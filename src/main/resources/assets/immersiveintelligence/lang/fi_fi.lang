@@ -1,0 +1,2310 @@
+
+#Items
+itemGroup.immersiveintelligence=Immersive Intelligence
+
+item.immersiveintelligence.material.basic_circuit_board_raw.name=Raaka yksinkertainen piirilevy
+item.immersiveintelligence.material.basic_circuit_board_etched.name=Etsattu yksinkertainen piirilevy
+item.immersiveintelligence.material.basic_electronic_element.name=Yksinkertainen elektroninen komponentti
+
+item.immersiveintelligence.material.advanced_circuit_board_raw.name=Raaka edistynyt piirilevy
+item.immersiveintelligence.material.advanced_circuit_board_etched.name=Etsattu edistynyt piirilevy
+item.immersiveintelligence.material.advanced_circuit_board.name=Edistynyt piirilevy
+item.immersiveintelligence.material.advanced_electronic_element.name=Edistynyt elektroninen komponentti
+
+item.immersiveintelligence.material.processor_circuit_board_raw.name=Raaka prosessoripiirilevy
+item.immersiveintelligence.material.processor_circuit_board_etched.name=Etsattu prosessoripiirilevy
+item.immersiveintelligence.material.processor_circuit_board.name=Prosessoripiirilevy
+item.immersiveintelligence.material.processor_electronic_element.name=Prosessori
+item.immersiveintelligence.material.transistor.name=Transistori
+
+item.immersiveintelligence.material.compact_electric_engine.name=Kompakti sähkömoottori
+item.immersiveintelligence.material.compact_electric_engine_advanced.name=Kehittynyt kompakti sähkömoottori
+item.immersiveintelligence.material.carbon_brush.name=Hiiliharja
+item.immersiveintelligence.material.wire_tungsten.name=Volframijohto
+item.immersiveintelligence.material.glass_fibre_cable.name=Lasikuitukaapeli
+
+item.immersiveintelligence.material.advanced_electron_tube.name=Edistynyt elektroniputki
+
+item.immersiveintelligence.material.punchtape_empty.name=Tyhjä reikänauha
+item.immersiveintelligence.punchtape.name=Reikänauha
+
+item.immersiveintelligence.binoculars.binoculars.name=Kiikarit
+item.immersiveintelligence.binoculars.infrared_binoculars.name=Infrapunakiikarit
+
+item.immersiveintelligence.assembly_scheme.name=Kokoonpanosuunnitelma
+
+item.immersiveintelligence.press_mold.howitzer.name=Metallipuristinmuotti: Tykistökranaatin kotelo
+item.immersiveintelligence.press_mold.light_howitzer.name=Metallipuristinmuotti: Kevyttykistökranaatin kotelo
+item.immersiveintelligence.press_mold.mortar.name=Metallipuristinmuotti: Kranaatinheitinkranaatin kotelo
+item.immersiveintelligence.press_mold.autocannon.name=Metallipuristinmuotti: Konetykkikranaatin kotelo
+item.immersiveintelligence.press_mold.machinegun.name=Metallipuristinmuotti: Konekiväärin hylsy
+item.immersiveintelligence.press_mold.assault_rifle.name=Metallipuristinmuotti: Rynnäkkökiväärin hylsy
+item.immersiveintelligence.press_mold.submachinegun.name=Metallipuristinmuotti: Konepistoolin hylsy
+item.immersiveintelligence.press_mold.naval_mine.name=Metallipuristinmuotti: Merimiinakotelo
+item.immersiveintelligence.press_mold.tripmine.name=Metallipuristinmuotti: Kompastusmiinakotelo
+item.immersiveintelligence.press_mold.tellermine.name=Metallipuristinmuotti: Maamiinakotelo
+
+item.immersiveintelligence.vulcanizer_mold.belt.name=Vulkanointimuotti: Hihna
+item.immersiveintelligence.vulcanizer_mold.tire.name=Vulkanointimuotti: Rengas
+
+item.immersiveintelligence.material_ingot.platinum.name=Platinaharkko
+item.immersiveintelligence.material_ingot.zinc.name=Sinkkiharkko
+item.immersiveintelligence.material_ingot.tungsten.name=Volframiharkko
+item.immersiveintelligence.material_ingot.brass.name=Messinkiharkko
+item.immersiveintelligence.material_ingot.advanced_electronic_alloy.name=Edistynyt elektroninen metalliseosharkko
+item.immersiveintelligence.material_ingot.silicon.name=Piiharkko
+item.immersiveintelligence.material_ingot.magnet.name=Magneetti
+item.immersiveintelligence.material_ingot.duraluminium.name=Duralumiiniharkko
+
+item.immersiveintelligence.material_rod.brass.name=Messinkisauva
+item.immersiveintelligence.material_rod.tungsten.name=Volframisauva
+item.immersiveintelligence.material_rod.zinc.name=Sinkkisauva
+item.immersiveintelligence.material_rod.platinum.name=Platinasauva
+item.immersiveintelligence.material_rod.duraluminium.name=Duralumiinisauva
+
+item.immersiveintelligence.material_dust.platinum.name=Platinajauhe
+item.immersiveintelligence.material_dust.zinc.name=Sinkkijauhe
+item.immersiveintelligence.material_dust.tungsten.name=Volframijauhe
+item.immersiveintelligence.material_dust.brass.name=Messinkijauhe
+item.immersiveintelligence.material_dust.advanced_electronic_alloy.name=Edistynyt elektroninen metalliseosjauhe
+item.immersiveintelligence.material_dust.silicon.name=Piijauhe
+item.immersiveintelligence.material_dust.fluorite.name=Fluoriittijauhe
+item.immersiveintelligence.material_dust.quartz.name=Kvartsijauhe
+item.immersiveintelligence.material_dust.quartz_dirty.name=Likainen kvartsijauhe
+item.immersiveintelligence.material_dust.phosphorus.name=Fosforijauhe
+item.immersiveintelligence.material_dust.duraluminium.name=Duralumiinijauhe
+
+item.immersiveintelligence.material_plate.platinum.name=Platinalevy
+item.immersiveintelligence.material_plate.zinc.name=Sinkkilevy
+item.immersiveintelligence.material_plate.tungsten.name=Volframilevy
+item.immersiveintelligence.material_plate.brass.name=Messinkilevy
+item.immersiveintelligence.material_plate.advanced_electronic_alloy.name=Edistynyt elektroninen metalliseoslevy
+item.immersiveintelligence.material_plate.silicon.name=Piikiekko
+item.immersiveintelligence.material_plate.rubber_raw.name=Luonnollinen kumilevy
+item.immersiveintelligence.material_plate.duraluminium.name=Duralumiinilevy
+
+item.immersiveintelligence.material_nugget.platinum.name=Platinahippu
+item.immersiveintelligence.material_nugget.zinc.name=Sinkkihippu
+item.immersiveintelligence.material_nugget.tungsten.name=Volframihippu
+item.immersiveintelligence.material_nugget.brass.name=Messinkihippu
+item.immersiveintelligence.material_nugget.advanced_electronic_alloy.name=Edistynyt elektroninen metalliseoshippu
+item.immersiveintelligence.material_nugget.silicon.name=Palanen piitä
+item.immersiveintelligence.material_nugget.duraluminium.name=Duralumiinihippu
+
+item.immersiveintelligence.material_wire.tungsten.name=Volframijohto
+
+item.immersiveintelligence.material_gem.fluorite.name=Nether-fluoriitti
+#Based on real-life mineral glauconite, though the word phosphorus is easier to remember
+item.immersiveintelligence.material_gem.phosphorus.name=Nether-fosfori
+
+item.immersiveintelligence.material_boule.silicon.name=Piiharkko
+
+item.immersiveintelligence.material_spring.brass.name=Messinkijousi
+item.immersiveintelligence.material_spring.iron.name=Rautajousi
+item.immersiveintelligence.material_spring.steel.name=Teräsjousi
+
+item.immersiveintelligence.material.dust_rdx.name=RDX-jauhe
+item.immersiveintelligence.material.dust_hmx.name=HMX-jauhe
+item.immersiveintelligence.material.white_phosphorus.name=Valkoinen fosfori
+
+item.immersiveintelligence.material.bullet_core_steel.name=Teräsluoti
+item.immersiveintelligence.material.bullet_core_brass.name=Messinkiluoti
+item.immersiveintelligence.material.bullet_core_uranium.name=Uraaniluoti
+item.immersiveintelligence.material.bullet_core_lead.name=Lyijyluoti
+item.immersiveintelligence.material.bullet_core_tungsten.name=Volframiluoti
+
+item.immersiveintelligence.material.dust_salt.name=Suolajauhe
+item.immersiveintelligence.material.dust_wood.name=Sahanpuru
+item.immersiveintelligence.material.pulp_wood.name=Paperimassa
+item.immersiveintelligence.material.pulp_wood_treated.name=Käsitelty paperimassa
+item.immersiveintelligence.material.dust_hexamine.name=Heksamiinijauhe
+item.immersiveintelligence.material.dust_formaldehyde.name=Formaldehydijauhe
+item.immersiveintelligence.material.rubber_compound.name=Vulkanointiyhdiste
+
+item.immersiveintelligence.material.artificial_leather.name=Keinotekoinen nahka
+item.immersiveintelligence.material.natural_rubber.name=Luonnollinen kumi
+item.immersiveintelligence.material.rubber_belt.name=Kumihihna
+item.immersiveintelligence.material.rubber_tire.name=Kumirengas
+
+item.immersiveintelligence.circuit_functional.arithmetic.name=Aritmetiikkavirtapiiri
+item.immersiveintelligence.circuit_functional.advanced_arithmetic.name=Edistynyt aritmetiikkavirtapiiri
+item.immersiveintelligence.circuit_functional.logic.name=Logiikkavirtapiiri
+item.immersiveintelligence.circuit_functional.comparator.name=Vertailuvirtapiiri
+item.immersiveintelligence.circuit_functional.advanced_logic.name=Edistynyt logiikkavirtapiiri
+item.immersiveintelligence.circuit_functional.text.name=Tekstinkäsittelyvirtapiiri
+item.immersiveintelligence.circuit_functional.itemstack.name=Tavarapinokäsittelyvirtapiiri
+item.immersiveintelligence.circuit_functional.array.name=Taulukkokäsittelyvirtapiiri
+item.immersiveintelligence.circuit_functional.entity.name=Joukkokäsittelyvirtapiiti
+item.immersiveintelligence.circuit_functional.document.name=Asiakirjavirtapiiri
+item.immersiveintelligence.circuit_functional.type_conversion.name=Tyyppimuunnosvirtapiiri
+
+item.immersiveintelligence.minecart.wooden_crate.name=Kaivosvaunu puulaatikolla
+item.immersiveintelligence.minecart.reinforced_crate.name=Kaivosvaunu vahvistetulla laatikolla
+item.immersiveintelligence.minecart.steel_crate.name=Kaivosvaunu teräslaatikolla
+item.immersiveintelligence.minecart.wooden_barrel.name=Kaivosvaunu puutynnyrillä
+item.immersiveintelligence.minecart.metal_barrel.name=Kaivosvaunu metallitynnyrillä
+item.immersiveintelligence.minecart.capacitor_lv.name=Kaivosvaunu LV-kondensaattorilla
+item.immersiveintelligence.minecart.capacitor_mv.name=Kaivosvaunu MV-kondensaattorilla
+item.immersiveintelligence.minecart.capacitor_hv.name=Kaivosvaunu HV-kondensaattorilla
+item.immersiveintelligence.minecart.capacitor_creative.name=Kaivosvaunu luovakondensaattorilla
+#Immersive Technology Compat
+item.immersiveintelligence.minecart.crate_creative.name=Kaivosvaunu luovavarastolaatikolla
+item.immersiveintelligence.minecart.barrel_creative.name=Kaivosvaunu luovatynnyrillä
+item.immersiveintelligence.minecart.steel_barrel.name=Kaivosvaunu terästynnyrillä
+item.immersiveintelligence.minecart.open_barrel.name=Kaivosvaunu avoimella metallitynnyrillä
+
+item.immersiveintelligence.light_engineer_armor_helmet.name=Insinöörin kevytkypärä
+item.immersiveintelligence.light_engineer_armor_chestplate.name=Insinöörin kevythaarniska
+item.immersiveintelligence.light_engineer_armor_leggings.name=Insinöörin kevythousut
+item.immersiveintelligence.light_engineer_armor_boots.name=Insinöörin kevytsaappaat
+item.immersiveintelligence.advanced_powerpack.name=Kehitetty kondensaattorireppu
+
+item.immersiveintelligence.lighter.name=Insinöörin sytytyin
+item.immersiveintelligence.measuring_cup.name=Insinöörin mittakuppi
+item.immersiveintelligence.electric_hammer.name=Insinöörin sähkövasara
+item.immersiveintelligence.electric_wirecutter.name=Insinöörin sähkösivuleikkurit
+item.immersiveintelligence.electric_multitool.name=Insinöörin sähköinen monityökalu
+item.immersiveintelligence.radio_configurator.basic.name=Yksinkertainen radioviritin
+item.immersiveintelligence.radio_configurator.advanced.name=Edistynyt radioviritin
+item.immersiveintelligence.trench_shovel.name=Juoksuhautalapio
+item.immersiveintelligence.tripod_periscope.name=Kolmijalkaperiskooppi
+item.immersiveintelligence.mine_detector.name=Miinanharava
+item.immersiveintelligence.mortar.name=Kranaatinheitin
+item.immersiveintelligence.machinegun.name=Konekivääri
+item.immersiveintelligence.assault_rifle.name=Rynnäkkökivääri
+item.immersiveintelligence.submachinegun.name=Konepistooli
+item.immersiveintelligence.autorevolver.name=Autorevolveri
+
+#Drillheads
+item.immersiveintelligence.drillhead.tungsten.name=Volframiporanpää
+item.immersiveintelligence.drillhead.iron_diamond_tip.name=Timanttikärkinen rautaporanpää
+item.immersiveintelligence.drillhead.steel_diamond_tip.name=Timanttikärkinen teräsporanpää
+item.immersiveintelligence.drillhead.tungsten_diamond_tip.name=Timanttikärkinen volframiporanpää
+
+item.immersiveintelligence.weapon_upgrade.water_cooling.name=Vesijäähdytetty piippu
+item.immersiveintelligence.weapon_upgrade.heavy_barrel.name=Raskas piippu
+item.immersiveintelligence.weapon_upgrade.second_magazine.name=Toinen lipas
+item.immersiveintelligence.weapon_upgrade.belt_fed_loader.name=Hihnasyötetty ammuslataaja
+item.immersiveintelligence.weapon_upgrade.precise_bipod.name=Tarkka kaksijalka
+item.immersiveintelligence.weapon_upgrade.hasty_bipod.name=Kenttäkaksijalka
+item.immersiveintelligence.weapon_upgrade.scope.name=Kiikaritähtäin
+item.immersiveintelligence.weapon_upgrade.infrared_scope.name=Infrapunakiikaritähtäin
+item.immersiveintelligence.weapon_upgrade.shield.name=Kiinnitettävät kilvet
+item.immersiveintelligence.weapon_upgrade.tripod.name=Kolmijalka
+
+item.immersiveintelligence.weapon_upgrade.sturdy_barrel.name=Tukeva piippu
+item.immersiveintelligence.weapon_upgrade.suppressor.name=Äänenvaimennin
+item.immersiveintelligence.weapon_upgrade.bottom_loading.name=Pohjalataaaja
+item.immersiveintelligence.weapon_upgrade.folding_stock.name=Taittuva tukki
+
+item.immersiveintelligence.weapon_upgrade.heavy_springbox.name=Raskas jousilaatikko
+
+item.immersiveintelligence.weapon_upgrade.radio_marker.name=Radiomerkitsijä
+item.immersiveintelligence.weapon_upgrade.rifle_grenade_launcher.name=Kiväärikranaatinheitin
+item.immersiveintelligence.weapon_upgrade.stereoscopic_rangefinder.name=Stereoskooppinen etäisyysmittari
+
+item.immersiveintelligence.armor_upgrade.gasmask.name=Kaasunaamari
+item.immersiveintelligence.armor_upgrade.infiltrator_gear.name=Tunkeutujan varustus
+item.immersiveintelligence.armor_upgrade.technician_gear.name=Tekniikon varustus
+item.immersiveintelligence.armor_upgrade.engineer_gear.name=Insinöörin varustus
+item.immersiveintelligence.armor_upgrade.steel_armor_plates.name=Teräspanssarilevyt
+item.immersiveintelligence.armor_upgrade.composite_armor_plates.name=Komposiittipanssarilevyt
+item.immersiveintelligence.armor_upgrade.hazmat_coating.name=Hazmat-pinnoite
+item.immersiveintelligence.armor_upgrade.heat_resistant_coating.name=Lämmönkestävä pinnoite
+item.immersiveintelligence.armor_upgrade.anti_static_mesh.name=Antistattinen verkko
+item.immersiveintelligence.armor_upgrade.camouflage_mesh.name=Naamioitumisverkko
+item.immersiveintelligence.armor_upgrade.infrared_absorbing_mesh.name=Infrapunaa absorboiva verkko
+item.immersiveintelligence.armor_upgrade.scuba_tank.name=Sukellustankki
+item.immersiveintelligence.armor_upgrade.helipack.name=Kopterireppu
+item.immersiveintelligence.armor_upgrade.exoskeleton.name=Eksoskeleton
+item.immersiveintelligence.armor_upgrade.boot_reinforcement.name=Saapasvahvike
+item.immersiveintelligence.armor_upgrade.snow_rackets.name=Lumikengät
+item.immersiveintelligence.armor_upgrade.flippers.name=Räpylät
+item.immersiveintelligence.armor_upgrade.internal_springs.name=Sisäiset jouset
+
+item.immersiveintelligence.tracer_powder.tracer_powder.name=Valojuovajauhe
+item.immersiveintelligence.tracer_powder.flare_powder.name=Merkinantojauhe
+
+item.immersiveintelligence.skycrate_mount.mechanical.name=Skycrate-kiinnitin
+item.immersiveintelligence.skycrate_mount.electric.name=Sähköinen Skycrate-kiinnitin
+
+desc.immersiveintelligence.electric_hammer=Kääntää kuutioita, vaihtaa koneiden portteja, muodostaa monikuutioita.
+desc.immersiveintelligence.electric_wirecutter=Leikkaa johtoja sekä moottorihihnoja, toimii kuten keritsimet.
+desc.immersiveintelligence.wrench=Asentaa päivityksiä yhteensopiviin laitteisiin.
+
+desc.immersiveintelligence.toolupgrade.item.revolver=Revolveri
+desc.immersiveintelligence.toolupgrade.item.railgun=Raidetykki
+desc.immersiveintelligence.toolupgrade.item.machinegun=Konekivääri
+desc.immersiveintelligence.toolupgrade.item.submachinegun=Konepistooli
+desc.immersiveintelligence.toolupgrade.item.mortar=Kranaatinheitin
+desc.immersiveintelligence.toolupgrade.item.assault_rifle=Rynnäkkökivääri
+desc.immersiveintelligence.toolupgrade.item.autorevolver=Autorevolveri
+
+desc.immersiveintelligence.filled_casing=Täytetty ruudilla
+desc.immersiveintelligence.explosives_programmed=Ohjelmoitu datapaketilla
+
+desc.immersiveintelligence.toolupgrade.item.light_engineer_helmet=Insinöörin kevytkypärä
+desc.immersiveintelligence.toolupgrade.item.light_engineer_chestplate=Insinöörin kevythaarniska
+desc.immersiveintelligence.toolupgrade.item.light_engineer_leggings=Insinöörin kevythousut
+desc.immersiveintelligence.toolupgrade.item.light_engineer_boots=Insinöörin kevytsaappaat
+
+desc.immersiveintelligence.toolupgrade.water_cooling=Käyttää vettä jäähdyttäkseen konekiväärin. Lisää lämmön maksimimäärää mitä konekivääri pystyy sietämään.
+desc.immersiveintelligence.toolupgrade.heavy_barrel=Dramaattisesti nostaa ampumanopeutta, aiheuttaa suuremman rekyylin sekä ylikuumenee nopeammin.
+desc.immersiveintelligence.toolupgrade.second_magazine=Mahdollistaa ammusten käyttämisen kahdesta lippaasta, vaatii erillisen uudelleen lataamisen.
+desc.immersiveintelligence.toolupgrade.belt_fed_loader=Mahdollista ammusten ottamisen ammuslaatikosta pelaajan alta. Pidentää kokoamisaikaa.
+desc.immersiveintelligence.toolupgrade.precise_bipod=Pidentää kokoamisaikaa, pienentää rekyyliä
+desc.immersiveintelligence.toolupgrade.hasty_bipod=Lyhentää kokoamisaikaa, suurentaa rekyyliä
+desc.immersiveintelligence.toolupgrade.scope=Mahdollistaa tähtäämisen kaukaisiin asioihin
+desc.immersiveintelligence.toolupgrade.infrared_scope=Mahdollistaa pimeässä näkemisen, tarvitse virtalähteen kuten kondensaattorireppu.
+desc.immersiveintelligence.toolupgrade.shield=Estää ammukset sekä puolustaa ampujaa lähitaistelulta. Pidentää kokoamisaikaa.
+desc.immersiveintelligence.toolupgrade.tripod=Poistaa rekyylin lähes täysin, kasvattaa maksimikulmaa sekä kokoamisaikaa.
+
+desc.immersiveintelligence.toolupgrade.sturdy_barrel=Kasvattaa luodin nopeutta ja läpäisykykyä, mutta laskee ampumanopeutta.
+desc.immersiveintelligence.toolupgrade.suppressor=Hiljentää aseen, mahdollistaa nopean ja salavihkaisen toiminnan.
+desc.immersiveintelligence.toolupgrade.bottom_loading=Korvaa kädensijan ja tekee aseesta alhaalta ladattavan. Mahdollistaa rumpulippaiden lataamisen.
+desc.immersiveintelligence.toolupgrade.folding_stock=Lyhentää uudelleenlataus- ja tähtäysaikaa. Pienempi tarkkuus liikkeessä.
+
+desc.immersiveintelligence.toolupgrade.heavy_springbox=Kasvattaa luodin nopeutta, aiheuttaen niille suuremman läpäisyvoiman. Pidentää aikaa laukaisujen välillä.
+
+desc.immersiveintelligence.toolupgrade.radio_marker=Mahdollistaa datasignaalin lähettämisen, jossa on pelaajan sijainti.
+desc.immersiveintelligence.toolupgrade.rifle_grenade_launcher=Mahdollistaa raidetykkikranaattien ampumisen hieman pienemällä etäisyydellä.
+desc.immersiveintelligence.toolupgrade.stereoscopic_rangefinder=Näytää etäisyyden nykyiseen kohteeseen. Yhdistettynä radiomerkitsijään, mahdollistaa vihollisten sijaintien lähettämisen datan kautta.
+
+desc.immersiveintelligence.toolupgrade.gasmask=Suojelee käyttäjää haitallisilta kaasuilta.
+
+desc.immersiveintelligence.toolupgrade.infiltrator_gear=Mahdollistaa pimeässä näkemisen sekä suurennoksen, tarvitsee energiaa toimiakseen.
+desc.immersiveintelligence.toolupgrade.technician_gear=Näyttää työkaluvihjeitä, jotka tavallisesti tarvitsisivat vasaran, volttimittarin tai jakoavaimen kädessä, tarvitsee energiaa toimiakseen.
+desc.immersiveintelligence.toolupgrade.engineer_gear=Yhdistää tunkeutujan ja tekniikon varusteiden vaikutukset yhteen laitteeseen. Suurempi energiankulutus.
+desc.immersiveintelligence.toolupgrade.steel_armor_plates=Hieman nostaa panssarin paksuutta. Pystyy estämään nuolia ja muita kevyitä ammuksia. Enintään kolme voidaan asentaa yhteen panssarinkappaleeseen.
+desc.immersiveintelligence.toolupgrade.composite_armor_plates=Merkittävästi nostaa panssarin paksuutta. Estää ammuksia ja vahingoittaa vihollisten lähitaisteluaseita kun ne eivät pysty aiheuttamaan tarpeeksi vahinkoa panssarin käyttäjälle. Enintään kolme voidaan asentaa yhteen panssarinkappaleeseen.
+desc.immersiveintelligence.toolupgrade.hazmat_coating=Tekee panssarista immuunin radioaktiivisuudelle ja syöpymiselle.
+desc.immersiveintelligence.toolupgrade.heat_resistant_coating=Kun yhdistetty saapasvahvikkeen kanssa, mahdollistaa kuumissa nesteissä uimisen.
+desc.immersiveintelligence.toolupgrade.anti_static_mesh=Tekee käyttäjästä immuunin sähköiselle vahingolle ja tekee lähisytyttimille mahdottomaksi tunnistaa käyttäjää. Erittäin herkkä sähköiselle vahingolle vedenalla.
+desc.immersiveintelligence.toolupgrade.camouflage_mesh=Tekee käyttäjästä näkymättömän lehvistössä hiipimsen aikana. Herkkä tulelle.
+desc.immersiveintelligence.toolupgrade.infrared_absorbing_mesh=Tekee käyttäjästä näkymättömän infrapunaan perustuville laitteille. Herkkä EMP:lle.
+desc.immersiveintelligence.toolupgrade.scuba_tank=Pystytään täyttämään hapella vedenalla hengittämistä varten sekä ylimääräisellä polttoaineella työkalujen käyttöä varten. Tarvitsee kaasunaamarin toimiakseen.
+desc.immersiveintelligence.toolupgrade.helipack=Mahdollistaa hitaan, mutta vakaan lentämisen. Tarvitsee bensiiniä.
+desc.immersiveintelligence.toolupgrade.exoskeleton=Mahdollistaa nopeamman juoksemisen. Tarvitsee energiaa toimiakseen.
+desc.immersiveintelligence.toolupgrade.boot_reinforcement=Tekee käyttäjästä immuunin tulelle. Kun yhdistetty lämmönkestävän pinnoitteen kanssa, mahdollistaa uimisen kuumissa nesteissä.
+desc.immersiveintelligence.toolupgrade.snow_rackets=Kasvattaa kävelynopeutta lumella sekä vakautta jäällä.
+desc.immersiveintelligence.toolupgrade.flippers=Mahdollistaa nopeamman liikkumisen vedessä.
+desc.immersiveintelligence.toolupgrade.internal_springs=Suojelee käyttäjää putoamisvahingolta. Hiljentää käyttäjän askeleet.
+
+item.immersiveintelligence.data_wire.name=Datakaapelikela
+
+item.immersiveintelligence.trip_wire.name=Ansalankakela
+
+item.immersiveintelligence.small_wirecoil.data.name=Pieni datakaapelikela
+item.immersiveintelligence.small_wirecoil.redstone.name=Pieni redstone-kaapelikela
+desc.immersiveintelligence.small_wirecoil=Käytetään tarkassa elektroniikassa, kuten kiinnitetyissä virtapiireissä.
+
+item.immersiveintelligence.printed_page.blank.name=Tyhjä sivu
+item.immersiveintelligence.printed_page.text.name=Tulostettu teksti
+item.immersiveintelligence.printed_page.code.name=Tulostettu koodi
+item.immersiveintelligence.printed_page.blueprint.name=Tulostettu rakennussuunnitelma
+
+item.immersiveintelligence.precission_tool.precission_buzzsaw.name=Tarkuussirkkeli
+item.immersiveintelligence.precission_tool.precission_drill.name=Tarkkuuspora
+item.immersiveintelligence.precission_tool.precission_inserter.name=Tarkkuusasettaja
+item.immersiveintelligence.precission_tool.precission_solderer.name=Tarkkuusjuottaja
+item.immersiveintelligence.precission_tool.precission_welder.name=Tarkkuushitsaaja
+item.immersiveintelligence.precission_tool.precission_hammer.name=Tarkkuusvasara
+
+item.immersiveintelligence.sawblade.iron.name=Rautasahanterä
+item.immersiveintelligence.sawblade.steel.name=Terässahanterä
+item.immersiveintelligence.sawblade.tungsten.name=Volframisahanterä
+
+#bCal - Block-Caliber (1/16 Block = 1 bCal)
+#Casings
+item.immersiveintelligence.ammo_casing.artillery_8bcal.name=Tykistökranaatin kotelo
+item.immersiveintelligence.artillery_8bCal.core.name=Tykistökranaatin ydin
+item.immersiveintelligence.artillery_8bCal.bullet.name=Tykistökranaatti
+
+item.immersiveintelligence.ammo_casing.mortar_6bCal.name=Kranaatinheitinkranaatin kotelo
+item.immersiveintelligence.mortar_6bCal.core.name=Kranaatinheitinkranaatin ydin
+item.immersiveintelligence.mortar_6bCal.bullet.name=Kranaatinheitinkranaatti
+
+item.immersiveintelligence.ammo_casing.light_artillery_6bcal.name=Kevyttykistökranaatin kotelo
+item.immersiveintelligence.artillery_6bCal.core.name=Kevyttykistökranaatin ydin
+item.immersiveintelligence.artillery_6bCal.bullet.name=Kevyttykistökranaatti
+
+item.immersiveintelligence.ammo_casing.mg_2bcal.name=Konekiväärin hylsy
+item.immersiveintelligence.mg_2bCal.core.name=Konekiväärin luoti
+item.immersiveintelligence.mg_2bCal.bullet.name=Konekivääripatruuna
+
+item.immersiveintelligence.ammo_casing.stg_1bcal.name=Rynnäkkökiväärin hylsy
+item.immersiveintelligence.stg_1bCal.core.name=Rynnäkkökiväärin luoti
+item.immersiveintelligence.stg_1bCal.bullet.name=Rynnäkkökivääripatruuna
+
+item.immersiveintelligence.ammo_casing.smg_1bcal.name=Konepistoolin hylsy
+item.immersiveintelligence.smg_1bCal.core.name=Konepistoolin luoti
+item.immersiveintelligence.smg_1bCal.bullet.name=Konepistoolipatruuna
+
+item.immersiveintelligence.revolver_1bCal.core.name=Revolverin luoti
+item.immersiveintelligence.revolver_1bCal.bullet.name=Revolveripatruuna
+
+item.immersiveintelligence.ammo_casing.autocannon_3bcal.name=Konetykkikranaatin kotelo
+item.immersiveintelligence.autocannon_3bCal.core.name=Konetykkikranaatin ydin
+item.immersiveintelligence.autocannon_3bCal.bullet.name=Konetykkikranaatti
+
+item.immersiveintelligence.grenade_5bCal.core.name=Käsikranaatin ydin
+item.immersiveintelligence.grenade_5bCal.bullet.name=Käsikranaatti
+
+item.immersiveintelligence.railgun_grenade_4bCal.core.name=Raidetykkikranaatin ydin
+item.immersiveintelligence.railgun_grenade_4bCal.bullet.name=Raidetykkikranaatti
+
+#Components
+
+item.immersiveintelligence.bullet.component.tnt.name=TNT
+item.immersiveintelligence.bullet.component.rdx.name=RDX
+item.immersiveintelligence.bullet.component.hmx.name=HMX
+item.immersiveintelligence.bullet.component.white_phosphorus.name=Valkoinen fosfori
+item.immersiveintelligence.bullet.component.firework.name=Ilotulitteet
+item.immersiveintelligence.bullet.component.tesla.name=Electrostaattisen varauksen säteilijä
+item.immersiveintelligence.bullet.component.tracer_powder.name=Valojuovajauhe
+item.immersiveintelligence.bullet.component.flare_powder.name=Merkinantojauhe
+item.immersiveintelligence.bullet.component.propaganda.name=Propaganda
+#shh! it's a secret!
+item.immersiveintelligence.bullet.component.fish.name=Kala
+item.immersiveintelligence.bullet.component.nuke.name=Ydinkärki
+
+#Cores
+
+item.immersiveintelligence.bullet.component.core_steel.name=Teräsydin
+item.immersiveintelligence.bullet.component.core_brass.name=Messinkiydin
+item.immersiveintelligence.bullet.component.core_tungsten.name=Volframiydin
+item.immersiveintelligence.bullet.component.core_lead.name=Lyijy-ydin
+item.immersiveintelligence.bullet.component.core_uranium.name=Uraaniydin
+
+item.immersiveintelligence.bullet_magazine.machinegun.name=Konekiväärilipas
+item.immersiveintelligence.bullet_magazine.submachinegun.name=Konepistoolilipas
+item.immersiveintelligence.bullet_magazine.submachinegun_drum.name=Konepistoolirumpulipas
+item.immersiveintelligence.bullet_magazine.automatic_revolver.name=Autorevolverilipas
+item.immersiveintelligence.bullet_magazine.assault_rifle.name=Rynnäkkökiväärilipas
+item.immersiveintelligence.bullet_magazine.autocannon.name=Konetykkilipas
+item.immersiveintelligence.bullet_magazine.cpds_drum.name=AVPJ-rumpulipas
+
+item.immersiveintelligence.motor_gear.copper.name=Kupariratas
+item.immersiveintelligence.motor_gear.brass.name=Messinkiratas
+item.immersiveintelligence.motor_gear.iron.name=Rautaratas
+item.immersiveintelligence.motor_gear.steel.name=Teräsratas
+item.immersiveintelligence.motor_gear.tungsten.name=Volframiratas
+
+item.immersiveintelligence.motor_belt.cloth.name=Kangasmoottorihihna
+item.immersiveintelligence.motor_belt.steel.name=Teräsmoottorihihna
+item.immersiveintelligence.motor_belt.rubber.name=Kumimoottorihihna
+
+item.immersiveintelligence.wrench.name=Insinöörin jakoavain
+item.immersiveintelligence.electric_wrench.name=Insinöörin sähköjakoavain
+
+item.immersiveintelligence.tachometer.name=Insinöörin kierroslukumittari
+item.immersiveintelligence.torque_meter.name=Insinöörin vääntömomenttimittari
+
+#Blocks
+
+tile.immersiveintelligence.ore.platinum.name=Platinamalmi
+tile.immersiveintelligence.sheetmetal.platinum.name=Platinapelti
+tile.immersiveintelligence.storage.platinum.name=Platinakuutio
+tile.immersiveintelligence.sheetmetal_slab.platinum.name=Platinapeltilaatta
+tile.immersiveintelligence.storage_slab.platinum.name=Platinalaatta
+
+tile.immersiveintelligence.ore.zinc.name=Sinkkimalmi
+tile.immersiveintelligence.sheetmetal.zinc.name=Sinkkipelti
+tile.immersiveintelligence.storage.zinc.name=Sinkkikuutio
+tile.immersiveintelligence.sheetmetal_slab.zinc.name=Sinkkipeltilaatta
+tile.immersiveintelligence.storage_slab.zinc.name=Sinkkilaatta
+
+tile.immersiveintelligence.ore.tungsten.name=Volframimalmi
+tile.immersiveintelligence.sheetmetal.tungsten.name=Volframipelti
+tile.immersiveintelligence.storage.tungsten.name=Volframikuutio
+tile.immersiveintelligence.sheetmetal_slab.tungsten.name=Volframipeltilaatta
+tile.immersiveintelligence.storage_slab.tungsten.name=Volframilaatta
+
+tile.immersiveintelligence.ore.salt.name=Suolamalmi
+
+tile.immersiveintelligence.ore.fluorite.name=Nether-fluoriittimalmi
+tile.immersiveintelligence.ore.phosphorus.name=Nether-fosforimalmi
+
+tile.immersiveintelligence.sheetmetal.brass.name=Messinkipelti
+tile.immersiveintelligence.storage.brass.name=Messinkikuutio
+tile.immersiveintelligence.sheetmetal_slab.brass.name=Messinkipeltilaatta
+tile.immersiveintelligence.storage_slab.brass.name=Messinkilaatta
+
+tile.immersiveintelligence.sheetmetal.duraluminium.name=Duralumiinipelti
+tile.immersiveintelligence.storage.duraluminium.name=Duralumiinikuutio
+tile.immersiveintelligence.sheetmetal_slab.duraluminium.name=Duralumiinipeltilaatta
+tile.immersiveintelligence.storage_slab.duraluminium.name=Duralumiinilaatta
+
+tile.immersiveintelligence.fence_brass.name=Messinkiaita
+tile.immersiveintelligence.fence_tungsten.name=Volframiaita
+tile.immersiveintelligence.fence_zinc.name=Sinkkiaita
+tile.immersiveintelligence.fence_platinum.name=Platina-aita
+tile.immersiveintelligence.fence_duraluminium.name=Duralumiiniaita
+
+tile.immersiveintelligence.rubber_log.raw.name=Kumipuu
+tile.immersiveintelligence.rubber_log.rebbur.name=Lateksin poistoreikä
+tile.immersiveintelligence.rubber_log.stripped.name=Kuorittu lateksin poistopiste
+tile.immersiveintelligence.rubber_leaves.rubber.name=Kumipuun lehdet
+tile.immersiveintelligence.rubber_sapling.rubber.name=Kumipuun taimi
+tile.immersiveintelligence.charred_log.main.name=Hiiltynyt tukki
+
+tile.immersiveintelligence.concrete_decoration.concrete_bricks.name=Betonitiilikuutio
+tile.immersiveintelligence.concrete_decoration_slab.concrete_bricks.name=Betonitiililaatta
+tile.immersiveintelligence.concrete_decoration_stairs_concrete_bricks.name=Betonitiiliportaat
+
+tile.immersiveintelligence.concrete_decoration.sturdy_concrete_bricks.name=Panzer-betonitiilikuutio
+tile.immersiveintelligence.concrete_decoration_slab.sturdy_concrete_bricks.name=Panzer-betonitiililaatta
+tile.immersiveintelligence.concrete_decoration_stairs_sturdy_concrete_bricks.name=Panzer-betonitiiliportaat
+
+tile.immersiveintelligence.concrete_decoration.uberconcrete.name=Über-betonitiilikuutio
+tile.immersiveintelligence.concrete_decoration_slab.uberconcrete.name=Über-betonitiililaatta
+tile.immersiveintelligence.concrete_decoration_stairs_uberconcrete.name=Über-betonitiiliportaat
+
+tile.immersiveintelligence.metal_decoration.electronic_engineering.name=Elektroninen tekniikkakuutio
+tile.immersiveintelligence.metal_decoration.advanced_electronic_engineering.name=Edistynyt elektroninen tekniikkakuutio
+tile.immersiveintelligence.metal_decoration.computer_engineering.name=Tietokonetekniikkakuutio
+tile.immersiveintelligence.metal_decoration.mechanical_engineering.name=Mekaaninen tekniikkakuutio
+tile.immersiveintelligence.metal_decoration.heavy_mechanical_engineering.name=Raskas mekaaninen tekniikkakuutio
+
+tile.immersiveintelligence.metal_decoration.coil_data.name=Datakaapelikela
+tile.immersiveintelligence.metal_decoration.coil_steel_motor_belt.name=Teräsmoottorihihnakela
+
+tile.immersiveintelligence.cloth_decoration.coil_rope.name=Köysikela
+tile.immersiveintelligence.cloth_decoration.coil_cloth_motor_belt.name=Kangasmoottorihihnakela
+tile.immersiveintelligence.cloth_decoration.coil_rubber_motor_belt.name=Kumimoottorihihnakela
+
+tile.immersiveintelligence.mine_sign.mine_sign.name=Miinavaroituskyltti
+tile.immersiveintelligence.mine_sign.mine_sign.desc=Miinoja;edessä!
+
+tile.immersiveengineering.conveyor.immersiveintelligence:rubber_conveyor.name=Kumiliukuhihna
+tile.immersiveengineering.conveyor.immersiveintelligence:rubber_uncontrolled.name=Kumiliukuhihna
+tile.immersiveengineering.conveyor.immersiveintelligence:rubber_uncontrolled.flavour=Ei huomioi redstone-ohjausta
+tile.immersiveengineering.conveyor.immersiveintelligence:rubber_dropper.name=Pudottava kumiliukuhihna
+tile.immersiveengineering.conveyor.immersiveintelligence:rubber_droppercovered.name=Pudottava peitetty kumiliukuhihna
+tile.immersiveengineering.conveyor.immersiveintelligence:rubber_vertical.name=Pystysuora kumiliukuhihna
+tile.immersiveengineering.conveyor.immersiveintelligence:rubber_splitter.name=Jakava kumiliukuhihna
+tile.immersiveengineering.conveyor.immersiveintelligence:rubber_covered.name=Peitetty kumiliukuhihna
+tile.immersiveengineering.conveyor.immersiveintelligence:rubber_verticalcovered.name=Pystysuora peitetty kumiliukuhihna
+tile.immersiveengineering.conveyor.immersiveintelligence:rubber_extract.name=Ulosvetävä kumiliukuhihna
+tile.immersiveengineering.conveyor.immersiveintelligence:rubber_extractcovered.name=Peitetty ulosvetävä kumiliukuhihna
+
+#due to how IE's base classes are designed, I had to use a "main" as only value in IIBlockTypes_Mine
+#redundant? yes, works? yes
+tile.immersiveintelligence.tripmine.main.name=Kompastusmiina
+tile.immersiveintelligence.tripmine.core.name=Kompastusmiinaydin
+#Same as above (for the landmine and explosives), this is due to how the projectile workshop gets the translation
+item.immersiveintelligence.tripmine.core.name=Kompastusmiinaydin
+item.immersiveintelligence.ammo_casing.tripmine.name=Kompastusmiinakotelo
+tile.immersiveintelligence.tripwire_connector.main.name=Ansalankayhdistin
+
+tile.immersiveintelligence.tellermine.main.name=Maamina
+tile.immersiveintelligence.tellermine.core.name=Maamiinaydin
+item.immersiveintelligence.tellermine.core.name=Maamiinaydin
+item.immersiveintelligence.ammo_casing.tellermine.name=Maamiinakotelo
+
+tile.immersiveintelligence.radio_explosives.main.name=Radioräjähteet
+tile.immersiveintelligence.radio_explosives.core.name=Radioräjähdeydin
+item.immersiveintelligence.radio_explosives.core.name=Radioräjähdeydin
+item.immersiveintelligence.ammo_casing.radio_explosives.name=Radiolla varustettu laukku
+
+item.immersiveintelligence.naval_mine.bullet.name=Merimiina
+item.immersiveintelligence.naval_mine.core.name=Merimiinaydin
+item.immersiveintelligence.ammo_casing.naval_mine.name=Merimiinakotelo
+
+tile.immersiveintelligence.stone_decoration.sandbags.name=Hiekkasäkit
+
+tile.immersiveintelligence.metal_device.metal_crate.name=Teräslaatikko
+tile.immersiveintelligence.metal_device.small_data_buffer.name=Pieni puskurimuisti
+tile.immersiveintelligence.metal_device.item_buffer.name=Tavarapuskuri
+tile.immersiveintelligence.metal_device.timed_buffer.name=Ajastettu puskuri
+tile.immersiveintelligence.metal_device.redstone_buffer.name=Redstone-puskuri
+tile.immersiveintelligence.metal_device.punchtape_reader.name=Reikänauhalukija
+tile.immersiveintelligence.metal_device.data_router.name=Datareititin
+tile.immersiveintelligence.metal_device.data_merger.name=Datayhdistin
+
+tile.immersiveintelligence.metal_device.ammunition_crate.name=Ammuslaatikko
+tile.immersiveintelligence.metal_device.medic_crate.name=Lääkintälaatikko
+tile.immersiveintelligence.metal_device.repair_crate.name=Korjauslaatikko
+
+tile.immersiveintelligence.metal_device.latex_collector.name=Lateksin kerääjä
+
+tile.immersiveintelligence.metal_device1.co2_filter.name=Hiilidioksidisuodatin
+
+tile.immersiveintelligence.gearbox.wooden_gearbox.name=Puinen vaihdelaatikko
+tile.immersiveintelligence.mechanical_device.wooden_transmission_box.name=Puinen voimansiirtolaatikko
+tile.immersiveintelligence.mechanical_device.creative_transmission_box.name=Luovavoimansiirtolaatikko
+tile.immersiveintelligence.mechanical_device1.mechanical_pump.name=Mekaaninen pumppu
+
+tile.immersiveintelligence.mechanical_connector.wooden_wheel.name=Pyörä
+
+tile.immersiveintelligence.small_crate.wooden_crate_box.name=Pieni puulaatikko (Laatikko)
+tile.immersiveintelligence.small_crate.wooden_crate_cube.name=Pieni puulaatikko (Kuutio)
+tile.immersiveintelligence.small_crate.wooden_crate_wide.name=Pieni puulaatikko (Leveä)
+tile.immersiveintelligence.small_crate.metal_crate_box.name=Pieni metallilaatikko (Laatikko)
+tile.immersiveintelligence.small_crate.metal_crate_cube.name=Pieni metallilaatikko (Kuutio)
+tile.immersiveintelligence.small_crate.metal_crate_wide.name=Pieni metallilaatikko (Leveä)
+
+tile.immersiveintelligence.metal_fortification.steel_chain_fence.name=Teräsketjuaita
+tile.immersiveintelligence.metal_fortification.brass_chain_fence.name=Messinkiketjuaita
+tile.immersiveintelligence.metal_fortification.aluminium_chain_fence.name=Alumiiniketjuaita
+
+tile.immersiveintelligence.wooden_fortification.wooden_steel_chain_fence.name=Puinen teräsketjuaita
+tile.immersiveintelligence.wooden_fortification.wooden_brass_chain_fence.name=Puinen messinkiketjuaita
+
+tile.immersiveintelligence.metal_fortification1.tank_trap.name=Panssarieste
+
+tile.immersiveintelligence.metal_multiblock.data_input_machine.storage=Datan syöttökone - Varasto
+tile.immersiveintelligence.metal_multiblock.data_input_machine.programming=Datan syöttökone - Ohjelmointi
+tile.immersiveintelligence.metal_multiblock.data_input_machine.edit=Datan syöttökone - Muuttujan muokkaus
+tile.immersiveintelligence.metal_multiblock.data_input_machine.label_punchtapes=Reikänauha varasto
+
+tile.immersiveintelligence.metal_multiblock.redstone_interface.data=Redstone-dataliittymä - Data
+tile.immersiveintelligence.metal_multiblock.redstone_interface.redstone=Redstone-dataliittymä - Redstone
+
+tile.immersiveintelligence.metal_multiblock.redstone_interface.modes.0=Ei mitään
+tile.immersiveintelligence.metal_multiblock.redstone_interface.modes.1=Boolean
+tile.immersiveintelligence.metal_multiblock.redstone_interface.modes.2=Luku (0-15)
+tile.immersiveintelligence.metal_multiblock.redstone_interface.modes.3=Luku (0-255)
+tile.immersiveintelligence.metal_multiblock.redstone_interface.modes.4=Luku (0-100)
+tile.immersiveintelligence.metal_multiblock.redstone_interface.modes.5=Merkkijono
+
+tile.immersiveintelligence.metal_multiblock.arithmetic_logic_machine.storage=Aritmeettinen logiikkalaite - Varasto
+tile.immersiveintelligence.metal_multiblock.arithmetic_logic_machine.programming=Aritmeettinen logiikkalaite - Ohjelmointi
+tile.immersiveintelligence.metal_multiblock.arithmetic_logic_machine.edit=Arithmeettinen logiikkalaite - Lausekkeen muokkaus
+
+tile.immersiveintelligence.data_connector.data_connector.name=Datayhdistin
+tile.immersiveintelligence.data_connector.data_relay.name=Dataliitin
+tile.immersiveintelligence.data_connector.data_duplex_connector.name=Kaksoisdatayhdistin
+tile.immersiveintelligence.data_connector.chemical_dispenser.name=Kemikaalijakelulaite
+
+tile.immersiveintelligence.data_connector.alarm_siren.name=Hälytyssireeni
+tile.immersiveintelligence.data_connector.programmable_speaker.name=Ohjelmoitavasireeni
+
+tile.immersiveintelligence.data_connector.inserter.name=Esinesyöttölaite
+tile.immersiveintelligence.data_connector.advanced_inserter.name=Edistynyt syöttölaite
+tile.immersiveintelligence.data_connector.fluid_inserter.name=Nestesyöttölaite
+tile.immersiveintelligence.data_connector.advanced_fluid_inserter.name=Edistynyt nestesyöttölaite
+
+tile.immersiveintelligence.data_connector.data_debugger.name=Datavirheenjäljitin
+
+tile.immersiveintelligence.circuit_socket.basic.name=Yksinkertainen virtapiiriliitin
+tile.immersiveintelligence.circuit_socket.advanced.name=Edistynyt virtapiiriliitin
+tile.immersiveintelligence.circuit_socket.processor.name=Prosessorivirtapiiriliitin
+
+#Multiblock names
+
+tile.immersiveintelligence.wooden_multiblock.skycrate_station.name=SkyCrate-asema
+tile.immersiveintelligence.wooden_multiblock.skycart_station.name=SkyCart-asema
+tile.immersiveintelligence.wooden_multiblock.skycrate_post.name=SkyCrate-tolppa
+tile.immersiveintelligence.wooden_multiblock.sawmill.name=Saha
+tile.immersiveintelligence.metal_multiblock.data_input_machine.name=Datan syöttökone
+tile.immersiveintelligence.metal_multiblock.arithmetic_logic_machine.name=Aritmeettinen logiikkalaite
+tile.immersiveintelligence.metal_multiblock.radio_station.name=Radioasena
+tile.immersiveintelligence.metal_multiblock.printing_press.name=Painokone
+tile.immersiveintelligence.metal_multiblock.chemical_bath.name=Kemiallinen kylpy
+tile.immersiveintelligence.metal_multiblock.electrolyzer.name=Elektrolysaattori
+tile.immersiveintelligence.metal_multiblock.precission_assembler.name=Tarkkuuskokoaja
+tile.immersiveintelligence.metal_multiblock.periscope.name=Periskooppi
+tile.immersiveintelligence.metal_multiblock.artillery_howitzer.name=Tykistöhaupitsi
+tile.immersiveintelligence.metal_multiblock.ballistic_computer.name=Ballistinen tietokone
+tile.immersiveintelligence.metal_multiblock.missile_silo.name=Ohjussiilo
+tile.immersiveintelligence.metal_multiblock.conveyor_scanner.name=Skannausliukuhihna
+tile.immersiveintelligence.metal_multiblock.packer.name=Pakkaaja
+tile.immersiveintelligence.metal_multiblock.minecart_packer.name=Rautatiepakkaaja
+
+tile.immersiveintelligence.metal_multiblock1.redstone_data_interface.name=Redstone-dataliittymä
+tile.immersiveintelligence.metal_multiblock1.vehicle_workshop.name=Ajoneuvopaja
+tile.immersiveintelligence.metal_multiblock1.vulcanizer.name=Vulkanisoija
+tile.immersiveintelligence.metal_multiblock1.coagulator.name=Koagulaattori
+
+tile.immersiveintelligence.metal_multiblock1.fuel_station.name=Tankkausasema
+tile.immersiveintelligence.metal_multiblock1.emplacement.name=Tuliasema
+tile.immersiveintelligence.metal_multiblock1.radar.name=Tutka
+
+tile.immersiveintelligence.gate_multiblock.wooden.name=Puuportti
+tile.immersiveintelligence.gate_multiblock.steel.name=Teräsportti
+tile.immersiveintelligence.gate_multiblock.aluminium.name=Alumiiniportti
+tile.immersiveintelligence.gate_multiblock.wooden_chain.name=Puuketjuportti
+tile.immersiveintelligence.gate_multiblock.steel_chain.name=Teräsketjuportti
+tile.immersiveintelligence.gate_multiblock.aluminium_chain.name=Alumiiniketjuportti
+
+desc.immersiveintelligence.metal_multiblock1.emplacement.storage=Tuliasema - Varasto
+desc.immersiveintelligence.metal_multiblock1.emplacement.tasks=Tuliasema - Tehtävät
+desc.immersiveintelligence.metal_multiblock1.emplacement.status=Tuliasema - Tila
+desc.immersiveintelligence.metal_multiblock1.emplacement.base_inventory=Perustavaraluettelo
+desc.immersiveintelligence.metal_multiblock1.emplacement.weapon=Kiinnitetty: %s
+desc.immersiveintelligence.metal_multiblock1.emplacement.weapon_none=Ei mitään
+desc.immersiveintelligence.metal_multiblock1.emplacement.upgrades=Asennetut päivitykset
+desc.immersiveintelligence.metal_multiblock1.emplacement.settings=Asetukset
+desc.immersiveintelligence.metal_multiblock1.emplacement.redstone_control=Redstone-ohjatty
+desc.immersiveintelligence.metal_multiblock1.emplacement.data_control=Dataohjattu
+desc.immersiveintelligence.metal_multiblock1.emplacement.send_attack_signal=Lähetä kohteet datan kautta
+desc.immersiveintelligence.metal_multiblock1.emplacement.auto_repair_threshold=Korjaa kun elämäpisteet ovat alle:
+desc.immersiveintelligence.metal_multiblock1.emplacement.selector_preset=Valitsinesiasetus
+desc.immersiveintelligence.metal_multiblock1.emplacement.filter=Suodatin
+desc.immersiveintelligence.metal_multiblock1.emplacement.task_enabled=Käytössä
+desc.immersiveintelligence.metal_multiblock1.emplacement.task_negation=Kielteinen
+desc.immersiveintelligence.metal_multiblock1.emplacement.add=Lisää
+desc.immersiveintelligence.metal_multiblock1.emplacement.remove=Poista
+desc.immersiveintelligence.metal_multiblock1.emplacement.duplicate=Monista
+desc.immersiveintelligence.metal_multiblock1.emplacement.clear=Tyhjennä
+
+desc.immersiveintelligence.metal_multiblock1.packer.task.pack=Pakkaa
+desc.immersiveintelligence.metal_multiblock1.packer.task.unpack=Pura
+desc.immersiveintelligence.metal_multiblock1.packer.task.charge=Lataa
+desc.immersiveintelligence.metal_multiblock1.packer.task.discharge=Pura lataus
+desc.immersiveintelligence.metal_multiblock1.packer.task.fill=Täytä
+desc.immersiveintelligence.metal_multiblock1.packer.task.drain=Tyhjennä
+
+desc.immersiveintelligence.metal_multiblock1.packer.mode.amount=Määrä
+desc.immersiveintelligence.metal_multiblock1.packer.mode.slot=Lokero
+desc.immersiveintelligence.metal_multiblock1.packer.mode.all_possible=Mahdollinen tila
+
+desc.immersiveintelligence.metal_multiblock1.emplacement.target.mobs=Joukot
+desc.immersiveintelligence.metal_multiblock1.emplacement.target.animals=Eläimet
+desc.immersiveintelligence.metal_multiblock1.emplacement.target.players=Pelaajat
+desc.immersiveintelligence.metal_multiblock1.emplacement.target.npcs=NPC:t
+desc.immersiveintelligence.metal_multiblock1.emplacement.target.vehicles=Ajoneuvot
+desc.immersiveintelligence.metal_multiblock1.emplacement.target.shells=Kranaatit
+desc.immersiveintelligence.metal_multiblock1.emplacement.target.team=Tiimi
+desc.immersiveintelligence.metal_multiblock1.emplacement.target.name=Nimi
+
+tile.immersiveintelligence.metal_multiblock1.flagpole.name=Lipputanko
+
+tile.immersiveintelligence.gate_multiblock.wooden_fence_gate.name=Puuportti
+tile.immersiveintelligence.gate_multiblock.wooden_chain_fence_gate.name=Puuketjuportti
+tile.immersiveintelligence.gate_multiblock.steel_fence_gate.name=Teräsportti
+tile.immersiveintelligence.gate_multiblock.steel_chain_fence_gate.name=Teräsketjuportti
+tile.immersiveintelligence.gate_multiblock.aluminium_fence_gate.name=Alumiiniportti
+tile.immersiveintelligence.gate_multiblock.aluminium_chain_fence_gate.name=Alumiiniketjuportti
+
+tile.immersiveintelligence.metal_multiblock1.filler.name=Täyttäjä
+tile.immersiveintelligence.metal_multiblock1.ammunition_workshop.name=Ammuspaja
+tile.immersiveintelligence.metal_multiblock1.projectile_workshop.name=Luotipaja
+
+tile.immersiveintelligence.metal_multiblock1.chemical_painter.name=Kemiallinen värjääjä
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.rgb=Näytä RGB-arvona
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.rgb.r=Punainen
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.rgb.g=Vihreä
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.rgb.b=Sininen
+
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.cmyk=Näytä CMYK-arvona
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.cmyk.c=Syaani
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.cmyk.m=Magenta
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.cmyk.y=Keltainen
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.cmyk.k=Punainen
+
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.hsv=Näytä HSV-arvona
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.hsv.h=Sävy
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.hsv.s=Kylläisyys
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color.hsv.v=Arvo
+desc.immersiveintelligence.metal_multiblock1.chemical_painter.color_copied=Väri kopioitu!
+
+desc.immersiveengineering.info.multiblock.II:SkyCrateStation=SkyCrate-asema
+desc.immersiveengineering.info.multiblock.II:SkyCartStation=SkyCart-asema
+desc.immersiveengineering.info.multiblock.II:SkyCratePost=SkyCrate-tolppa
+desc.immersiveengineering.info.multiblock.II:Sawmill=Saha
+desc.immersiveengineering.info.multiblock.II:DataInputMachine=Datan syöttökone
+desc.immersiveengineering.info.multiblock.II:ArithmeticLogicMachine=Aritmeettinen logiikkalaite
+desc.immersiveengineering.info.multiblock.II:RadioStation=Radioasema
+desc.immersiveengineering.info.multiblock.II:PrintingPress=Painokone
+desc.immersiveengineering.info.multiblock.II:ChemicalBath=Kemiallinen kylpy
+desc.immersiveengineering.info.multiblock.II:Electrolyzer=Elektrolysaattori
+desc.immersiveengineering.info.multiblock.II:PrecissionAssembler=Tarkkuuskokoaja
+desc.immersiveengineering.info.multiblock.II:Periscope=Periskooppi
+desc.immersiveengineering.info.multiblock.II:ArtilleryHowitzer=Tykistöhaupitsi
+desc.immersiveengineering.info.multiblock.II:BallisticComputer=Ballistinen tietokone
+desc.immersiveengineering.info.multiblock.II:MissileSilo=Ohjussiilo
+desc.immersiveengineering.info.multiblock.II:ConveyorScanner=Skannausliukuhihna
+desc.immersiveengineering.info.multiblock.II:Packer=Pakkaaja
+desc.immersiveengineering.info.multiblock.II:MinecartPacker=Rautatiepakkaaja
+
+desc.immersiveengineering.info.multiblock.II:RedstoneDataInterface=Redstone-dataliittymä
+
+desc.immersiveengineering.info.multiblock.II:VehicleWorkshop=Ajonauvopaja
+desc.immersiveengineering.info.multiblock.II:FuelStation=Tankkausasema
+desc.immersiveengineering.info.multiblock.II:Vulcanizer=Vulkanisoija
+desc.immersiveengineering.info.multiblock.II:Coagulator=Koagulaattori
+
+desc.immersiveengineering.info.multiblock.II:Emplacement=Tuliasema
+desc.immersiveengineering.info.multiblock.II:Radar=Tutka
+desc.immersiveengineering.info.multiblock.II:Flagpole=Lipputanko
+
+desc.immersiveengineering.info.multiblock.II:Filler=Täyttäjä
+desc.immersiveengineering.info.multiblock.II:AmmunitionWorkshop=Ammuspaja
+desc.immersiveengineering.info.multiblock.II:ProjectileWorkshop=Luotipaja
+desc.immersiveengineering.info.multiblock.II:ChemicalPainter=Kemiallinen värjääjä
+
+desc.immersiveengineering.info.multiblock.II:WoodenFenceGate=Puuportti
+desc.immersiveengineering.info.multiblock.II:WoodenChainFenceGate=Puuketjuportti
+desc.immersiveengineering.info.multiblock.II:SteelFenceGate=Teräsportti
+desc.immersiveengineering.info.multiblock.II:SteelChainFenceGate=Teräsketjuportti
+desc.immersiveengineering.info.multiblock.II:AluminiumFenceGate=Alumiiniportti
+desc.immersiveengineering.info.multiblock.II:AluminiumChainFenceGate=Alumiiniketjuportti
+
+#Fluids
+fluid.ink=Muste
+fluid.ink_cyan=Syaani muste
+fluid.ink_magenta=Magenta muste
+fluid.ink_yellow=Keltainen muste
+
+fluid.etching_acid=Etsaushappo
+fluid.hydrofluoric_acid=Vetyfluoridi
+fluid.sulfuric_acid=Rikkihappo
+fluid.nitric_acid=Typpihappo
+fluid.formic_acid=Muurahaishappo
+
+fluid.oxygen=Happi
+fluid.hydrogen=Vety
+fluid.chlorine=Kloori
+fluid.carbon_dioxide=Hiilidioksidi
+fluid.carbon_monoxide=Hiilimonoksidi
+fluid.mustard_gas=Sinappikaasu
+
+fluid.brine=Suolavesi
+
+fluid.ammonia=Ammoniakki
+fluid.hexamine=Heksamiini
+fluid.methanol=Metanoli
+
+fluid.latex=Lateksi
+
+#Dusts
+dust.gunpowder=Ruuti
+dust.sulfur=Rikki
+
+
+#Sounds
+
+subtitle.immersiveintelligence.siren=Sireeni huutaa
+subtitle.immersiveintelligence.printing_press=Painokone toimii
+subtitle.immersiveintelligence.paper_eject=Paperi putoaa
+
+subtitle.immersiveintelligence.machinegun_shot_def=Konekiväärin ääniä
+subtitle.immersiveintelligence.machinegun_shot_hb=Raskaspippukonekiväärin ääniä
+subtitle.immersiveintelligence.machinegun_shot_wc=Vesijäähdytetyn konekiväärin ääniä
+subtitle.immersiveintelligence.machinegun_reload=Konekivääri uudelleenladataan
+
+subtitle.immersiveintelligence.submachinegun_shot=Konepistoolin laukauksia
+subtitle.immersiveintelligence.submachinegun_reload=Konepistooli uudelleenladataan
+
+subtitle.immersiveintelligence.howitzer_shot=Haupitserin laukaisu
+subtitle.immersiveintelligence.howitzer_shell_pick=Tykistökranaatti poimitaan
+subtitle.immersiveintelligence.howitzer_shell_put=Tykistökranaatti asetetaan
+subtitle.immersiveintelligence.howitzer_platform=Asealusta liikkuu
+subtitle.immersiveintelligence.howitzer_rotating=Haupitseri liikkuu
+subtitle.immersiveintelligence.howitzer_door_open=Haupitserin ovet avautuvat
+subtitle.immersiveintelligence.howitzer_door_close=Haupitserin ovet sulkeutuvat
+
+subtitle.immersiveintelligence.inserter=Syöttölaitteen ääniä
+
+subtitle.immersiveintelligence.radio_beep=Lyhyitä radiopiippauksia
+subtitle.immersiveintelligence.radio_noise=Radioääni
+
+subtitle.immersiveintelligence.impact_metal=Ammus rikkoutuu metallin läpi
+subtitle.immersiveintelligence.ricochet_metal=Ammus kimpoaa metallista
+
+subtitle.immersiveintelligence.bullet_impact=Ammus osuu
+subtitle.immersiveintelligence.bullet_ricochet=Ammus kimpoaa
+
+subtitle.immersiveintelligence.motorbike_start=Moottoripyörä käynnistetään
+subtitle.immersiveintelligence.motorbike_engine=Moottoripyörän moottorin ääniä
+subtitle.immersiveintelligence.motorbike_horn=Moottoripyörän torvi
+
+subtitle.immersiveintelligence.fuel_station=Polttoainetta pumpataan
+subtitle.immersiveintelligence.welding=Hitsaus
+subtitle.immersiveintelligence.sawmill=Saha toiminnassa
+
+subtitle.immersiveintelligence.vulcanizer_heating=Vulkanisoijan lämmittimen ääniä
+subtitle.immersiveintelligence.vulcanizer_motor=Vulkanisoija kääntyy
+
+subtitle.immersiveintelligence.drawer_open=Laatikko liukuu ulos
+subtitle.immersiveintelligence.drawer_close=Laatikko liukuu sisään
+subtitle.immersiveintelligence.metal_locker_open=Kaappi avautuu
+subtitle.immersiveintelligence.metal_locker_close=Kaappi sulkeutuu
+
+subtitle.immersiveintelligence.chemical_painter_lights=UV-valot surisevat
+subtitle.immersiveintelligence.chemical_painter_lift_up=Liukuhihna nousee
+subtitle.immersiveintelligence.chemical_painter_lift_down=Liukuhihna laskeutuu
+
+subtitle.immersiveintelligence.autocannon_shot=Konetykki ampuu
+subtitle.immersiveintelligence.autocannon_reload=Konetykki uudelleenladataan
+
+subtitle.immersiveintelligence.explosion_flare=Valomerkki käynnistyy
+subtitle.immersiveintelligence.explosion_incendiary=Polttava räjähdys
+subtitle.immersiveintelligence.explosion_nuke=Ydinräjähdys
+
+subtitle.immersiveintelligence.mortar_shot=Kranaatinheitin ampuu
+subtitle.immersiveintelligence.mortar_load=Kranaatinheittimen lataus
+
+subtitle.immersiveintelligence.mine_detector=Miinaharava piippaa
+
+subtitle.immersiveintelligence.construction=Vasara-avustettu rakentaminen
+
+subtitle.immersiveintelligence.emplacement_rotation=Tuliaseman ase kääntyy
+subtitle.immersiveintelligence.emplacement_platform=Tuliaseman alusta liikkuu
+subtitle.immersiveintelligence.emplacement_door_open=Tuliaseman ovet avautuvat
+subtitle.immersiveintelligence.emplacement_door_close=Tuliaseman ovet sulkeutuvat
+
+#Entities
+
+entity.minecart_wooden_crate.name=Kaivosvaunu puulaatikolla
+entity.minecart_reinforced_crate.name=Kaivosvaunu vahvistetulla laatikolla
+entity.minecart_steel_crate.name=Kaivosvaunu teräslaatikolla
+entity.minecart_wooden_barrel.name=Kaivosvaunu puutynnyrillä
+entity.minecart_metal_barrel.name=Kaivosvaunu metallitynnyrillä
+entity.minecart_capacitor_lv.name=Kaivosvaunu LV-kondensaattorilla
+entity.minecart_capacitor_mv.name=Kaivosvaunu MV-kondensaattorilla
+entity.minecart_capacitor_hv.name=Kaivosvaunu HV-kondensaattorilla
+entity.minecart_capacitor_creative.name=Ksivosvaunu luovakondensaattorilla
+#Immersive Technology Compat
+entity.minecart_crate_creative.name=Kaivosvaunu luovavarastolaatikolla
+entity.minecart_barrel_creative.name=Kaivosvaunu luovatynnyrillä
+entity.minecart_steel_barrel.name=Kaivosvaunu terästynnyrillä
+entity.minecart_open_barrel.name=Kaivosvaunu avoimella metalli tynnyrillä
+
+entity.skycrate.name=Skycrate
+
+entity.bullet.name=Ammus
+entity.shrapnel.name=Srapnelli
+entity.flare.name=Valomerkki
+entity.gas_cloud.name=Kaasupilvi
+entity.white_phosphorus.name=Valkoisen fosforin räjähdys
+entity.atomic_boom.name=Ydinräjähdys
+
+entity.machinegun.name=Konekivääri
+entity.mortar.name=Kranaatinheitin
+entity.motorbike.name=Moottoripyörä
+entity.wheel.name=Rengas
+entity.seat.name=Istuin
+entity.field_howitzer.name=Kenttähaupitseri
+entity.tripod_periscope.name=Kolmijalkaperiskooppi
+
+entity.hans.name=Hans
+
+#Skins
+skin.immersiveintelligence.anno_1880.name=Anno 1880
+skin.immersiveintelligence.anno_1880.desc=Hienostunut, tarkka, koristeellinen
+skin.immersiveintelligence.anno_1880.text=Palkittu BluSunrize:lle sekä Hazard:lle loistavasta työstä Immersive Engineering:n parissa.
+
+skin.immersiveintelligence.royal.name=Kuninkaallinen
+skin.immersiveintelligence.royal.desc=Jäännös vanhasta valtakunnasta
+skin.immersiveintelligence.royal.text=Retrofuturistinen keisarillinen skini. Alunperin tarkoitettu Patreoneille, nyt myönnetty palkintona avustuksesta.
+
+skin.immersiveintelligence.old_glory.name=Vanha kunnia
+skin.immersiveintelligence.old_glory.desc=Kunnia sankareille
+skin.immersiveintelligence.old_glory.text=Puola-teemainen skini, myönnetty palkintona avustuksesta.
+
+skin.immersiveintelligence.stormwind.name=Myrskytuuli
+skin.immersiveintelligence.stormwind.desc=Kunnianosoitus merilinnoituksen puolustajille
+skin.immersiveintelligence.stormwind.text=Inspiroitu vanhasta mahtavasta Storm Winds -Flash-pelistä
+
+skin.immersiveintelligence.flakmeister.name=Flakmeister
+skin.immersiveintelligence.flakmeister.desc=Tunnetulle tykistöläiselle
+skin.immersiveintelligence.flakmeister.text=Myönnetty Carver:lle, joka avusti paljon ja haupitsisoi vähän enemmän.
+
+skin.immersiveintelligence.blackdragon.name=Blackdragon
+skin.immersiveintelligence.blackdragon.desc=Avustuksesta, vaivasta ja sisällöstä, palkinto
+skin.immersiveintelligence.blackdragon.text=Myönnetty Blackdragon:lle, jotka teki hyviä II-tutoriaalivideoita Youtubessa.
+
+skin.immersiveintelligence.eisenheim.name=Eisenheim
+skin.immersiveintelligence.eisenheim.desc=Vuoristolinnoituksen sankareiden sotamaalaus
+skin.immersiveintelligence.eisenheim.text=Skini, jonka aiheena on Engineered Adventures: Tales from the Front -modipaketin insinööriryhmittymä.
+
+skin.immersiveintelligence.vanguard.name=Etujoukko
+skin.immersiveintelligence.vanguard.desc=Insinöörien tukijoiden eliitille
+skin.immersiveintelligence.vanguard.text=Skini niille, jotka ovat lahjoittaneet $1 tai enemmän Patreonissa.
+
+skin.immersiveintelligence.magnate.name=Magnaatti
+skin.immersiveintelligence.magnate.desc=Insinöörien kehityksen jalosta tuesta
+skin.immersiveintelligence.magnate.text=Skini niille, jotka ovat lahjoittaneet $5 tai enemmän Patreonissa.
+
+skin.immersiveintelligence.investor.name=Sijoittaja
+skin.immersiveintelligence.investor.desc=Pieni palkinto suuresta anteliasuudesta
+skin.immersiveintelligence.investor.text=Skini niille, jotka ovat lahjoittaneet $15 Patreonissa.
+
+#Machine Upgrades
+machineupgrade.immersiveintelligence.inserter=Syöttölaite
+machineupgrade.immersiveintelligence.inserter.desc=Syöttölaitteen lisääminen laatikkoon sen automaattisen toimimisen 3 kuution säteellä jos se saa virtaa.
+
+machineupgrade.immersiveintelligence.mg_loader=Hihnasyöttäjä
+machineupgrade.immersiveintelligence.mg_loader.desc=Ammuslokeroiden suurennus mahdollistaa ammusten syötön suoraan konekiväärin joidenkin muutosten jälkeen. Laatikon täytyy olla auki antaakseen ammuksia.
+
+machineupgrade.immersiveintelligence.improved_gearbox=Kehitetty vaihdelaatikko
+machineupgrade.immersiveintelligence.improved_gearbox.desc=Perinteisen vaihdelaatikon korvaaminen paremmalla mallilla merkittävästi nostaa koneen nopeutta, kasvattaa tarvittavaa energiamäärää.
+
+machineupgrade.immersiveintelligence.saw_unregulator=Sääntelemätön saha
+machineupgrade.immersiveintelligence.saw_unregulator.desc=Sääntelemätön saha johtaa suurempaan sahanpurun tuottoon päätuotannon kustannuksella.
+
+machineupgrade.immersiveintelligence.emplacement_grenades=Hätäsavulaukaisulaitteet
+machineupgrade.immersiveintelligence.emplacement_grenades.desc=Kun tuliaseman ase on vaurioitunut pahasti, savua laukaistaan suojan antamiseksi.
+
+machineupgrade.immersiveintelligence.emplacement_bearings=Vahvat laakerit
+machineupgrade.immersiveintelligence.emplacement_bearings.desc=Parempilaatuiset laakerit nostavat aseen maksimikääntymisnopeutta, toimiakseen täydellä kapasitetiilla tarvitaan voiteluaineita
+
+machineupgrade.immersiveintelligence.infrared_observer=Infrapuna-tarkkailija
+machineupgrade.immersiveintelligence.infrared_observer.desc=Infrapuna-tarkkailija mahdollistaa kaukaisten vihollisten valvomisen ja niiden koordinaattien lähettämisen datakaapeleiden kautta.
+
+machineupgrade.immersiveintelligence.cpds=AVPJ
+machineupgrade.immersiveintelligence.cpds.desc=Ammusten Vastainen Puolustusjärjestelmä on edistynyt ilmatorjunta-ase, joka kukenee tuhoamaan saapuvia tykistökranaatteja ilmasta.
+
+machineupgrade.immersiveintelligence.autocannon=Konetykki
+machineupgrade.immersiveintelligence.autocannon.desc=Neljä 3bCal automaattista tykkiä tarjoavat paljon tulivoimaa tehden aseesta universaalisen puolustuksen ilma- ja maakohteita vastaan.
+
+machineupgrade.immersiveintelligence.heavy_chemthrower=Raskas kemikaalinheittäjä
+machineupgrade.immersiveintelligence.heavy_chemthrower.desc=Raskaampi versio hyvin tunnetusta kemikaalinheittäjästä, suurempi paine mahdollista vihollisia vastaan hyökkäämisen etäisyyksillä 4 kertaa pitempiä kuin kannettavassa mallissa.
+
+machineupgrade.immersiveintelligence.heavy_railgun=Raskas raidetykki
+machineupgrade.immersiveintelligence.heavy_railgun.desc=Raskas raidetykki tarjoaa suoraa tulitukea. Se voi laukaista metallisauvoja tai kranaatteja suurella nopaudella, mahdollistaen vihollisten ja materiaalien lävistämisen.
+
+machineupgrade.immersiveintelligence.machinegun=Konekivääripesä
+machineupgrade.immersiveintelligence.machinegun.desc=Konekivääripesä voi tarjota tukahduttavaa konetulta, mahdollistaen väkijoukon hallinan. Rakennuksensa seurauksesta, se on kykenemätön tappelemaan ilmassa olevia vihollisia vastaan.
+
+machineupgrade.immersiveintelligence.mg_heavy_barrel=Raskas piippu
+machineupgrade.immersiveintelligence.mg_heavy_barrel.desc=Raskaat piiput mahdollistavat paljon nopeamman ampumisnopeuden sekä hieman nostavat suurinta sallittua ylikuumenemista.
+
+machineupgrade.immersiveintelligence.mg_watercooled=Vesijäähdytetty piippu
+machineupgrade.immersiveintelligence.mg_watercooled.desc=Korvaaja perinteisille piipuille. Kun asetettu, piiput eivät ylikuumene, kun jäähdytysnestettä on tarjolla.
+
+machineupgrade.immersiveintelligence.mg_bunker=Lisäsuojat
+machineupgrade.immersiveintelligence.mg_bunker.desc=Ylimääräisten hiekkasäkkien asettaminen konekivääripesän ympärille antaa sille lisää suojaa ja nostaa sen kestävyyttä.
+
+machineupgrade.immersiveintelligence.mortar=Kranaatinheittäjä
+machineupgrade.immersiveintelligence.mortar.desc=Kranaatinheittäjä tarjoaa epäsuoraa tulitukea lähietäisyydellä, pystysuora ampumiskulma ja korkea kranaatin kaliiperi mahdollistavat sen läpäistä kattojen läpi ja tuhota vihollisia ylhäältä käsin
+
+machineupgrade.immersiveintelligence.light_howitzer=Kevyt haupitsi
+machineupgrade.immersiveintelligence.light_howitzer.desc=Kevyt haupitsi tarjoaa epäsuoraa tulitukea keskipitkällä etäisyydellä, sen liikkuvuus mahdollistaa nopeaa ja tarkkaa sulkutulta vihollisten sijainteihin
+
+machineupgrade.immersiveintelligence.tesla=Tesla-torni
+machineupgrade.immersiveintelligence.tesla.desc=Tesla-torni käyttää korkeaa jännitettä tuhotakseen vihollisia lähettyvillä, se on erityisen tehokas sähkölaitteita vastaan
+
+machineupgrade.immersiveintelligence.core_filler=Luotitäyttäjä
+machineupgrade.immersiveintelligence.core_filler.desc=Luotipajan varustaminen syöttölaitteella mahdollistaa luotien tarkan täyttämisen halutuilla komponenteilla.
+
+machineupgrade.immersiveintelligence.unpacker_conversion=Purkamismuunnos
+machineupgrade.immersiveintelligence.unpacker_conversion.desc=Kääntää laitteen toiminnan, jotta se voi purkaa esineitä säiliöistä ja tyhjentää nesteitä ja sähköä säiliöistä (tarvitsee lisäpäivityksiä)
+
+machineupgrade.immersiveintelligence.packer_fluid=Pumppausmoduuli
+machineupgrade.immersiveintelligence.packer_fluid.desc=Nestetankin asentaminen mahdollistaa esineiden täyttämisen nesteillä, puolittaa tavaroiden varastoimistilan, turvallisuussyistä latausmoduulia ei voi asentaa tämän päivityksen kanssa
+
+machineupgrade.immersiveintelligence.packer_energy=Latausmoduuli
+machineupgrade.immersiveintelligence.packer_energy.desc=Kondensaattorin asentaminen mahdollistaa esineiden lataamisen IF:llä, puolittaa tavaroiden varastoimistilan, turvallisuussyistä pumppausmoduulia ei voi asentaa tämän päivityksen kanssa
+
+machineupgrade.immersiveintelligence.radio_locators=Radiopaikantimet
+machineupgrade.immersiveintelligence.radio_locators.desc=Mahdollistaa tutkan tunnistaa radiosignaaleja ja laskea niiden alkuperän sijainti. Kasvattaa tarvittue energiamäärää.
+
+#Descriptions
+desc.immersiveintelligence.radio_configurator_basic=Mahdollistaa taajuuden asettamisen yksinkertaisille radiolaitteille.
+desc.immersiveintelligence.radio_configurator_advanced=Päivitetty malli korkeampien taajuuksien asettamiselle.
+desc.immersiveintelligence.radio_configurator_frequency=Taajuus: %s
+desc.immersiveintelligence.radio_configurator_max_frequency=Maksimitaajuus: %s
+desc.immersiveintelligence.naval_mine_chain_length=Maksimi ketjun pituus: %s
+desc.immersiveintelligence.measuring_cup_size=Kapasiteetti: %s / %s mB
+desc.immersiveintelligence.measuring_cup_cant_resize=Ei voida muuttaa kokoa, kun sisältää nestettä.
+desc.immersiveintelligence.functional_circuit_shift=§6Pidä pohjassa Vaihto§r - Tehdyt operaatiot
+desc.immersiveintelligence.functional_circuit=Mahdollistaa koneen tehdä operaatioita kuten:
+desc.immersiveintelligence.upgrade_toolbox=Voidaan käyttää laitteiden päivittämiseen
+desc.immersiveintelligence.cost=Materiaalihinta:
+
+desc.immersiveintelligence.printed_page.blank=Tyhjä sivu valmiina tulostukselle.
+desc.immersiveintelligence.printed_page.text=Sivu, joka sisältää tekstiä.
+desc.immersiveintelligence.printed_page.code=Sivu, joka sisältää jollain ohjelmointikielellä kirjoitettua koodia.
+desc.immersiveintelligence.printed_page.blueprint=Sivu, joka sisältää tietoa rakennuksen rakentamisesta.
+
+desc.immersiveintelligence.infrared_enabled=§4Infrapuna-näkö§r päällä!
+desc.immersiveintelligence.infrared_disabled=§cInfrapuna-näkö§r pois päältä!
+
+desc.immersiveintelligence.assembly_scheme.used_to_create=Käytetään valmistamaan: %s
+desc.immersiveintelligence.assembly_scheme.items_created=Valmistetut esineet: %s
+
+desc.immersiveengineering.info.holdControl=§4Pidä pohjassa Ctrl§r
+desc.immersiveengineering.info.holdControlForInfo=§cPidä pohjassa Ctrl lisätiedoista§r
+
+
+desc.immersiveintelligence.assembly_scheme.info_hold1=§6Pidä pohjassa Vaihto§r - Käytetyt materiaalit
+desc.immersiveintelligence.assembly_scheme.info_hold2=§4Pidä pohjassa Ctrl§r - Käytetyt työkalut
+desc.immersiveintelligence.assembly_scheme.materials=Käytetyt materiaalit:
+desc.immersiveintelligence.assembly_scheme.tools=Käytetyt työkalut:
+
+
+desc.immersiveintelligence.storage_module=Varasto
+desc.immersiveintelligence.variables_module=Muuttujat
+desc.immersiveintelligence.data_module=Data
+desc.immersiveintelligence.redstone_module=Redstone
+desc.immersiveintelligence.data_to_redstone_module=Data redstoneksi
+desc.immersiveintelligence.redstone_to_data_module=Redstone dataksi
+desc.immersiveintelligence.tasks_module=Tehtävät
+desc.immersiveintelligence.status_module=Tila
+
+desc.immersiveintelligence.tooltip.armor=Panssari %f%%
+
+desc.immersiveintelligence.upgrade_gui.title=Päivitä laite
+desc.immersiveintelligence.upgrade_gui.info=Info
+desc.immersiveintelligence.upgrade_gui.install=Asenna
+desc.immersiveintelligence.upgrade_gui.remove=Poista
+desc.immersiveintelligence.upgrade_gui.back=Takaisin
+
+desc.immersiveintelligence.variable_type=Tyyppi:
+desc.immersiveintelligence.variable_add_desc=Lisää muuttuja
+desc.immersiveintelligence.variable_set=Aseta
+desc.immersiveintelligence.variable_set_desc=Muuta muuttujan arvo
+desc.immersiveintelligence.variable_send_packet=Lähetä paketti
+desc.immersiveintelligence.variable_send_packet_desc=Lähettää nykyisen paketin dataverkkoon
+desc.immersiveintelligence.hide_manual_widget=Piilota sivu-manuaali
+desc.immersiveintelligence.show_manual_widget=Näytä sivu-manuaali
+desc.immersiveintelligence.variable_remove=Poista
+desc.immersiveintelligence.variable_remove_desc=Poista muuttuja
+desc.immersiveintelligence.variable_properties=Ominaisuudet
+desc.immersiveintelligence.variable_apply=Käytä
+desc.immersiveintelligence.variable_value=Arvo:
+desc.immersiveintelligence.operation=Operaatio:
+desc.immersiveintelligence.conditional_variable=Ehdollinen muuttuja:
+desc.immersiveintelligence.no_variable=Ei mitään
+desc.immersiveintelligence.variable=Muuttuja:
+
+#Bullets
+
+desc.immersiveintelligence.bullet_type.general_purpose=Yleinen tarkoitus
+desc.immersiveintelligence.bullet_type.shrapnel=Srapnelli
+desc.immersiveintelligence.bullet_type.piercing=Panssarin lävistävä
+desc.immersiveintelligence.bullet_type.explosive=Korkearäjähde
+desc.immersiveintelligence.bullet_type.incendiary=Polttava
+desc.immersiveintelligence.bullet_type.tracer=Valojuova
+desc.immersiveintelligence.bullet_type.flare=Merkinanto
+desc.immersiveintelligence.bullet_type.chemical=Kemikaali
+desc.immersiveintelligence.bullet_type.special=Erikoistarkoitus
+
+desc.immersiveintelligence.bullet_core_type.softpoint=Pehmeä kärki
+desc.immersiveintelligence.bullet_core_type.shaped=Muotoiltu
+desc.immersiveintelligence.bullet_core_type.piercing=Panssarin lävistävä
+desc.immersiveintelligence.bullet_core_type.piercing_sabot=Sabot
+desc.immersiveintelligence.bullet_core_type.canister=Kanisteri
+
+desc.immersiveintelligence.bullet_fuse.contact=Osumasytytin
+desc.immersiveintelligence.bullet_fuse.timed=Ajastettu sytytin
+desc.immersiveintelligence.bullet_fuse.proximity=Lähisytytin
+
+desc.immersiveintelligence.bullets.core=Täytetty %1$s %2$s
+desc.immersiveintelligence.bullets.fuse=%s
+desc.immersiveintelligence.bullets.mass=Massa: %s
+desc.immersiveintelligence.bullets.caliber=Kaliiperi: %s bCal
+
+desc.immersiveintelligence.data_merger.0=Molemmat
+desc.immersiveintelligence.data_merger.1=Vasen
+desc.immersiveintelligence.data_merger.2=Oikea
+
+desc.immersiveintelligence.medical_crate.heal=Paranna haavoittuneet joukot
+desc.immersiveintelligence.medical_crate.boost=Anna efektit joukoile
+
+desc.immersiveintelligence.repair_crate.repair_armor=Korjaa vahingoittunut panssari
+desc.immersiveintelligence.repair_crate.repair_vehicles=Korjaa kulkuneuvot
+
+desc.immersiveintelligence.jei.washing_recipe=Kemiallinen pesu
+
+#Potion effects
+
+potion.immersiveintelligence.suppression=Tukahdutettu
+potion.immersiveintelligence.broken_armor=Lävistetty panssari
+potion.immersiveintelligence.corrosion=Syöpyminen
+potion.immersiveintelligence.infrared_vision=Infrapuna-näkö
+potion.immersiveintelligence.iron_will=Rautainen tahto
+potion.immersiveintelligence.well_supplied=Hyvin varustettu
+potion.immersiveintelligence.concealed=Piilotettu
+potion.immersiveintelligence.exposed=Paljastettu
+potion.immersiveintelligence.medical_treatment=Lääkitseminen
+potion.immersiveintelligence.undergoing_repairs=Korjaus käynnissä
+potion.immersiveintelligence.radiation=Radioaktiivisuus
+potion.immersiveintelligence.nuclear_heat=Ydinlämpö
+potion.immersiveintelligence.movement_assist=Liikkumisavustus
+
+#Chat info / debug
+info.immersiveintelligence.frequency_set=Radio taajuus on asetettu arvoon %s
+info.immersiveintelligence.frequency_invalid=Virheellinen taajuus, yksinkertaiset laitteet voivat käyttää vain taajuksia %s asti!
+info.immersiveintelligence.current_frequency=Nykyinen taajuus: %s
+
+info.immersiveintelligence.requires_advanced_hammer=Edistynyt tekniikka vaatii edistyneitä työkaluja... tarvitset sähkövasaran rakentaaksesi tämän laitteen!
+
+info.immersiveintelligence.tool_durability=Kestävyys: %1$s / %2$s
+info.immersiveintelligence.gear_ratio=Välityssuhde: %1$s : %2$s
+info.immersiveintelligence.charge_with_if=Lataa IF:llä
+
+info.immersiveintelligence.yaw=Vaakakulma: %s
+info.immersiveintelligence.pitch=Pystykulma: %s
+info.immersiveintelligence.distance=Etäisyys: %s
+info.immersiveintelligence.distance_unknown=Tuntematon
+
+info.immersiveintelligence.debugger_mode=Virheenjäljitystila: %s
+info.immersiveintelligence.debugger_mode.0=Lähetin-vastaanotin
+info.immersiveintelligence.debugger_mode.1=Lähetin
+info.immersiveintelligence.debugger_mode.2=Vastaanotin
+
+info.immersiveintelligence.punchtape_reader_mode=Reikänauhalukijan tila: %s
+info.immersiveintelligence.punchtape_reader_mode.0=Ei reagoi redstoneen
+info.immersiveintelligence.punchtape_reader_mode.1=Paketti redstonesta
+info.immersiveintelligence.punchtape_reader_mode.2=Redstone paketista
+
+info.immersiveintelligence.redstone_buffer_mode=Redstone-puskuritila: %s
+info.immersiveintelligence.redstone_buffer_mode.passtrough=Päästä läpi
+info.immersiveintelligence.redstone_buffer_mode.signal=Kun signaali
+
+info.immersiveintelligence.tachometer_message.basic=Sisäinen: nopeus %s RPM / vääntömomentti %s Nm.
+info.immersiveintelligence.tachometer_message.advanced=Sisäinen: nopeus %s RPM / vääntömomentti %s Nm. Ulkoinen: nopeus %s RPM / vääntömomentti %s Nm.
+info.immersiveintelligence.tachometer.internal_torque=Sisäinen vääntömomentti: %s
+info.immersiveintelligence.tachometer.external_torque=Ulkoinen vääntömomentti: %s
+info.immersiveintelligence.tachometer.internal_speed=Sisäinen nopeus: %s
+info.immersiveintelligence.tachometer.external_speed=Ulkoinen nopeus: %s
+info.immersiveintelligence.tachometer.torque=Vääntömomentti: %s
+info.immersiveintelligence.tachometer.speed=Nopeus: %s
+
+info.immersiveintelligence.machineupgrade.name=Asennus: %s
+info.immersiveintelligence.machineupgrade.progress=Edistys: %1$s / %2$s IF
+
+info.immersiveintelligence.exoskeleton.0=Exoskeleton: §4Pois päältä§r
+info.immersiveintelligence.exoskeleton.1=Exoskeleton: §aLiikeavustus§r
+info.immersiveintelligence.exoskeleton.2=Exoskeleton: §2Ylikierros§r
+
+info.immersiveintelligence.machineupgrade.mg_loader.gui_tooltip=Konekivääri
+
+info.immersiveintelligence.towing.no=Hinattavaa kulkuneuvoa ei löytyny
+info.immersiveintelligence.towing.towed=Hinattu onnistuneesti!
+info.immersiveintelligence.towing.untowed=Irrotettu onnistuneesti!
+#Do not translate, it's a Factorio reference ^^
+info.immersiveintelligence.towing.no_easter_egg=Nie można rozsprzęgać taboru nie będąc w pojeździe!
+
+#Rotational Energy
+
+rotary.immersiveintelligence.belt_system.wrongCable=Moottorihihnoja ei voi yhdistää johtoyhdistimiin
+rotary.immersiveintelligence.belt_system.wrongCable1=Yksi ei vain yksinkertaisesti yhdistä hihnoja johtojärjestelmään
+rotary.immersiveintelligence.belt_system.wrongCable2=Kuten sanoin, sinä ET VOI yhdistää niitä, lopeta yrittämästä
+rotary.immersiveintelligence.belt_system.wrongCable3=Kuuntele minua, jos sinä yrität yhdistää ne vielä kerran...
+rotary.immersiveintelligence.belt_system.wrongCable4=MITÄ OSAA SINÄ ET VOI YHDISTÄÄ HIHNOJA ET YMMÄRRÄ?!
+rotary.immersiveintelligence.belt_system.wrongCable5=Jätä minut rauhaan... Dummkopf! Siinä, ota edistysaskel, ja nyt painu vi****n!
+rotary.immersiveintelligence.belt_system.itsBoringGetALife=Olet erittäin tylsä, jopa minulla, MotorBeltUtils.java:lla on tunteita, okei?!
+rotary.immersiveintelligence.belt_system.wrongBelt=Et voi yhdistää tätä hihnaa tähän
+
+rotary.immersiveintelligence.belt_system.wrongDimension=Olet väärässä ulottuvuudessa
+rotary.immersiveintelligence.belt_system.sameConnection=Et voi yhdistää hihnaa samaan kohtaan
+rotary.immersiveintelligence.belt_system.tooFar=Olet liian kaukana edellisestä liitoksesta
+rotary.immersiveintelligence.belt_system.cantSee=Liitos on estetty
+rotary.immersiveintelligence.belt_system.connectionExists=Liitos on jo olemassa
+rotary.immersiveintelligence.belt_system.invalidPoint=Yksi liitospisteistä on väärä
+
+rotary.immersiveintelligence.mechanical.speed=Nopeus
+rotary.immersiveintelligence.mechanical.speed_unit=RPM
+rotary.immersiveintelligence.mechanical.torque=Vääntömomentti
+rotary.immersiveintelligence.mechanical.torque_unit=Nm
+
+#Data System Descriptions
+datasystem.immersiveintelligence.function.add=Lisäys
+datasystem.immersiveintelligence.function.subtract=Erotus
+datasystem.immersiveintelligence.function.multiply=Kertominen
+datasystem.immersiveintelligence.function.divide=Jakaminen
+datasystem.immersiveintelligence.function.modulo=Mod
+datasystem.immersiveintelligence.function.abs=Abs
+
+datasystem.immersiveintelligence.function.power=Potenssi
+datasystem.immersiveintelligence.function.root=Juuri
+datasystem.immersiveintelligence.function.max=Max
+datasystem.immersiveintelligence.function.min=Min
+datasystem.immersiveintelligence.function.sign=Etumerkki
+datasystem.immersiveintelligence.function.ceil=Katto
+datasystem.immersiveintelligence.function.round=Pyöristä
+datasystem.immersiveintelligence.function.floor=Lattia
+datasystem.immersiveintelligence.function.sin=Sin
+datasystem.immersiveintelligence.function.cos=Cos
+datasystem.immersiveintelligence.function.tan=Tan
+
+datasystem.immersiveintelligence.function.and=AND
+datasystem.immersiveintelligence.function.or=OR
+datasystem.immersiveintelligence.function.not=NOT
+datasystem.immersiveintelligence.function.nand=NAND
+datasystem.immersiveintelligence.function.nor=NOR
+datasystem.immersiveintelligence.function.xor=XOR
+datasystem.immersiveintelligence.function.xnor=XNOR
+
+datasystem.immersiveintelligence.function.greater=Suurempi
+datasystem.immersiveintelligence.function.less=Pienempi
+datasystem.immersiveintelligence.function.greater_or_equal=Suurempi tai yhtäsuuri
+datasystem.immersiveintelligence.function.less_or_equal=Pienempi tai yhtäsuuri
+datasystem.immersiveintelligence.function.equal=Yhtäsuuri
+
+datasystem.immersiveintelligence.function.string_join=Yhdistä
+datasystem.immersiveintelligence.function.string_split=Jaa
+datasystem.immersiveintelligence.function.string_length=Pituus
+datasystem.immersiveintelligence.function.string_char_at=Merkki kohdassa
+datasystem.immersiveintelligence.function.string_substring=Alamerkkijono
+datasystem.immersiveintelligence.function.string_trim=Trimmaus
+
+datasystem.immersiveintelligence.function.string_hexcol=Käytä Hexcol-formaattia
+datasystem.immersiveintelligence.function.string_format=Käytä TextFormatting-formaattia
+
+datasystem.immersiveintelligence.function.string_contains=Sisältää
+datasystem.immersiveintelligence.function.string_contains_count=Sisältynyt määrä
+datasystem.immersiveintelligence.function.string_replace_first=Korvaa ensimmäinen
+datasystem.immersiveintelligence.function.string_replace_all=Korvaa kaikki
+
+datasystem.immersiveintelligence.function.string_lowercase=Pienaakkosiksi
+datasystem.immersiveintelligence.function.string_uppercase=Suuraakkosiksi
+datasystem.immersiveintelligence.function.string_snake_case=snake_case:ksi
+datasystem.immersiveintelligence.function.string_camel_case=camelCase:ksi
+datasystem.immersiveintelligence.function.string_reverse=Käännä
+
+datasystem.immersiveintelligence.function.get_quantity=Hanki määrä
+datasystem.immersiveintelligence.function.set_quantity=Aseta määrä
+datasystem.immersiveintelligence.function.get_durability=Hanki kestävyys
+datasystem.immersiveintelligence.function.set_durability=Aseta kestävys
+datasystem.immersiveintelligence.function.get_nbt=Hanki NBT
+datasystem.immersiveintelligence.function.set_nbt=Aseta NBT
+datasystem.immersiveintelligence.function.get_itemstack=Luo ID:stä
+datasystem.immersiveintelligence.function.get_item_id=Hanki ID
+datasystem.immersiveintelligence.function.can_stack_with=Voidaan pinota kanssa
+datasystem.immersiveintelligence.function.matches_oredict=Vastaa OreDictionary:ä
+
+datasystem.immersiveintelligence.function.array_get=Hanki
+datasystem.immersiveintelligence.function.array_set=Aseta
+datasystem.immersiveintelligence.function.array_push=Push
+datasystem.immersiveintelligence.function.array_pop=Pop
+datasystem.immersiveintelligence.function.array_swap=Vaihda
+datasystem.immersiveintelligence.function.array_length=Hanki pituus
+
+datasystem.immersiveintelligence.function.entity_get_id=Hanki ID
+datasystem.immersiveintelligence.function.entity_get_type=Hanki tyyppi
+datasystem.immersiveintelligence.function.entity_get_name=Hanki nimi
+datasystem.immersiveintelligence.function.entity_get_dimension_id=Hanki ulottuvuus
+datasystem.immersiveintelligence.function.entity_get_x=Hanki X
+datasystem.immersiveintelligence.function.entity_get_y=Hanki Y
+datasystem.immersiveintelligence.function.entity_get_z=Hanki Z
+
+datasystem.immersiveintelligence.function.document_read_page=Lue sivu
+datasystem.immersiveintelligence.function.document_read_all_pages_array=Lue kaikki sivut (Taulukko)
+datasystem.immersiveintelligence.function.document_read_all_pages_string=Lue kaikki sivut (Merkkijono)
+datasystem.immersiveintelligence.function.document_get_author=Hanki tekijä
+datasystem.immersiveintelligence.function.document_get_title=Hanki otsikko
+
+datasystem.immersiveintelligence.function.is_null=On null
+datasystem.immersiveintelligence.function.is_same_type=On sama tyyppi
+datasystem.immersiveintelligence.function.to_integer=Kokonaisluvuksi
+datasystem.immersiveintelligence.function.to_float=Liukuluvuksi
+datasystem.immersiveintelligence.function.to_string=Merkkiluvuksi
+datasystem.immersiveintelligence.function.to_boolean=Booleaniksi
+datasystem.immersiveintelligence.function.to_null=Nulliksi
+
+datasystem.immersiveintelligence.datatype.null=Null
+datasystem.immersiveintelligence.datatype.boolean=Boolean
+datasystem.immersiveintelligence.datatype.integer=Kokonaisluku
+datasystem.immersiveintelligence.datatype.float=Liukuluku
+datasystem.immersiveintelligence.datatype.vector=Vektori
+datasystem.immersiveintelligence.datatype.string=Merkkijono
+datasystem.immersiveintelligence.datatype.expression=Lauseke
+datasystem.immersiveintelligence.datatype.accessor=Aksessori
+datasystem.immersiveintelligence.datatype.itemstack=Tavarapino
+datasystem.immersiveintelligence.datatype.fluidstack=Nestepino
+datasystem.immersiveintelligence.datatype.array=Taulukko
+datasystem.immersiveintelligence.datatype.map=Kartta
+datasystem.immersiveintelligence.datatype.entity=Joukko
+
+datasystem.immersiveintelligence.datatype.boolean.true=Tosi
+datasystem.immersiveintelligence.datatype.boolean.false=Epätosi
+
+#Blueprints
+
+desc.immersiveengineering.info.blueprint.basic_circuits=Perusvirtapiirit
+desc.immersiveengineering.info.blueprint.advanced_circuits=Edistyneet virtapiirit
+desc.immersiveengineering.info.blueprint.processors=Prosessorit
+
+desc.immersiveengineering.info.blueprint.basic_functional_circuits=Perus funktionaaliset virtapiirit
+desc.immersiveengineering.info.blueprint.advanced_functional_circuits=Edistyneet funktionaaliset virtapiirit
+desc.immersiveengineering.info.blueprint.processor_functional_circuits=Ohjelmoidut prosessorit
+
+desc.immersiveengineering.info.blueprint.metal_springs=Jouset
+desc.immersiveengineering.info.blueprint.ammo_molds=Ammusmuotit
+desc.immersiveengineering.info.blueprint.vulcanizer_molds=Vulkanisoijamuotit
+
+#Keybindings
+key.immersiveintelligence.manualReload=Manuaalinen uudelleenlataus
+key.immersiveintelligence.armorHelmet=Kytke kevyt insinöörin panssari päävarusteet
+key.immersiveintelligence.armorExosuit=Kytke kevyt insinöörin panssari eksoskeletoni
+
+key.immersiveintelligence.mgScope=Zoom / Konekiväärintähtäin
+
+key.immersiveintelligence.engineWorking=Kytke moottori
+key.immersiveintelligence.motorbikeTowing=Hinaa/Irrota
+
+#Advancements
+advancement.immersiveintelligence.root=Immersive Intelligence
+advancement.immersiveintelligence.root.desc=RTFM?
+
+advancement.immersiveintelligence.connect_belt=Voimakasta kuljetusta
+advancement.immersiveintelligence.connect_belt.desc=Yhdistä kaksi mekaanista pyörää hihnakelalla
+
+#Reference to Tiger 1 tank memes
+advancement.immersiveintelligence.craft_steel_belt=Hans, vöimänsiirtö töimii!
+advancement.immersiveintelligence.craft_steel_belt.desc=Työstä teräsmoottorihihna
+
+advancement.immersiveintelligence.secret_connect_wire=Joka uskaltaa, voittaa
+advancement.immersiveintelligence.secret_connect_wire.desc=Saitko tarpeeksesi? Nyt jätä minut rauhaan.
+
+advancement.immersiveintelligence.advanced_circuit_board=Paremmin, kovemmin, nopeammin!
+advancement.immersiveintelligence.advanced_circuit_board.desc=Tuota edistynyt piirilevy
+
+advancement.immersiveintelligence.artillery_howitzer=Berthan sisko
+advancement.immersiveintelligence.artillery_howitzer.desc=Rakenna tykistöhaupitsi
+
+advancement.immersiveintelligence.chemical_bath=Bulbulaattori
+advancement.immersiveintelligence.chemical_bath.desc=Rakenna kemiallinen kylpy
+
+advancement.immersiveintelligence.circuit_board=Piip boop?
+advancement.immersiveintelligence.circuit_board.desc=Tuota piirilevy
+
+#Ay you, yes you @CrimsonTwilight, we know you want the inserters in IG :D
+advancement.immersiveintelligence.craft_advanced_inserter=Crimson-syöttölaite
+advancement.immersiveintelligence.craft_advanced_inserter.desc=Työstä päivitetty versio syöttölaitteesta.
+
+advancement.immersiveintelligence.craft_binoculars=Taktista tarkkailua
+advancement.immersiveintelligence.craft_binoculars.desc=Työstä kiikarit
+
+advancement.immersiveintelligence.craft_chemdispenser=Liekki mustassa yössä
+advancement.immersiveintelligence.craft_chemdispenser.desc=Työstä kemikaalijakelulaite
+
+advancement.immersiveintelligence.craft_inserter=Ei keltaisia, anteeksi!
+advancement.immersiveintelligence.craft_inserter.desc=Työstä syöttölaite
+
+#Long story short, in Company of Heroes 2 on Wikinger Mod, there is a special unit type - the infiltrators
+#Those guys often have superior firepower and accuracy, German units are using the Sturmgewehrs with infrared sights
+#That's why all the infiltration stuff in II is related to Infrared Vision
+advancement.immersiveintelligence.craft_ir_binoculars=Tunkeutuja
+advancement.immersiveintelligence.craft_ir_binoculars.desc=Työstä infrapuna-kiikarit
+
+#Reference to Fullmetal Alchemist: Brotherhood (Lust death scene)
+advancement.immersiveintelligence.craft_lighter=Zippo-tyypin paluu
+advancement.immersiveintelligence.craft_lighter.desc=Työstä sytytin
+
+advancement.immersiveintelligence.craft_mg=Hansin omaisuutta
+advancement.immersiveintelligence.craft_mg.desc=Työstä tunnettu konekivääri
+
+#Reference to Industrialcraft2's alarm siren addon
+advancement.immersiveintelligence.craft_siren=Onko reaktori okei?
+advancement.immersiveintelligence.craft_siren.desc=Rakenna hälytyssireeni
+
+#Reference to a sidenote on one of Choroman's concept drawings
+advancement.immersiveintelligence.craft_speaker=Iloisia insinööriääniä
+advancement.immersiveintelligence.craft_speaker.desc=Työstä ohjelmoitava kaiutin
+
+advancement.immersiveintelligence.electrolyzer=Nestesokkiterapiaa
+advancement.immersiveintelligence.electrolyzer.desc=Rakenna elektrolysaattori
+
+advancement.immersiveintelligence.hans_9000=Hans 9000
+advancement.immersiveintelligence.hans_9000.desc=Valmistele konekivääri paikallaan olevaa puolustusta varten
+
+#A reference to the well known engineer and weapon maker Jörg Sprave
+advancement.immersiveintelligence.let_me_show_you_its_features=Anna minun näyttää sen toiminnot!
+advancement.immersiveintelligence.let_me_show_you_its_features.desc=Päivitä konekivääri infrapuna-kiikaritähtäimellä, raskaalla piipulla ja toisella lippaalla
+
+#A JoJo reference
+advancement.immersiveintelligence.make_platinum=Parempi kuin maailma?
+advancement.immersiveintelligence.make_platinum.desc=Hanki platinaharkko
+
+#A Dr. Stone reference
+advancement.immersiveintelligence.make_tungsten=Hirviön tuhoaminen lämmöllä
+advancement.immersiveintelligence.make_tungsten.desc=Hanki volframiharkko
+
+advancement.immersiveintelligence.make_tungsten_drillhead=Nopeampi kuin kääpiöt
+advancement.immersiveintelligence.make_tungsten_drillhead.desc=Työstä volramiporanpää
+
+#Reference to a well known mod
+advancement.immersiveintelligence.make_tungsten_drillhead_diamond=Työkaluilla näpertely
+advancement.immersiveintelligence.make_tungsten_drillhead_diamond.desc=Työstä timanttikärkinen volramiporanpää
+
+advancement.immersiveintelligence.prec_assembler=Laatu: Mestariteos
+advancement.immersiveintelligence.prec_assembler.desc=Rakenna tarkkuuskokoaja
+
+advancement.immersiveintelligence.printing_press=Muste vähissä
+advancement.immersiveintelligence.printing_press.desc=Rakenna painokone
+
+#Ah, the good old Crysis 3
+advancement.immersiveintelligence.processor_circuit_board=Pystyykö se pyörittämään Crysis:tä?
+advancement.immersiveintelligence.processor_circuit_board.desc=Tuota prosessoripiirilevy
+
+advancement.immersiveintelligence.radio_station=Kauko-ohjaus
+advancement.immersiveintelligence.radio_station.desc=Rakenna radioasema
+
+#Tripod Periscope
+advancement.immersiveintelligence.craft_tripod_periscope=Silmälasit kepeillä
+advancement.immersiveintelligence.craft_tripod_periscope.desc=Työstä kolmijalkaperiskooppi
+
+#Reference to a chat with Carver
+advancement.immersiveintelligence.craft_mine_detector=EI pölynimuri
+advancement.immersiveintelligence.craft_mine_detector.desc=Työstä miinaharava
+
+#Ground Zero is a centre of a nuclear explosion
+advancement.immersiveintelligence.secret_nuclear_tripmine=Siementen istutusta nollapisteessä
+advancement.immersiveintelligence.secret_nuclear_tripmine.desc=Sijoita ydinkompastusmiina
+
+#Reference to C&C
+advancement.immersiveintelligence.rad_cannon=Tuomion ja hävityksen levitys
+advancement.immersiveintelligence.rad_cannon.desc=Ryhdy ympäristön vakauden loukkaajaksi
+
+#Reference to an old Polish meme, in which a certain cocoa brand is actually a story-rich book!
+#The cocoa was once put into a shop's shelf, mistaken as a book, that's where it started.
+advancement.immersiveintelligence.secret_cocoa=Deco Morrenon tarinoita
+advancement.immersiveintelligence.secret_cocoa.desc=Korkein laatu on saavutettu
+
+#Reference to Carver and C&C, though I left the mind control feature optional, was kinda op
+advancement.immersiveintelligence.secret_carvers_revenge=Carver:n kosto
+advancement.immersiveintelligence.secret_carvers_revenge.desc=Mitä tarkoitat, että meillä ei voi olla mieliohjattuja ydinohjussiiloja?
+
+#URA! Reference to a youtube video by HRejterzy, check it out ^^
+advancement.immersiveintelligence.create_motorbike=Za vas, za nas, za neft' i gaz!
+advancement.immersiveintelligence.create_motorbike.desc=Rakenna moottoripyörä
+
+#Reference to a certain discord chat
+advancement.immersiveintelligence.secret_sorry_for_ceiling=Anteeksi katostasi!
+advancement.immersiveintelligence.secret_sorry_for_ceiling.desc=Koe haupitserikranaatin rikkovan katon jakaakseen sinulle propagandaa.
+
+#Manual Categories
+
+ie.manual.category.ii_data.name=Datan siirto
+ie.manual.category.ii_warfare.name=Sodankäynti
+ie.manual.category.ii_logi.name=Logistiikka
+ie.manual.category.ii_intel.name=Tiedustelu
+ie.manual.category.ii_motorworks.name=Moottorityöt
+
+#Data and Electronics
+
+#Reference to... flow control... yeah, really, that boring
+ie.manual.entry.data_main.name=Data
+ie.manual.entry.data_main.subtext=Virtauksen hallinta
+ie.manual.entry.data_main0=Kun haluat ohjata automatisoitua tehdasta, sähkölaitosta tai muunlaista monimutkaista laitosta sinä tarvitset jonkinlaisen ohjausjärjestelmän. <br>Redstone on hyvä aluksi, mutta kun koneita on paljon, sen sotkuisuus alkaa näkyä - ja se on sopiva hetki esitellä datajärjestelmä.
+ie.manual.entry.data_main1=Data, toisin kuin redstone-signaali, lähetetään asynkronisesti pakettien kautta. Tämä tarkoittaa, että signaalia ei lähetetä koko ajan, vaan vain kerran. Jokainen paketti voi sisältää enintään 36 erityyppistä <link;data_variable_types;§n§omuuttujaa§r;>, jotka on merkitty yhdellä 26 kirjaimesta ja numerosta 0-9. Paketit vastaanotetaan ja lähetetään välittömästi, jolloin ne voivat matkustaa pitkiä matkoja menettämättä tallentamiaan tietoja.
+
+#Reference to possibly a box of foodstuffs
+ie.manual.entry.data_variable_types.name=Data-tyypit
+ie.manual.entry.data_variable_types.subtext=Tulokset voivat vaihdella
+ie.manual.entry.data_variable_types=Paketti voi sisältää useita muuttujia. Jokaisella tyypillä on oletusarvo (ei pidä sekoittaa <link;data_variable_types;§o§nNulliin§r;1>) ja muut sille ominaiset parametrit.<br> Perustyypit ovat: <link;data_variable_types;§o§nnull§r;1>, <link;data_muuttujatyypit;§o§nkokonaisluku§r;2>, <link;data_variable_types;§o§nmerkkijono§r;3>, <link;data_variable_types;§o§nboolean§r;4>. On myös muutamia yhdistetyyppejä, joita ovat <link;data_variable_types;§o§ntavarapino§r;5>, <link;data_variable_types;§o§ntaulukko§r;6>, <link;data_variable_types;§o§nnestepino§ r;7>, <link;data_variable_types;§o§nvektori§r;7>, <link;data_variable_types;§o§njoukko§r;7> ja <link;data_variable_types;§o§nkartta§r;8>.
+
+ie.manual.entry.data_variable_types_null=§lNull§r on erityinen tietotyyppi, jolla ei ole §6arvoa§r.<br>Se on §6määrittelemättömän§r muuttujan oletustyyppi.
+
+ie.manual.entry.data_variable_types_integer=§lKokonaisluku§r on numerotietotyyppi. Se voi tallentaa §6numeron§r ilman murto-osakomponenttiaan.<br>Sitä käytetään pääasiassa laskelmissa ja lukuvertailuissa.
+ie.manual.entry.data_variable_types_float=§lLiukuluku§r on numerotietotyyppi. Se voi tallentaa §6numeron§r murto-osakomponenttinsa kanssa.<br>Sitä käytetään erittäin tarkoissa laskelmissa, kuten pitkän matkan ballistisen lentoradan kulmien laskemisessa.
+ie.manual.entry.data_variable_types_vector=§lVektori§r on tietotyyppi, joka tallentaa 3 numeroarvoa. Se voi tallentaa §6kokonaislukuja§r, §6liukulukuja§r tai niiden yhdistelmän.<br>Sitä käytetään edustamaan arvoja 3-ulotteisessa avaruudessa, kuten kohteiden sijainti tai liike.
+
+ie.manual.entry.data_variable_types_string=§lMerkkijono§r on §6tekstitietotyyppi§r, joka voi sisältää useita merkkejä.<br>Monet laitteet käyttävät sitä komentoihin, kyselyihin ja syöttö-/tulostusviesteihin.
+
+ie.manual.entry.data_variable_types_boolean=§lBoolean§r on §6logiikkatietotyyppi§r, sillä voi olla toinen kahdesta arvosta - §6Tosi§r tai §6epätosi§r. Sen ensisijainen käyttö on logiikkafunktioissa, joissa käytetään booleanalgebraa.
+
+ie.manual.entry.data_variable_types_itemstack=§lTavarapino§r on tietotyyppi, joka sisältää tietoja tietystä §6pinosta§r tavaroita: sen §6id§r, §6määrä§r, §6metadata§r (vaurio) ja §6NBT komponentti§r.
+ie.manual.entry.data_variable_types_fluidstack=§lNestepino§r on tietotyyppi, joka sisältää tietoja tietystä nesteen §6nesteestä§r: sen §6nimi§r, §6määrä§r ja §6NBT komponent§r.
+ie.manual.entry.data_variable_types_entity=§lJoukko§r on tietotyyppi, joka sisältää tietoja tietystä maailman §6joukosta§r: sen §6nimi§r, §6id§r, §6sijainti§r, §6liike§r ja §6NBT data§r.
+
+ie.manual.entry.data_variable_types_array=§lTaulukko§r on kokoelma tietotyyppejä, jotka on järjestetty §6indeksinumeron§r mukaan alkaen 0:sta. Se voi sisältää minkä tahansa tietotyypin.
+ie.manual.entry.data_variable_types_map=§lKartta§r on kokoelma 2 tietotyypin paria nimeltä §6merkinnät§r.<br>Syötteen ensimmäistä elementtiä kutsutaan §6avaimeksi§r ja toista §6arvoksi§r.<br>Ensimmäistä voidaan käyttää toisen saamiseksi ja käänteisesti.<br>Tiedot voivat sisältää minkä tahansa tietotyypin sekä avain- että arvokentässä.
+
+ie.manual.entry.data_variable_types_expression=§lLauseke§r on erityinen tietotyyppi, jota aritmeettisen logiikkalaitteen piirit käyttävät. Se suorittaa esiohjelmoidun toiminnon syöttöparametreille arvojen tai niiden aksessorien muodossa ja palauttaa arvon.
+ie.manual.entry.data_variable_types_accessor=§lAksessori§r on tietotyyppi, jota käytetään paketin toisen muuttujan arvon saamiseen. Aksessoreita käytetään usein lausekkeiden sisällä arvon saamiseksi dynaamisesti paketista kiinteän arvon sijaan.
+
+ie.manual.entry.def_value=Oletusarvo
+ie.manual.entry.min_value=Minimiarvo
+ie.manual.entry.max_value=Maksimiarvo
+ie.manual.entry.min_index=Pienin indeksi
+ie.manual.entry.max_index=Suurin indeksi
+ie.manual.entry.empty=Tyhjä
+ie.manual.entry.accepted_values=Hyväksytyt arvot
+ie.manual.entry.max_length=Maksimi pituus
+ie.manual.entry.tf=Tosi/epätosi
+ie.manual.entry.false=Epätosi
+ie.manual.entry.true=Tosi
+
+ie.manual.entry.variables_input=Syötemuuttujat:
+ie.manual.entry.variables_output=Tulostusmuuttujat:
+ie.manual.entry.variables_callback=Takaisinsoittomuuttujat:
+
+ie.manual.entry.circuit_production.name=Kytkennät
+ie.manual.entry.circuit_production.subtext=Ei ihan piip-boop vielä
+ie.manual.entry.circuit_production0=Piirit ovat yksi tärkeimmistä ja yleisimmin käytetyistä elektronisista osista. Piirejä on kolmenlaisia: <link;circuit_production_basic;§n§oyksinkertainen§r;> - valmistettu elektroniputkista ja redstonesta, <link;circuit_production_advanced;§o§nedistyneet§r;> - valmistettu edistynyt elektroninen metalliseos™:lla ja päivitetyillä elektroniputkilla. Kehittyneimmät ovat <link;circuit_production_processor;§o§nprosessori§r;>-piirit, jotka on valmistettu pääasiassa piistä monimutkaisessa <link;precision_assembler;§o§nkokoamisprosessissa§r;>.
+ie.manual.entry.circuit_production_basic=Peruspiirit ovat yleisiä, ensisijaisia ja halpoja piirejä. Ne voidaan sovittaa suorittamaan yksinkertaisia aritmeettisia, logiikka- ja tekstioperaatioita, mutta niiden pääasiallinen käyttötarkoitus on erilaisten koneiden rakentaminen. Peruspiirin tuottamiseksi raaka piirilevy täytyy <chemical_bath;§o§netsata§r;> hapossa ja sitten tyhjiöputkista valmistettu siru <link;precission_assembler;§o§ntarkkuuskokoajassa§r ;> on asennettava niihin.
+ie.manual.entry.circuit_production_basic_usages=Peruspiirejä käytetään perustason elektronisten laitteiden ja koneiden, kuten painokoneen, <link;aritmetic_logic_machine;§o§naritmeettisen $o$nlogiikkalaitteen§r;> ja <link;data_input_machine;§o§ndatan §o§nsyöttökoneen§r;> rakentamiseen.
+ie.manual.entry.circuit_production_advanced=Edistyneet piirit ovat suora päivitys edeltäjiinsä, ne käyttävät edelleen elektroniputkia, mutta käytetyn uuden metalliseoksen ansiosta niiden ominaisuudet ovat paljon paremmat. Ne on valmistettu päivitetystä piirilevystä ja sirusta, joka koostuu päivitetyistä elektroniputkista.
+ie.manual.entry.circuit_production_advanced_usages=Nopean lähetysnopeuden vuoksi ne voidaan sovittaa suorittamaan edistyneempiä aritmeettisia, logiikka-, teksti- ja jopa tavaroiden käsittelytoimintoja. Ylivoimaisen nopeudensa vuoksi niitä käytetään langattomassa tiedonsiirrossa ja edistyneissä tietokoneissa.
+ie.manual.entry.circuit_production_processor=Prosessoripiirit ovat maailman edistyksellisimpiä ja tehokkaimpia piirejä, jotka on valmistettu piistä, edistyneestä elektronisesta metalliseoksesta ja useista muista materiaaleista monivaiheisen kokoonpanoprosessin aikana.
+ie.manual.entry.circuit_production_processor_usages=Tällä hetkellä prosessoreita ei käytetä minkään tekemiseen, joten rakenna ne enemmän haasteena kuin tarvittavana esineenä.
+
+#Reference to a Polish tinkerer/Baumeister slang word meaning doohickey, thingamabob, but in exact meaning a device that makes the "bul bul" (splash splash?) noise
+ie.manual.entry.chemical_bath.name=Kemiallinen kylpy
+ie.manual.entry.chemical_bath.subtext=Bulbulaattori
+ie.manual.entry.chemical_bath0=Kemiallinen kylpy on kone, joka on rakennettu teollisuuskokoisesta teräskylpyammeesta ja liikkuvasta vaunusta, jossa on tarrain. Konetta käytetään yleisesti raakapiirien etsaukseen happossa. Käytä sen muodostamiseen vasaraa keskimmäiseen peltikuutioon.
+
+#Reference to Dr.Stone
+ie.manual.entry.precission_assembler.name=Tarkkuuskokoaja
+ie.manual.entry.precission_assembler.subtext=Jumalallinen käsityöläinen
+ie.manual.entry.precission_assembler0=Tarkkuuskokoaja on edistyksellinen kone, jota käytetään esineiden tekemiseen erittäin tarkasti. Se vaatii kokoonpanosuunnitelman ja joitain tarkkoja työkaluja toimiakseen. Käytä sen muodostamiseen vasaraa puiseen rakennustelineeseen.
+ie.manual.entry.precission_assembler1=Kone käyttää vain tarvitsemansa määrän ja tuottaa romua tuotetun tuotteen mukana. Sen yleisin käyttötarkoitus on elektronisten komponenttien valmistus.
+
+ie.manual.entry.electrolyzer.name=Electrolysaattori
+ie.manual.entry.electrolyzer.subtext=Nestesokkiterapia
+ie.manual.entry.electrolyzer0=Elektrolysaattori on kone, joka käyttää elektrolyysiprosessia nesteen jakamiseen kahdeksi eri osaksi. Se voi jakaa veden vedyksi ja hapeksi ja suolaveden klooriksi ja vedyksi. Se vaatii toimiakseen sähköä. Kuution muodostamiseksi käytä vasaraa koneen edessä olevaan raskaaseen tekniikkakuutioon.
+ie.manual.entry.electrolyzer1=Neste on syötettävä koneen sivulle, kun prosessi on päättynyt, kaksi luotua nestettä syötetään eteen. Vaikka koneen sisäiset säiliöt mahdollistavat pienen nestemäärän varastoinnin, harkitse <link;tank;§o§nkunnollisten §o§ntankkien§r;>:n rakentamista teollisen mittakaavan elektrolyysiä varten.
+
+ie.manual.entry.filler.name=Täyttäjä
+ie.manual.entry.filler.subtext=Käyttää kaikki jauheet
+ie.manual.entry.filler0=Täyttäjä on laite, jota käytetään säiliöiden täyttämiseen jauheella. Sen tärkein tarkoitus on täyttää hylsyt ruudilla. Täyttäjän muodostamiseksi käytä vasaraa keskimmäiseen liukuhihnaan.
+ie.manual.entry.filler1=Täyttäjän käyttäminen vaatii sähköä, täytettävän säiliön ja sopivan määrän jauhetta. Kun jauhetta laitetaan syöttöaukkoon, se siirretään pääsäiliöön, jossa jauheen kokonaismäärä näytetään milliämpäreinä. Kone voi säilyttää vain yhden jauhetyypin kerrallaan. Ainoa tapa poistaa jauhetta koneesta säiliöiden täyttöä lukuun ottamatta on rikkoa kone.
+
+ie.manual.entry.chemical_painter.name=Kemiallinen värjääjä
+ie.manual.entry.chemical_painter.subtext=Tuhannen harjan arvoinen
+ie.manual.entry.chemical_painter0=Kemiallinen värjääjä on kone, jota käytetään tavaroiden maalaamiseen tarkasti määritetyllä värillä musteella. Käytä sen muodostamiseen vasaraa keskimmäiseen kevyeen tekniikkakuutioon.
+ie.manual.entry.chemical_painter1=Esineiden värjääminen manuaalisesti on työlästä eikä kovin tarkkaa, paljon väriainetta voidaan tuhlata halutun värin saamiseen. Kemiallinen värjääjä poistaa tämän ongelman. Syaani, magenta, keltainen ja musta muste on syötettävä neljään nesteen syöttöaukkoon laitteen takana. Sähkö on syötettävä ylemmän tuloportin kautta. Tuotteet voidaan lisätä käsin tai sisäänpäin suuntautuvan liukuhihnan kautta.
+ie.manual.entry.chemical_painter2=Aseta väri käyttämällä käyttöliittymää tai datajärjestelmää. Käyttöliittymässä on 3 painiketta, jotka mahdollistavat värimallin vaihtamisen: R- RGB, C -CMYK ja H - HSV.<br>Kemiallisen värjääjän avulla voidaan maalata ammuksia niiden tarkoituksen merkitsemiseksi. Muista, että useimmat esineet voidaan puhdistaa käyttämällä <link;chemical_bath;§o§nkemiallista §o§nkylpyä§r;>.
+#Chemical Painter output variables
+ie.manual.entry.chemical_painter.vars_in.p.main=Tulostusmoodi
+#Chemical Painter callback variables
+ie.manual.entry.chemical_painter.vars_callback.get_color=Palauttaa tällä hetkellä käytetyn värin RGB-kokonaislukuna
+ie.manual.entry.chemical_painter.vars_callback.get_color_hex=Palauttaa tällä hetkellä käytetyn värin hex-merkkijonona
+ie.manual.entry.chemical_painter.vars_callback.get_ink=Palauttaa mustan musteen määrän
+ie.manual.entry.chemical_painter.vars_callback.get_ink_cyan=Palauttaa syaanin musteen määrän
+ie.manual.entry.chemical_painter.vars_callback.get_ink_yellow=Palauttaa keltaisen musteen määrän
+ie.manual.entry.chemical_painter.vars_callback.get_ink_magenta=Palauttaa magentan musteen määrän
+ie.manual.entry.chemical_painter.vars_callback.get_energy=Palauttaa varastoidun energian määrän
+
+ie.manual.entry.printing_press.name=Painokone
+ie.manual.entry.printing_press.subtext=Insinöörin kirja ja sulkakynä
+ie.manual.entry.printing_press0=Painokone on kone, joka voi tulostaa tekstiä pyynnöstä, kun se vastaanottaa datapaketin. Painokone vaatii toimiakseen mustetta ja paperia. Muodosta se käyttämällä vasaraa koneen edessä olevaan kevyeen tekniikkakuutioon.
+ie.manual.entry.printing_press1=Painopaperi on erikoisohennettu versio kirjoissa käytetystä tavallisesta paperista, se valmistetaan puristamalla paperia metallipuristimessa. Kone vaatii eri mustevärejä kulloinkin tulostettavan värin CMYK-arvojen mukaan.
+ie.manual.entry.printing_press2=Mustemäärä riippuu tulostetun merkin väristä. Tulostetut sivut tulee poistaa välittömästi, sillä painokone voi säilyttää niitä vain 12 kappaletta korissaan.
+
+#Printing Press output variables
+ie.manual.entry.printing_press.vars_in.m.main=Tulostusmoodi
+ie.manual.entry.printing_press.vars_in.m.sub=Mahdolliset arvot: "text", "code", "blueprint"
+ie.manual.entry.printing_press.vars_in.a.main=Kopioiden määrä
+ie.manual.entry.printing_press.vars_in.a.sub=
+ie.manual.entry.printing_press.vars_in.t.main=Tulostettava teksti
+ie.manual.entry.printing_press.vars_in.t.sub=Saatavilla vain "text" moodissa
+#Printing Press callback variables
+ie.manual.entry.printing_press.vars_callback.get_ink=Palauttaa mustan musteen määrän
+ie.manual.entry.printing_press.vars_callback.get_ink_cyan=Palauttaa syaanin musteen määrän
+ie.manual.entry.printing_press.vars_callback.get_ink_yellow=Palauttaa keltaisen musteen määrän
+ie.manual.entry.printing_press.vars_callback.get_ink_magenta=Palauttaa magentan musteen määrän
+ie.manual.entry.printing_press.vars_callback.get_energy=Palauttaa varastoidun energian määrän
+ie.manual.entry.printing_press.vars_callback.get_paper=Palauttaa tyhjien paperisivujen määrän
+
+ie.manual.entry.data_input_machine.name=Datan syöttökone
+ie.manual.entry.data_input_machine.subtext=Syöttötulostin
+ie.manual.entry.data_input_machine0=Datan syöttökone on elektroninen laite, joka koostuu puisesta pöydästä, jonka päällä on näppäimistö, ja teräskonekotelosta. Käyttäjä voi syöttää siihen dataa ja lähettää sen käyttämällä redstone-signaalia. Datapaketin lähettämisen jälkeen muuttujat jäävät sinne ja laitetta voidaan käyttää uudelleen. Laite vaatii toimiakseen sähköä. Käytä sen muodostamiseen vasaraa vasemmalla olevaan kevyt tekniikkakuutioon.
+ie.manual.entry.data_input_machine1=Koneen käyttöliittymä koostuu kahdesta osasta. Varasto-osa, johon varastoidaan reikänauhat, joihin on kirjoitettu data, ja dataosa. Reikänauha voidaan asettaa aukkoon sen lukemista (jos reikänauha on kirjoitettu) tai koneen datapaketin kirjoittamista siihen (kun reikänauha on tyhjä). Data-osiossa muuttujia voidaan lisätä käyttämällä +-painiketta. Sitten niitä voidaan muokata tai poistaa (pidä pohjassa vaihto-näppäintä).
+ie.manual.entry.data_input_machine2=Kun muokkaat muuttujaa, voit muuttaa sen kirjainta ylä- ja alanuolilla. Muuttaaksesi sen tyyppiä pidä pohjasssa vaihto-näppäintä, kun sitä napsautetaan.
+
+#Reference to a song
+ie.manual.entry.arithmetic_logic_machine.name=Aritmeettinen logiikkalaite
+ie.manual.entry.arithmetic_logic_machine.subtext=Tekee nopeaa matematiikkaa
+ie.manual.entry.arithmetic_logic_machine0=Aritmeettinen logiikka laite on elektroninen laite, jonka ensisijaisena tehtävänä on käsitellä ja muokata tietoja. Se vaatii energiaa toimiakseen.
+ie.manual.entry.arithmetic_logic_machine1=Kun datapaketti vastaanotetaan koneen vasemmalla puolella, se käyttää funktionaalisia virtapiirejä, jotka on sijoitettu telineen neljään paikkaan muuttaakseen muuttujia vastaavasti. Kone iteroi kaikki piirit läpi ja sitten aakkosjärjestyksessä muuttujat ja asettaa niiden arvot annetun lausekkeen tulokseen. Lauseke koostuu kahdesta arvosta ja operaattorista (+,-,* jne.). Jokaisella piirillä on luettelo käytettävissä olevista lausekkeista. Lausekkeella voi olla myös ehdollinen muuttuja (boolean).
+ie.manual.entry.arithmetic_logic_machine2=Kone tarjoaa myös standardista poikkeavan tietotyypin, aksessorin, jolla ei ole omaa arvoa, mutta joka voi saada muuttujalle viimeksi määritetyn arvon vastaanotetusta paketista. Lausekkeen muuttuja voidaan vaihtaa aksessoriksi napsauttamalla @-painiketta.
+ie.manual.entry.arithmetic_logic_machine_fcircuit_arithmetic=Aritmetiikkavirtapiiri<br>Tätä piiriä käytetään laskemaan matemaattisia peruslausekkeita, kuten yhteen-, vähennys-, kerto- ja jakolaskuja.
+ie.manual.entry.arithmetic_logic_machine_fcircuit_advanced_arithmetic=Edistynyt aritmetiikkavirtapiiri<br> Tämän piirin avulla voidaan laskea edistyneempiä matemaattisia lausekkeita, kuten luvun nostaminen potenssiin, neliöjuuren saaminen tai pienimmän tai suurimman luvun saaminen kahdesta.
+ie.manual.entry.arithmetic_logic_machine_fcircuit_logic=Logiikkavirtapiiri<br> Tätä piiriä käytetään peruslogiikkalausekkeisiin (kuten logiikkaporttiin), kuten AND, OR, NOT.
+ie.manual.entry.arithmetic_logic_machine_fcircuit_comparator=Vertailuvirtapiiri<br>Tämä piiri sallii kahden kokonaisluvun vertaamisen ja palauttaa loogisen arvon.
+ie.manual.entry.arithmetic_logic_machine_fcircuit_advanced_logic=Edistynyt logiikkavirtapiiri<br> Tämä piiri voi suorittaa edistyneitä logiikkatoimintoja, kuten NAND, NOR, XOR ja XNOR sekä perustoiminnot.
+ie.manual.entry.arithmetic_logic_machine_fcircuit_advanced_text=Tekstinkäsittelyvirtapiiri<br> Tämä piiri pystyy suorittamaan perustekstinkäsittelyn, tällä hetkellä mahdollistaa vain kahden merkkijonon yhdistämisen.
+ie.manual.entry.arithmetic_logic_machine_fcircuit_advanced_itemstack=Tavarapinokäsittelyvirtapiiri<br> Tämä piiri voi saada ja käsitellä tavarapino-datatyypin ominaisuuksia, sitä voidaan käyttää pinon NBT:n, metan ja id:n saamiseen/asetukseen. Voidaan käyttää yhdessä muiden piirien kanssa ohjaamaan logistista järjestelmää.
+
+#Reference to Fullmetal Alchemist
+ie.manual.entry.redstone_interface.name=Redstone-dataliittymä
+ie.manual.entry.redstone_interface.subtext=Vastaava vaihto
+ie.manual.entry.redstone_interface0=Redstone-dataliittymä on silta vanhan, mutta edelleen käytetyn redstonen ja uuden datajärjestelmän välillä. Se voi muuntaa dataa redstone-signaaliksi ja toisin päin. Koska se on vain muuntaja, kone ei käytä virtaa.
+ie.manual.entry.redstone_interface1=Kone koostuu useista osista, joistakin lankakeloista, joukosta teräslevyjä ja muutamasta elektroniputkesta, mutta tärkeimmät niistä ovat datansyöttöportti, johon on asennettava yhdistin ja sisään-rakennettu redstone-yhdistin, johon voit kiinnittää johdon. Käyttöliittymässä on kaksi osiota, data redstoneksi ja päinvastoin. Kun olet lisännyt merkinnän, sinun on määritettävä muuttujan kirjain ja sitä vastaava redstonen väri.
+
+#Reference to a meme
+ie.manual.entry.conveyor_scanner.name=Skannausliukuhihna
+ie.manual.entry.conveyor_scanner.subtext=Hae kamera!
+ie.manual.entry.conveyor_scanner0=Skannausliukuhihna on laite, joka koostuu kuljettimesta, kamerasta ja muutamista elektronisista piireistä, joita käytetään esineen tarkkaan havaitsemiseen. Kun esine kulkee kuljetinskannerin läpi, sen ominaisuudet luetaan ja lähetetään välittömästi tietopaketin muodossa käyttäen tavarapino-datatyyppiä.
+ie.manual.entry.conveyor_scanner1=Kone tarvitsee toimiakseen sähköä. Muodosta se käyttämällä vasaraa liukuhihnaan, joka osoittaa samaan suuntaan kuin sinä.<br>Skannausliukuhihna ei ole kovinkaan kykenevä yksinään, signaalin käsittelemiseen voit käyttää ALL:ää oikean piirin kanssa. Sitä käytetään yleisimmin osana esinelaskuria tai laukaisinta, jonka tietty esine aktivoi.
+
+ie.manual.entry.conveyor_scanner.vars_out.s.main=Skannattu esine
+ie.manual.entry.conveyor_scanner.vars_out.s.sub=Skannattu esine (sen id:llä, kestävyydellä ja NBT:llä), käsittele tavarapinokäsittelyvirtapiiriä käyttäen
+
+#Reference to Factorio
+ie.manual.entry.inserters.name=Syöttölaitteet
+ie.manual.entry.inserters.subtext=Ei keltaista tällä kertaa!
+ie.manual.entry.inserters0=Tarkkussyöttämislaite, joka tunnetaan myös nimellä syöttölaite, on laite, jota käytetään siirtämään kohteita tavaraluettelosta toiseen. Esinesyöttölaitteet koostuvat varresta ja moottoreista pyöritystä ja esineen noudon käsittelyä varten. Nestesyöttölaitteet käyttävät putkia ja automaattiventtiilejä. Syöttölaitteet pystyvät ottamaan ja asettamaan mistä tahansa vaakasuuntaisesta sivusta ja mihinkä tahansa vaakasuuntaiseen sivuun.
+ie.manual.entry.inserters1=Syöttölaitteen kyljet voidaan konfiguroida vasaralla (aseta ulostulo hiipimällä). Syöttölaitteet vaativat sähköä toimiakseen ja data kertomaan niille, mitä tehdä.
+ie.manual.entry.inserters_basic=Perussyöttölaitetta käytetään yksinkertaiseen, mutta ohjattuun kohteen siirtoon. Peruspiireistä ja mekaanisista komponenteista valmistettu se on halpa ja helppo tapa siirtää tarkka määrä esineitä säiliöstä toiseen.
+
+ie.manual.entry.inserters_basic.vars_in.c.main=Komento
+ie.manual.entry.inserters_basic.vars_in.c.sub=Mahdolliset arvot: "add", "remove", "clear"
+ie.manual.entry.inserters_basic.vars_in.a.main=Toiminto (Käytetty "add":n kanssa, vapaaehtoinen "remove":n kanssa)
+ie.manual.entry.inserters_basic.vars_in.a.sub=Mahdolliset arvot: "item", "place_block", "from_minecart", "into_minecart"
+ie.manual.entry.inserters_basic.vars_in.s.main=Pino
+ie.manual.entry.inserters_basic.vars_in.s.sub=Vapaaehtoinen. Tavarapino tai OreDict-merkkijono, joiden tavaroiden täytyy olla.
+ie.manual.entry.inserters_basic.vars_in.e.main=Vanhenemisaika (Käytetty "add":n kanssa)
+ie.manual.entry.inserters_basic.vars_in.e.sub=Vapaaehtoinen. Minkä tavaramäärän jälkeen tehtävän (pyynnön) tulee päättyä.
+ie.manual.entry.inserters_basic.vars_in.t.main=Tavaroiden ottomäärä (Käytetty "add":n kanssa)
+ie.manual.entry.inserters_basic.vars_in.t.sub=Vapaaehtoinen. Enimmäismäärä esineitä, joita syöttölaite ottaa vuoroa kohden.
+
+ie.manual.entry.inserters_basic.vars_in.i.main=Ottosuunta
+ie.manual.entry.inserters_basic.vars_in.i.sub=Vapaaehtoinen. Merkkijono ("north", "east", "south", "west") tai kokonaisluku 2-4.
+ie.manual.entry.inserters_basic.vars_in.o.main=Asetussuunta
+ie.manual.entry.inserters_basic.vars_in.o.sub=Vapaaehtoinen. Merkkijono ("north", "east", "south", "west") tai kokonaisluku 2-4.
+ie.manual.entry.inserters_basic.vars_in.1.main=Ottoetäisyys
+ie.manual.entry.inserters_basic.vars_in.1.sub=Vapaaehtoinen. Kokonaisluku 1-2.
+ie.manual.entry.inserters_basic.vars_in.0.main=Asetusetäisyys
+ie.manual.entry.inserters_basic.vars_in.0.sub=Vapaaehtoinen. Kokonaisluku 1-2
+
+
+ie.manual.entry.inserter_obsolete.vars_in.m.main=Tavaran ottomoodi (Vanhentunut)
+ie.manual.entry.inserter_obsolete.vars_in.m.sub=Mahdolliset arvot: "set", "add"
+ie.manual.entry.inserter_obsolete.vars_in.c.main=Esineiden määrä (Vanhentunut)
+ie.manual.entry.inserter_obsolete.vars_in.c.sub=
+
+ie.manual.entry.inserters_advanced=Edistynyt syöttölaite on päivitetty versio, joka mahdollistaa tiettyjen tavaroiden poimimisen suodattamisen ja laatikoiden ja tynnyrien poimimisen kaivosvaunuista. Edistyneet syöttölaitteet ovat paljon nopeampia, mutta ne myös kuluttavat enemmän sähköä.
+ie.manual.entry.inserters_fluid=Nestesyöttölaite on tarkka nesteensiirron rajoitin. Joissakin tilanteissa haluat lisätä vain tarvittavan määrän, tämä laite tekee juuri sen.
+
+ie.manual.entry.inserters_fluid.vars_in.m.main=Nesteen ottomoodi
+ie.manual.entry.inserters_fluid.vars_in.m.sub=Mahdolliset arvot: "set", "add"
+ie.manual.entry.inserters_fluid.vars_in.c.main=Otettava nesteen määrä
+ie.manual.entry.inserters_fluid.vars_in.c.sub=Milliämpäreissä (mB)
+
+#Reference to IndustrialCraft's siren addon
+ie.manual.entry.alarm_siren.name=Hälytyssireeni
+ie.manual.entry.alarm_siren.subtext=Reaktori on okei, oli, ainakin.
+ie.manual.entry.alarm_siren0=Hälytyssireeni on laite, joka lähettää kovaa ääntä, kun sille annetaan redstone-signaali (äänenvoimakkuus riippuu signaalin voimakkuudesta). Redstone-johto voidaan kiinnittää miltä tahansa puolelta. Sireeni, kuten jokainen Redstone-liitin, voidaan konfiguroida uudelleen käyttämään eri redstone-kanavaa (oletus on valkoinen).
+
+#Reference to Choroman's radar concept drawings
+ie.manual.entry.programmable_speaker.name=Ohjelmoitava kaiutin
+ie.manual.entry.programmable_speaker.subtext=Iloisia insinööriääniä
+ie.manual.entry.programmable_speaker0=Ohjelmoitava kaiutin on laite, joka lähettää äänen, kun sille annetaan redstone-signaali. Redstone- ja datajohto voidaan kiinnittää miltä tahansa puolelta. Dataa voidaan käyttää äänen ja sen korkeuden asettamiseen, kun taas redstone säätää äänenvoimakkuutta.
+
+ie.manual.entry.programmable_speaker.vars_in.o.main=Soita kerran
+ie.manual.entry.programmable_speaker.vars_in.o.sub=Jos tosi, ääni soitetaan vain kerran, riippumatta redstone-signaalista
+ie.manual.entry.programmable_speaker.vars_in.s.main=Soitettavan äänen ID
+ie.manual.entry.programmable_speaker.vars_in.s.sub=Esimerkki "immersiveintelligence:siren"
+ie.manual.entry.programmable_speaker.vars_in.v.main=Äänenvoimakkuus
+ie.manual.entry.programmable_speaker.vars_in.v.sub=Arvon täytyy olla 0 ja 100 välillä
+ie.manual.entry.programmable_speaker.vars_in.t.main=Sävy/korkeus
+ie.manual.entry.programmable_speaker.vars_in.t.sub=Arvon täytyy olla -100 ja 100 välillä
+
+#Reference to an event from my life
+ie.manual.entry.radio_station.name=Radioasema
+ie.manual.entry.radio_station.subtext=Johdoton johto™
+ie.manual.entry.radio_station0=Radioasema on laite datan lähettämiseen ja vastaanottamiseen langattomasti. Radioasemat voivat kommunikoida vain silloin, kun ne ovat kantoalueella (joka on huonolla säällä matalampi), kun ne toimivat samalla taajuudella ja kun molemmille torneille annetaan riittävästi sähköenergiaa.
+ie.manual.entry.radio_station1=Radioasema on edistynyt monikuutio, mikä tarkoittaa, että se voidaan rakentaa vain insinöörin sähkövasaralla 2-vaiheisessa prosessissa. Ensimmäisessä vaiheessa on rakennettava multikuutio ja sitten vasaraa on käytettävä ylempään edistyneeseen elektroniikkakuutioon, toisessa vaiheessa energiaa (sähkövasaraa käyttämällä) on käytettävä sen viimeistelyyn.
+ie.manual.entry.radio_station2=Radioaseman taajuus voidaan asettaa radiovirittimellä. Virittimestä on 2 versiota eri taajuuksilla. Radioasema voi käyttää vain perusaluetta.
+
+#Reference to... Immersive Engineering's Curse Description
+ie.manual.entry.small_data_devices.name=Pienet datalaitteet
+ie.manual.entry.small_data_devices.subtext=Harmaat tulevaisuuskuutiot
+ie.manual.entry.data_merger=Datayhdistin on kone, joka voi yhdistää kaksi datasyöttöä sivuilta ulostuloksi eteen. Koneessa on kytkin halutulle puolelle muuttujan ottamiseksi. Jokaisella muuttujalla on myös sivun ohitustila, vihreä on vasen ja punainen on oikea, tummemmat värit poistavat muuttujan, jos tuon puolen uusin paketti ei sisällä muuttujaa.
+ie.manual.entry.data_router=Datareititin mahdollistaa paketin ohjaamisen tietylle puolelle, joka määritellään jollakin paketin muuttujista (voidaan asettaa reitittimeen hiipimällä vasaralla). Muuttujan on oltava kokonaisluku.<br>Ylös - 0, Alas - 1<br>Pohjoinen - 2, Etelä - 3<br>Itä - 4, Länsi - 5
+ie.manual.entry.redstone_buffer=Redstone-puskuri on laite, joka voi säilyttää saapuvan datapaketin, kunnes se ei vastaanota Redstone-signaalia.
+ie.manual.entry.timed_buffer=Ajastettu puskuri on laite, joka voi säilyttää saapuvan datapaketin tietyn ajan. Kesto asetetaan muuttujalla '0' (odotettavien tikkien määrä).
+ie.manual.entry.small_data_buffer=Pieni datapuskuri on laite, joka voi sisältää jopa 4 pakettia ja voi vapauttaa ne First-In-First-Out -menetelmällä, kun sille annetaan redstone-signaali.
+
+ie.manual.entry.data_wires.name=Datajohdotus
+ie.manual.entry.data_wires.subtext=Ei oikein sähkölinjoja
+ie.manual.entry.data_wires0=Johtojen kautta data lähetetään ja vastaanotetaan välittömästi. Joissakin tapauksissa <link;radio_station;§o§nlangaton §o§nlähetys§r;> voi olla parempi, mutta johdot tarjoavat paremman vakauden ankarissa sääolosuhteissa ja ovat halvempia.
+ie.manual.entry.data_wires1=Datajohdoilla, kuten useimmilla kaapeloinneilla, on omat liittimet ja yhdistimet, jotka jakavat ja yhdistävät koneita. Niitä voidaan käyttää loistavien logististen, sodankäynti-, tiedustelu- ja tuotantoverkostojen luomiseen.
+
+ie.manual.entry.tools.name=Datajohdotus
+ie.manual.entry.tools.subtext=Ei oikein sähkölinjoja
+ie.manual.entry.tools0=Johtojen kautta data lähetetään ja vastaanotetaan välittömästi. Joissakin tapauksissa <link;radio_station;§o§nlangaton §o§nlähetys§r;> voi olla parempi, mutta johdot tarjoavat paremman vakauden ankarissa sääolosuhteissa ja ovat halvempia.
+ie.manual.entry.tools1=Datajohdoilla, kuten useimmilla kaapeloinneilla, on omat liittimet ja yhdistimet, jotka jakavat ja yhdistävät koneita. Niitä voidaan käyttää loistavien logististen, sodankäynti-, tiedustelu- ja tuotantoverkostojen luomiseen.
+
+
+#Intelligence
+
+#Reference to Dr. Stone
+ie.manual.entry.intel_main.name=Tiedustelu
+ie.manual.entry.intel_main.subtext=Tieteen vahvin ase
+ie.manual.entry.intel_main0=Tiedustelu on tekniikan ala, joka keskittyy vakoiluun, soluttautumiseen, sabotaasiin ja tiedusteluun.<br>Tiedustelu tarjoaa useita työkaluja ja koneita vihollisen liikkeiden tarkkailuun ja ennustamiseen. Näitä ovat yksinkertaiset, kuten kiikarit, ja edistyneet, kuten infrapuna-tarkkailija tai strateginen komentopöytä.
+
+#Reference to Dr. Stone
+ie.manual.entry.binoculars.name=Kiikarit
+ie.manual.entry.binoculars.subtext=Tieteen silmät
+ie.manual.entry.binoculars0=Kiikarit ovat työkalu, joka mahdollistaa kauemman näkemisen. Ne perustuvat samaan suurennusperiaatteeseen kuin <link;railgun;§o§nRaidetykin§r;> kiikaritähtäin.
+ie.manual.entry.binoculars1=Infrapunakiikarit ovat päivitetty versio tavallisista kiikareista. Kun se saa energiaa, esim. <link;powerpack;§o§nkondensaattorireppu§r;>, se mahdollistaa pimeänäön, älä käytä niitä valaistuilla alueilla, se voi sokeuttaa sinut vakavasti.
+
+ie.manual.entry.tripod_periscope.name=Kolmijalkaperiskooppi
+ie.manual.entry.tripod_periscope.subtext=Silmälasit kepeillä
+ie.manual.entry.tripod_periscope0=Kolmijalkaperiskooppi on havaintolaite, joka koostuu kiikareista, suurennusputkista, kiertomekanismista ja jalustasta. Kolmijalkaperiskooppi mahdollistaa kurkistamisen ulos juoksuhaudasta tai seinästä ilman ammutuksi tulemisen vaaraa.
+ie.manual.entry.tripod_periscope1=Tavallisiin kiikareihin verrattuna kolmijalkaperiskoopissa on paremmat zoomausominaisuudet, joiden avulla voidaan tutkia kauempana ja nähdä kohteita erittäin kaukana.<br>Jalustan käyttö on samanlainen kuin konekiväärin, joka vaatii sinun asettaamaan esineen maahan ja käyttää sitä tyhjällä kädellä. Nostaaksesi sen hiivi ja käytä sitä.
+
+#Reference to the Battle of Britain in WW2
+ie.manual.entry.radar.name=Tutka
+ie.manual.entry.radar.subtext=Jäänne Doverista
+ie.manual.entry.radar0=Tutka on suuri tunnistuslaite, joka pystyy havaitsemaan joukkoja suorassa linjassa uskomattoman pitkien etäisyyksien päästä, mukaan lukien (ja erityisesti) kaikki metalliesineet ja tykistöammukset. Käytä sen muodostamiseen vasaraa vasemmassa puiseen rakennustelineeseen.
+ie.manual.entry.radar1=Tutkalla on useita käyttötarkoituksia. Se voidaan yhdistää tuliasemien aseisiin, kuten AVPJ:iin, ja sitä voidaan käyttää ammusten pysäyttämiseen pitkillä etäisyyksillä. Se voidaan myös yhdistää strategiseen komentopöytään [WIP].<br>Jos tutka on päivitetty §6kolmiomittaajilla§r, se voi myös havaita kantamansa sisällä olevia radiosignaaleja ja määrittää niiden sijainnin. Tämä mahdollistaa aavistamattomien vihollisten väijytyksen tarkoilla tykistöiskuilla. Tutkan toiminta vaatii jatkuvaa sähkönsyöttöä.
+
+#Reference to a book by Sun Tzu
+ie.manual.entry.strategic_command_table.name=Strateginen komentopöytä
+ie.manual.entry.strategic_command_table.subtext=Sodankäynnin taito
+ie.manual.entry.strategic_command_table0=
+
+#Warfare
+
+#Reference to an RTS game
+ie.manual.entry.warfare_main.name=Sodankäynti
+ie.manual.entry.warfare_main.subtext=Suunnittele & valloita
+ie.manual.entry.warfare_main0=Sodankäynti on tekniikan ala, joka keskittyy puolustamiseen ja hyökkäämiseen vihollisia vastaan. Suunnitellut keksinnöt ovat mullistaneet modernin taistelutavan, miekat ja kilvet ovat vanhentuneet, ammusaseiden aikakausi on tullut. Nykyaikainen sodankäynti perustuu sekä tarkkoihin että nopeisiin hyökkäyksiin, joiden kantama on parempi kuin kaikki menneisyyden aseet.
+
+
+ie.manual.entry.contributor_skins.name=Tukijaskinit
+ie.manual.entry.contributor_skins.subtext=Insinöörien tukemisesta!
+ie.manual.entry.contributor_skins=Immersive Intelligencen avustajia, joko suoraa apua tarjoamalla tekstuureja, modeleita, koodia, käännöksiä, tekemällä opetusvideoita, lahjoituksia Patreonin kautta tai yksinkertaisesti osallistumalla II-yhteisöön, ei voida jättää huomiotta, ja heidät on palkittava.<br > Sitä varten peliin on lisätty kokoelma skinejä, jotka soveltuvat erilaisiin aseisiin konekivääreistä haupitseihin. Suuri kiitos teille kaikille, ilman teitä tämä projekti kestäisi paljon kauemmin kuin kohta™.
+
+#Reference to the well known meme
+ie.manual.entry.machinegun.name=Konekiväärin
+ie.manual.entry.machinegun.subtext=Hansin omaisuutta
+ie.manual.entry.machinegun0=Konekivääri on uraauurtava, hienostunut uusi keksintö, joka mahdollistaa tehokkaan suojautumisen kaikenlaisia uhkia vastaan. Toisin kuin useimmat miehitetyt aseet, konekivääriä ei voi ampua tien päällä. Ampumista varten se on asetettava kuutiolla, jolla on tarpeeksi tilaa. Konekivääri käyttää kertakäyttölippaita, jotka voidaan ladata luoteilla <link;packer;§o§npakkaajassa§r;>.
+ie.manual.entry.machinegun1=Kun luoteja ammutaan, hylsyt putoavat maahan poimimista varten. Konekivääri on altis ylikuumenemiselle, mikä riippuu ampumisnopeudesta. Ase, kuten useimmat nykyajan laitteet, mahdollistaa erilaisia kokoonpanoja päivitysten avulla, kuten vesijäähdytyksen, tähtäimet, kaksijalan vaihdon ja paljon muuta.
+
+ie.manual.entry.machinegun_upgrade_heavy_barrel=§6Raskas piippu§r on modifikaatio, joka lisää aseen tulinopeutta dramaattisesti, mutta lisää samalla myös aseen ylikuumenemisnopeutta. Aseen ampuminen lyhyillä purskeilla on paras taktiikka tällä päivityksellä.
+ie.manual.entry.machinegun_upgrade_water_cooling=§6Vesijäähdytteinen piippu§r lisää konekiväärin piipun alle säiliön, joka voidaan täyttää jäähdytysnesteellä (kuten vedellä), mikä melkein eliminoi aseen ylikuumenemisen. Vaimentavan tulen asettaminen tällä päivityksellä on hyvä idea, mutta sinun on tehtävä se tarkasti, koska aseen laukaisunopeus on hidas.
+ie.manual.entry.machinegun_upgrade_belt_fed_loader=§6Hihnasyöttöinen ammustenlataaja§r mahdollistaa ammusten lataamisen hihnalta, joka saadaan ampumapaikan alla olevasta ammuslaatikosta.
+ie.manual.entry.machinegun_upgrade_second_magazine=§6Toinen lipas§r päivitys mahdollistaa kahden lippaan lataamisen aseeseen, toinen lipas voidaan ladata toisesta kädestä.
+ie.manual.entry.machinegun_upgrade_hasty_bipod=§6Kenttäkaksijalka§r on nopeasti tehty korvaava kaksijalka tavalliselle kaksijalalle, se lyhentää aseen kokoamisaikaa, mutta lisää rekyyliä.
+ie.manual.entry.machinegun_upgrade_precise_bipod=§6Tarkka kaksijalka§r on korvaa tavallisen kaksijalan. Se on tehty erittäin tarkasti ja pidentää aseen kokoamisaikaa ja vähentää rekyyliä.
+ie.manual.entry.machinegun_upgrade_scope=§6Kiikaritähtäin§r on muokattu versio <link;railgun;§o§nraidetykin§r;> tähtäimestä, joka mahdollistaa kaukaisen kohteen suurentamisen.
+ie.manual.entry.machinegun_upgrade_infrared_scope=§6Infrapuna-kiikaritähtäin§r on päivitetty versio edeltäjästään, joka voi myös tarjota yönäön infrapunaheijastimen ja erikoissuodattimen avulla. Se vaatii toimiakseen kondensaattorirepun tuottamaa energiaa.
+ie.manual.entry.machinegun_upgrade_shield=§6Kilvet§r ovat yksinkertainen ja tehokas tapa suojata ampujaa ammuksilta ja lähitaisteluvaurioilta. Ne voivat vastustaa rajoitetun määrän ammuksia, minkä jälkeen vaurioita ei torjuta. Kilven vastus regeneroituu ajan myötä, kunnes se ei ole rikki. Päivityksen kiinnittäminen lisää myös aseen kokoamisaikaa.
+ie.manual.entry.machinegun_upgrade_tripod=§6Kolmijalka§r korvaa konekiväärin kaksijalan. Se nostaa vaakasuuntaisen laukaisukulman 165 asteeseen ja melkein poistaa rekyylin. Se on raskas ja hidas asentaa, joten se on ihanteellinen valinta staattiseen puolustukseen.
+
+ie.manual.entry.submachinegun.name=Konepistooli
+ie.manual.entry.submachinegun.subtext=Tommyn lelu
+
+ie.manual.entry.submachinegun0=Konepistooli on jalkaväen ase, joka on suunniteltu lyhyestä keskipitkän kantaman taisteluihin. Konepistooli on suhteellisen halpa valmistaa ja valmistaa ammuksia, joten se on ihanteellinen valinta lähitaisteluihin, jotka vaativat nopeatempoisia liikkeitä ja suurta tulinopeutta.
+ie.manual.entry.submachinegun1=Konepistooli voidaan muokata hyväksymään rumpulippaat ja siihen voi liittää <link;revolver;§o§npistimen§r;3>, mikä mahdollistaa taistelun lähitaistelujen aikana. Tähtäysnopeuden parantamiseksi voidaan asentaa <link;submachinegun;§o§ntaittuva §o§ntukki§r;6>. <link;submachinegun;§o§nÄänenvaimennin§r;4> voidaan asentaa, jotta voidaan poistaa kovat laukausäänet, jotka voivat houkutella vihollisia ympärilleen. Päinvastoin piippu voidaan vaihtaa äänekkäämpään, mutta nopeampaan (ja siksi - paremman läpäisykykyyn) <link;submachinegun;§o§ntukevaan §o§npiippuun§r;3>.
+ie.manual.entry.submachinegun2=Muista, että konepistooli menettää tarkkuutensa etäisyydellä kohteeseen. Sen sijaan on suositeltavaa käyttää raidetykkejä tai tykistöaseita pitkän kantaman taisteluissa.
+ie.manual.entry.submachinegun_upgrade_sturdy_barrel=§6Tukeva piippu§r on modifikaatio, joka lisää aseen tarkkuutta ja luodin nopeutta aseen laukaisunopeuden kustannuksella.
+ie.manual.entry.submachinegun_upgrade_suppressor=§6Äänenvaimennin§r lähes hiljentää laukauksen, täydellinen väijytyksiin ja soluttautumisen varalta. Se ei vaikuta laukaisunopeuteen eikä läpäisykykyyn.
+ie.manual.entry.submachinegun_upgrade_bottom_loading=§6Pohjalataaja§r siirtää lippaiden latausmekanismin oikealta puolelta alas ja korvaa puisen etukahvan. Tämä mahdollistaa sekä tikku- että rumpulippaiden lataamisen.
+ie.manual.entry.submachinegun_upgrade_folding_stock=§6Taittuva tukki§r tekee konepistoolista kompaktimman ja lyhentää tähtäyssaikaa. Täydellinen laskuvarjo- ja erikoisjoukkoille.
+
+ie.manual.entry.autorevolver_upgrade_heavy_springbox=§6Raskas jousilaatikko§r on päivitys autorevolverille. Se käyttää mekaanista voimaa puristamaan ilmaa luotikammiossa, mikä lisää luotien nopeutta. Haittoja ovat hitaampi latausnopeus ja pienempi tarkkuus.
+
+ie.manual.entry.assault_rifle_upgrade_radio_marker=
+ie.manual.entry.assault_rifle_upgrade_rifle_grenade_launcher=
+ie.manual.entry.assault_rifle_upgrade_stereoscopic_rangefinder=
+
+ie.manual.entry.mortar.name=Kranaatinheitin
+ie.manual.entry.mortar.subtext=Kuolema ylhäältä
+ie.manual.entry.mortar0=Kranaatinheitin on kevyt, liikkuva, epäsuora ase lähituleen. Kranaatinheittimellä on alhaisin kantama kaikista tykistöaseista. Sen kuitenkin kompensoi sen helppokäyttöisyys ja poikkeuksellinen liikkuvuus.
+ie.manual.entry.mortar1=Käyttääkseen kranaatinheitintä tykistömiehen on asetettava se maahan vihollisen suuntaan ja sitten käytettävä asetta. Kranaatinheittimen käyttäjä ei voi muuttaa vaakasuuntaa helposti, voi muuttaa pystykulmaa painamalla eteenpäin tai taaksepäin. Kranaatinheittimessä on sisäänrakennetut lyhyen kantaman tykistötähtäimet, jotka ovat käytettävissä pitämällä Z-näppäintä painettuna. Ampuakseen ammuksen käyttäjän on käytettävä kranaatinheitinkranaattia kädessään kranaatinheitintä miehittäessään.
+
+ie.manual.entry.grenades.name=Käsi- ja raidetykkikranaatit
+ie.manual.entry.grenades.subtext=Achtung, Granate!
+ie.manual.entry.grenades0=Keppi-käsikranaatti on heitetty ase, joka sisältää räjähteitä tai muuta materiaalia, joka laukeaa kosketuksessa. Kokoaaksesi sen yhdistä käsitelty keppi sopivaan kranaatin ytimeen <link;ammunition_assembler;§o§nammuspajassa§r;>.
+ie.manual.entry.grenades1=Raidetykkikranaatit ovat ammuksia raidetykille ja raskaalle raidetykille, joita voidaan käyttää tavallisten metallisauvojen sijasta. Ne voidaan täyttää räjähteillä tai srapnellilla ja käyttää sitten kannettavana tykistöaseena. Kokoaaksesi sen yhdistä terästanko sopivaan kranaatin ytimeen <link;ammunition_assembler;§o§nammuspajassa§r;>.
+
+#Reference to Rico, a penguin from the movie Madagascar
+ie.manual.entry.explosives_mines.name=Miinat ja räjähteet
+ie.manual.entry.explosives_mines.subtext=Ka-boom?
+ie.manual.entry.explosives_mines_satchel0=Kun toimintasi vaativat salaperäistä, tarkkaa lähestymistapaa, radioräjäytetyt matkalaukkupanokset ovat oikea valinta. Olipa kyseessä kaivostoiminta, rakennusten purkaminen tai junasiltojen sabotointi, matkalaukkupanokset ovat roolissaan universaaleja ja ovat sekä taisteluinsinöörien että sabotoijien rakastamia.
+ie.manual.entry.explosives_mines_satchel1=Ensisijainen tapa räjäyttää räjähteet on käyttää <link;radio_station;§o§nradiosignaalia§r;>. Tätä varten räjähteet on ensin ohjelmoitava datapaketilla <link;data_input_machine;§o§ndatan §o§nsyöttökoneessa§r;>. Räjähteet räjähtävät vain, kun ne vastaanottavat radion kautta datapaketin, joka on identtinen ohjelmoidun kanssa. Lisäksi räjähteet voivat vastaanottaa dataa kaapelin kautta täsmälleen samoissa olosuhteissa ja toimia dataliittimenä.
+ie.manual.entry.explosives_mines_satchel2=Räjähteet voidaan myös räjäyttää käyttämällä redstonea, kuten muutkin redstone-yhdistimet, ne voivat vastaanottaa signaalin yhdellä 16 kanavasta. Vaihda kanavaa käyttämällä vasaraa asetettuun laukkuun.
+ie.manual.entry.explosives_mines_satchel3=Toisin kuin muut räjähdekotelot, radioräjähdelaukku on työstettävä. Nahkalaukku saattaa aluksi tuntua kalliilta, mutta muista, että nahkaa voidaan valmistaa keinotekoisesti käyttämällä <link;sawmill;§o§nsahanpurua§r;> ja <link;cokeoven;§o§nkreosoottia§r;>.
+
+ie.manual.entry.explosives_mines0=Miinoja käytetään yleisesti staattisena puolustuskeinona. Niiden pääasialliset käyttötapaukset ovat vihollisen pääsyn estäminen alueelle, etenemisen hidastaminen tai jos ne eivät ole kovin kirkkaita - merkitsemään, missä heidän hautansa tulevat olemaan.<br>Muista, että maamiinat eivät tee eroa kohteidensa välillä, se on erittäin on tärkeää seurata omia miinakenttiäsi ja käyttää suunnitelmia satunnaisen sijoittamisen sijaan.
+ie.manual.entry.explosives_mines_landmine=Klassinen, luotettava ja halpa valmistaa: tämäntyyppiset maamiinat ovat yleisimmin käytetty. Sen toimintatapa on hyvin suoraviivainen: se räjähtää vihollisen astuttua sen päälle aiheuttaen vakavia vahinkoja. Pudonneet esineet ja kevyet olennot, kuten kanat, eivät kuitenkaan aiheuta räjähdystä.
+ie.manual.entry.explosives_mines_landmine1=Maamiinan tärkeä ominaisuus on kyky kaivaa se mihin tahansa pehmeään kuutioon, kuten multaan, soraan ja saveen, jolle se asetettiin. Jos haluat kaivaa maamiinan maahan, käytä siihen lapiota. Vaikka mikä tahansa lapio riittäisi, juoksuhautalapio tekee sen paljon nopeammin.<br>Lisäksi voit sijoittaa ruohoa maamiinan päälle peittääksesi sen kokonaan.
+ie.manual.entry.explosives_mines_tripmine=Kompastusmiina, jota joskus kutsutaan §hyppivä maamiina§r on räjähtävä laite, joka ei aktivoidu painon painalluksella, vaan vetämällä johdosta. Laukaisun jälkeen miina hyppää ulos kotelostaan ja räjähtää. Jotta miina voidaan asentaa, se vaatii yhdistämisen toiseen miinaan tai ansalankayhdistimeen. Kompastusmiina on mahdollista kaivaa maahan lapiolla, samalla tavalla kuin tavallinen maamiina.
+ie.manual.entry.explosives_mines_naval_mine=Merimiinat ovat veteen sijoitettuja miinoja, jotka estävät veneitä ja vesieläimiä pääsemästä alueelle ja tappavat ne tehokkaasti koskettaessaan niitä. Merimiinojen sisällä on suurempi määrä komponentteja, mikä tarkoittaa, että räjähdys on suurempi kuin maamiinan räjähdys ja useimmissa tapauksissa tappava.
+ie.manual.entry.explosives_mines_naval_mine1=Merimiinan käyttöönottoa varten aseta ensin ketjun pituus hiipimällä ja rullaamalla, tämä määrittää. Kun se on tehty, käytä maamiinaa vesilohkolla, se ottaa käyttöön ankkurikärryn, johon miina on kiinnitetty ketjulla. Kärry yrittää upota, mutta miina yrittää pysyä pinnalla, kunnes se saavuttaa suurimman ketjun pituuden tai pinnan.<br>Huomaa, että merimiinojen aseistautuminen kestää muutaman sekunnin, joten voit ottaa ne turvallisesti käyttöön ilman vaaraa räjäyttää itsesi.
+
+ie.manual.entry.explosives_mines_sign=Vaikka tämä merkki on yksinkertainen puupala, johon on kirjoitettu tekstiä, se näyttää juurruttavan jonkin verran kauhua vastustajiisi.<br>Sen päätarkoitus on osoittaa ystävällisiä ja vihamielisiä miinakenttiä, vaikka jotkut käyttävätkin sitä jostain syystä makuuhuoneen koristeeksi. No, sellaisia ovat insinöörit…
+
+ie.manual.entry.light_engineer_armor.name=Insinöörin kevytpanssari
+ie.manual.entry.light_engineer_armor.subtext=Valmiina liikkeisiin
+ie.manual.entry.light_engineer_armor0=Insinöörin kevytpanssari on kevyt, tyylikäs, mutta silti erittäin suojaava puku. Vaikka se on valmistettu nahasta ja teräksestä, se suojaa valmistustarkkuuden vuoksi paremmin vastustajilta, joita saatat kohdata, paremmin kuin teräs- ja timanttipanssarit. Se on pakollinen hankinta jokaiselle taisteluinsinöörille.
+ie.manual.entry.light_engineer_armor1=Insinöörin kevytpanssari on suunniteltu monikäyttöiseksi, ja se voidaan mukauttaa ympäristöön Moduulijärjestelmä™:n avulla. Panssari on modulaarinen ja mahdollistaa parannuksien lisäämisen, kuten metallilevyt sen vahvistamiseksi, eksoskeletoni juoksunopeuden lisäämiseksi ja infrapunapäähineet, jotka mahdollistavat yönäön räpylöihin ja lumimailoihin, jotka tarjoavat erinomaisen liikkuvuuden.
+ie.manual.entry.light_engineer_armor_upgrade_gasmask=Kaasunaamari on päivitys, joka suojaa käyttäjää vaarallisilta kaasuilta. Yhdistettynä sukellustankin kanssa, se mahdollistaa hengityksen veden alla.
+ie.manual.entry.light_engineer_armor_upgrade_infiltrator_gear=Tunkeutujan varustus on edistynyt työkalu, joka on tehty vakoilua varten. Päähineet mahdollistavat kuvan suurentamisen ja lähettävät infrapunavaloa, mikä mahdollistaa yönäön. Se voidaan yhdistää tekniikon varustuksen kanssa luomaan insinöörin varustus.
+ie.manual.entry.light_engineer_armor_upgrade_technician_gear=Tekniikon varustus on hyödyllinen työkalu tehtaiden hallintaan. Se näyttää tietoja, kuten koneiden sisältämän energian, pyörimistehotilastot, varastoidut nesteet ja datan. Se voidaan yhdistää tunkeutujan varustuksen kanssa luomaan insinöörin varustus.
+ie.manual.entry.light_engineer_armor_upgrade_engineer_gear=Insinöörin varustus yhdistää tunkeutujan ja tekniikon varusteiden tehosteet yhdeksi laitteeksi. Tämän seurauksena virrankulutus kasvaa, mutta myös ominaisuuksien määrä kasvaa.<br>Ainoa asia, joka nyt puuttuu, on tölkinpidike.
+ie.manual.entry.light_engineer_armor_upgrade_steel_armor_plates=Teräspanssarilevyt lisäävät panssarin paksuutta ja kestävyyttä ja tarjoavat mahdollisuuden torjua nuolia ja muita kevyitä ammuksia. On aika näyttää maailmalle, että teollinen kehitys on jo ylittänyt vanhentuneet jouset ja nuolet! Painonsa vuoksi yhteen panssarikappaleeseen voidaan asentaa vain 3 levyä.
+ie.manual.entry.light_engineer_armor_upgrade_composite_armor_plates=Komposiittipanssarilevyt ovat paljon kestävämpiä kuin teräslevyt, ja niiden keveyden ansiosta voidaan saavuttaa suurempi paksuus. Lisäksi panssarin lyöminen lähitaisteluaseella vahingoittaa sitä vakavasti. Vain 3 levyä voidaan asentaa yhtä panssarikappaletta kohden.
+ie.manual.entry.light_engineer_armor_upgrade_hazmat_coating=Hazmat-pinnoite on ylimääräinen sisäinen panssarikerros, joka suojaa säteilyltä ja hapoilta. On aika lähteä kävelylle ydinjätealueille.
+ie.manual.entry.light_engineer_armor_upgrade_heat_resistant_coating=Lämmönkestävä pinnoitekerros sallii uimisen kuumissa nesteissä, jotka muutoin polttaisivat käyttäjän. Toimii vain vahvistettujen saappaiden kanssa käytettynä päällekkäisten suojakerrosten ja lämmön jakautumisen vuoksi.
+ie.manual.entry.light_engineer_armor_upgrade_anti_static_mesh=Antistaattinen verkko antaa käyttäjälle suojan sähkövaurioita vastaan ja häiritsee läheisyyssulakkeiden kohdistusta häiritsemällä niitä. Rakenteensa ansiosta se ei kuitenkaan toimi veden alla, mikä aiheuttaa käyttäjälle suurempaa haittaa, kun siihen hyökätään sähkö- tai sähkömagneettisilla aseilla.
+ie.manual.entry.light_engineer_armor_upgrade_camouflage_mesh=Camouflage Mesh on yksinkertainen verkko, johon on kiinnitetty lehdet, mikä saa käyttäjän sulautumaan lehtien joukkoon livahdellessaan. Koska se on tehty lehdistä, tuleen sytyttämistä ei suositella. Erityisen hyödyllinen metsissä, puutarhoissa ja tasangoilla.
+ie.manual.entry.light_engineer_armor_upgrade_infrared_absorbing_mesh=Infrapunaa absorboiva verkko absorboi siihen lähetetyn infrapunavaloa, mikä on täydellinen tapa piiloutua infrapuna-antureilta. Kuitenkin sen rakenteesta johtuen sähkömagneettisten aseiden osuminen aiheuttaa tavallista enemmän haittaa.
+ie.manual.entry.light_engineer_armor_upgrade_scuba_tank=Scuba Tank antaa mahdollisuuden pysyä pidempään veden alla ilman tarvetta nousta pintaan uusia ilmavaroja varten. Se voidaan täyttää hapella käyttämällä <link;bottlingMachine;§o§nBottling §o§nMachine§r>.<br>On erityisen kätevää vedenalaisissa rakennustöissä. Vaatii kaasunaamarin käyttöä.
+ie.manual.entry.light_engineer_armor_upgrade_helipack=
+ie.manual.entry.light_engineer_armor_upgrade_exoskeleton=Exoskeleton-päivitys antaa käyttäjälle mahdollisuuden ajaa nopeammin monimutkaisen moottoreiden ja hydrauliikan ansiosta. Turvallisuussyistä se aktivoituu vain ajon aikana. Eksoskeleton tarvitsee energiaa toimiakseen.
+ie.manual.entry.light_engineer_armor_upgrade_boot_reinforcement=Saappaiden vahvistuspäivitys koostuu useista teräslevyistä, joita pitävät yhdessä nahkahihnat. Se lisää lisäpanssaria ja suojaa käyttäjää tulelta.
+ie.manual.entry.light_engineer_armor_upgrade_flippers=Räpät mahdollistavat nopean liikkeen nesteissä. Ne toimivat erittäin hyvin Scuba Tankin ja Gas Maskin kanssa.
+ie.manual.entry.light_engineer_armor_upgrade_snow_rackets=Lumimailat parantavat vakautta lumella ja jäällä, jolloin käyttäjä voi ylittää vaikean maaston.
+ie.manual.entry.light_engineer_armor_upgrade_internal_springs=Sisäiset jouset vaimentavat iskuvoimaa ja suojaavat käyttäjää putoamisvaurioilta. Tämä on yhdistetty kumipohjaisiin pehmusteisiin, jotka tekevät portaista lähes äänettömät.
+
+#Stronghold Reference (Tuneller unit)
+ie.manual.entry.trench_shovel.name=Juoksuhautalapio
+ie.manual.entry.trench_shovel.subtext = Pimeyteen!
+ie.manual.entry.trench_shovel0=Vaikka useimmat jäävät usein huomiotta työkalujen valinnassa, kaivantolapio on yksi tärkeimmistä varusteista insinöörin arsenaalissa. Verrattuna tavallisiin lapioihin kaivantoversio on kompaktimpi ja teroitettu, minkä ansiosta se on isompi. Suunnittelunsa ansiosta se mahdollistaa <link;explosives_mines;§o§nlandmines§r;> hautaamisen maahan paljon 3 kertaa nopeammin kuin tavallinen lapio.
+
+#The first Mine Detector was invented by J. Kosacki, a Pole, the word "pole" means literally "field" in Polish, making Poles "field people"
+#Surprisingly fitting for a field-sweeping device ^^
+ie.manual.entry.mine_detector.name=Minun ilmaisin
+ie.manual.entry.mine_detector.subtext=Kentämiesten keksimä
+ie.manual.entry.mine_detector=Miinailmaisin on työkalu, joka on suunniteltu maamiinojen ja piilotettujen räjähteiden havaitsemiseen. Se on peräisin epäonnistuneesta yrityksestä luoda malminpaljastin, mutta osoittautui pelastustyökaluksi armeijalle.
+ie.manual.entry.mine_detector_demining0=Jotta voit tarkistaa maamiinan, sinun on pidettävä miinanilmaisinta pääkädessäsi ja osoitettava se lohkoon. Maamiinan läsnäolon ilmaisee piippausääni, jonka taajuus kasvaa mitä lähemmäs maamiinaa olet.<br>On myös syytä huomata, että miinan havaitseminen ei tapahdu paikassasi, vaan siinä, jota katsot .
+ie.manual.entry.mine_detector_demining1=Asettaaksesi <link;explosives_mines;§o§nmine §o§nor §o§nexplosive§r;> virityksen onnistuneen havaitsemisen jälkeen, käytä lankaleikkureita tai niiden sähköistä vastinetta. Kun se on tehty, voit turvallisesti murtaa lohkon.
+
+#First thing I thought was "The banners high", but I am aware of the consequences if I'd put that
+ie.manual.entry.flagpole.name=Lipputanko
+ie.manual.entry.flagpole.subtext=Kysy hymniä!
+ie.manual.entry.flagpole0=Lipputanko on moniosainen, jonka avulla voit merkitä lähellä olevat alueet, pitää sen kuormitettuna ja hallinnassa ja näyttää samalla tyylikkään bannerin ystäville ja vihollisille tunnistettavaksi. Käytä sen muodostamiseen vasaraa keskimmäisessä terälankalohkossa.
+ie.manual.entry.flagpole1=Lipputanko pitää 8 ympäröivää palaa ladattuina sen mukana, johon se on asetettu, se ei vaadi resursseja tehdäkseen niin. <br> Sen toinen toiminto on bannereiden näyttäminen lipun muodossa. Aseta banneri käyttämällä sitä johonkin puupylväästä. Jos olet päättänyt tunkeutua jonkun muun omaisuuteen tai haluat vain päivittää bannerisuunnittelua, voit poistaa sijoitetun bannerin lankaleikkureilla.
+
+#Reference to Contra
+ie.manual.entry.emplacement.name=Asennus
+ie.manual.entry.emplacement.subtext=Lukittu ja ladattu
+ie.manual.entry.emplacement0=Asennus on raskas suojarakenne, jota käytetään suojaamaan tehtaasi kehää. Käytä sen muodostamiseen vasaraa ylempään keskimmäiseen hiekkasäkkilohkoon.
+ie.manual.entry.emplacement1=Perinteiseen tykkitorniin verrattuna asennuspaikan asentaminen vaatii paljon enemmän valmistelua. Paikkoihin ei ole asennettu <link;emplacement_weapons;§o§nweapon§r;> oletusarvoisesti. Sen sijaan ase kootaan paikalleen jakoavaimen tai sen sähköekvivalentin avulla. Kun käytät asennusta jakoavaimella, sinulla on asennettava valikoima moduuleja, joista jokainen vaatii oman osuutensa resursseista. Kun olet valinnut haluamasi aseen, sinun on koottava se lisäämällä vuorovaikutusta aseen kanssa jakoavaimen avulla. Huomaa, että Electric Wrench kokoaa aseen paljon nopeammin.
+ie.manual.entry.emplacement2=Asema vaatii toimiakseen sähköä, ammuksia ja oletuksena Redstone-signaalin. Jos Redstone-signaali katkeaa, ase piiloutuu sijoituksen sisään.
+ie.manual.entry.emplacement3=Asetusaseet voivat vaurioitua ja korjata automaattisesti. Voit asettaa sijoitetun aseen kunnon vähimmäiskynnyksen ennen kuin se menee korjaustilaan.<br>Korjauksen aikana se piiloutuu aseen sisään eikä reagoi komentoihin. Huomaa, että sijoitukset voidaan tuhota, jos itse aseelle aiheutetaan riittävästi vahinkoa, mikä tarkoittaa myös, että menetät sen rakentamiseen käytetyt resurssit.
+ie.manual.entry.emplacement4=Asetukset sallivat jopa 4 kohdesuodatustehtävän tallentamisen. Jokaisella tehtävällä on 3 perusryhmää, joiden perusteella se suodattaa kokonaisuuden. Ensimmäinen on tyyppi: väkijoukko, eläin, ajoneuvo tai kuori, lisäparametreja (id) voidaan määrittää. Toinen on nimi ja kolmas on joukkue. Ryhmän sisällä olevat parametrit yhdistetään TAI-näppäimellä ja sitten AND-näppäimellä muihin ryhmiin. Esimerkki: valitse kaikki väkijoukot tai eläimet joukkueista "a" ja "b" nimellä "c".
+ie.manual.entry.emplacement5=*Immersive Intelligence™ ei ole vastuussa mistään omaisuusvahingoista tai kuolemantapauksista, jotka aiheutuvat virheellisistä kohdistussyötteistä.*
+
+ie.manual.entry.emplacement_weapons.name=Asetusaseet
+ie.manual.entry.emplacement_weapons.subtext=Voiman esitys
+
+ie.manual.entry.emplacement_mg0=Machinegun Emplacement on yksinkertaisin ja halvin kaikista saatavilla olevista asennuspaikoista. Se on luotettava valinta pehmeiden maakohteiden tai kevyiden ajoneuvojen käsittelyyn, kun käytetään panssaria lävistäviä ammuksia.
+ie.manual.entry.emplacement_mg1=Konekivääriasennolla on kolme versiota: oletus, raskaspiippuinen ja vesijäähdytteinen, jotka ovat toiminnaltaan samanlaisia kuin konekiväärin jalkaväkiversiossa.<br>Huomaa, että tämä ase toimii Älä käytä makasiinia, luodit on syötettävä sijoittelun syöttöportin kautta. Rajoitetun nousunsa vuoksi MG Emplacement on huono valinta ilmakohteisiin ampumiseen.
+
+ie.manual.entry.emplacement_heavy_chem0=Heavy Chemthrower on ase, joka on suunniteltu lähitaisteluihin joukkovihollisia vastaan. Tavallisen Chemthrowerin tapaan raskas variantti voidaan täyttää erilaisilla nesteillä nestesäiliöistä.
+ie.manual.entry.emplacement_heavy_chem1=Oletusarvoisesti se sytyttää nesteen, mutta se voidaan vaihtaa datapaketin avulla. Heavy Chemthrower Emplacementin kantama on alhaisin kaikista asteikoista, ja se on huono kohdistamaan ilmassa oleviin kohteisiin.
+
+ie.manual.entry.emplacement_flak0=Autocannon Emplacement on tavallinen, monipuolinen vaihtoehto pehmeiden kohteiden, ajoneuvojen ja ilmakohteiden käsittelyyn. Ammuksista riippuen se voi toimia erinomaisena vakiovaihtoehtona perussuojaukseen kaikenlaisia uhkia vastaan.
+ie.manual.entry.emplacement_flak1=Korkean nopeuden ja monipuolisen kallistus- ja suunnankulmansa ansiosta Autocannon on erityisen tehokas ilmassa olevia kohteita vastaan.<br>Sen haittapuolena on hitaampi tulinopeus verrattuna MG:hen ja sen suhteellisen pieni lipaskoko, pakottaa sen lataamaan uudelleen hyvin usein. Se on parasta yhdistää muihin tiloihin.
+
+ie.manual.entry.emplacement_heavy_railgun0=Heavy Railgun Emplacementiä käytetään tarkkuusriippuvaisessa pitkän kantaman taistelussa. Sitä käytetään parhaiten ajoneuvoja ja yksittäisiä kohteita vastaan, jotka ovat erittäin kestäviä. Vahinko riippuu metallista, josta sauva on valmistettu, tai kiskokranaatin koostumuksesta.
+ie.manual.entry.emplacement_heavy_railgun1=Erittäin alhaisen tulinopeuden, käännösnopeuden ja alhaisen makasiinimäärän vuoksi se on huono valinta kerättyihin kohteisiin. Se on yhdistettävä muiden asennuspaikkojen kanssa paremman suojan takaamiseksi.<br>Raskasraidease on hyvä panssarin lävistyskyky, ja sitä voidaan parhaiten hyödyntää panssaroituihin kohteisiin, ajoneuvoihin ja terässeinien takana oleviin kohteisiin. Mikään panssari ei ole liian kova.
+
+ie.manual.entry.emplacement_cpds0=Tietokonetekniikan, mekaanisten taitojen ja kehittyneiden kohdistusohjelmistojen huippu, Counter-Projectile Defense System on pahin vihollinen kaikesta, mikä voi lentää, ja logistiikkaosaston.
+ie.manual.entry.emplacement_cpds1=Hämmästyttävän tulinopeuden sekä nopeiden jäljitys- ja reagointiominaisuuksien ansiosta ilmakohteiden kiertäminen on lähes mahdotonta.<br>Kehittyneen kohdistusjärjestelmän ansiosta se on paras ase ammusten vastaiseen puolustukseen, jolla on kyky ampua alas tykistöammuksia keskellä ilmaa luotimyrskyssä. Tätä varten se on linkitettävä tutkaan tai tarkkailijoihin, jotta onnistuneen sieppauksen mahdollisuudet voidaan maksimoida.
+ie.manual.entry.emplacement_cpds2=Ainoa sen mukana tuleva haittapuoli on sen valtavat ylläpitokustannukset korkeasta palonopeudesta johtuen. Jos sinulla on vaikeuksia tarjota sille riittävä määrä ammuksia, harkitse sen käyttöä erityisenä viimeisenä keinona ammusten torjumiseen.
+
+ie.manual.entry.emplacement_tesla0=Tesla Coil Emplacement on Tesla Coilin suurempi ja hienostuneempi variantti. Ase on hyvä valinta pehmeitä kohteita vastaan, jotka sattuivat tulemaan liian lähelle. Kehittyneiden järjestelmiensä ansiosta ase pystyy erottamaan ystävän ja vihollisen ja aiheuttaa suurempia vahinkoja laajennetulla kantamalla.
+ie.manual.entry.emplacement_tesla1=Energiakäyttöisyyden vuoksi se ei vaadi ammuksia - vain jatkuvaa sähkönsyöttöä. Sen haittoja ovat alhainen hyökkäysalue ja korkea energiankulutus.
+
+ie.manual.entry.emplacement_ir_observer0=Infrapunatarkkailija on valvontalaite, jota käytetään vihollisten havaitsemiseen kaukaa ja niiden koordinaattien jakamiseen muiden sijoituspaikkojen kanssa. Sitä pidetään yhtenä ellei tärkeimmistä sijoitusaseista.
+ie.manual.entry.emplacement_ir_observer1=IR-tarkkailijoita käyttämällä voidaan laajentaa dramaattisesti muiden asemapaikkojen toiminta-aluetta, paljastaa ja välittää vihollisen sijaintien koordinaatteja erittäin pitkien etäisyyksien tietojen avulla ja koordinoida yhdistettyjen asemapaikkojen verkostoa tarkan tulipalon suorittamiseksi yhteen kohde kaukaa, mikä lisää puolustusjärjestelmän yleistä potentiaalia.
+ie.manual.entry.emplacement_ir_observer2=On syytä huomata, että infrapunahavaintolaite voi myös havaita soihdut ja lähettää niiden koordinaatit, joita voidaan käyttää suoraan ohjattuun tarkkaan tykistöpommitukseen.<br>Tarkkailijoilla on rajoitettu 180 asteen näkökenttä. Ei kykyä kääntyä asennuksen jälkeen ja vain ylös ja alas nousu on mahdollista. Tämä tarkoittaa, että yksi tarkkailija voi kattaa vain suunnan. Tarkkailijat voivat kääntyä, kun sille lähetetään kunnollinen datapaketti, huomioi tämä vaatii purkamista ja sijoitteluun piiloutumista.
+
+#Reference to Jess from Advance Wars, for most kids (me included) playing the game the shell she held was a giant pencil
+#When we grew up we realised ^^
+ie.manual.entry.bullet_production.name=Luodituotanto
+ie.manual.entry.bullet_production.subtext=Se on kuori, ei kynä!
+ie.manual.entry.bullet_production0=Ammusten valmistukseen tarvitaan 2 osaa: ydin - säiliö räjähteille, sirpaleille ja muille komponenteille ja kotelo - johon ydin laitetaan. Näiden osien tuotanto koostuu useista vaiheista ja vaihtelee ammusten tyypin ja monimutkaisuuden mukaan.
+ie.manual.entry.bullet_production1=Aloitetaan kotelosta. Useimmat kotelot voidaan valmistaa käyttämällä sopivaa muottia <link;metalPress;§o§nmetal §o§npress§r;>, mutta jotkut, kuten <link;explosives_mines;§o§nradio §o§nexplosives§r; 5>, vaativat käsityötä.<br>Jos valmistat luoteja, seuraava vaihe on <link;filler;§o§nFiller§r;>:n avulla täyttää luodin kotelo ruudilla. Kotelo on nyt valmis ja valmis kokoamista varten.
+ie.manual.entry.bullet_production2=Ydin voidaan valmistaa <link;projectile_workshop;§o§nProjectile§o§nWorkshop§r;> metallikimpaleilla, muista käyttää <link;bullet_cores;§o§sopiva § o§nmetal §o§nfor §o§nthe §o§njob§r;>: uraanilla on parempi tunkeutumisarvo, mutta pienempi komponenttivaikutus kuin messingillä. Toinen valittavissa oleva muuntaja on <link;core_types;§o§ncore §o§ntype§r;>, joka määrittää kuinka monta komponenttia ydin voi tallentaa.<br>Kun ytimesi on valmistettu, voit täyttää sen komponenteilla käyttämällä toista ammuspajaa, johon on asennettu täyteainepäivitys. Tämä vaihe on valinnainen ja voidaan toistaa useita kertoja samoilla tai eri komponenteilla.
+ie.manual.entry.bullet_production3=Viimeinen vaihe on luodin kokoaminen <link;ammunition_workshop;§o§nAmmunition§o§nWorkshop§r;>:ssa. Täältä voit valita <link;bullet_fuses;§o§nfuse§r;>. Muista, että tietyt ammukset, kuten kranaatit ja räjähteet, eivät tue kaikkia sulaketyyppejä.<br>Siellä on myös seuraava valinnainen vaihe - Chemical Painter. Ampumatarvikkeet voidaan maalata tunnistamisen helpottamiseksi ja yhtenäisyyden parantamiseksi.
+
+ie.manual.entry.ammunition_workshop.name=Ammuspaja
+ie.manual.entry.ammunition_workshop.subtext=Sotakoneen sydän
+ie.manual.entry.ammunition_workshop0=Ammuspaja suorittaa <link;bullet_production;§o§nammunition §o§nproduction§r;> viimeisen osan - kokoonpanon. Käytä sen muodostamiseen vasaraa kahden kuljettimen välissä olevaan terästelinelohkoon.
+ie.manual.entry.ammunition_workshop1=Ammuspaja kokoaa ammukset <link;projectile_workshop;§o§nProjectile §o§nWorkshop§r;>:ssa tuotetusta ytimestä ja kotelosta. Se myös asettaa sulakkeen määrittämään, missä olosuhteissa sen komponentit räjähtävät. Sulakkeet voidaan asettaa liitännän tai datapaketin kautta. Kone vaatii toimiakseen sähköä.
+
+#Reference to its purpose-changing upgrade
+ie.manual.entry.projectile_workshop.name=Luotipaja
+ie.manual.entry.projectile_workshop.subtext=Monikäyttöinen, monitoimityökalu
+ie.manual.entry.projectile_workshop0=Luotipaja on kone, jota käytetään valmistamaan tai täyttämään ytimiä - luotien ammusten osia komponenteilla. Käytä sen muodostamiseen vasaraa vasemmassa metallilaatikossa.
+ie.manual.entry.projectile_workshop1=Oletusasetuksissa luotipaja tuottaa <link;bullet_cores;§o§nytimiä §o§nmetallihipuista§r;>. Koneen käyttäminen vaatii sähköä. Sen käyttöliittymän kautta voidaan asettaa valmistetut ammukset ja ydintyyppi. Se on mahdollista myös data-järjestelmän avulla.
+ie.manual.entry.projectile_workshop2=Luotipaja voidaan päivittää luotien täyttäjäksi. Tämä muuttaa roolin muiden luotipajojen tuottamien ytimien täyttämiseen käyttämällä <link;bullet_components;§o§nkomponentteja§r;>. Täytettävä määrä voidaan määrittää käyttöliittymän tai data-järjestelmän kautta. Enimmäismäärä määräytyy ydintyypin mukaan.
+
+#Reference to Dicker Bertha cannon
+ie.manual.entry.artillery_howitzer.name=Tykistöhaupitsi
+ie.manual.entry.artillery_howitzer.subtext=Berthan sisar
+ie.manual.entry.artillery_howitzer1=Tarkkuuspommituslaite, joka tunnetaan yleisesti nimellä §oArtillery Howitzer§r on epäsuora tuliase, joka on erinomainen hyökkäämään kohteisiin pitkillä etäisyyksillä.
+ie.manual.entry.artillery_howitzer2=Haupitsipesä koostuu betonibunkkerista aseella, komentopöydät sivuilla yläosassa ja teräsovesta, joka voidaan avata punakiven signaalilla. Kuljettimelle on syötettävä ammukset alas laskevalle ja lastattavalle "load"-komennolla, ampumisen jälkeen aseen tyhjä kotelo on purettava "unload"-komennolla. Kone vaatii toimiakseen suuria määriä tehoa. Käytä sen muodostamiseen vasaraa betonilohkoon, joka työntyy ulos ylhäältä.
+ie.manual.entry.artillery_howitzer.vars_in.c.main=Toimintotila
+ie.manual.entry.artillery_howitzer.vars_in.c.sub=Mahdolliset arvot: "load", "unload", "fire", "aim", "stop"
+ie.manual.entry.artillery_howitzer.vars_in.f.main=Shell sulakeaika
+ie.manual.entry.artillery_howitzer.vars_in.f.sub=Aika ennen kuin kuori räjähtää (tikkuja, 20 tikkiä = 1 sekunti), oletus on -1 (pois käytöstä)
+ie.manual.entry.artillery_howitzer.vars_in.y.main=Aseen kiertosuunta
+ie.manual.entry.artillery_howitzer.vars_in.y.sub=Oikeat arvot välillä 0-360, mutta hyväksyy minkä tahansa luvun ja normalisoi sen
+ie.manual.entry.artillery_howitzer2.vars_in.p.main=Aseen nousu
+ie.manual.entry.artillery_howitzer2.vars_in.p.sub=Mahdolliset arvot: 0 (ase ylös) -105 (ase alas)
+
+ie.manual.entry.artillery_howitzer1.vars_callback.get_energy=Palauttaa energiamäärän
+ie.manual.entry.artillery_howitzer1.vars_callback.get_state=Palauttaa nykyisen tilan<br>§oMahdolliset arvot: "idle","loading","unloading","shooting"§r
+ie.manual.entry.artillery_howitzer1.vars_callback.get_state_num=Palauttaa nykyisen tilan<br>§oMahdolliset arvot: 0,1,2,3§r
+ie.manual.entry.artillery_howitzer1.vars_callback.get_state_progress=Palauttaa tilan edistymisen prosentteina
+
+ie.manual.entry.artillery_howitzer2.vars_callback.get_yaw=Palauttaa nykyisen aseen suunnan
+ie.manual.entry.artillery_howitzer2.vars_callback.get_pitch=Palauttaa nykyisen aseen nousun
+ie.manual.entry.artillery_howitzer2.vars_callback.get_planned_yaw=Palauttaa suunnitellun aseen suunnan
+ie.manual.entry.artillery_howitzer2.vars_callback.get_planned_pitch=Palauttaa suunnitellun aseen nousun
+ie.manual.entry.artillery_howitzer2.vars_callback.get_platform_height=Palauttaa nykyisen lavan korkeuden
+
+ie.manual.entry.artillery_howitzer3.vars_callback.get_door_opened=Palauttaa onko ovi avattu
+ie.manual.entry.artillery_howitzer3.vars_callback.get_door_closed=Palauttaa onko ovi kiinni
+ie.manual.entry.artillery_howitzer3.vars_callback.get_door_opening=Palauttaa onko ovi auki/sulkeutuuko
+
+ie.manual.entry.artillery_howitzer4.vars_callback.get_loaded_shell=Palauttaa tällä hetkellä ladatun komentotulkin
+ie.manual.entry.artillery_howitzer4.vars_callback.get_stored_shell=Palauttaa jonossa odottavan komentotulkin<br>§oVaatii kokonaisluvun 'i' arvolla 0-5§r
+
+ie.manual.entry.ballistic_computer.name=Balistinen tietokone
+ie.manual.entry.ballistic_computer.subtext=Laske tämä siihen
+ie.manual.entry.ballistic_computer0=Ballistinen tietokone on laite, joka muuntaa sijaintivektorin ja luodin massan kallistukseksi ja nousuksi, jota useimmat dataohjatut aseet käyttävät.
+ie.manual.entry.ballistic_computer1=Muuttujan syöttö:<br>Kokonaisluvut 'x', 'y', 'z' - paikka, jossa laukaistaan<br>Kokonaisluku 'm' - luodin massa<br>Muuttujatulostus:< br>Kokonaisluku 'p' - aseen kiertosuunta<br>Kokonaisluku 'y' - aseen kiertosuunta
+ie.manual.entry.ballistic_computer.vars_in.x.main=Ampupaikka
+ie.manual.entry.ballistic_computer.vars_in.x.sub=Suhteessa tykistön keskustaan
+ie.manual.entry.ballistic_computer.vars_in.m.main=Luotimassa
+ie.manual.entry.ballistic_computer.vars_in.m.sub=Koska et voi syöttää Floatia, sinun on pyöristettävä luku
+
+ie.manual.entry.ballistic_computer.vars_out.y.main=Aseen kiertosuunta
+ie.manual.entry.ballistic_computer.vars_out.y.sub=Oikeat arvot välillä 0-360, mutta hyväksyy minkä tahansa luvun ja normalisoi sen
+ie.manual.entry.ballistic_computer.vars_out.p.main=Aseen nousu
+ie.manual.entry.ballistic_computer.vars_out.p.sub=Mahdolliset arvot: 0 (ase ylös) -105 (ase alas)
+
+#Reference to the BluSunrize's general dislike of the machinegun and the ammunition crate
+ie.manual.entry.ammocrate.name=Ammuslaatikko
+ie.manual.entry.ammocrate.subtext=Väritetty vihreä, ei sininen
+ie.manual.entry.ammocrate0=Ammuslaatikko on kannettava säilytystila kaikille luodeille ja tyhjille koteloille. Sitä voidaan käyttää revolverin tai pikalataimen lataamiseen luomalla kuormakuvio ja asettamalla patruunat sisään. Voit ottaa revolverin takaisin laatikosta käyttämällä sitä tyhjällä kädellä.
+
+#Reference to Blacknight, author of the sprites for electric hammer and lighter, also the author of the idea of the chemical dispenser.
+ie.manual.entry.chemdispenser.name=Kemikaaliannostelija
+ie.manual.entry.chemdispenser.subtext=Lekki mustassa yössä
+ie.manual.entry.chemdispenser0=Laite, jonka on keksinyt sama insinööri, joka suunnitteli sähkövasaran, alunperin sadon kasteluun ja tulipalojen sammuttamiseen. Sitä voidaan käyttää myös sytytysnesteen ruiskuttamiseen tarkasti.
+ie.manual.entry.chemdispenser1=Kemikaaliannostelija vaatii virtaa johdon kautta laitteen liittimeen, datasignaalin (tai jatkuvan Redstone-signaalin) päättääkseen toiminnoistaan ja nesteen takana olevaan tuloon.
+ie.manual.entry.chemdispenser.vars_in.a.main = Ruiskutettavan nesteen määrä
+ie.manual.entry.chemdispenser.vars_in.a.sub=milibuckets (mB)
+ie.manual.entry.chemdispenser.vars_in.i.main=Pitäisikö neste sytyttää
+ie.manual.entry.chemdispenser.vars_in.i.sub=
+ie.manual.entry.chemdispenser.vars_in.y.main=Suutin kääntyy
+ie.manual.entry.chemdispenser.vars_in.y.sub=Mahdolliset arvot: -45 - 45
+ie.manual.entry.chemdispenser.vars_in.p.main=Suuttimen nousu
+ie.manual.entry.chemdispenser.vars_in.p.sub=Mahdolliset arvot: -45 - 45
+
+#Gandalf!
+ie.manual.entry.fortifications.name=Pentopuolustukset
+ie.manual.entry.fortifications.subtext=Ne eivät läpäise
+ie.manual.entry.fortifications0=Hiekkapussit ovat halpa suojaseinä, joka kestää pienikaliiperisia luoteja ja pieniä räjähdyksiä. Ne ovat erittäin hyödyllisiä kaivantojen rakentamisessa ja niitä käytetään <link;emplacement;§o§nemplacements§r;> luomiseen.
+ie.manual.entry.fortifications1=Panssarintorjuntaloukku, jota kutsutaan myös Anti-Tank Hedgehogiksi, on passiivinen ajoneuvojen vastainen ase. Sen terävät reunat pystyvät leikkaamaan uria ja ajoneuvojen renkaita ja vahingoittamaan vakavasti kevyitä ajoneuvoja, jotka yrittävät painaa niitä.
+
+#Bullet cores & components
+ie.manual.entry.bullet_cores.name=Luotiytimet
+ie.manual.entry.bullet_cores.subtext=Tuo pomppii!
+
+ie.manual.entry.bullet_core.core_brass = Messinkiydin
+ie.manual.entry.bullet_core.core_brass.lore=Tee siitä Steampunk
+ie.manual.entry.bullet_core.core_brass.desc=Mesinki on raskasmetalli, jolla on huonot tunkeutumisominaisuudet, mutta se lisää huomattavasti muiden komponenttien vaikutusta.
+
+ie.manual.entry.bullet_core.core_lead=Johdinydin
+ie.manual.entry.bullet_core.core_lead.lore=Hyvä, huono ja ruma
+ie.manual.entry.bullet_core.core_lead.desc=Lyijy on hyvä materiaali halvoille luodeille, joilla on suuri vaurio ja keskinkertainen läpäisykyky.
+
+ie.manual.entry.bullet_core.core_steel=Teräsydin
+ie.manual.entry.bullet_core.core_steel.lore=Full Metal Jacket
+ie.manual.entry.bullet_core.core_steel.desc=Teräksen käyttö on edullinen tapa lisätä ammusten läpäisykykyä, ainoa haittapuoli on hieman heikentynyt komponenttivaikutus.
+
+ie.manual.entry.bullet_core.core_tungsten=Volframiydin
+ie.manual.entry.bullet_core.core_tungsten.lore=Lataa APCR!
+ie.manual.entry.bullet_core.core_tungsten.desc=Volframi läpäisee esineitä paremmin kuin teräs, mutta se vähentää muiden komponenttien vaikutusta
+
+ie.manual.entry.bullet_core.core_uranium=Uraaniydin
+ie.manual.entry.bullet_core.core_uranium.lore=Mitä tarkoitat, ammukset ovat lopussa?
+ie.manual.entry.bullet_core.core_uranium.desc=Alhainen paino ja kovuus tekevät uraanista erinomaisen tunkeutumisen menettämättä kykyä kuljettaa räjähtäviä aineita. Hieno, mutta kallis valinta.
+
+ie.manual.entry.bullet_components.name=Ammusten komponentit
+ie.manual.entry.bullet_components.subtext=Load APCRHEFSPTSD B-Capped!
+ie.manual.entry.bullet_components.dmg_mod=Vahinko: %sx
+ie.manual.entry.bullet_components.pen_mod=Lävistysvoima: %s vBH
+ie.manual.entry.bullet_components.blast_mod=Räjähdyssäde: %sx
+ie.manual.entry.bullet_components.density=Tiheys: %s
+ie.manual.entry.bullet_components.type=Tyyppi: %s
+
+#A quote from World in Conflict
+ie.manual.entry.bullet_component.firework=Ilotulitus
+ie.manual.entry.bullet_component.firework.lore=Ja nyt, vapauta taivaat
+ie.manual.entry.bullet_component.firework.desc=Ilotulitteita, jotka tunnetaan enimmäkseen kauniista ulkonäöstään, voidaan käyttää vihollisten tukahduttamiseen ja sokeuttamiseen.
+
+#Quote from Company of Heroes/Market Garden campaign
+ie.manual.entry.bullet_component.tracer_powder=Jäljitysjauhe
+ie.manual.entry.bullet_component.tracer_powder.lore=Täytä taivas merkkiaineilla!
+ie.manual.entry.bullet_component.tracer_powder.desc=Tracerit ovat hyvä tapa nähdä mihin suuntaan luotisi lentää. Tätä voidaan käyttää puhtaasti koristetarkoituksiin tai aseen laukauskulman korjaamiseen.
+
+#Reference to Codename Panzers: Cold War
+ie.manual.entry.bullet_component.flare_powder=Häihdytysjauhe
+ie.manual.entry.bullet_component.flare_powder.lore=Yöstä tuli päivä
+ie.manual.entry.bullet_component.flare_powder.desc=Soihdutuksia voidaan käyttää valaisemaan tai merkitsemään paikkoja, tästä voi olla hyötyä tykistöjen ohjaamisessa
+
+#Reference to the book "Thus Spoke Zarathustra"
+ie.manual.entry.bullet_component.propaganda=Propaganda
+ie.manual.entry.bullet_component.propaganda.lore=Se, joka tottelee, ei kuuntele itseään!
+ie.manual.entry.bullet_component.propaganda.desc=Propagandaa voidaan käyttää herättämään pelkoa vihollisesi, eli jos he osaavat tietysti lukea.
+
+#Fallout reference
+ie.manual.entry.bullet_component.nuke=Ydinpommi
+ie.manual.entry.bullet_component.nuke.lore=Sota ei muutu koskaan
+ie.manual.entry.bullet_component.nuke.desc=Ydinräjähteet ovat tehokkaimpia ja tuhoisimpia ihmisen tuntemia, vain paksut teräsbetonikerrokset voivat suojata sen voimalta. Lisäksi sen aiheuttama lämpö sulattaa vihollisia ympäriltä ja vaikka he selviäisivät siitä, he kuolevat nopeasti säteilyyn.
+
+#Reference to a song
+ie.manual.entry.bullet_component.tnt=TNT
+ie.manual.entry.bullet_component.tnt.lore=Tonnia!
+ie.manual.entry.bullet_component.tnt.desc=TNT on räjähtävä materiaali, jolla on keskinkertainen tuhovoima. Koska se on helppo valmistaa, se on hyvä valinta konekivääriluoteja ja kranaatteja varten.
+
+#CoH2 Reference
+ie.manual.entry.bullet_component.rdx=RDX
+ie.manual.entry.bullet_component.rdx.lore=Asiat nousevat, asiat menevät alas!
+ie.manual.entry.bullet_component.rdx.desc=RDX, joka tunnetaan myös nimellä §shexogen§r, on voimakas erittäin räjähtävä materiaali. Koska se on kaksi kertaa tehokkaampi kuin TNT, se pystyy tuhoamaan raskaimmatkin paikat.
+
+#There are many variants of HMX's full name, one of them is Her Majesty's Explosive
+ie.manual.entry.bullet_component.hmx=HMX
+ie.manual.entry.bullet_component.hmx.lore=Hänen Majesteettinsa hienoin
+ie.manual.entry.bullet_component.hmx.desc=HMX on yksi tehokkaimmista tavanomaisista räjähteistä, se on kolme kertaa tehokkaampi kuin TNT, ja se pystyy murtautumaan minkä tahansa linnoituksen läpi.
+
+#Reference to a song
+ie.manual.entry.bullet_component.white_phosphorus=Valkoinen fosfori
+ie.manual.entry.bullet_component.white_phosphorus.lore=Myrskypilviä, tulta ja terästä.
+ie.manual.entry.bullet_component.white_phosphorus.desc=Valkoinen fosfori on useimpien syttyvien kuorien pääainesosa. Sen korkea lämpö tekee ympäröivistä vihollisista syttyvämpiä, kun taas palavat kuumat palaset syttyvät kaiken ympärillä.
+
+#A reference to struggle between Tesla and Edison
+#similar to how the Finns made a cocktail for Molotov (soviet foreign affairs minister) during the Winter War, a tesla grenade would be a nice one for Edison
+ie.manual.entry.bullet_component.tesla=Vapaa lähettäjät
+ie.manual.entry.bullet_component.tesla.lore=Lahja Edisonille
+ie.manual.entry.bullet_component.tesla.desc=Pikkupurkaussäteilijät luovat kentän, joka häiritsee sähkön virtausta. Ne ovat hyödyllisiä teollisuuslaitteiden, työpaikkojen ja energiantuotannon sabotoinnissa.
+
+
+ie.manual.entry.bullet_component.shrapnel_aluminum=Alumiinisirpale
+ie.manual.entry.bullet_component.shrapnel_aluminum.lore=Ameliinia, sitä ei vain maalata
+ie.manual.entry.bullet_component.shrapnel_aluminum.desc=Alumiini ei ole paras materiaali sirpaleille, mutta se on tarpeeksi halpaa käytettäväksi taistelussa.
+
+ie.manual.entry.bullet_component.shrapnel_zinc=Sinkkisirpale
+ie.manual.entry.bullet_component.shrapnel_zinc.lore=
+ie.manual.entry.bullet_component.shrapnel_zinc.desc=Sinkki ei ole hyvä sirpalemateriaali, mutta jos siitä on pulaa, kaikki käy.
+
+#Reference to Terraria's coin gun
+ie.manual.entry.bullet_component.shrapnel_copper=Kuparisirpale
+ie.manual.entry.bullet_component.shrapnel_copper.lore=Tee kolikoista ammuksiasi
+ie.manual.entry.bullet_component.shrapnel_copper.desc=Vaikka kuparin heittäminen vihollisiin ei lahjoa heitä, muutaman laukauksen jälkeen se saattaa tehdä heidät kuolleiksi.
+
+#Reference to JoJo, yes even in the II there has to be one
+ie.manual.entry.bullet_component.shrapnel_platinum=Platinasirpale
+ie.manual.entry.bullet_component.shrapnel_platinum.lore=Sirpalekäyttäjä, vai mitä?
+ie.manual.entry.bullet_component.shrapnel_platinum.desc=Valitsetko Platinan? Kyllä, ehdottomasti, tee itsestäsi köyhä, sinä haluat sen, en minä.
+
+#Murica' fuck yeah
+ie.manual.entry.bullet_component.shrapnel_gold=Kultainen sirpale
+ie.manual.entry.bullet_component.shrapnel_gold.lore=Ja kuka välittää veronmaksajista?
+ie.manual.entry.bullet_component.shrapnel_gold.desc=Ai niin, vanha kunnon tapa tuhlata rahaa - sota. Vaikka luodit ovat jonkin verran kalliita, niillä ei näytä olevan paljon vaikutusta vastustajaan.
+
+ie.manual.entry.bullet_component.shrapnel_nickel=Nikkelin sirpale
+ie.manual.entry.bullet_component.shrapnel_nickel.lore=
+ie.manual.entry.bullet_component.shrapnel_nickel.desc=Nikkeli on huono valinta sirpaleille, se ei aiheuta paljon vahinkoa, mutta vaikeina aikoina se voi pelastaa päivän.
+
+#Reference to the Netflix's Witcher series
+ie.manual.entry.bullet_component.shrapnel_silver=Hopeanvärinen sirpale
+ie.manual.entry.bullet_component.shrapnel_silver.lore=Heitä kolikko ampujallesi
+ie.manual.entry.bullet_component.shrapnel_silver.desc=Hopean sirpaleet ovat hyvä vaihtoehto taistella epäkuolleita vihollisia vastaan.
+
+ie.manual.entry.bullet_component.shrapnel_electrum=Sähkösirpale
+ie.manual.entry.bullet_component.shrapnel_electrum.lore=Shokkijoukot ovat saapuneet
+ie.manual.entry.bullet_component.shrapnel_electrum.desc=Electrum on erinomainen sähkön johtamisessa, kun taas shapneli ei satu paljon, viholliset, joihin osuu, saavat enemmän vahinkoa energia-aseilta, kuten tesla-kelailta.
+
+#Reference to a post-ww2 poster for inter-country help in Western Europe
+ie.manual.entry.bullet_component.shrapnel_constantan=Constantanin sirpale
+ie.manual.entry.bullet_component.shrapnel_constantan.lore=<br>Säällä mikä tahansa, tapamme vihollisia yhdessä.
+ie.manual.entry.bullet_component.shrapnel_constantan.desc=Constantan on tunnettu lämmönjohtavista ominaisuuksistaan, viholliset, joihin osuma, ovat alttiita tulivaurioille jonkin aikaa.
+
+#Reference to words by Otto von Bismarck
+ie.manual.entry.bullet_component.shrapnel_iron=Rautasirpaleita
+ie.manual.entry.bullet_component.shrapnel_iron.lore=Verellä ja raudalla!
+ie.manual.entry.bullet_component.shrapnel_iron.desc=Rauta on hyvä valinta sirpaleille, se tunkeutuu helposti kevyen panssarin päällä olevien vihollisten läpi.
+
+ie.manual.entry.bullet_component.shrapnel_lead=Johda sirpale
+ie.manual.entry.bullet_component.shrapnel_lead.lore=Anna lyijyn sataa!
+ie.manual.entry.bullet_component.shrapnel_lead.desc=Lyijy on hyvä sirpalemateriaali, se on raskasta ja aiheuttaa suurta vahinkoa panssarittomille vihollisille.
+
+#Japanese "hagane" means steel, but the literal translation is "full metal", Hagane no Renkinjutsushi
+ie.manual.entry.bullet_component.shrapnel_steel=Terässirpale
+ie.manual.entry.bullet_component.shrapnel_steel.lore=Täysmetalli kaikessa komeudessaan
+ie.manual.entry.bullet_component.shrapnel_steel.desc=Teräs on hienoa sirpalemateriaalia, hyvä vahinko, hajonta ja nopeus tekevät siitä tehokkaan kaikkia vastustajia vastaan.
+
+ie.manual.entry.bullet_component.shrapnel_brass=Messinkisirpaleita
+ie.manual.entry.bullet_component.shrapnel_brass.lore = Koristesuunnittelu
+ie.manual.entry.bullet_component.shrapnel_brass.desc=Mesinki on huono valinta sirpaleiden valmistukseen, vaikka sen suuri paino tekee siitä enemmän vahinkoa kuin muut heikot metallit.
+
+#A reference to Bear989sr. - a gregtech player, I just love when he says the word "steel", also some nice GT tutorials
+ie.manual.entry.bullet_component.shrapnel_tungsten=Volframi sirpale
+ie.manual.entry.bullet_component.shrapnel_tungsten.lore=Ja nyt teemme *ekhem* TUNGSTEN-STEEL...
+ie.manual.entry.bullet_component.shrapnel_tungsten.desc=Volframi on erittäin hyvä materiaali sirpaleille, sen suuri vaurio mahdollistaa vihollisten paloittelun.
+
+#Reference to Kuruma saying IEn's thorium railgun rods are the strongest railgun ammo
+ie.manual.entry.bullet_component.shrapnel_thorium=Thorium-sirpale
+ie.manual.entry.bullet_component.shrapnel_thorium.lore=Tee kranaatteja, älä sauvoja!
+ie.manual.entry.bullet_component.shrapnel_thorium.desc=Thorium on hyvä, mutta kallis sirpalemateriaali, jolla on korkeat vaurio- ja tunkeutumisarvot.
+
+ie.manual.entry.bullet_component.shrapnel_HOPGraphite=HOP-grafiittisirpale
+ie.manual.entry.bullet_component.shrapnel_HOPGraphite.lore=
+ie.manual.entry.bullet_component.shrapnel_HOPGraphite.desc=Grafiitti on erittäin hyvä sirpalemateriaali, sen keveys ja hyvät lävistysominaisuudet tekevät siitä hyödyllisen taistelussa.
+
+ie.manual.entry.bullet_component.shrapnel_uranium=Uraanin sirpale
+ie.manual.entry.bullet_component.shrapnel_uranium.lore=Ra-di-o-active
+ie.manual.entry.bullet_component.shrapnel_uranium.desc=Uraani on yksi parhaista materiaaleista sirpaleita varten, sirovilla palasilla ei ole ongelmaa tunkeutua panssarin läpi ja ne voivat aiheuttaa suurta vahinkoa mihin tahansa kohteeseen.
+
+
+#Logistics
+
+#Reference to Foxhole - a MMO game with a big persitent war in which logistics play a key role
+ie.manual.entry.logistics.name=Logistiikka
+ie.manual.entry.logistics.subtext=Logi, bmats ASAP!
+ie.manual.entry.logistics0=Logistiikka on ainutlaatuinen tekniikan ala, joka keskittyy tavaroiden varastointiin, toimittamiseen ja siirtotavan hallintaan. Hyvä logistiikkajärjestelmä koostuu varastotilasta ja läheisistä tuotantolaitoksista ja tehtaista tarvittavien asioiden nopeaa valmistusta varten. Uusimman elektroniikka- ja sähkötekniikan ja joidenkin vanhojen pyöriväkäyttöisten koneiden avulla hyvän jakelujärjestelmän luominen on helpompaa kuin koskaan.
+
+#KISS is a rule used in programming, logistics and engineering
+ie.manual.entry.task_system.name=Tehtäväjärjestelmä
+ie.manual.entry.task_system.subtext=Pidä se yksinkertainen, tyhmä
+ie.manual.entry.task_system0=Tehtäväjärjestelmä on konsepti koneen työaikataulun järjestämisestä yksittäisten, toistettavien tehtävien avulla. Monet datalaitteet, kuten lisääjät, pakkaaja ja datareititin, käyttävät tehtäviä.<br>Tehtävät jaetaan:<br>Työt - tehtävät, jotka suoritetaan loputtomasti, ellei niitä poisteta manuaalisesti<br>Pyynnöt - tehtävät, jotka ovat väliaikaisia ja poistetaan, kun ne ovat valmiit (eli kun lisäaja on poiminut tietyn määrän kohteita)
+ie.manual.entry.task_system1=Oletusarvoisesti tehtävät suoritetaan vanhimmasta uusimpaan. Jos tehtävää ei voida suorittaa, se ohitetaan. Pyynnön suorittamisen jälkeen (onnistuneesti tai ei) tarkistetaan, pitäisikö se poistaa.
+
+#Reference to Choroman's laziness, but also some hard work on the Packer model
+ie.manual.entry.packer.name=Pakkaaja
+ie.manual.entry.packer.subtext=Vielä enemmän putkia ja tunneleita!
+ie.manual.entry.packer0=Pakkaaja on kone, jota käytetään tavaroiden lastaamiseen säiliöihin, kuten laatikoihin tai luotimakasiiniin. Toimintaa varten se vaatii virtaa ja yhden datasignaalin, joka määrittää, kuinka paljon esineitä tulee laittaa joka kerta. Muodosta se käyttämällä vasaraa kuljetinhihnan yläpuolella olevaan putkeen.
+ie.manual.entry.packer1=Oletusarvoisesti pakkaaja tarjoaa 54 säilytyspaikkaa tavaroille, jotka voidaan syöttää yhden kuljettimen kautta koneen takaosassa. Sen käyttäminen vaatii sähköä ja kontin toimittamista 3 lohkon pituiselle kuljettimelle. Tilausten pakkaamiseen kone käyttää tehtäväjärjestelmää: tehtäviä voidaan lisätä, poistaa ja muokata sen käyttöliittymän tai kourutietojärjestelmän kautta.
+ie.manual.entry.packer2=Pakkaa-tehtävää käytetään tuotteiden lataamiseen säiliöön. Oletuksena pakkaaja voi ottaa minkä tahansa tuotteen (*-symboli) ja suurimman mahdollisen määrän sitä. Tätä voidaan muuttaa: valitsemalla eri tilan voit valita, otetaanko paikkoja tai kohteita. Tämä summa voidaan määrittää käyttöliittymässä alla olevan syöttökentän kautta.
+ie.manual.entry.packer3="Käyttää OreDictiä"-kytkin määrittää, yhdistetäänkö kohteet, joilla on sama Ore Dictionary -avain. Tämä mahdollistaa erityyppisten kivi- tai puulankkujen ottamisen. "NBT Sensitive" -kytkin määrittää, onko tuotteessa oltava sama NBT-tunniste kuin syötetyssä. Se on oletuksena pois käytöstä.
+ie.manual.entry.packer4="Pura", "Täytä", "Poista täyttö", "Lataa" ja "Tyhjennä" -tehtävät toimivat samalla tavalla kuin "Pakkaa" -tehtävät. Nesteiden osalta "raot" ovat tankkeja ja määrä on nesteen määrä megatavuina. Energian osalta vain määrä otetaan huomioon.
+
+ie.manual.entry.packer.vars_in.c.main=Komento
+ie.manual.entry.packer.vars_in.c.sub=Mahdolliset arvot: "add", "remove", "clear"
+ie.manual.entry.packer.vars_in.a.main=Toiminto ("add":n käyttämä)
+ie.manual.entry.packer.vars_in.a.sub=Mahdolliset arvot: "tuote", "fluid", "energy"
+ie.manual.entry.packer.vars_in.s.main=Pino
+ie.manual.entry.packer.vars_in.s.sub=Valinnainen. ItemStack- tai OreDict-merkkijono, jonka kohteiden on vastattava.
+ie.manual.entry.packer.vars_in.m.main=Tila ("add":n käyttämä)
+ie.manual.entry.packer.vars_in.m.sub=Mahdolliset arvot: "summa", "slot", "all_possible". Valinnainen, oletuksena "all_possible".
+ie.manual.entry.packer.vars_in.e.main=Vanhenee jälkeen ("add" käyttää)
+ie.manual.entry.packer.vars_in.e.sub=Valinnainen. Minkä summan jälkeen tehtävän tulee päättyä.
+
+#Star Wars reference
+ie.manual.entry.advanced_powerpack.name=Parannettu kondensaattorireppu
+ie.manual.entry.advanced_powerpack.subtext=(Melkein) ääretön teho
+ie.manual.entry.advanced_powerpack0=Parannettu kondensaattorireppu on suora päivitys <link;powerpack0;§o§nCapacitor §o§nBackpack§r;>:een. Suurin ero on suurempi energiakapasiteetti ja kyky ladata <linkillä. link;teslaCoil;§o§nTesla §o§nCoils§r;>.
+ie.manual.entry.advanced_powerpack1=Sen langaton latauskyky tekee käyttäjän myös immuuni sähkövaurioille ja poistaa Faraday-puvun käytön tarpeen. Repun sivusäkit voidaan maalata samalla tavalla kuin nahkapanssarit.
+
+#Ziplines
+ie.manual.entry.skycrates.name=Skycrates
+ie.manual.entry.skycrates.subtext=Varsinaiset logistiset linjat!
+ie.manual.entry.skycrates0=Skycrate-järjestelmä on erilainen lähestymistapa tuotteiden toimittamiseen. Sen nopeus on parempi kuin minkä tahansa kuljettimen ja köydestä valmistetut linjat ovat paljon halvempia ja tilaa säästävämpiä. Siinä on myös joitain haittoja: se vaatii asemat molemmilla puolilla ja laatikot on asetettava miinakärryyn. Skycrates on parempi vaihtoehto kuin kuljettimet pitkillä etäisyyksillä, niiden käyttöä ei suositella lyhyillä (0-30m) etäisyyksillä.
+ie.manual.entry.skycrates1=Skycrate-asema on skycrate-linjan alku- ja loppupiste. Käytä sen muodostamiseen vasaraa keskellä olevaan telineeseen. Toimiakseen se vaatii kyljelleen syötetyn pyörivän tehon. Vaihteiden määrä lisää sen tehokkuutta samalla tavalla kuin se toimii <link;rotary_power;§o§nGearboxes§r;4>:n kanssa.
+ie.manual.entry.skycrates2=Asema käyttää telineitä skycrates-kiinnitysten kiinnittämiseen, kiinnikkeet otetaan takaosasta, asettimen takaa. Laatikot asetetaan ja tulostetaan kuljettimelle. Häkki voidaan pakottaa ulos asemalta käyttämällä punakiven signaalia.
+ie.manual.entry.skycrates3=Skycart-asema on skycrate-linjan alku- ja loppupiste. Käytä sen muodostamiseen vasaraa keskellä olevaan telineeseen. Toimiakseen se vaatii kyljelleen syötetyn pyörivän tehon. Vaihteiden määrä lisää sen tehokkuutta samalla tavalla kuin se toimii <link;rotary_power;§o§nGearboxes§r;4>:n kanssa.
+ie.manual.entry.skycrates4=Asema käyttää telineitä skycrates-kiinnitysten kiinnittämiseen, kiinnikkeet otetaan takaosasta, asettimen takaa. Miinakärryt pääsevät asemalle vasta, kun rautatiepuomi on pystyssä, miinakärry voidaan pakottaa asemalta ulos punakivi-opasteella. Asema karkottaa miinakärryt automaattisesti lastaamisen/purkauksen jälkeen.
+ie.manual.entry.skycrates5=Skycrate Post on skycrate-verkon kahden pisteen välinen rele. Vain kaksi johtoa voidaan kiinnittää. Käytä sen muodostamiseen vasaraa aidassa.
+ie.manual.entry.skycrates6=Crate miinakärryt ovat turvallinen tapa kuljettaa tavaraa rautateitse. Ne voidaan valmistaa laittamalla laatikko miinakärryyn, sillä sisällä olevat esineet eivät katoa. Purettuna kaivoskärry jakautuu varsinaiseksi kärryksi ja laatikoksi.
+ie.manual.entry.skycrates7=Skycrate-kiinnikkeitä käytetään laatikoiden kuljettamiseen vetoketjun kautta, mallia on kaksi: perusmalli ja sähköinen, joka käyttää <link;tesla_coil;§o§nTeslan liikkeellä saatua energiaa. §o§nCoils§r;> lähellä.
+
+#TF2 Reference
+ie.manual.entry.medicrate.name=Lääketieteellinen laatikko
+ie.manual.entry.medicrate.subtext=Oikein, Archimedes?
+ie.manual.entry.medicrate0=Lääketieteellinen laatikko on laite, jota käytetään haavoittuneiden henkilöiden parantamiseen. Asetuksen jälkeen se on täytettävä §lbasic§r Regeneration Potionilla toimiakseen.
+ie.manual.entry.medicrate1=Helppo ja hiiren oikea napsautus avaa tai sulkee laatikon: kun se on suljettu - sen inventaarioon pääsee käsiksi, kun se on auki - napsauta hiiren kakkospainikkeella saadaksesi tehosteet. Medical Crate voi myös soveltaa "Iron Will" tehostustehostetta, mikä lisää liikkuvuutta ja keskittymistä ampuessaan aseita liikkeessä nimeltä. Sen saavuttamiseksi toinen paikka on täytettävä kultaisilla omenoilla.
+ie.manual.entry.medicrate2=Asennuslaite voidaan asentaa laatikon päälle. Käytä avainta suljetussa laatikossa ja valitse sopiva päivitys. Asennuksen jälkeen laatikko vaatii MV- tai LV-virtajohdon, joka on liitetty siihen suoraan. Asennettu ruiskunsyötin parantaa automaattisesti ja antaa vauhtia ympärillä oleville kokonaisuuksille.
+
+#A "ministry of nuts and bolts" is a term for a government institution trying to regulate amounts of produced of a good, that's in high demand and cannot (and shouldn't) be measured, like nuts and bolts for construction
+ie.manual.entry.repair_crate.name=Korjaa laatikko
+ie.manual.entry.repair_crate.subtext=Muttereiden ja pulttien ministeriön hyväksymä
+ie.manual.entry.repair_crate0=Korjauskori on laite, jota käytetään varustettujen kohteiden ja päivitetyn lähellä olevien ajoneuvojen korjaamiseen. Asetuksen jälkeen se on toimitettava teräslevyillä toimiakseen.
+ie.manual.entry.repair_crate1=Hiippaaminen ja oikea napsautus avaa tai sulkee laatikon: kun se on suljettu - sen inventaarioon pääsee käsiksi, kun se on auki - napsauta hiiren kakkospainikkeella saadaksesi tehosteet. Korjauslaatikko korjaa kaikki käyttäjän hallussa olevat ja käyttämät tavarat.
+ie.manual.entry.repair_crate2=Asennuslaite voidaan asentaa laatikon päälle. Käytä avainta suljetussa laatikossa ja valitse sopiva päivitys. Asennuksen jälkeen laatikko vaatii MV- tai LV-virtajohdon, joka on liitetty siihen suoraan. Asennettu hitsauslaite korjaa automaattisesti varusteet, ajoneuvot ja lohkot ympäriltä.
+
+#Motorworks
+
+ie.manual.entry.motorworks.name=Moottorityöt
+ie.manual.entry.motorworks.subtext=Täysi kaasu!
+ie.manual.entry.motorworks=Moottorityöt on tekniikan ala, joka keskittyy ajoneuvojen rakentamiseen ja parantaa muiden tehtävien suorittamista. Ajoneuvot lisäävät henkilökunnan ja tavaroiden kuljetusnopeutta ja parantavat sitä kautta tehtaan kokonaistehokkuutta. Ajoneuvoja voidaan myös hyödyntää taisteluetujen saamiseksi.
+
+#Bob Ross reference
+ie.manual.entry.rubber_production.name=Kumin tuotanto
+ie.manual.entry.rubber_production.subtext=Happy Little Trees
+ie.manual.entry.rubber_production0=Ensimmäinen askel kumin tuotannossa on löytää ja kerätä viidakon biomista löytyneen §6Rubber Trees§r -taimia. Nämä puut ovat arvokas lateksin lähde - valkoista nestettä, joka on teollisuuskumin pääkomponentti.
+ie.manual.entry.rubber_production1=Toinen vaihe on kumiviljelmän luominen, kun puun taimet ovat kasvaneet, kaiverra kaiverreikätuki kirveellä. Aseta sitten lateksikeräin puun viereen ja käytä ämpäriä keräilijän päällä saadaksesi sen keräämään lateksia.
+ie.manual.entry.rubber_production2=Jos puun vieressä on useampi kuin yksi keräilijä, lateksi jaetaan niiden kaikkien kesken. Kun ämpäri on täynnä, ota se takaisin vuorovaikutuksessa keräimen kanssa.<br>Lateksin koaguloimisen aloittamiseksi raakakumiksi tarvitaan kaksi asiaa: §6muurahaishappo§r ja <link;coagulator;§o§nthe §o§ncoagulator§r ;>. Muurahaishapon tuottamiseksi tarvitaan <link;refinery;§o§nrefinery§r;>. Yhdistä hiilimonoksidi metanoliin saadaksesi muurahaishappoa.
+ie.manual.entry.rubber_production3=Hiilimonoksidia voidaan tuottaa elektrolyysillä hiilidioksidista, saasteesta ja sivutuotteesta, joka kerätään §6Hiilidioksidisuodattimella§r.
+ie.manual.entry.rubber_production4=Metanolia voidaan valmistaa sekoittamalla nikkeliä tai platinaa veteen, joka syntyy veden elektrolyysillä. Viimeinen vaihe on yhdistää molemmat käyttämällä <link;refinery;§o§nrefinery§r;>.
+ie.manual.entry.rubber_production5=Kun lateksia ja muurahaishappoa hankitaan, on aika koaguloida. Käytä konetta §6raakakumi§r-pallojen luomiseen ja paina ne sitten levyiksi <link;metalPress;§o§nmetal §o§npress§r;>:n levymuotilla.
+ie.manual.entry.rubber_production6=Viimeinen vaihe on raakakumilevyjen vulkanointi. Käytä <link;vulcanizer;§o§nVulcanizer§r;> kumirenkaiden tai -hihnojen valmistamiseen.
+
+ie.manual.entry.vehicle_workshop.name=Ajoneuvopaja
+ie.manual.entry.vehicle_workshop.subtext=Joyride-matkan alku
+ie.manual.entry.vehicle_workshop0=Teollinen kehitys tuo uusia kulkuvälineitä, jotka korvaavat perinteiset, kuten hevoset. Ajoneuvotyöpajan avulla voit luoda näitä uusia keinoja, erityisesti - <link;motorbike;§o§nThe §o§nMotorbike§r;>. Käytä sen muodostamiseen vasaraa vasemmassa alumiinitelineessä.
+ie.manual.entry.vehicle_workshop1=Kone vaatii <config;b;petroleumHere;§6Diesel§r tai ;>§6Biodiesel§r sekä sähkön toimiakseen, ne voidaan toimittaa käyttämällä asianmukaisia portteja koneen sivulla ja päällä. Ajoneuvon luominen: valitse sopiva vaihtoehto käyttöliittymän kautta, toimita näytettävät materiaalit ja varmista, ettei alustalle ole pysäköity ajoneuvo. Jos kaikki ehdot täyttyvät, paina käyttöliittymän raidallista painiketta ja korjaamo aloittaa ajoneuvosi kokoonpanon.
+ie.manual.entry.vehicle_workshop2=Jos ajoneuvo käyttää polttoainetta, se tankataan puolivälissä korjaamon sisäisen säiliön avulla. Polttoaine ei kestä kauan, joten harkitse <link;§o§nFuel §o§nStation§r;fuel_station;>:n rakentamista.
+ie.manual.entry.vehicle_workshop3=Olemassa olevat ajoneuvot voidaan myös päivittää. Päivitystä varten aja ajoneuvosi alustalle ja valitse kelvolliset päivitykset käyttöliittymän kautta. Päivitys ja päivitysten poistaminen vaatii tehon ja dieselin toimituksen.
+
+ie.manual.entry.fuel_station.name=Polttoaineasema
+ie.manual.entry.fuel_station.subtext=EI myy hot-dogeja
+ie.manual.entry.fuel_station0=Bensa-asema on laite, jota käytetään lähellä olevien ajoneuvojen automaattiseen tankkaamiseen. Käytä sen muodostamiseen vasaraa vasemmassa valotekniikan lohkossa.
+ie.manual.entry.fuel_station1=Bensa-asema vaatii virransyötön toimiakseen. Tarvittava polttoaine riippuu ajoneuvosta, monet ajoneuvot, kuten moottoripyörät, käyttävät dieseliä<config;b;petroleumHere;, mutta moottoriveneet käyttävät bensiiniä;>.
+
+ie.manual.entry.vulcanizer.name=Vulcanizer
+ie.manual.entry.vulcanizer.subtext=Ylisuunniteltu savuannostelija
+ie.manual.entry.vulcanizer0=Vulcanizer on viimeinen kone <link;rubber_production;§o§nrubber §o§nproduction§r;> prosessissa. Käytä sen muodostamiseen vasaraa säiliötä lähinnä olevaan teräskappaleeseen.
+ie.manual.entry.vulcanizer1=Käyttäen lämpöä, painetta, muotteja ja lisäyhdisteitä Vulcanizer muuttaa raakakumilevyt tutuksi teolliseksi kumiksi, jota käytetään monien uusien koneiden, erityisesti nopeampien kuljettimien, tehokkaampien moottorihihnojen ja on elintärkeää pyörillä varustettujen ajoneuvojen tuotannossa. Kumin käsittelyyn tarvitaan kolme ainesosaa: raakakumilevyt, jotka toimitetaan rautasäiliön ylempään aukkoon, vulkanointiseos - toimitetaan alla olevaan aukkoon ja rikki - syötetään terässäiliöön.
+ie.manual.entry.vulcanizer2=Koneen käyttäminen vaatii vulkanointimuotin - määrittää lopullisen tehon ja sähkön.
+ie.manual.entry.vulcanizer3=Vulkanointimuotteja voidaan luoda <link;workbench;§o§nEngineerin §o§nWorkbench§r;> -sovelluksessa yllä olevan suunnitelman avulla.
+ie.manual.entry.vulcanizer4=Vulkanointiseos koostuu lisäaineista, jotka parantavat kumin ominaisuuksia. Se voidaan valmistaa kahdella tavalla.
+
+ie.manual.entry.coagulator.name=Koagulaattori
+ie.manual.entry.coagulator.subtext=Intensified Mixing Co.
+ie.manual.entry.coagulator0=Koagulaattori on kone, jota käytetään lateksin koaguloimiseen ja raakakumipallojen muodostamiseen jatkokäsittelyä varten. Käytä sen muodostamiseen vasaraa koneen takaosan keskimmäisessä peltilohkossa.
+ie.manual.entry.coagulator1=Koagulaattori vaatii sähkönsyötön raskaaseen liitinporttiinsa ja tasaisen lateksin (oikea säiliö) ja muurahaishapon (vasen säiliö) syöttämisen, §huomaa sivujen vaihto, jos konetta käännetään§ r. Kun lateksi on sekoitettu happoon ja ylempi "kvarkki"-kerros muodostuu, nosturi valitsee yhden kauhoista, upottaa sen ja laittaa sen takaisin, kun ajastin asetetaan automaattisesti. Jonkin ajan kuluttua lateksi jähmettyy raakakumiksi, joka tulee ulos ämpäriä pitävästä mekanismista. Kumi pudotetaan maahan kauhan viereen.
+
+#Other
+
+#Reference to a certain picture i've seen on reddit few years ago
+ie.manual.entry.electric_tools.name=Tehotyökalut
+ie.manual.entry.electric_tools.subtext=Työskentele älykkäämmin, ei kovemmin
+ie.manual.entry.electric_tools0=Insinöörin sähkövasara on suora päivitys vanhaan Engineer's Hammeriin. Parannetun lujuutensa ja nopeudensa ansiosta tämä vasara voi muodostaa ja rakentaa edistyneitä monilohkoja, kuten <link;radio_station;§o§nRadio §o§nStation§r;>.
+ie.manual.entry.electric_tools1=Insinöörin sähköavain on paranneltu versio Engineer's Wrenchistä. Se rakentaa päivityksiä ja sijoitteluaseita paljon nopeammin kuin manuaalinen vastine.
+ie.manual.entry.electric_tools2=Insinöörin sähköjohtoleikkurit ovat paranneltu versio Engineer's Wire Cuttersista. Ne leikkaavat lohkojen, kuten partakoneen langan, läpi nopeammin.
+
+#Reference to TF2 Pyro
+ie.manual.entry.lighter.name=Insinöörin sytytin
+ie.manual.entry.lighter.subtext=Ei Rainbow-Vision
+ie.manual.entry.lighter0=Insinöörin sytytin on laite, jota käytetään lohkojen sytyttämiseen. Sen kestävyys on ääretön, mutta vaatii polttoainetta toimiakseen.
+ie.manual.entry.lighter_fuels=Kevyemmät polttoaineet
+ie.manual.entry.field_fuel=Neste
+ie.manual.entry.field_amount=Summa
+
+#Reference to a certain picture i've seen on reddit few years ago
+ie.manual.entry.sawmill.name=Saha
+ie.manual.entry.sawmill.subtext=Parempi fidget spinner!
+ie.manual.entry.sawmill0=Saha on automaattinen puusepänkone, joka toimii pyörivällä energialla. Se koostuu pöydästä, mekaanisesta asettimesta ja sahakiinnittimestä. Käytä monilohkon muodostamiseen vasaraa keskimmäiseen puutelineeseen.
+ie.manual.entry.sawmill1=Eri materiaaleista valmistettuja sahoja voidaan asentaa. Vaikka jokainen saha on tehokas puun leikkaamiseen, kovista materiaaleista, kuten teräksestä ja tunstenista, valmistetut sahat voivat leikata jopa metallia.
+ie.manual.entry.sawmill2=Kone vaatii jatkuvaa pyörimisvoimaa sivulleen. Resurssit voidaan laittaa pöydän oikealle puolelle ja prosessoidut tavarat viedään puiseen säilytyslaatikkoon maassa
+
+ie.manual.entry.rotary_power.name=Kiertovirta
+ie.manual.entry.rotary_power.subtext=Asiat alkavat kääntyä!
+ie.manual.entry.rotary_power0=Kiertovoima on vanhanaikainen vaihtoehto sähkövoimalle. Johtojen ja liittimien sijasta käytetään pyöriä ja moottorin hihnoja. Voimajärjestelmä hyödyntää kahta tekijää: vääntömomenttia newtonmetreinä (Nm) ja nopeutta kierroslukuina. Koneet vaativat erilaista vääntömomenttia ja nopeutta toimiakseen tehokkaasti.
+ie.manual.entry.rotary_power1=Jos jokin näistä arvoista ylittää rajan, kone räjähtää. Teho voidaan yhdistää ja jakaa käyttämällä <link;rotary_power;§o§nGearboxes§r;4>.
+ie.manual.entry.rotary_power2=Pyörää käytetään mekaanisen (pyörivän) tehon siirtämiseen laitteiden välillä. Asetuksen jälkeen se voidaan kytkeä toiseen pyörään moottorihihnalla, samalla tavalla kuin liittimet kytketään johtoihin.
+ie.manual.entry.rotary_power3=Moottorihihnat ovat jokaisen pyörivän sähköverkon päävoimansiirtoelementti. Ne eroavat toisistaan siirrettävän vääntömomentin ja nopeuden mukaan. Jos vääntömomentti tai nopeus on liian suuri hihnalle, se irtoaa pyörästä ja putoaa maahan. Käytä erilaisia materiaaleja erilaisiin tarpeisiin - teräs saattaa kestää paremmin vääntömomenttia, mutta tehohäviöt ovat suuremmat.
+ie.manual.entry.rotary_power4=Vaihdelaatikoita käytetään useiden pyörien yhdistämiseen, niiden sivut voidaan vaihtaa tuloon, ulostuloon tai ei mitään. Kaikista tuloista syötetty vääntömomentti summataan ja jaetaan sitten tasan kaikkien lähtöjen kesken. Voit käyttää vaihteistoa yhdistämään vääntömomenttia suuremmaksi tai jakamaan sen kahdelle tai useammalle pyörälle. Vaihteisto vaatii vaihteet, joilla on tietty vääntö- ja nopeusvastus toimiakseen täydellä teholla.
+ie.manual.entry.rotary_power5=Vaihteistolaatikoita käytetään mekaanisten laitteiden kytkemiseen eri standardin akseleilla, niillä voidaan liittää tuulimylly tai vesipyörä moottorin hihnaverkkoon tai tuottaa mekaanista energiaa dynamoon.
+
+#Reference to a certain polish eastern, well... house dweller
+ie.manual.entry.chain_fences.name=Ketjuaidat ja portit
+ie.manual.entry.chain_fences.subtext=Kolme metriä ja kasvaa!
+ie.manual.entry.chain_fences0=Ketjuaidat voivat toimia tyylikkäänä teollisen näköisenä esteenä tehdasalueiden välillä. Ne tarjoavat vähäisen suojan täysimittaista hyökkäystä vastaan, mutta ne riittävät estämään ei-toivotut vieraat tukikohdastasi. Saatavilla monissa mauissa.
+ie.manual.entry.chain_fences1=Puinen aitaportti on tyylikäs ja monumentaalinen sisäänkäynti tehdaskompleksiisi. Ne voidaan aktivoida käyttämällä punakiveä sisäpuolella. Kuten aidat, saatavilla on monia makuja.
+ie.manual.entry.chain_fences2=Puinen ketjuaitaportti on tyylikäs ja monumentaalinen sisäänkäynti tehdaskompleksiisi. Ne voidaan aktivoida käyttämällä punakiveä sisäpuolella. Kuten aidat, saatavilla on monia makuja.
+ie.manual.entry.chain_fences3=Teräsaitaportti on tyylikäs ja monumentaalinen sisäänkäynti tehdaskompleksiisi. Ne voidaan aktivoida käyttämällä punakiveä sisäpuolella. Kuten aidat, saatavilla on monia makuja.
+ie.manual.entry.chain_fences4=Teräsketju-aitaportti on tyylikäs, monumentaalinen sisäänkäynti tehdaskompleksiisi. Ne voidaan aktivoida käyttämällä punakiveä sisäpuolella. Kuten aidat, saatavilla on monia makuja.
+ie.manual.entry.chain_fences5=Alumiininen aitaportti on tyylikäs ja monumentaalinen sisäänkäynti tehdaskompleksiisi. Ne voidaan aktivoida käyttämällä punakiveä sisäpuolella. Kuten aidat, saatavilla on monia makuja.
+ie.manual.entry.chain_fences6=Alumiininen ketjuaitaportti on tyylikäs, monumentaalinen sisäänkäynti tehdaskompleksiisi. Ne voidaan aktivoida käyttämällä punakiveä sisäpuolella. Kuten aidat, saatavilla on monia makuja.
+
+death.attack.iiBullet=%1$s tuli pelaajan %2$s ampumaksi
+death.attack.iiBulletNoShooter=%1$s ammuttiin
+death.attack.iiBulletHeadShot=%1$s otti pelaajan %2$s luodin päähänsä
+death.attack.iiBulletHeadShotNoShooter=%1$s otti luodin päähänsä
+death.attack.iiShrapnel=%1$s repeytyi pelaajan %2$s srapnellista
+death.attack.iiShrapnelNoShooter=%1$s repeytyi srapnellista
+death.attack.iiSawmill=%1$s tuli sahan leikkaamaksi
+death.attack.iiRadiation=%1$s koki voimakasta säteilyä
+death.attack.iiNuclearHeat=%1$s tuhoutui ydinräjähdyksessä
+death.attack.iiMotorbike=%2$s ajoi pelaajan %1$s yli
+death.attack.iiMotorbikeNoRider=%1$s ajettiin yli
+death.attack.iiMotorbikeExplicit=%2$s on tehnyt pelaajan %1$s perseestä ilmaisen parkkipaikan
+death.attack.iiMotorbikeSuicide=%1$s päätti hypätä liikkuvasta moottoripyörästä
+death.attack.iiPanzer1=%1$s murskattiin panssarivaunun telaketjujen alle
+death.attack.iiPanzer2=Järkkymättömät panssarivaunun telaketjut ovat murskanneet pelaajan %1$s
