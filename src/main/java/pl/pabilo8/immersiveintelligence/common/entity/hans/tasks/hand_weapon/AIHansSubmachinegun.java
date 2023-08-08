@@ -4,11 +4,10 @@ import blusunrize.immersiveengineering.common.util.ItemNBTHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
-import pl.pabilo8.immersiveintelligence.api.Utils;
 import pl.pabilo8.immersiveintelligence.common.IIContent;
+import pl.pabilo8.immersiveintelligence.common.IIUtils;
 import pl.pabilo8.immersiveintelligence.common.entity.EntityHans;
-import pl.pabilo8.immersiveintelligence.common.items.ammunition.ItemIIBulletMagazine;
-import pl.pabilo8.immersiveintelligence.common.items.weapons.ItemIISubmachinegun;
+import pl.pabilo8.immersiveintelligence.common.item.weapons.ItemIISubmachinegun;
 
 /**
  * @author Pabilo8
@@ -28,9 +27,9 @@ public class AIHansSubmachinegun extends AIHansHandWeapon
 
 	public AIHansSubmachinegun(EntityHans hans)
 	{
-		super(hans, 4, 22, 1f);
+		super(hans, 4, 18, 1f);
 		this.rangedAttackTime = -1;
-		this.burstTime = 20;
+		this.burstTime = 10;
 	}
 
 	@Override
@@ -38,7 +37,7 @@ public class AIHansSubmachinegun extends AIHansHandWeapon
 	{
 		final ItemStack smg = getWeapon();
 		final ItemStack magazine = ItemNBTHelper.getItemStack(smg, "magazine");
-		return hans.hasAmmo||IIContent.itemSubmachinegun.isAmmo(magazine, smg)||!IIContent.itemSubmachinegun.findMagazine(hans, smg).isEmpty();
+		return hans.hasAmmo||IIContent.itemSubmachinegun.isAmmo(magazine, smg)||!IIContent.itemSubmachinegun.findAmmo(hans, smg).isEmpty();
 	}
 
 	@Override
@@ -52,7 +51,7 @@ public class AIHansSubmachinegun extends AIHansHandWeapon
 	{
 		assert attackTarget!=null;
 		final ItemStack smg = getWeapon();
-		ItemStack magazine = ItemNBTHelper.getItemStack(smg, "magazine");
+		ItemStack magazine = ItemNBTHelper.getItemStack(smg, ItemIISubmachinegun.SHOULD_RELOAD);
 		boolean isAmmoLoaded = IIContent.itemSubmachinegun.isAmmo(magazine, smg);
 
 		//use weapon
@@ -61,12 +60,12 @@ public class AIHansSubmachinegun extends AIHansHandWeapon
 		//reload if magazine empty
 		if(!isAmmoLoaded)
 		{
-			if(!ItemNBTHelper.getBoolean(smg, "shouldReload"))
+			if(!ItemNBTHelper.getBoolean(smg, ItemIISubmachinegun.SHOULD_RELOAD))
 			{
-				final ItemStack ammo = IIContent.itemSubmachinegun.findMagazine(hans, smg);
+				final ItemStack ammo = IIContent.itemSubmachinegun.findAmmo(hans, smg);
 				hans.hasAmmo = !ammo.isEmpty();
 				if(hans.hasAmmo)
-					ItemNBTHelper.setBoolean(smg, "shouldReload", true);
+					ItemNBTHelper.setBoolean(smg, ItemIISubmachinegun.SHOULD_RELOAD, true);
 				hans.setSneaking(false);
 			}
 		}
@@ -74,7 +73,7 @@ public class AIHansSubmachinegun extends AIHansHandWeapon
 		//hans can not shoot while running away
 		if(motionState==MotionState.FALLBACK)
 		{
-			if(!ItemNBTHelper.getBoolean(smg, "shouldReload"))
+			if(!ItemNBTHelper.getBoolean(smg, ItemIISubmachinegun.SHOULD_RELOAD))
 				hans.resetActiveHand();
 			hans.setSneaking(false);
 			return;
@@ -94,13 +93,14 @@ public class AIHansSubmachinegun extends AIHansHandWeapon
 			{
 				hans.hasAmmo = true;
 				hans.setSneaking(true);
-				hans.rotationPitch = calculateBallisticAngle(ItemIIBulletMagazine.takeBullet(magazine, false), attackTarget);
+				hans.rotationPitch = calculateBallisticAngle(IIContent.itemBulletMagazine.takeBullet(magazine, false), attackTarget);
 			}
 			else
 				hans.resetActiveHand();
+			rangedAttackTime ++;
 
 			if(rangedAttackTime >= burstTime)
-				rangedAttackTime = -10;
+				rangedAttackTime = -(int)(-burstTime*0.75);
 		}
 		else
 			hans.resetActiveHand();
@@ -115,6 +115,6 @@ public class AIHansSubmachinegun extends AIHansHandWeapon
 	@Override
 	protected float calculateBallisticAngle(ItemStack ammo, EntityLivingBase attackTarget)
 	{
-		return Utils.getDirectFireAngle(IIContent.itemAmmoSubmachinegun.getDefaultVelocity(), IIContent.itemAmmoSubmachinegun.getMass(ammo), hans.getPositionVector().addVector(0, (double)hans.getEyeHeight()-0.10000000149011612D, 0).subtract(Utils.getEntityCenter(attackTarget)));
+		return IIUtils.getDirectFireAngle(IIContent.itemAmmoSubmachinegun.getDefaultVelocity(), IIContent.itemAmmoSubmachinegun.getMass(ammo), hans.getPositionVector().addVector(0, (double)hans.getEyeHeight()-0.10000000149011612D, 0).subtract(IIUtils.getEntityCenter(attackTarget)));
 	}
 }

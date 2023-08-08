@@ -2,22 +2,22 @@ package pl.pabilo8.immersiveintelligence.common.gui;
 
 import blusunrize.immersiveengineering.common.gui.ContainerIEBase;
 import blusunrize.immersiveengineering.common.gui.IESlot.Output;
-import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import pl.pabilo8.immersiveintelligence.api.utils.IPrecissionTool;
-import pl.pabilo8.immersiveintelligence.common.blocks.multiblocks.metal.tileentities.first.TileEntityPrecissionAssembler;
-import pl.pabilo8.immersiveintelligence.common.items.ItemIIAssemblyScheme;
+import pl.pabilo8.immersiveintelligence.api.utils.IPrecisionTool;
+import pl.pabilo8.immersiveintelligence.common.block.multiblock.metal_multiblock0.tileentity.TileEntityPrecisionAssembler;
+import pl.pabilo8.immersiveintelligence.common.item.ItemIIAssemblyScheme;
 
 /**
  * @author Pabilo8
  * @since 2019-05-17
  */
-public class ContainerPrecissionAssembler extends ContainerIEBase<TileEntityPrecissionAssembler>
+public class ContainerPrecissionAssembler extends ContainerIEBase<TileEntityPrecisionAssembler>
 {
-	public ContainerPrecissionAssembler(InventoryPlayer inventoryPlayer, TileEntityPrecissionAssembler tile)
+	public ContainerPrecissionAssembler(EntityPlayer player, TileEntityPrecisionAssembler tile)
 	{
-		super(inventoryPlayer, tile);
+		super(player.inventory, tile);
 
 		//tool slots
 		for(int i = 0; i < 3; i++)
@@ -26,7 +26,7 @@ public class ContainerPrecissionAssembler extends ContainerIEBase<TileEntityPrec
 				@Override
 				public boolean isItemValid(ItemStack stack)
 				{
-					return stack.getItem() instanceof IPrecissionTool;
+					return stack.getItem() instanceof IPrecisionTool;
 				}
 			});
 
@@ -56,9 +56,9 @@ public class ContainerPrecissionAssembler extends ContainerIEBase<TileEntityPrec
 
 		for(int i = 0; i < 3; i++)
 			for(int j = 0; j < 9; j++)
-				addSlotToContainer(new Slot(inventoryPlayer, j+i*9+9, 8+j*18, 86+i*18));
+				addSlotToContainer(new Slot(player.inventory, j+i*9+9, 8+j*18, 86+i*18));
 		for(int i = 0; i < 9; i++)
-			addSlotToContainer(new Slot(inventoryPlayer, i, 8+i*18, 144));
+			addSlotToContainer(new Slot(player.inventory, i, 8+i*18, 144));
 
 	}
 }

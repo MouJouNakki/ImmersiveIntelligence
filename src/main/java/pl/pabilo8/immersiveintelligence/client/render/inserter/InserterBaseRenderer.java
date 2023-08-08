@@ -8,9 +8,9 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Tuple;
 import pl.pabilo8.immersiveintelligence.ImmersiveIntelligence;
-import pl.pabilo8.immersiveintelligence.client.animation.*;
 import pl.pabilo8.immersiveintelligence.client.render.IITileRenderer;
-import pl.pabilo8.immersiveintelligence.common.blocks.metal.inserter.TileEntityInserterBase;
+import pl.pabilo8.immersiveintelligence.client.util.amt.*;
+import pl.pabilo8.immersiveintelligence.common.block.metal_device.tileentity.inserter.TileEntityInserterBase;
 
 import java.util.function.Function;
 
@@ -21,7 +21,7 @@ import java.util.function.Function;
 public abstract class InserterBaseRenderer<T extends TileEntityInserterBase> extends IITileRenderer<T>
 {
 	//inserter animations for all directions
-	private IIAnimationCompiledMap animationFrontBack = null, animationFrontRight = null, animationFrontLeft = null, animationFrontFront = null;
+	private IIAnimationCompiledMap animationDefaults, animationFrontBack, animationFrontRight, animationFrontLeft, animationFrontFront;
 	//directions + actual inserter
 	private AMT[] model = null;
 	//reference to model parts
@@ -37,6 +37,7 @@ public abstract class InserterBaseRenderer<T extends TileEntityInserterBase> ext
 		//defaultize model angles
 		for(AMT mod : model)
 			mod.defaultize();
+		animationDefaults.apply(0); //apply default animation
 
 		//apply input box direction
 		IIAnimationUtils.setModelRotation(inBox, 0, -te.defaultInputFacing.getHorizontalAngle(), 0);
@@ -60,6 +61,7 @@ public abstract class InserterBaseRenderer<T extends TileEntityInserterBase> ext
 					animationFrontFront.apply(totalProgress); //same direction
 					break;
 				case 1:
+				case 3:
 					//depends on side, required due to abs() making the result always positive
 					(teIn.rotateY()==teOut?animationFrontRight: animationFrontLeft)
 							.apply(totalProgress);
@@ -92,6 +94,7 @@ public abstract class InserterBaseRenderer<T extends TileEntityInserterBase> ext
 		outBox = IIAnimationUtils.getPart(model, "output");
 		turntable = IIAnimationUtils.getPart(model, "turntable");
 
+		animationDefaults = IIAnimationCompiledMap.create(model, new ResourceLocation(ImmersiveIntelligence.MODID, "inserter/item"));
 		animationFrontBack = IIAnimationCompiledMap.create(model, new ResourceLocation(ImmersiveIntelligence.MODID, "inserter/front_back"));
 		animationFrontRight = IIAnimationCompiledMap.create(model, new ResourceLocation(ImmersiveIntelligence.MODID, "inserter/front_right"));
 		animationFrontLeft = IIAnimationCompiledMap.create(model, new ResourceLocation(ImmersiveIntelligence.MODID, "inserter/front_left"));

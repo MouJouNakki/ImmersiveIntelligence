@@ -1,8 +1,25 @@
 package pl.pabilo8.immersiveintelligence.common.network;
 
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
+import pl.pabilo8.immersiveintelligence.common.network.IIMessage.IIMessageHandler;
+import pl.pabilo8.immersiveintelligence.common.network.messages.*;
+import pl.pabilo8.immersiveintelligence.common.util.AdvancedSounds.MultiSound;
+import pl.pabilo8.immersiveintelligence.common.util.AdvancedSounds.RangedSound;
 
 /**
  * @author Pabilo8
@@ -10,34 +27,118 @@ import net.minecraftforge.fml.relauncher.Side;
  */
 public class IIPacketHandler
 {
-	/*
-	Huge thanks to Choonster: https://www.minecraftforge.net/forum/topic/36769-18-the-received-string-length-is-longer-than-maximum-allowed-27-gt-20/
-	According mc forum, the lenght of the SimpleNetworkWrapper name mustn't be longer than 20 letters
-	Immersive Intelligence happens to have 21...
-	Really, what's even the reason for that?!
-	*/
+	/**
+	 * Huge thanks to Choonster: <a href="https://www.minecraftforge.net/forum/topic/36769-18-the-received-string-length-is-longer-than-maximum-allowed-27-gt-20/">
+	 * https://www.minecraftforge.net/forum/topic/36769-18-the-received-string-length-is-longer-than-maximum-allowed-27-gt-20/</a><br>
+	 * According mc forum, the length of the SimpleNetworkWrapper name mustn't be longer than 20 letters<br>
+	 * Immersive Intelligence happens to have 21...<br>
+	 */
 	public static final SimpleNetworkWrapper INSTANCE = NetworkRegistry.INSTANCE.newSimpleChannel("immersiveintelli");
+	private static int messageID = 0;
+	public static int DEFAULT_RANGE = 40;
 
 	public static void preInit()
 	{
-		INSTANCE.registerMessage(MessageAlarmSirenSync.Handler.class, MessageAlarmSirenSync.class, 0, Side.CLIENT);
-		INSTANCE.registerMessage(MessageItemScrollableSwitch.Handler.class, MessageItemScrollableSwitch.class, 1, Side.SERVER);
-		INSTANCE.registerMessage(MessageBooleanAnimatedPartsSync.HandlerClient.class, MessageBooleanAnimatedPartsSync.class, 2, Side.CLIENT);
-		INSTANCE.registerMessage(MessageBooleanAnimatedPartsSync.HandlerServer.class, MessageBooleanAnimatedPartsSync.class, 3, Side.SERVER);
-		INSTANCE.registerMessage(MessageGuiNBT.HandlerServer.class, MessageGuiNBT.class, 4, Side.SERVER);
-		INSTANCE.registerMessage(MessageEntityNBTSync.HandlerClient.class, MessageEntityNBTSync.class, 5, Side.CLIENT);
-		INSTANCE.registerMessage(MessageEntityNBTSync.HandlerServer.class, MessageEntityNBTSync.class, 6, Side.SERVER);
-		INSTANCE.registerMessage(MessageFireworks.HandlerClient.class, MessageFireworks.class, 7, Side.CLIENT);
-		INSTANCE.registerMessage(MessageRotaryPowerSync.HandlerClient.class, MessageRotaryPowerSync.class, 8, Side.CLIENT);
-		INSTANCE.registerMessage(MessageBlockDamageSync.HandlerClient.class, MessageBlockDamageSync.class, 9, Side.CLIENT);
-		INSTANCE.registerMessage(MessageProgrammableSpeakerSync.Handler.class, MessageProgrammableSpeakerSync.class, 10, Side.CLIENT);
-		INSTANCE.registerMessage(MessagePlayerAimAnimationSync.HandlerClient.class, MessagePlayerAimAnimationSync.class, 11, Side.CLIENT);
-		INSTANCE.registerMessage(MessageItemKeybind.Handler.class, MessageItemKeybind.class, 12, Side.SERVER);
-		INSTANCE.registerMessage(MessageExplosion.HandlerClient.class, MessageExplosion.class, 13, Side.CLIENT);
-		INSTANCE.registerMessage(MessageParticleEffect.HandlerClient.class, MessageParticleEffect.class, 14, Side.CLIENT);
-		INSTANCE.registerMessage(MessageBeginMachineUpgrade.HandlerClient.class, MessageBeginMachineUpgrade.class, 15, Side.CLIENT);
-		INSTANCE.registerMessage(MessageBeginMachineUpgrade.HandlerServer.class, MessageBeginMachineUpgrade.class, 16, Side.SERVER);
-		INSTANCE.registerMessage(MessageParticleGunfire.HandlerClient.class, MessageParticleGunfire.class, 17, Side.CLIENT);
-		INSTANCE.registerMessage(MessageManualClose.HandlerServer.class, MessageManualClose.class, 18, Side.SERVER);
+		registerMessage(MessageItemScrollableSwitch.class, false, true);
+		registerMessage(MessageBooleanAnimatedPartsSync.class, true, true);
+		registerMessage(MessageChatInfo.class, true, false);
+		registerMessage(MessageIITileSync.class, true, true);
+		registerMessage(MessageGuiNBT.class, false, true);
+		registerMessage(MessageEntityNBTSync.class, true, true);
+		registerMessage(MessageFireworks.class, true, false);
+		registerMessage(MessageRotaryPowerSync.class, true, false);
+		registerMessage(MessageBlockDamageSync.class, true, false);
+		registerMessage(MessagePlayerAimAnimationSync.class, true, false);
+		registerMessage(MessageItemKeybind.class, true, true);
+		registerMessage(MessageExplosion.class, true, false);
+		registerMessage(MessageParticleEffect.class, true, false);
+		registerMessage(MessageBeginMachineUpgrade.class, true, true);
+		registerMessage(MessageParticleGunfire.class, true, false);
+		registerMessage(MessageManualClose.class, false, true);
+		registerMessage(MessagePlayIISound.class, true, false);
+	}
+
+	private static <T extends IIMessage> void registerMessage(Class<T> message, boolean clientSide, boolean serverSide)
+	{
+		//handles both sides
+		IIMessageHandler<T> handler = new IIMessageHandler<>();
+		if(clientSide)
+			INSTANCE.registerMessage(handler, message, messageID++, Side.CLIENT);
+		if(serverSide)
+			INSTANCE.registerMessage(handler, message, messageID++, Side.SERVER);
+	}
+
+	//--- Message Sending Utils ---//
+
+	public static void sendToServer(IIMessage message)
+	{
+		INSTANCE.sendToServer(message);
+	}
+
+	public static void sendToClient(BlockPos pos, World world, IIMessage message)
+	{
+		INSTANCE.sendToAllTracking(message, targetPointFromPos(pos, world, DEFAULT_RANGE));
+	}
+
+	public static void sendToClient(Vec3d pos, World world, IIMessage message)
+	{
+		INSTANCE.sendToAllTracking(message, targetPointFromPos(pos, world, DEFAULT_RANGE));
+	}
+
+	public static void sendToClient(Entity entity, IIMessage message)
+	{
+		INSTANCE.sendToAllTracking(message, entity);
+	}
+
+	public static void sendToClient(TileEntity tile, IIMessage message)
+	{
+		INSTANCE.sendToAllTracking(message, targetPointFromTile(tile, DEFAULT_RANGE));
+	}
+
+	public static void sendChatInfo(EntityPlayer player, ITextComponent... components)
+	{
+		INSTANCE.sendTo(new MessageChatInfo(components), ((EntityPlayerMP)player));
+	}
+
+	public static void sendChatString(EntityPlayer player, String string)
+	{
+		sendChatInfo(player, new TextComponentString(string));
+	}
+
+	public static void sendChatTranslation(EntityPlayer player, String translation, Object... args)
+	{
+		sendChatInfo(player, new TextComponentTranslation(translation, args));
+	}
+
+	public static void playMultiSound(World world, Vec3d pos, MultiSound sound, SoundCategory category, int distance, int time, float volume, float pitch)
+	{
+		INSTANCE.sendToAllAround(new MessagePlayIISound(sound, category, time, pos, volume, pitch), targetPointFromPos(pos, world, distance));
+	}
+
+	public static void playRangedSound(World world, Vec3d pos, RangedSound sound, SoundCategory category, int distance, float volume, float pitch)
+	{
+		INSTANCE.sendToAllAround(new MessagePlayIISound(sound, category, distance, pos, volume, pitch), targetPointFromPos(pos, world, distance));
+	}
+
+	//--- TargetPoint Utils ---//
+
+	public static TargetPoint targetPointFromPos(BlockPos pos, World world, int range)
+	{
+		return new TargetPoint(world.provider.getDimension(), pos.getX(), pos.getY(), pos.getZ(), range);
+	}
+
+	public static TargetPoint targetPointFromPos(Vec3d pos, World world, int range)
+	{
+		return new TargetPoint(world.provider.getDimension(), pos.x, pos.y, pos.z, range);
+	}
+
+	public static TargetPoint targetPointFromEntity(Entity entity, int range)
+	{
+		return new TargetPoint(entity.world.provider.getDimension(), entity.posX, entity.posY, entity.posZ, range);
+	}
+
+	public static TargetPoint targetPointFromTile(TileEntity tile, int range)
+	{
+		return new TargetPoint(tile.getWorld().provider.getDimension(), tile.getPos().getX(), tile.getPos().getY(), tile.getPos().getZ(), range);
 	}
 }

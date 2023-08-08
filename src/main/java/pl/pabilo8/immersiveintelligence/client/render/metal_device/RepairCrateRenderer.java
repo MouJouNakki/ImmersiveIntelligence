@@ -13,14 +13,16 @@ import net.minecraft.util.Tuple;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import pl.pabilo8.immersiveintelligence.ImmersiveIntelligence;
+import pl.pabilo8.immersiveintelligence.client.render.IITileRenderer.RegisteredTileRenderer;
 import pl.pabilo8.immersiveintelligence.common.IIContent;
-import pl.pabilo8.immersiveintelligence.common.blocks.metal.TileEntityRepairCrate;
+import pl.pabilo8.immersiveintelligence.common.block.metal_device.tileentity.effect_crate.TileEntityRepairCrate;
 
 /**
  * @author Pabilo8
  * @since 2019-05-26
  */
 @SideOnly(Side.CLIENT)
+@RegisteredTileRenderer(name = "repair_crate", clazz = TileEntityRepairCrate.class)
 public class RepairCrateRenderer extends EffectCrateRenderer<TileEntityRepairCrate>
 {
 	private ItemStack STACK;

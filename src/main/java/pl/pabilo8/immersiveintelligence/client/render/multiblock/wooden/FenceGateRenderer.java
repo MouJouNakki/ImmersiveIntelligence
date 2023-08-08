@@ -14,7 +14,7 @@ import net.minecraft.util.EnumFacing.Axis;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import org.lwjgl.opengl.GL11;
-import pl.pabilo8.immersiveintelligence.common.blocks.multiblocks.gate.TileEntityGateBase;
+import pl.pabilo8.immersiveintelligence.common.block.multiblock.gate_multiblock.tileentity.TileEntityGateBase;
 
 /**
  * @author Pabilo8
@@ -22,6 +22,7 @@ import pl.pabilo8.immersiveintelligence.common.blocks.multiblocks.gate.TileEntit
  */
 public class FenceGateRenderer<T extends TileEntityGateBase<T>> extends TileEntitySpecialRenderer<T>
 {
+	//TODO: 16.07.2023 bring to AMT
 	@Override
 	public void render(T te, double x, double y, double z, float partialTicks, int destroyStage, float alpha)
 	{

@@ -3,15 +3,14 @@ package pl.pabilo8.immersiveintelligence.common.gui;
 import blusunrize.immersiveengineering.common.gui.ContainerIEBase;
 import blusunrize.immersiveengineering.common.gui.IESlot;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import pl.pabilo8.immersiveintelligence.api.crafting.SawmillRecipe;
-import pl.pabilo8.immersiveintelligence.api.utils.ISawblade;
-import pl.pabilo8.immersiveintelligence.common.blocks.multiblocks.wooden.TileEntitySawmill;
+import pl.pabilo8.immersiveintelligence.api.tools.ISawblade;
+import pl.pabilo8.immersiveintelligence.common.block.multiblock.wooden_multiblock.tileentity.TileEntitySawmill;
 
 /**
  * @author Pabilo8
@@ -19,9 +18,9 @@ import pl.pabilo8.immersiveintelligence.common.blocks.multiblocks.wooden.TileEnt
  */
 public class ContainerSawmill extends ContainerIEBase<TileEntitySawmill>
 {
-	public ContainerSawmill(InventoryPlayer inventoryPlayer, TileEntitySawmill tile)
+	public ContainerSawmill(EntityPlayer player, TileEntitySawmill tile)
 	{
-		super(inventoryPlayer, tile);
+		super(player.inventory, tile);
 		//Input/Output Slots
 
 		this.addSlotToContainer(new SawmillInput(this, this.inv, 0, 13, 36));
@@ -35,9 +34,9 @@ public class ContainerSawmill extends ContainerIEBase<TileEntitySawmill>
 
 		for(int i = 0; i < 3; i++)
 			for(int j = 0; j < 9; j++)
-				addSlotToContainer(new Slot(inventoryPlayer, j+i*9+9, 8+j*18, 86+i*18));
+				addSlotToContainer(new Slot(player.inventory, j+i*9+9, 8+j*18, 86+i*18));
 		for(int i = 0; i < 9; i++)
-			addSlotToContainer(new Slot(inventoryPlayer, i, 8+i*18, 144));
+			addSlotToContainer(new Slot(player.inventory, i, 8+i*18, 144));
 	}
 
 	public static class SawmillInput extends IESlot

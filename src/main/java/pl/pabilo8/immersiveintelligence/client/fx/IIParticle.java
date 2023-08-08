@@ -1,6 +1,9 @@
 package pl.pabilo8.immersiveintelligence.client.fx;
 
+import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.particle.Particle;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import pl.pabilo8.immersiveintelligence.client.fx.ParticleRenderer.DrawingStages;
 
@@ -12,14 +15,69 @@ import javax.annotation.Nonnull;
  */
 public abstract class IIParticle extends Particle
 {
-	protected IIParticle(World worldIn, double posXIn, double posYIn, double posZIn)
+	public IIParticle(World world, Vec3d pos, Vec3d motion)
 	{
-		super(worldIn, posXIn, posYIn, posZIn);
+		this(world, pos.x, pos.y, pos.z, 0, 0, 0);
+		setMotion(motion);
 	}
 
-	public IIParticle(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn, double ySpeedIn, double zSpeedIn)
+	public IIParticle(World world, Vec3d pos)
 	{
-		super(worldIn, xCoordIn, yCoordIn, zCoordIn, xSpeedIn, ySpeedIn, zSpeedIn);
+		this(world, pos, Vec3d.ZERO);
+		setMotion(Vec3d.ZERO);
+	}
+
+	protected IIParticle(World world, double x, double y, double z, double motionX, double motionY, double motionZ)
+	{
+		super(world, x, y, z, motionX, motionY, motionZ);
+	}
+
+	//--- Protected Methods ---//
+
+	protected void setMotion(Vec3d motion)
+	{
+		this.motionX = motion.x;
+		this.motionY = motion.y;
+		this.motionZ = motion.z;
+	}
+
+	protected Vec3d getMotion()
+	{
+		return new Vec3d(this.motionX, this.motionY, this.motionZ);
+	}
+
+	protected float getProgress(float partialTicks)
+	{
+		return MathHelper.clamp((this.particleAge+partialTicks)/(float)this.particleMaxAge,
+				0.0F, 1.0F);
+	}
+
+	//--- For Use with AMT ---//
+
+	public int getMaxAge()
+	{
+		return particleMaxAge;
+	}
+
+	@Override
+	public void setMaxAge(int value)
+	{
+		super.setMaxAge(value);
+	}
+
+	public int getAge()
+	{
+		return particleMaxAge;
+	}
+
+	public void setAge(int value)
+	{
+		particleAge = value;
+	}
+
+	public void setWorld(World world)
+	{
+		this.world = world;
 	}
 
 	@Nonnull

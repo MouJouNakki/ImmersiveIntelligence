@@ -6,7 +6,7 @@ import blusunrize.immersiveengineering.common.util.ItemNBTHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
-import pl.pabilo8.immersiveintelligence.api.Utils;
+import pl.pabilo8.immersiveintelligence.common.IIUtils;
 import pl.pabilo8.immersiveintelligence.common.IIContent;
 import pl.pabilo8.immersiveintelligence.common.entity.EntityHans;
 
@@ -35,7 +35,7 @@ public class AIHansRevolver extends AIHansHandWeapon
 	{
 		final ItemStack smg = getWeapon();
 		final ItemStack magazine = ItemNBTHelper.getItemStack(smg, "magazine");
-		return hans.hasAmmo||IIContent.itemSubmachinegun.isAmmo(magazine, smg)||!IIContent.itemSubmachinegun.findMagazine(hans, smg).isEmpty();
+		return hans.hasAmmo||IIContent.itemSubmachinegun.isAmmo(magazine, smg)||!IIContent.itemSubmachinegun.findAmmo(hans, smg).isEmpty();
 	}
 
 	@Override
@@ -94,6 +94,6 @@ public class AIHansRevolver extends AIHansHandWeapon
 	@Override
 	protected float calculateBallisticAngle(ItemStack ammo, EntityLivingBase attackTarget)
 	{
-		return Utils.getDirectFireAngle(IIContent.itemAmmoRevolver.getDefaultVelocity(), IIContent.itemAmmoRevolver.getMass(ammo), hans.getPositionVector().addVector(0, (double)hans.getEyeHeight()-0.10000000149011612D, 0).subtract(attackTarget.getPositionVector()));
+		return IIUtils.getDirectFireAngle(IIContent.itemAmmoRevolver.getDefaultVelocity(), IIContent.itemAmmoRevolver.getMass(ammo), hans.getPositionVector().addVector(0, (double)hans.getEyeHeight()-0.10000000149011612D, 0).subtract(attackTarget.getPositionVector()));
 	}
 }

@@ -9,7 +9,7 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.renderer.GlStateManager;
 import org.apache.commons.lang3.ArrayUtils;
 import pl.pabilo8.immersiveintelligence.ImmersiveIntelligence;
-import pl.pabilo8.immersiveintelligence.api.Utils;
+import pl.pabilo8.immersiveintelligence.common.IIUtils;
 import pl.pabilo8.immersiveintelligence.api.data.DataPacket;
 
 import javax.annotation.Nullable;
@@ -98,10 +98,14 @@ public class GuiButtonDataLetterList extends GuiButton
 
 		if(dropped)
 		{
+			GlStateManager.pushMatrix();
+			GlStateManager.enableDepth();
+			GlStateManager.translate(0,0,1);
+
 			this.drawTexturedModalRect(xx, y+height, 56, 115, 96, 32);
 			this.drawTexturedModalRect(xx, y+height+32, 56, 195-4, 96, 20);
 
-			if(Utils.isPointInRectangle(xx+4, y+height+4, xx+4+10*fr.FONT_HEIGHT, y+height+52+4, mouseX, mouseY))
+			if(IIUtils.isPointInRectangle(xx+4, y+height+4, xx+4+10*fr.FONT_HEIGHT, y+height+52+4, mouseX, mouseY))
 			{
 				int hlX = ((int)Math.floor((mouseX-(xx+4))/(float)fr.FONT_HEIGHT));
 				int hlY = ((int)Math.floor((mouseY-(y+height+4))/(float)12));
@@ -116,12 +120,12 @@ public class GuiButtonDataLetterList extends GuiButton
 			{
 				if(buttonNext!=null&&buttonNext.isMouseOver())
 					hoveredEntry = avoidGetter!=null?
-							Utils.cyclePacketCharsAvoiding(selectedEntry, true, hasEmpty, avoidGetter.get()):
-							Utils.cycleDataPacketChars(selectedEntry, true, hasEmpty);
+							IIUtils.cyclePacketCharsAvoiding(selectedEntry, true, hasEmpty, avoidGetter.get()):
+							IIUtils.cycleDataPacketChars(selectedEntry, true, hasEmpty);
 				else if(buttonPrev!=null&&buttonPrev.isMouseOver())
 					hoveredEntry = avoidGetter!=null?
-							Utils.cyclePacketCharsAvoiding(selectedEntry, false, hasEmpty, avoidGetter.get()):
-							Utils.cycleDataPacketChars(selectedEntry, false, hasEmpty);
+							IIUtils.cyclePacketCharsAvoiding(selectedEntry, false, hasEmpty, avoidGetter.get()):
+							IIUtils.cycleDataPacketChars(selectedEntry, false, hasEmpty);
 				else
 					hoveredEntry = '/';
 			}
@@ -153,6 +157,7 @@ public class GuiButtonDataLetterList extends GuiButton
 					cx = 0;
 				}
 			}
+			GlStateManager.popMatrix();
 		}
 
 		fr.drawString(String.valueOf(selectedEntry==' '?'_': selectedEntry), xx+9-(int)Math.floor(fr.getCharWidth(selectedEntry==' '?'_': selectedEntry)/2f), y+5, Lib.COLOUR_I_ImmersiveOrange, true);
@@ -181,22 +186,22 @@ public class GuiButtonDataLetterList extends GuiButton
 		if(buttonNext!=null&&buttonNext.mousePressed(mc, mx, my))
 		{
 			selectedEntry = avoidGetter!=null?
-					Utils.cyclePacketCharsAvoiding(selectedEntry, true, hasEmpty, avoidGetter.get()):
-					Utils.cycleDataPacketChars(selectedEntry, true, hasEmpty);
+					IIUtils.cyclePacketCharsAvoiding(selectedEntry, true, hasEmpty, avoidGetter.get()):
+					IIUtils.cycleDataPacketChars(selectedEntry, true, hasEmpty);
 			return true;
 		}
 		else if(buttonPrev!=null&&buttonPrev.mousePressed(mc, mx, my))
 		{
 			selectedEntry = avoidGetter!=null?
-					Utils.cyclePacketCharsAvoiding(selectedEntry, false, hasEmpty, avoidGetter.get()):
-					Utils.cycleDataPacketChars(selectedEntry, false, hasEmpty);
+					IIUtils.cyclePacketCharsAvoiding(selectedEntry, false, hasEmpty, avoidGetter.get()):
+					IIUtils.cycleDataPacketChars(selectedEntry, false, hasEmpty);
 			return true;
 		}
 		else if(dropped)
 		{
 			FontRenderer fr = ClientUtils.mc().fontRenderer;
 			int xx = arrows==ArrowsAlignment.LEFT?x+10: x;
-			if(Utils.isPointInRectangle(xx+4, y+height+4, xx+4+10*fr.FONT_HEIGHT, y+height+52, mx, my))
+			if(IIUtils.isPointInRectangle(xx+4, y+height+4, xx+4+10*fr.FONT_HEIGHT, y+height+52, mx, my))
 			{
 				if(hoveredEntry!='/')
 				{
@@ -228,7 +233,7 @@ public class GuiButtonDataLetterList extends GuiButton
 		}
 		else
 		{
-			return this.dropped = Utils.isPointInRectangle(x, y, x+width, y+height, mx, my);
+			return this.dropped = IIUtils.isPointInRectangle(x, y, x+width, y+height, mx, my);
 		}
 	}
 

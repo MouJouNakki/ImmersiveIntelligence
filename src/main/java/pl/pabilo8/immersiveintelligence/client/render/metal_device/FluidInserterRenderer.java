@@ -16,11 +16,11 @@ import pl.pabilo8.immersiveintelligence.Config.IIConfig.Machines.FluidInserter;
 import pl.pabilo8.immersiveintelligence.ImmersiveIntelligence;
 import pl.pabilo8.immersiveintelligence.client.model.metal_device.ModelFluidInserter;
 import pl.pabilo8.immersiveintelligence.client.render.IReloadableModelContainer;
-import pl.pabilo8.immersiveintelligence.client.tmt.ModelRendererTurbo;
-import pl.pabilo8.immersiveintelligence.client.tmt.TmtUtil;
+import pl.pabilo8.immersiveintelligence.client.util.tmt.ModelRendererTurbo;
+import pl.pabilo8.immersiveintelligence.client.util.tmt.TmtUtil;
 import pl.pabilo8.immersiveintelligence.common.IIContent;
-import pl.pabilo8.immersiveintelligence.common.blocks.metal.TileEntityFluidInserter;
-import pl.pabilo8.immersiveintelligence.common.blocks.types.IIBlockTypes_Connector;
+import pl.pabilo8.immersiveintelligence.common.block.metal_device.tileentity.TileEntityFluidInserter;
+import pl.pabilo8.immersiveintelligence.common.block.data_device.BlockIIDataDevice.IIBlockTypes_Connector;
 
 import javax.annotation.Nullable;
 
@@ -135,15 +135,6 @@ public class FluidInserterRenderer extends TileEntitySpecialRenderer<TileEntityF
 			for(ModelRendererTurbo mod : model.inserterGaugeArrow)
 				mod.render(f5);
 
-			GlStateManager.scale(2f, 2f, 2f);
-			GlStateManager.translate(0.0625f, 0.03125f, -0.4375);
-			if(TileEntityFluidInserter.conn_data!=null)
-				renderItem.renderItem(TileEntityFluidInserter.conn_data, TransformType.GROUND);
-			GlStateManager.translate(0.375f, 0.1875f, 0.375f);
-			GlStateManager.scale(0.65f, 0.65f, 0.65f);
-			if(TileEntityFluidInserter.conn_mv!=null)
-				renderItem.renderItem(TileEntityFluidInserter.conn_mv, TransformType.GROUND);
-
 			GlStateManager.popMatrix();
 
 		}
@@ -174,16 +165,6 @@ public class FluidInserterRenderer extends TileEntitySpecialRenderer<TileEntityF
 				mod.render(1f/16f);
 
 			GlStateManager.popMatrix();
-
-			GlStateManager.scale(2f, 2f, 2f);
-			GlStateManager.translate(0.0625f, 0.03125f, -0.4375);
-			if(TileEntityFluidInserter.conn_data!=null)
-				renderItem.renderItem(TileEntityFluidInserter.conn_data, TransformType.GROUND);
-			GlStateManager.translate(0.375f, 0.1875f, 0.375f);
-			GlStateManager.scale(0.65f, 0.65f, 0.65f);
-			if(TileEntityFluidInserter.conn_mv!=null)
-				renderItem.renderItem(TileEntityFluidInserter.conn_mv, TransformType.GROUND);
-
 
 			GlStateManager.popMatrix();
 		}

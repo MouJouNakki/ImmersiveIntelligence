@@ -6,11 +6,11 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.util.math.MathHelper;
 import pl.pabilo8.immersiveintelligence.Config.IIConfig.Tools;
 import pl.pabilo8.immersiveintelligence.ImmersiveIntelligence;
-import pl.pabilo8.immersiveintelligence.api.Utils;
-import pl.pabilo8.immersiveintelligence.client.ShaderUtil;
 import pl.pabilo8.immersiveintelligence.client.model.multiblock.metal.ModelRadioStation;
 import pl.pabilo8.immersiveintelligence.client.render.IReloadableModelContainer;
-import pl.pabilo8.immersiveintelligence.common.blocks.multiblocks.metal.tileentities.first.TileEntityRadioStation;
+import pl.pabilo8.immersiveintelligence.client.util.ShaderUtil;
+import pl.pabilo8.immersiveintelligence.common.IIUtils;
+import pl.pabilo8.immersiveintelligence.common.block.multiblock.metal_multiblock0.tileentity.TileEntityRadioStation;
 
 /**
  * @author Pabilo8
@@ -49,18 +49,18 @@ public class RadioStationRenderer extends TileEntitySpecialRenderer<TileEntityRa
 			}
 			else
 			{
-				double cc = (int)Math.min(te.clientConstruction+((partialTicks*(Tools.electric_hammer_energy_per_use_construction/4.25f))), Utils.getMaxClientProgress(te.construction, te.getConstructionCost(), TileEntityRadioStation.PART_AMOUNT));
+				double cc = (int)Math.min(te.clientConstruction+((partialTicks*(Tools.electricHammerEnergyPerUseConstruction/4.25f))), IIUtils.getMaxClientProgress(te.construction, te.getConstructionCost(), TileEntityRadioStation.PART_AMOUNT));
 				double progress = MathHelper.clamp(cc/(float)te.getConstructionCost(), 0f, 1f);
 
 				for(int i = 0; i < TileEntityRadioStation.PART_AMOUNT*progress; i++)
 				{
-					if(1+i>Math.round(TileEntityRadioStation.PART_AMOUNT*progress))
+					if(1+i > Math.round(TileEntityRadioStation.PART_AMOUNT*progress))
 					{
 						GlStateManager.pushMatrix();
 						double scale = 1f-(((progress*TileEntityRadioStation.PART_AMOUNT)%1f));
 						GlStateManager.enableBlend();
 						GlStateManager.color(1f, 1f, 1f, (float)Math.min(scale*2, 1));
-						GlStateManager.translate(0,scale*1.5f,0);
+						GlStateManager.translate(0, scale*1.5f, 0);
 
 						modelCurrent.baseModel[i].render(0.0625f);
 						GlStateManager.color(1f, 1f, 1f, 1f);
@@ -77,8 +77,8 @@ public class RadioStationRenderer extends TileEntitySpecialRenderer<TileEntityRa
 				GlStateManager.translate(0.0625f/2f, 0f, -0.0265f/2f);
 				//float flicker = (te.getWorld().rand.nextInt(10)==0)?0.75F: (te.getWorld().rand.nextInt(20)==0?0.5F: 1F);
 
-				ShaderUtil.blueprint_static(0.35f, ClientUtils.mc().player.ticksExisted+partialTicks);
-				for(int i = 50; i >= Math.max((50*progress)-1,0); i--)
+				ShaderUtil.useBlueprint(0.35f, ClientUtils.mc().player.ticksExisted+partialTicks);
+				for(int i = 50; i >= Math.max((50*progress)-1, 0); i--)
 				{
 					modelCurrent.baseModel[i].render(0.0625f);
 				}
@@ -113,6 +113,6 @@ public class RadioStationRenderer extends TileEntitySpecialRenderer<TileEntityRa
 		modelFlipped = new ModelRadioStation();
 		modelFlipped.flipAllZ();
 
-		TileEntityRadioStation.PART_AMOUNT=model.baseModel.length;
+		TileEntityRadioStation.PART_AMOUNT = model.baseModel.length;
 	}
 }

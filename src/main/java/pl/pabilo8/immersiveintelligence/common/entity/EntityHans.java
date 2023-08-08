@@ -48,12 +48,9 @@ import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.idle.AIHansKaza
 import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.idle.AIHansSalute;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.idle.AIHansTimedLookAtEntity;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.AIHansGetSupplies;
-import pl.pabilo8.immersiveintelligence.common.items.ammunition.ItemIIAmmoGrenade;
-import pl.pabilo8.immersiveintelligence.common.items.armor.ItemIILightEngineerHelmet;
-import pl.pabilo8.immersiveintelligence.common.items.tools.ItemIIBinoculars;
-import pl.pabilo8.immersiveintelligence.common.items.weapons.ItemIIMachinegun;
-import pl.pabilo8.immersiveintelligence.common.items.weapons.ItemIIRailgunOverride;
-import pl.pabilo8.immersiveintelligence.common.items.weapons.ItemIISubmachinegun;
+import pl.pabilo8.immersiveintelligence.common.item.weapons.ItemIIGunBase;
+import pl.pabilo8.immersiveintelligence.common.entity.vehicle.EntityFieldHowitzer;
+import pl.pabilo8.immersiveintelligence.common.item.armor.ItemIILightEngineerHelmet;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -69,7 +66,7 @@ public class EntityHans extends EntityCreature implements INpc
 {
 	public boolean isWeapon(ItemStack stack)
 	{
-		return stack.getItem() instanceof ItemIISubmachinegun
+		return stack.getItem() instanceof ItemIIGunBase
 				||stack.getItem() instanceof ItemIIMachinegun
 				||stack.getItem() instanceof ItemIIBinoculars
 				||stack.getItem() instanceof ItemIIRailgunOverride
@@ -164,6 +161,14 @@ public class EntityHans extends EntityCreature implements INpc
 	public void onUpdate()
 	{
 		super.onUpdate();
+
+		tasks.taskEntries.removeIf(entry -> entry.action instanceof AIHansBase&&((AIHansBase)entry.action).shouldBeRemoved());
+		for(EntityAITaskEntry entry : tasks.taskEntries)
+		{
+			if(entry.action instanceof AIHansBase)
+				((AIHansBase)entry.action).setRequiredAnimation();
+		}
+		
 		if(world.isRemote)
 		{
 			if(dataManager.isDirty())
@@ -224,15 +229,8 @@ public class EntityHans extends EntityCreature implements INpc
 			//idle + combat animations
 			HansLegAnimation currentLeg = legAnimation;
 			HansArmAnimation currentArm = armAnimation;
-			legAnimation = isInWater()?HansLegAnimation.SWIMMING:HansLegAnimation.STANDING;
+			legAnimation = isInWater()?HansLegAnimation.SWIMMING: HansLegAnimation.STANDING;
 			armAnimation = HansArmAnimation.NORMAL;
-
-			tasks.taskEntries.removeIf(entry -> entry.action instanceof AIHansBase&&((AIHansBase)entry.action).shouldBeRemoved());
-			for(EntityAITaskEntry entry : tasks.taskEntries)
-			{
-				if(entry.action instanceof AIHansBase)
-					((AIHansBase)entry.action).setRequiredAnimation();
-			}
 
 			if(currentLeg!=legAnimation)
 			{
@@ -243,14 +241,12 @@ public class EntityHans extends EntityCreature implements INpc
 			//dataManager.set(DATA_MARKER_ARM_ANIMATION, HansArmAnimation.NORMAL.name().toLowerCase());
 
 			if(currentArm!=armAnimation)
-			{
 				dataManager.set(DATA_MARKER_ARM_ANIMATION, armAnimation.name().toLowerCase());
-			}
 
 		}
 
 		//update held item
-		getHeldItemMainhand().getItem().onUpdate(getHeldItemMainhand(),world,this,0,true);
+		getHeldItemMainhand().getItem().onUpdate(getHeldItemMainhand(), world, this, 0, true);
 
 		if(prevLegAnimation!=legAnimation)
 		{
@@ -326,13 +322,28 @@ public class EntityHans extends EntityCreature implements INpc
 		super.initEntityAI();
 
 		//Attack mobs and enemies focused on the Hans first
-		this.targetTasks.addTask(1, new EntityAINearestAttackableTarget<>(this, EntityLiving.class, 1, false, false,
-				input -> input.isEntityAlive()&&(input instanceof IMob||input.getAttackTarget()==this)
-		));
+		this.targetTasks.addTask(1, new EntityAINearestAttackableTarget<EntityLiving>(this, EntityLiving.class, 1, true, false,
+						input -> input.isEntityAlive()&&(input instanceof IMob||input.getAttackTarget()==this))
+				{
+					@Override
+					protected AxisAlignedBB getTargetableArea(double targetDistance)
+					{
+						return this.taskOwner.getEntityBoundingBox().grow(targetDistance, targetDistance*0.66f, targetDistance);
+					}
+				}
+
+		);
 		//Attack entities with different team, stay neutral on default
-		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<>(this, EntityLivingBase.class, 1, false, false,
-				input -> input!=null&&isValidTarget(input)
-		));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<EntityLivingBase>(this, EntityLivingBase.class, 1, true, false,
+						input -> input!=null&&isValidTarget(input))
+				{
+					@Override
+					protected AxisAlignedBB getTargetableArea(double targetDistance)
+					{
+						return this.taskOwner.getEntityBoundingBox().grow(targetDistance, targetDistance*0.66f, targetDistance);
+					}
+				}
+		);
 		//Call other hanses for help when attacked
 		this.targetTasks.addTask(2, new AIHansAlertOthers(this, true));
 
@@ -367,7 +378,6 @@ public class EntityHans extends EntityCreature implements INpc
 			this.tasks.addTask(3, weaponTask);
 		this.tasks.addTask(4, new EntityAIAttackMelee(this, 1.125f, true));
 	}
-
 
 	@Override
 	public boolean startRiding(@Nonnull Entity entity)
@@ -416,7 +426,7 @@ public class EntityHans extends EntityCreature implements INpc
 	{
 		if(capability==CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 		{
-			if(facing==null) return (T)joinedHandler;
+			if(facing==null) return (T)invHandler;
 			else if(facing.getAxis().isVertical()) return (T)handHandler;
 			else if(facing.getAxis().isHorizontal()) return (T)armorHandler;
 		}

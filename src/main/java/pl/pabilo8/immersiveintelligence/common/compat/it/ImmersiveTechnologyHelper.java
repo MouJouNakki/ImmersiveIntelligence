@@ -6,7 +6,6 @@ import mctmods.immersivetechnology.common.blocks.wooden.types.BlockType_WoodenCr
 import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.Vec3d;
@@ -15,11 +14,12 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import pl.pabilo8.immersiveintelligence.ImmersiveIntelligence;
-import pl.pabilo8.immersiveintelligence.api.bullets.BulletHelper;
+import pl.pabilo8.immersiveintelligence.api.bullets.AmmoUtils;
 import pl.pabilo8.immersiveintelligence.api.bullets.penhandlers.PenetrationHandlerConcretes.PenetrationHandlerConcreteBricks;
 import pl.pabilo8.immersiveintelligence.api.bullets.penhandlers.PenetrationHandlerMetals.PenetrationHandlerSteel;
+import pl.pabilo8.immersiveintelligence.common.IIContent;
 import pl.pabilo8.immersiveintelligence.common.compat.IICompatModule;
-import pl.pabilo8.immersiveintelligence.common.items.ItemIIMinecart.Minecarts;
+import pl.pabilo8.immersiveintelligence.common.item.ItemIIMinecart.Minecarts;
 
 import java.util.ArrayList;
 import java.util.function.BiFunction;
@@ -74,13 +74,13 @@ public class ImmersiveTechnologyHelper extends IICompatModule
 		addBlock(blocks, new ResourceLocation("immersivetech", "metal_barrel"));
 		addBlock(blocks, new ResourceLocation("immersivetech", "metal_device"));
 		addBlock(blocks, new ResourceLocation("immersivetech", "metal_trash"));
-		BulletHelper.batchRegisterHandler(new PenetrationHandlerSteel(), blocks.toArray(new Block[0]));
+		AmmoUtils.batchRegisterHandler(new PenetrationHandlerSteel(), blocks.toArray(new Block[0]));
 
 		blocks.clear();
 		addBlock(blocks, new ResourceLocation("immersivetech", "stone_multiblock"));
 		addBlock(blocks, new ResourceLocation("immersivetech", "stone_decoration"));
 		addBlock(blocks, new ResourceLocation("immersivetech", "stone_decoration_slab"));
-		BulletHelper.batchRegisterHandler(new PenetrationHandlerConcreteBricks(), blocks.toArray(new Block[0]));
+		AmmoUtils.batchRegisterHandler(new PenetrationHandlerConcreteBricks(), blocks.toArray(new Block[0]));
 	}
 
 	@Optional.Method(modid = "immersivetech")
@@ -94,6 +94,7 @@ public class ImmersiveTechnologyHelper extends IICompatModule
 				() -> new ItemStack(ITContent.blockMetalBarrel, 1, BlockType_MetalBarrel.BARREL_STEEL.getMeta()));
 		addMinecartToItem("open_barrel", EntityMinecartBarrelOpen::new,
 				() -> new ItemStack(ITContent.blockMetalBarrel, 1, BlockType_MetalBarrel.BARREL_OPEN.getMeta()));
+		IIContent.itemMinecart.updateValues(Minecarts.values());
 	}
 
 	@Optional.Method(modid = "immersivetech")
@@ -114,9 +115,9 @@ public class ImmersiveTechnologyHelper extends IICompatModule
 				true);
 	}
 
-	public static Minecarts addMinecartToItem(String name, BiFunction<World, Vec3d, EntityMinecart> minecart, Supplier<ItemStack> stack)
+	public static void addMinecartToItem(String name, BiFunction<World, Vec3d, EntityMinecart> minecart, Supplier<ItemStack> stack)
 	{
-		return EnumHelper.addEnum(Minecarts.class, name.toUpperCase(),
+		EnumHelper.addEnum(Minecarts.class, name.toUpperCase(),
 				new Class[]{BiFunction.class, Supplier.class},
 				minecart, stack
 		);

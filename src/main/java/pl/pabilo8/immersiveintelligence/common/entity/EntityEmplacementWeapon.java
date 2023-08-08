@@ -22,10 +22,11 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import pl.pabilo8.immersiveintelligence.Config.IIConfig.Machines.Emplacement;
-import pl.pabilo8.immersiveintelligence.api.Utils;
+import pl.pabilo8.immersiveintelligence.api.utils.IEntitySpecialRepairable;
 import pl.pabilo8.immersiveintelligence.common.IISounds;
-import pl.pabilo8.immersiveintelligence.common.blocks.multiblocks.metal.tileentities.second.TileEntityEmplacement;
-import pl.pabilo8.immersiveintelligence.common.blocks.multiblocks.metal.tileentities.second.TileEntityEmplacement.EmplacementWeapon;
+import pl.pabilo8.immersiveintelligence.common.IIUtils;
+import pl.pabilo8.immersiveintelligence.common.block.multiblock.metal_multiblock1.tileentity.TileEntityEmplacement;
+import pl.pabilo8.immersiveintelligence.common.block.multiblock.metal_multiblock1.tileentity.TileEntityEmplacement.EmplacementWeapon;
 
 import javax.annotation.Nullable;
 import java.util.Arrays;
@@ -37,7 +38,7 @@ import java.util.Optional;
  * @author Pabilo8
  * @since 17.07.2021
  */
-public class EntityEmplacementWeapon extends EntityLivingBase implements IEntityMultiPart
+public class EntityEmplacementWeapon extends EntityLivingBase implements IEntityMultiPart, IEntitySpecialRepairable
 {
 	EmplacementWeapon parent = null;
 	public EmplacementHitboxEntity[] partArray = new EmplacementHitboxEntity[0];
@@ -219,11 +220,11 @@ public class EntityEmplacementWeapon extends EntityLivingBase implements IEntity
 
 		Vec3d thisPos = getPositionVector().addVector(0, 4.5f*turretHeight-3, 0);
 
-		Vec3d pos_main_x = Utils.offsetPosDirection(1f, Math.toRadians(rotationYaw), 0);
-		Vec3d pos_main_z = Utils.offsetPosDirection(1f, Math.toRadians(rotationYaw-90), 0);
+		Vec3d pos_main_x = IIUtils.offsetPosDirection(1f, Math.toRadians(rotationYaw), 0);
+		Vec3d pos_main_z = IIUtils.offsetPosDirection(1f, Math.toRadians(rotationYaw-90), 0);
 
-		Vec3d pos_gun_x = Utils.offsetPosDirection(1f, Math.toRadians(rotationYaw), Math.toRadians(rotationPitch));
-		Vec3d pos_gun_z = Utils.offsetPosDirection(1f, Math.toRadians(rotationYaw-90), Math.toRadians(rotationPitch-90));
+		Vec3d pos_gun_x = IIUtils.offsetPosDirection(1f, Math.toRadians(rotationYaw), Math.toRadians(rotationPitch));
+		Vec3d pos_gun_z = IIUtils.offsetPosDirection(1f, Math.toRadians(rotationYaw-90), Math.toRadians(rotationPitch-90));
 
 
 		for(EmplacementHitboxEntity part : partArray)
@@ -278,14 +279,14 @@ public class EntityEmplacementWeapon extends EntityLivingBase implements IEntity
 			int armor = ((EmplacementHitboxEntity)part).armor;
 			if(armor-damage > 0)
 			{
-				world.playSound(null, getPosition(), IISounds.ricochet_metal, SoundCategory.BLOCKS, 1.5f, armor/damage*0.95f);
+				world.playSound(null, getPosition(), IISounds.hitMetal.getSoundImpact(), SoundCategory.BLOCKS, 1.5f, armor/damage*0.95f);
 				return false;
 			}
 			parent.applyDamage(damage-armor);
-			world.playSound(null, getPosition(), IISounds.impact_metal, SoundCategory.BLOCKS, 1.5f, 0.95f);
+			world.playSound(null, getPosition(), IISounds.hitMetal.getSoundImpact(), SoundCategory.BLOCKS, 1.5f, 0.95f);
 			return true;
 		}
-		world.playSound(null, getPosition(), IISounds.ricochet_metal, SoundCategory.BLOCKS, 1.5f, 0.65f);
+		world.playSound(null, getPosition(), IISounds.hitMetal.getSoundRicochet(), SoundCategory.BLOCKS, 1.5f, 0.65f);
 		return false;
 	}
 
@@ -307,6 +308,35 @@ public class EntityEmplacementWeapon extends EntityLivingBase implements IEntity
 			}
 		}
 		return null;
+	}
+
+	@Override
+	public boolean canRepair()
+	{
+		if(parent==null)
+			return false;
+
+		return parent.getHealth()!=parent.getMaxHealth();
+	}
+
+	@Override
+	public boolean repair(int repairPoints)
+	{
+		if(parent==null)
+			return false;
+
+		int maxAmount = MathHelper.clamp(repairPoints, 0, parent.getMaxHealth()-parent.getHealth());
+		parent.applyDamage(-maxAmount);
+		return true;
+	}
+
+	@Override
+	public int getRepairCost()
+	{
+		if(parent==null)
+			return 0;
+
+		return 4;
 	}
 
 	public static class EmplacementHitboxEntity extends MultiPartEntityPart

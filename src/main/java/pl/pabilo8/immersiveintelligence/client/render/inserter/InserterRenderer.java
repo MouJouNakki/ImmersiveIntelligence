@@ -4,11 +4,11 @@ import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import pl.pabilo8.immersiveintelligence.client.animation.AMT;
-import pl.pabilo8.immersiveintelligence.client.animation.AMTItem;
-import pl.pabilo8.immersiveintelligence.client.animation.IIAnimationUtils;
-import pl.pabilo8.immersiveintelligence.client.animation.IIModelHeader;
-import pl.pabilo8.immersiveintelligence.common.blocks.metal.inserter.TileEntityInserter;
+import pl.pabilo8.immersiveintelligence.client.render.IITileRenderer.RegisteredTileRenderer;
+import pl.pabilo8.immersiveintelligence.client.util.amt.AMT;
+import pl.pabilo8.immersiveintelligence.client.util.amt.AMTItem;
+import pl.pabilo8.immersiveintelligence.client.util.amt.IIModelHeader;
+import pl.pabilo8.immersiveintelligence.common.block.metal_device.tileentity.inserter.TileEntityInserter;
 
 import java.util.function.Function;
 
@@ -17,6 +17,7 @@ import java.util.function.Function;
  * @since 2019-05-26
  */
 @SideOnly(Side.CLIENT)
+@RegisteredTileRenderer(name = "inserter", clazz = TileEntityInserter.class)
 public class InserterRenderer extends InserterBaseRenderer<TileEntityInserter>
 {
 	//reference to model parts
@@ -27,7 +28,6 @@ public class InserterRenderer extends InserterBaseRenderer<TileEntityInserter>
 	{
 		//set held stack
 		item.setStack(te.insertionHandler.getStackInSlot(0));
-		IIAnimationUtils.setModelRotation(item, 90, 0, 0);
 	}
 
 	@Override

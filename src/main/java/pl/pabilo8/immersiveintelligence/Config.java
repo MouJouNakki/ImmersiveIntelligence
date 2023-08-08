@@ -27,20 +27,28 @@ public class Config
 	public static class IIConfig
 	{
 		@SubConfig
+		@LangKey("Graphics")
+		public static Graphics graphics;
+		@SubConfig
+		@LangKey("Ores")
 		public static Ores ores;
 		@SubConfig
+		@LangKey("Machines")
 		public static Machines machines;
 		@SubConfig
+		@LangKey("Mechanical Devices")
 		public static MechanicalDevices mechanicalDevices;
 		@SubConfig
+		@LangKey("Tools")
 		public static Tools tools;
 		@SubConfig
+		@LangKey("Weapons")
 		public static Weapons weapons;
 		@SubConfig
-		public static Bullets bullets;
-		@SubConfig
+		@LangKey("Wires")
 		public static Wires wires;
 		@SubConfig
+		@LangKey("Vehicles")
 		public static Vehicles vehicles;
 
 		@Comment({"A list of all mods that IEn has integrated compatability for", "Setting any of these to false disables the respective compat"})
@@ -50,6 +58,7 @@ public class Config
 		public static int radioBasicMaxFrequency = 32;
 
 		@Comment({"The maximum frequency for advanced radios."})
+		@LangKey("Wires")
 		public static int radioAdvancedMaxFrequency = 256;
 
 		@Comment({"Whether basic circuits should be produced in II or IE way"})
@@ -69,6 +78,28 @@ public class Config
 				"minecraft:ender_dragon"
 		};
 
+
+		public static class Graphics
+		{
+			@Comment({"Whether gun recoil is visible in first-person view."})
+			public static boolean cameraRecoil = true;
+
+			@Comment({"Roll the camera when turning the motorbike."})
+			public static boolean cameraRoll = false;
+
+			@Comment({"Determines how hand animations should be displayed on II models",
+					"0 - disabled",
+					"1 - first person only",
+					"2 - 1st and 3rd person (may be incompatible with mods modifying the player model)"})
+			@RangeInt(min = 0, max = 2)
+			public static int AMTHandDisplayMode = 1;
+
+			@RequiresMcRestart
+			@Comment({"Max amount of block penetrations that will be rendered. 0 will disable rendering."})
+			public static int maxPenetratedBlocks = 64;
+
+		}
+
 		public static class Ores
 		{
 			@Comment({"A blacklist of dimensions in which IE ores won't spawn. By default this is Nether (-1) and End (1)"})
@@ -78,80 +109,82 @@ public class Config
 			public static int[] oreDimBlacklistNether = new int[]{0, 1};
 
 			@Comment({"Set this to false to disable the logging of the chunks that were flagged for retrogen."})
-			public static boolean retrogen_log_flagChunk = true;
+			public static boolean retrogenLogFlagChunk = true;
+
 			@Comment({"Set this to false to disable the logging of the chunks that are still left to retrogen."})
-			public static boolean retrogen_log_remaining = true;
+			public static boolean retrogenLogRemaining = true;
+
 			@Comment({"The retrogeneration key. Basically IE checks if this key is saved in the chunks data. If it isn't, it will perform retrogen on all ores marked for retrogen.", "Change this in combination with the retrogen booleans to regen only some of the ores."})
-			public static String retrogen_key = "DEFAULT_II";
+			public static String retrogenKey = "DEFAULT_II";
 
 			@Comment({"Generation config for Platinum Ore.", "Parameters: Vein size, lowest possible Y, highest possible Y, veins per chunk, chance for vein to spawn (out of 100). Set vein size to 0 to disable the generation"})
 			@RequiresMcRestart
 			@Mapped(mapClass = Config.class, mapName = "manual_intA")
-			public static int[] ore_platinum = new int[]{6, 0, 10, 2, 75};
+			public static int[] orePlatinum = new int[]{6, 0, 10, 2, 75};
 
 			@Comment({"Generation config for Zinc Ore.", "Parameters: Vein size, lowest possible Y, highest possible Y, veins per chunk, chance for vein to spawn (out of 100). Set vein size to 0 to disable the generation"})
 			@RequiresMcRestart
 			@Mapped(mapClass = Config.class, mapName = "manual_intA")
-			public static int[] ore_zinc = new int[]{10, 35, 95, 2, 100};
+			public static int[] oreZinc = new int[]{10, 35, 95, 2, 100};
 
 			@Comment({"Generation config for Tungsten Ore.", "Parameters: Vein size, lowest possible Y, highest possible Y, veins per chunk, chance for vein to spawn (out of 100). Set vein size to 0 to disable the generation"})
 			@RequiresMcRestart
 			@Mapped(mapClass = Config.class, mapName = "manual_intA")
-			public static int[] ore_tungsten = new int[]{6, 0, 35, 2, 75};
+			public static int[] oreTungsten = new int[]{6, 0, 35, 2, 75};
 
 			@Comment({"Generation config for Salt Ore.", "Parameters: Vein size, lowest possible Y, highest possible Y, veins per chunk, chance for vein to spawn (out of 100). Set vein size to 0 to disable the generation"})
 			@RequiresMcRestart
 			@Mapped(mapClass = Config.class, mapName = "manual_intA")
-			public static int[] ore_salt = new int[]{12, 55, 95, 1, 75};
+			public static int[] oreSalt = new int[]{12, 55, 95, 1, 75};
 
 			@Comment({"Generation config for Fluorite Ore.", "Parameters: Vein size, lowest possible Y, highest possible Y, veins per chunk, chance for vein to spawn (out of 100). Set vein size to 0 to disable the generation"})
 			@RequiresMcRestart
 			@Mapped(mapClass = Config.class, mapName = "manual_intA")
-			public static int[] ore_fluorite = new int[]{6, 1, 55, 1, 65};
+			public static int[] oreFluorite = new int[]{6, 1, 55, 1, 65};
 
 			@Comment({"Generation config for Fluorite Ore.", "Parameters: Vein size, lowest possible Y, highest possible Y, veins per chunk, chance for vein to spawn (out of 100). Set vein size to 0 to disable the generation"})
 			@RequiresMcRestart
 			@Mapped(mapClass = Config.class, mapName = "manual_intA")
-			public static int[] ore_phosphorus = new int[]{12, 1, 55, 1, 80};
+			public static int[] orePhosphorus = new int[]{12, 1, 55, 1, 80};
 
 			@Comment({"Set this to true to allow retro-generation of Platinum Ore."})
 			@RequiresMcRestart
 			@Mapped(mapClass = IIWorldGen.class, mapName = "retrogenMap")
-			public static boolean retrogen_platinum = false;
+			public static boolean retrogenPlatinum = false;
 
 			@Comment({"Set this to true to allow retro-generation of Zinc Ore."})
 			@RequiresMcRestart
 			@Mapped(mapClass = IIWorldGen.class, mapName = "retrogenMap")
-			public static boolean retrogen_zinc = false;
+			public static boolean retrogenZinc = false;
 
 			@Comment({"Set this to true to allow retro-generation of Tungsten Ore."})
 			@RequiresMcRestart
 			@Mapped(mapClass = IIWorldGen.class, mapName = "retrogenMap")
-			public static boolean retrogen_tungsten = false;
+			public static boolean retrogenTungsten = false;
 
 			@Comment({"Set this to true to allow retro-generation of Salt Ore."})
 			@RequiresMcRestart
 			@Mapped(mapClass = IIWorldGen.class, mapName = "retrogenMap")
-			public static boolean retrogen_salt = false;
+			public static boolean retrogenSalt = false;
 
 			@Comment({"Set this to true to allow retro-generation of Salt Ore."})
 			@RequiresMcRestart
 			@Mapped(mapClass = IIWorldGen.class, mapName = "retrogenMap")
-			public static boolean retrogen_fluorite = false;
+			public static boolean retrogenFluorite = false;
 
 			@Comment({"Set this to true to allow retro-generation of Salt Ore."})
 			@RequiresMcRestart
 			@Mapped(mapClass = IIWorldGen.class, mapName = "retrogenMap")
-			public static boolean retrogen_phosphorus = false;
+			public static boolean retrogenPhosphorus = false;
 
 			@Comment({"Whether rubber trees should be generated."})
 			@RequiresWorldRestart
 			@Mapped(mapClass = IIWorldGen.class, mapName = "retrogenMap")
-			public static boolean gen_rubber_trees = true;
+			public static boolean genRubberTrees = true;
 
 			@RangeInt(min = 0, max = 100)
 			@RequiresWorldRestart
-			public static int gen_rubber_trees_chance = 15;
+			public static int genRubberTreesChance = 15;
 		}
 
 		public static class Tools
@@ -163,165 +196,165 @@ public class Config
 			public static TripodPeriscope tripodPeriscope;
 
 			@Comment({"A modifier to apply to the ammunition resupply time of the Ammunition Crate (weapons reload)."})
-			public static float ammunition_crate_resupply_time = 1.0f;
+			public static float ammunitionCrateResupplyTime = 1.0f;
 
 			@Comment({"The Lighter fuel capacity in milibuckets (mB)."})
 			@RequiresMcRestart
-			public static int lighter_capacity = 1000;
+			public static int lighterCapacity = 1000;
 
 			@Comment({"The capacity of the measuring cup (mB)."})
 			@RequiresMcRestart
-			public static int measuring_cup_capacity = 500;
+			public static int measuringCupCapacity = 500;
 
 			@Comment({"The energy capacity of the electric hammer in RF... i mean IF... i mean FE... that thing o' powerin'!."})
 			@RequiresMcRestart
-			public static int electric_hammer_capacity = 24000;
+			public static int electricHammerCapacity = 24000;
 
 			@Comment({"The energy capacity of the electric wirecutter."})
 			@RequiresMcRestart
-			public static int electric_wirecutter_capacity = 24000;
+			public static int electricWirecutterCapacity = 24000;
 
 			@Comment({"The energy capacity of the electric wrench."})
 			@RequiresMcRestart
-			public static int electric_wrench_capacity = 24000;
+			public static int electricWrenchCapacity = 24000;
 
 			//Soon?
 			@Comment({"The energy capacity of the electric multitool. (when it will be added)"})
 			@RequiresMcRestart
-			public static int electric_multitool_capacity = 100000;
+			public static int electricMultitoolCapacity = 100000;
 
 			@Comment({"The energy usage of the electric hammer (when mining, rotating, etc. )."})
 			@RequiresMcRestart
-			public static int electric_hammer_energy_per_use = 100;
+			public static int electricHammerEnergyPerUse = 100;
 
 			@Comment({"The energy usage of the electric hammer when building advanced multiblocks (per tick)."})
 			@RequiresMcRestart
-			public static int electric_hammer_energy_per_use_construction = 4096;
+			public static int electricHammerEnergyPerUseConstruction = 4096;
 
 			@Comment({"The energy usage of the electric wirecutter (when cutting wires)."})
 			@RequiresMcRestart
-			public static int electric_wirecutter_energy_per_use = 100;
+			public static int electricWirecutterEnergyPerUse = 100;
 
 			@Comment({"The energy usage of the electric wrench (when destroying blocks / upgrading)."})
 			@RequiresMcRestart
-			public static int electric_wrench_energy_per_use = 1000;
+			public static int electricWrenchEnergyPerUse = 1000;
 
 			@Comment({"The upgrade progress added per use of the engineer's wrench (default 1IF=1 Point of Progress™)."})
 			@RequiresMcRestart
-			public static int electric_wrench_upgrade_progress = 1000;
+			public static int electricWrenchUpgradeProgress = 1000;
 
 			@Comment({"The durability of the engineer's wrench."})
 			@RequiresMcRestart
-			public static int wrench_durability = 256;
+			public static int wrenchDurability = 256;
 
 			@Comment({"The upgrade progress added per use of the engineer's wrench."})
 			@RequiresMcRestart
-			public static int wrench_upgrade_progress = 350;
+			public static int wrenchUpgradeProgress = 350;
 
 			@Comment({"Max zoom of the binoculars (in Blu's Unit of Magnification Measurement™)."})
 			@RequiresMcRestart
 			@Mapped(mapClass = Config.class, mapName = "manual_floatA")
-			public static float[] binoculars_max_zoom = new float[]{0.1f, 0.125f, 0.167f, 0.25f, 0.5f};
+			public static float[] binocularsMaxZoom = new float[]{0.1f, 0.125f, 0.167f, 0.25f, 0.5f};
 
 			@Comment({"Max zoom of the advanced binoculars (in Blu's Unit of Magnification Measurement™)."})
 			@RequiresMcRestart
 			@Mapped(mapClass = Config.class, mapName = "manual_floatA")
-			public static float[] advanced_binoculars_max_zoom = new float[]{0.05f, 0.0625f, 0.0833f, 0.1f, 0.25f, 0.5f};
+			public static float[] advancedBinocularsMaxZoom = new float[]{0.05f, 0.0625f, 0.0833f, 0.1f, 0.25f, 0.5f};
 
 			@Comment({"The energy capacity of advanced binoculars (when using Infrared Sight)."})
 			@RequiresMcRestart
-			public static int advanced_binoculars_energy_capacity = 4000;
+			public static int advancedBinocularsEnergyCapacity = 4000;
 
 			@Comment({"The energy usage of advanced binoculars (when using Infrared Sight)."})
 			@RequiresMcRestart
-			public static int advanced_binoculars_energy_usage = 150;
+			public static int advancedBinocularsEnergyUsage = 150;
 
 			//Durability
 
 
-			@Comment({"The durability (max number of uses) of the Precission Buzzsaw."})
+			@Comment({"The durability (max number of uses) of the Precision Buzzsaw."})
 			@RequiresMcRestart
-			public static int precission_tool_buzzsaw_durability = 150;
+			public static int precissionToolBuzzsawDurability = 150;
 
-			@Comment({"The durability (max number of uses) of the Precission Drill."})
+			@Comment({"The durability (max number of uses) of the Precision Drill."})
 			@RequiresMcRestart
-			public static int precission_tool_drill_durability = 250;
+			public static int precissionToolDrillDurability = 250;
 
-			@Comment({"The durability (max number of uses) of the Precission Inserter."})
+			@Comment({"The durability (max number of uses) of the Precision Inserter."})
 			@RequiresMcRestart
-			public static int precission_tool_inserter_durability = 200;
+			public static int precissionToolInserterDurability = 200;
 
-			@Comment({"The durability (max number of uses) of the Precission Solderer."})
+			@Comment({"The durability (max number of uses) of the Precision Solderer."})
 			@RequiresMcRestart
-			public static int precission_tool_solderer_durability = 150;
+			public static int precissionToolSoldererDurability = 150;
 
-			@Comment({"The durability (max number of uses) of the Precission Welder."})
+			@Comment({"The durability (max number of uses) of the Precision Welder."})
 			@RequiresMcRestart
-			public static int precission_tool_welder_durability = 250;
+			public static int precissionToolWelderDurability = 250;
 
-			@Comment({"The durability (max number of uses) of the Precission Hammer."})
+			@Comment({"The durability (max number of uses) of the Precision Hammer."})
 			@RequiresMcRestart
-			public static int precission_tool_hammer_durability = 200;
+			public static int precissionToolHammerDurability = 200;
 
 			@Comment({"The durability (max number of uses) of the Iron Sawblade."})
 			@RequiresMcRestart
-			public static int sawblade_iron_durability = 150;
+			public static int sawbladeIronDurability = 150;
 
 			@Comment({"The durability (max number of uses) of the Steel Sawblade."})
 			@RequiresMcRestart
-			public static int sawblade_steel_durability = 300;
+			public static int sawbladeSteelDurability = 300;
 
 			@Comment({"The durability (max number of uses) of the Tungsten Sawblade."})
 			@RequiresMcRestart
-			public static int sawblade_tungsten_durability = 550;
+			public static int sawbladeTungstenDurability = 550;
 
 			//Usage Time
 
-			@Comment({"The usage time of the Precission Buzzsaw."})
+			@Comment({"The usage time of the Precision Buzzsaw."})
 			@RequiresMcRestart
-			public static int precission_tool_buzzsaw_usage_time = 140;
+			public static int precissionToolBuzzsawUsageTime = 140;
 
-			@Comment({"The usage time of the Precission Drill."})
+			@Comment({"The usage time of the Precision Drill."})
 			@RequiresMcRestart
-			public static int precission_tool_drill_usage_time = 140;
+			public static int precissionToolDrillUsageTime = 140;
 
-			@Comment({"The usage time of the Precission Inserter."})
+			@Comment({"The usage time of the Precision Inserter."})
 			@RequiresMcRestart
-			public static int precission_tool_inserter_usage_time = 60;
+			public static int precissionToolInserterUsageTime = 60;
 
-			@Comment({"The usage time of the Precission Solderer."})
+			@Comment({"The usage time of the Precision Solderer."})
 			@RequiresMcRestart
-			public static int precission_tool_solderer_usage_time = 80;
+			public static int precissionToolSoldererUsageTime = 80;
 
-			@Comment({"The usage time of the Precission Welder."})
+			@Comment({"The usage time of the Precision Welder."})
 			@RequiresMcRestart
-			public static int precission_tool_welder_usage_time = 160;
+			public static int precissionToolWelderUsageTime = 160;
 
-			@Comment({"The usage time of the Precission Hammer."})
+			@Comment({"The usage time of the Precision Hammer."})
 			@RequiresMcRestart
-			public static int precission_tool_hammer_usage_time = 40;
+			public static int precissionToolHammerUsageTime = 40;
 
 			public static class SkycrateMounts
 			{
 				@Comment({"The speed of the Mechanical Skycrate Mount."})
 				@RequiresMcRestart
-				public static float mech_speed = 0.25f;
+				public static float mechSpeed = 0.25f;
 
 				@Comment({"The energy (max distance to be traveled) of the Mechanical Skycrate Mount."})
 				@RequiresMcRestart
-				public static float mech_energy = 35;
+				public static float mechEnergy = 35;
 
 				@Comment({"The speed of the Electric Skycrate Mount."})
 				@RequiresMcRestart
-				public static float electric_speed = 1f;
+				public static float electricSpeed = 1f;
 
 				@Comment({"The energy to distance ratio of the Electric Skycrate Mount. (in Immersive Flux per Meter)"})
 				@RequiresMcRestart
-				public static int electric_energy_ratio = 128;
+				public static int electricEnergyRatio = 128;
 
 				@Comment({"The energy capacity of the Electric Skycrate Mount (in Immersive Flux)."})
 				@RequiresMcRestart
-				public static float electric_energy = 55;
+				public static float electricEnergy = 55;
 
 			}
 
@@ -330,21 +363,21 @@ public class Config
 				@Comment({"Determines how fast the Tripod Periscope can be set up (in ticks)."})
 				@RangeInt(min = 0)
 				@RequiresMcRestart
-				public static int setup_time = 60;
+				public static int setupTime = 60;
 
 				@Comment({"The yaw turn speed of the Tripod Periscope (in degrees)."})
 				@RequiresMcRestart
-				public static float turn_speed = 2.5f;
+				public static float turnSpeed = 2.5f;
 
 				@Comment({"Max zoom of a machinegun with a scope mounted (in Blu's Unit of Distance Measurement™)."})
 				@RequiresMcRestart
 				@Mapped(mapClass = Config.class, mapName = "manual_floatA")
-				public static float[] tripod_zoom_steps = new float[]{0.01f, 0.02f, 0.04f, 0.0625f, 0.0833f, 0.125f, 0.25f, 0.5f};
+				public static float[] tripodZoomSteps = new float[]{0.01f, 0.02f, 0.04f, 0.0625f, 0.0833f, 0.125f, 0.25f, 0.5f};
 			}
 
 			@Comment({"The capacity of the Improved Capacitor Backpack (in IF)."})
 			@RequiresMcRestart
-			public static int advanced_powerpack_capacity = 1000000;
+			public static int advancedPowerpackCapacity = 1000000;
 		}
 
 		public static class Machines
@@ -364,7 +397,7 @@ public class Config
 			@SubConfig
 			public static Electrolyzer electrolyzer;
 			@SubConfig
-			public static PrecissionAssembler precissionAssembler;
+			public static PrecisionAssembler precissionAssembler;
 			@SubConfig
 			public static Coagulator coagulator;
 			@SubConfig
@@ -376,23 +409,23 @@ public class Config
 			@SubConfig
 			public static MissileSilo missileSilo;
 			@SubConfig
-			public static ConveyorScanner conveyor_scanner;
+			public static ConveyorScanner conveyorScanner;
 			@SubConfig
 			public static Inserter inserter;
 			@SubConfig
-			public static AdvancedInserter advanced_inserter;
+			public static AdvancedInserter advancedInserter;
 			@SubConfig
-			public static FluidInserter fluid_inserter;
+			public static FluidInserter fluidInserter;
 			@SubConfig
-			public static AdvancedFluidInserter advanced_fluid_inserter;
+			public static AdvancedFluidInserter advancedFluidInserter;
 			@SubConfig
-			public static ChemicalDispenser chemical_dispenser;
+			public static ChemicalDispenser chemicalDispenser;
 			@SubConfig
-			public static SmallDataBuffer small_data_buffer;
+			public static SmallDataBuffer smallDataBuffer;
 			@SubConfig
-			public static SkyCrateStation skycrate_station;
+			public static SkyCrateStation skycrateStation;
 			@SubConfig
-			public static SkyCartStation skycart_station;
+			public static SkyCartStation skycartStation;
 			@SubConfig
 			public static Packer packer;
 			@SubConfig
@@ -479,7 +512,7 @@ public class Config
 				public static int energyCapacity = 16000;
 
 				@Comment({"Additional energy capacity of the packer when the charging module upgrade is present."})
-				public static int energyCapacityUpgrade = 4000000;
+				public static int energyCapacityUpgrade = 16000000;
 
 				@Comment({"Additional fluid capacity of the packer when the pump module upgrade is present."})
 				public static int fluidCapacityUpgrade = 96000;
@@ -654,7 +687,7 @@ public class Config
 				public static int fluidCapacity = 12000;
 			}
 
-			public static class PrecissionAssembler
+			public static class PrecisionAssembler
 			{
 				@Comment({"Energy capacity of the chemical bath."})
 				public static int energyCapacity = 16000;
@@ -917,53 +950,79 @@ public class Config
 
 		public static class Weapons
 		{
+			//thanks for reminding me, trainmaniac ^^
+			@Comment({"Whether blocks should be damaged when hit by bullets"})
+			public static boolean blockDamage = true;
+
+			@Comment({"Whether bullets should whistle, when flying close to player (slightly affects performance)"})
+			public static boolean bulletsWhistleSound = true;
+			@Comment({"Whether artillery shells should whistle, when about to impact"})
+			public static boolean artilleryImpactSound = true;
+
 			@SubConfig
+			@LangKey("Ammunition")
+			public static Ammunition ammunition;
+			@SubConfig
+			@LangKey("Submachinegun")
 			public static Submachinegun submachinegun;
 			@SubConfig
+			@LangKey("Machinegun")
 			public static Machinegun machinegun;
 			@SubConfig
+			@LangKey("Rifle")
+			public static Rifle rifle;
+			@SubConfig
+			@LangKey("Assault Rifle")
+			public static AssaultRifle assaultRifle;
+			@SubConfig
+			@LangKey("Mortar")
 			public static Mortar mortar;
 			@SubConfig
+			@LangKey("Emplacement Weapons")
 			public static EmplacementWeapons emplacementWeapons;
 			@SubConfig
+			@LangKey("Railgun")
 			public static Railgun railgun;
 			@SubConfig
+			@LangKey("Grenade")
 			public static Grenade grenade;
 			@SubConfig
+			@LangKey("Mines")
 			public static Mines mines;
 			@SubConfig
+			@LangKey("Light Engineer Armor")
 			public static LightEngineerArmor lightEngineerArmor;
 
 			public static class LightEngineerArmor
 			{
 				@Comment({"The energy usage of the Infiltrator's Headgear when IR is active (in IF / 20 ticks)."})
 				@RangeInt(min = 0)
-				public static int ir_headgear_energy_usage = 150;
+				public static int irHeadgearEnergyUsage = 150;
 
 				@Comment({"The energy usage of the Technician's Headgear when it is active (in IF / 20 ticks)."})
 				@RangeInt(min = 0)
-				public static int technician_headgear_energy_usage = 50;
+				public static int technicianHeadgearEnergyUsage = 50;
 
 				@Comment({"The energy usage of the Engineer's Headgear when it is active (in IF / 20 ticks)."})
 				@RangeInt(min = 0)
-				public static int engineer_headgear_energy_usage = 225;
+				public static int engineerHeadgearEnergyUsage = 225;
 
 				@Comment({"The multiplier of electric damage taken when an anti-static mesh is worn under water (in half-hearts)."})
 				@RangeInt(min = 0)
-				public static float anti_static_mesh_water_damage_mod = 1.5f;
+				public static float antiStaticMeshWaterDamageMod = 1.5f;
 
 				@Comment({"The energy usage of the exoskeleton when running (in IF)."})
 				@RangeInt(min = 0)
-				public static int exoskeleton_energy_usage = 200;
+				public static int exoskeletonEnergyUsage = 200;
 
 				@Comment({"The oxygen capacity of the scuba tank (in mB)."})
 				@RangeInt(min = 0)
 				@RequiresMcRestart
-				public static int scuba_tank_capacity = 10000;
+				public static int scubaTankCapacity = 10000;
 
 				@Comment({"The oxygen capacity of the scuba tank (in mB / 20 ticks)."})
 				@RangeInt(min = 0)
-				public static int scuba_tank_usage = 20;
+				public static int scubaTankUsage = 20;
 
 			}
 
@@ -981,7 +1040,7 @@ public class Config
 
 				@Comment({"The pitch turn speed of the Mortar (in degrees)."})
 				@RequiresMcRestart
-				public static float pitch_speed = 1f;
+				public static float pitchSpeed = 1f;
 			}
 
 			public static class EmplacementWeapons
@@ -1246,11 +1305,50 @@ public class Config
 
 			}
 
+			public static class Rifle
+			{
+				@Comment({"Time required to reload a stick magazine in SMG. (in ticks)"})
+				public static int bulletReloadTime = 20;
+
+				@Comment({"Time required to reload a drum magazine in SMG. (in ticks)"})
+				public static int magazineReloadTime = 65;
+
+				@Comment({"Time required to aim the SMG. (in ticks)"})
+				public static int clipSize = 4;
+
+				@Comment({"Time required to aim the SMG. (in ticks)"})
+				public static int aimTime = 15;
+
+				@Comment({"Time required to fire a single bullet."})
+				public static int bulletFireTime = 20;
+
+				@Comment({"Time required to fire a single bullet."})
+				public static int bulletFireTimeSemiAuto = 10;
+
+				@Comment({"Maximum amount of horizontal recoil."})
+				public static float longBarrelVelocityMod = 1.5f;
+
+				@Comment({"Amount of horizontal recoil after taking a shot."})
+				public static float recoilHorizontal = 0.5f;
+
+				@Comment({"Amount of vertical recoil after taking a shot."})
+				public static float recoilVertical = 2.75f;
+
+				@Comment({"Maximum amount of horizontal recoil."})
+				public static float maxRecoilHorizontal = 3.5f;
+
+				@Comment({"Maximum amount of vertical recoil."})
+				public static float maxRecoilVertical = 12f;
+
+				@Comment({"Amount of vertical recoil after taking a shot."})
+				public static float recoilSemiAutoVertical = 1f;
+
+				@Comment({"Range in which enemies will be attracted to the gunshot."})
+				public static int enemyAttractRange = 32;
+			}
+
 			public static class Submachinegun
 			{
-				@Comment({"Whether the recoil is visible in first-person view."})
-				public static boolean cameraRecoil = true;
-
 				@Comment({"Time required to reload a stick magazine in SMG. (in ticks)"})
 				public static int clipReloadTime = 45;
 
@@ -1270,16 +1368,74 @@ public class Config
 				public static float sturdyBarrelVelocityMod = 1.25f;
 
 				@Comment({"Amount of horizontal recoil after taking a shot."})
-				public static float recoilHorizontal = 3.5f;
+				public static float recoilHorizontal = 0.345f;
 
 				@Comment({"Amount of vertical recoil after taking a shot."})
-				public static float recoilVertical = 5f;
+				public static float recoilVertical = 0.625f;
 
 				@Comment({"Maximum amount of horizontal recoil."})
-				public static float maxRecoilHorizontal = 30f;
+				public static float maxRecoilHorizontal = 14.5f;
 
 				@Comment({"Maximum amount of vertical recoil."})
-				public static float maxRecoilVertical = 45f;
+				public static float maxRecoilVertical = 9f;
+
+				@Comment({"Range in which enemies will be attracted to the gunshot."})
+				public static int enemyAttractRange = 36;
+
+				@Comment({"Range in which enemies will be attracted to the gunshot for a suppressed SMG."})
+				public static int enemyAttractRangeSuppressor = 6;
+			}
+
+			public static class AssaultRifle
+			{
+				//--- Stock ---//
+
+				@Comment({"Time required to reload a magazine in AR. (in ticks)"})
+				public static int clipReloadTime = 45;
+
+				@Comment({"Time required to load a railgun grenade to an upgraded AR. (in ticks)"})
+				public static int grenadeReloadTime = 80;
+
+				@Comment({"Time required to aim the AR. (in ticks)"})
+				public static int aimTime = 15;
+
+				@Comment({"Time required to fire a single bullet in Auto mode."})
+				public static int bulletFireTimeAuto = 2;
+
+				@Comment({"Time required to fire a single bullet in Semi-Auto mode."})
+				public static int bulletFireTimeSemiAuto = 5;
+
+				@Comment({"Amount of horizontal recoil after taking a shot."})
+				public static float recoilHorizontal = 0.345f;
+
+				@Comment({"Amount of vertical recoil after taking a shot."})
+				public static float recoilVertical = 0.425f;
+
+				@Comment({"Maximum amount of horizontal recoil."})
+				public static float maxRecoilHorizontal = 8.5f;
+
+				@Comment({"Maximum amount of vertical recoil."})
+				public static float maxRecoilVertical = 8.5f;
+
+				@Comment({"Range in which enemies will be attracted to the gunshot."})
+				public static int enemyAttractRange = 36;
+
+				//--- Upgrades ---//
+
+				@Comment({"Energy used per tick by the Infrared Scope upgrade."})
+				public static int upgradeIRScopeEnergy = 20;
+
+				@Comment({"Energy used per shot by the Electric Firing Motor upgrade."})
+				public static int upgradeFiringMotorEnergy = 10;
+
+				@Comment({"Energy used per shot by the Railgun Chamber upgrade."})
+				public static int upgradeRailgunChamberEnergy = 40;
+
+				@Comment({"Energy used per tick by the Gyroscopic Stabilizer upgrade."})
+				public static int upgradeStabilizerEnergy = 10;
+
+				@Comment({"Energy used per tick by the Stereoscopic Rangefinder upgrade."})
+				public static int upgradeRangefinderEnergy = 1024;
 			}
 
 			public static class Machinegun
@@ -1348,7 +1504,7 @@ public class Config
 				@Comment({"Max zoom of a machinegun with a scope mounted (in Blu's Unit of Distance Measurement™)."})
 				@RequiresMcRestart
 				@Mapped(mapClass = Config.class, mapName = "manual_floatA")
-				public static float[] machinegun_scope_max_zoom = new float[]{0.55f, 0.35f, 0.15f};
+				public static float[] machinegunScopeMaxZoom = new float[]{0.55f, 0.35f, 0.15f};
 
 				@Comment({"Shield's initial strength (resistance vs attacks)."})
 				public static float shieldStrengthInitial = 45;
@@ -1359,7 +1515,7 @@ public class Config
 			}
 		}
 
-		public static class Bullets
+		public static class Ammunition
 		{
 			@Comment({"Default velocity of a light howitzer shell."})
 			public static float mortarVelocity = 8f;
@@ -1444,9 +1600,6 @@ public class Config
 				@Comment({"Damage resistance of the fuel tank."})
 				public static int fuelTankDurability = 80;
 
-				@Comment({"Roll the camera when turning the motorbike."})
-				public static boolean cameraRoll = false;
-
 				@Comment({"Amount of fuel burn per time, dependent on diesel generator fluids (in mB)"})
 				public static int fuelBurnAmount = 8;
 
@@ -1484,37 +1637,35 @@ public class Config
 		{
 			@Comment({"The modifier of internal torque of a machine using this gear.", GEARS})
 			@Mapped(mapClass = Config.class, mapName = "manual_floatA")
-			public static float[] gear_torque_modifier = new float[]{0.25f, 0.5f, 1f, 1.5f, 2f};
+			public static float[] gearTorqueModifier = new float[]{0.25f, 0.5f, 1f, 1.5f, 2f};
 
 			@Comment({"Belts will break if Torque is higher than this value.", BELTS})
 			@Mapped(mapClass = Config.class, mapName = "manual_intA")
-			public static int[] belt_max_torque = new int[]{50, 200, 100};
+			public static int[] beltMaxTorque = new int[]{50, 200, 100};
 
 			@Comment({"Torque loss, later multiplied by belt length.", BELTS})
 			@Mapped(mapClass = Config.class, mapName = "manual_floatA")
-			public static float[] belt_torque_loss = new float[]{0.05f, 0.1f, 0.01f};
+			public static float[] beltTorqueLoss = new float[]{0.05f, 0.1f, 0.01f};
 
 			@Comment({"Max length of the belt, works exactly like wires (measured in blocks).", BELTS})
 			@Mapped(mapClass = Config.class, mapName = "manual_intA")
-			public static int[] belt_length = new int[]{8, 16, 16};
-
-			// TODO: 26.12.2021 inspect
+			public static int[] beltLength = new int[]{8, 16, 16};
 
 			@Comment({"Immersive Flux to Rotary Flux conversion ratio (default 4 RoF = 1 IF)."})
 			@Mapped(mapClass = Config.class, mapName = "manual_floatA")
-			public static float rof_conversion_ratio = 4f;
+			public static float rofConversionRatio = 4f;
 
 			@Comment({"Default torque, used as a fallback, when IE rotational device is not recognised."})
 			@Mapped(mapClass = Config.class, mapName = "manual_floatA")
-			public static float dynamo_default_torque = 16f;
+			public static float dynamoDefaultTorque = 16f;
 
 			@Comment({"Torque multiplier for the windmill."})
 			@Mapped(mapClass = Config.class, mapName = "manual_floatA")
-			public static float dynamo_windmill_torque = 20f;
+			public static float dynamoWindmillTorque = 20f;
 
 			@Comment({"Torque multiplier for the windmill."})
 			@Mapped(mapClass = Config.class, mapName = "manual_floatA")
-			public static float dynamo_watermill_torque = 24f;
+			public static float dynamoWatermillTorque = 24f;
 		}
 	}
 
@@ -1522,8 +1673,6 @@ public class Config
 	public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent ev)
 	{
 		if(ev.getModID().equals(ImmersiveIntelligence.MODID))
-		{
-			ConfigManager.sync(ImmersiveIntelligence.MODID, net.minecraftforge.common.config.Config.Type.INSTANCE);
-		}
+			ConfigManager.sync(ImmersiveIntelligence.MODID, Type.INSTANCE);
 	}
 }
