@@ -10,12 +10,11 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
-import pl.pabilo8.immersiveintelligence.common.IIContent;
 import pl.pabilo8.immersiveintelligence.common.entity.EntityHans;
-import pl.pabilo8.immersiveintelligence.common.items.ammunition.ItemIIAmmoGrenade;
-import pl.pabilo8.immersiveintelligence.common.items.armor.ItemIILightEngineerHelmet;
-import pl.pabilo8.immersiveintelligence.common.items.weapons.ItemIIRailgunOverride;
-import pl.pabilo8.immersiveintelligence.common.items.weapons.ItemIISubmachinegun;
+import pl.pabilo8.immersiveintelligence.common.item.ammo.ItemIIAmmoGrenade;
+import pl.pabilo8.immersiveintelligence.common.item.armor.ItemIILightEngineerHelmet;
+import pl.pabilo8.immersiveintelligence.common.item.weapons.ItemIIGunBase;
+import pl.pabilo8.immersiveintelligence.common.item.weapons.ItemIIRailgunOverride;
 
 public class AIHansGetSupplies extends EntityAIBase
 {
@@ -126,7 +125,7 @@ public class AIHansGetSupplies extends EntityAIBase
     }
     private boolean canGetAmmoFor(ItemStack weapon)
     {
-        return weapon.getItem() instanceof ItemIISubmachinegun
+        return weapon.getItem() instanceof ItemIIGunBase
                 ||weapon.getItem() instanceof ItemRailgun
                 ||weapon.getItem() instanceof ItemIIAmmoGrenade
                 ;
@@ -135,8 +134,8 @@ public class AIHansGetSupplies extends EntityAIBase
     {
         if(!canGetAmmoFor(weapon))
             return false;
-        if(weapon.getItem() instanceof ItemIISubmachinegun)
-            return IIContent.itemSubmachinegun.isAmmo(stack, weapon);
+        if(weapon.getItem() instanceof ItemIIGunBase)
+            return ((ItemIIGunBase)weapon.getItem()).isAmmo(stack, weapon);
         else if(weapon.getItem() instanceof ItemRailgun)
             return ItemIIRailgunOverride.isAmmo(stack);
         else if(weapon.getItem() instanceof ItemIIAmmoGrenade)
@@ -147,7 +146,7 @@ public class AIHansGetSupplies extends EntityAIBase
     {
         if(!canGetAmmoFor(weapon))
             return 0;
-        if(weapon.getItem() instanceof ItemIISubmachinegun)
+        if(weapon.getItem() instanceof ItemIIGunBase)
             return 4;
         else if(weapon.getItem() instanceof ItemRailgun)
             return 16;

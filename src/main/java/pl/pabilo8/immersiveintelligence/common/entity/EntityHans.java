@@ -36,7 +36,7 @@ import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import pl.pabilo8.immersiveintelligence.common.IIContent;
-import pl.pabilo8.immersiveintelligence.common.entity.bullets.EntityBullet;
+import pl.pabilo8.immersiveintelligence.common.entity.bullet.EntityBullet;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.HansAnimations;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.HansAnimations.*;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.HansPathNavigate;
@@ -48,9 +48,13 @@ import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.idle.AIHansKaza
 import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.idle.AIHansSalute;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.idle.AIHansTimedLookAtEntity;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.AIHansGetSupplies;
+import pl.pabilo8.immersiveintelligence.common.item.ammo.ItemIIAmmoGrenade;
+import pl.pabilo8.immersiveintelligence.common.item.tools.ItemIIBinoculars;
 import pl.pabilo8.immersiveintelligence.common.item.weapons.ItemIIGunBase;
 import pl.pabilo8.immersiveintelligence.common.entity.vehicle.EntityFieldHowitzer;
 import pl.pabilo8.immersiveintelligence.common.item.armor.ItemIILightEngineerHelmet;
+import pl.pabilo8.immersiveintelligence.common.item.weapons.ItemIIMachinegun;
+import pl.pabilo8.immersiveintelligence.common.item.weapons.ItemIIRailgunOverride;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
