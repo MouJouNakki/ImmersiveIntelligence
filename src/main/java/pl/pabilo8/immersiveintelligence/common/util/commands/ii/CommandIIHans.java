@@ -58,6 +58,16 @@ public class CommandIIHans extends CommandBase
 	{
 		squadList.clear();
 
+		squadList.put(new ResourceLocation(ImmersiveIntelligence.MODID, "none"),
+				new HansSquadHandWeapon()
+				{
+					@Override
+					public void setItems(EntityHans hans, int id) {
+
+					}
+				}
+		);
+
 		squadList.put(new ResourceLocation(ImmersiveIntelligence.MODID, "smg"),
 				new HansSquadHandWeapon()
 				{

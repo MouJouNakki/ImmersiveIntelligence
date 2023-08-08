@@ -76,7 +76,7 @@ repositories {
     //https://www.cursemaven.com/
     //for Immersive Petroleum, Posts and Technology
     maven {
-        url "https://www.cursemaven.com"
+        setUrl("https://cursemaven.com")
     }
 
     //Curseforge maven, in case some other maven goes offline

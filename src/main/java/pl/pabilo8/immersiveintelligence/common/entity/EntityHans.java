@@ -1,6 +1,8 @@
 package pl.pabilo8.immersiveintelligence.common.entity;
 
 import blusunrize.immersiveengineering.common.IEContent;
+import blusunrize.immersiveengineering.common.items.ItemChemthrower;
+import blusunrize.immersiveengineering.common.items.ItemRevolver;
 import blusunrize.immersiveengineering.common.util.ChatUtils;
 import blusunrize.immersiveengineering.common.util.Utils;
 import net.minecraft.entity.*;
@@ -34,6 +36,7 @@ import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import pl.pabilo8.immersiveintelligence.common.IIContent;
+import pl.pabilo8.immersiveintelligence.common.entity.bullets.EntityBullet;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.HansAnimations;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.HansAnimations.*;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.HansPathNavigate;
@@ -44,12 +47,19 @@ import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.idle.AIHansIdle
 import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.idle.AIHansKazachok;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.idle.AIHansSalute;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.idle.AIHansTimedLookAtEntity;
+import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.AIHansGetSupplies;
+import pl.pabilo8.immersiveintelligence.common.items.ammunition.ItemIIAmmoGrenade;
 import pl.pabilo8.immersiveintelligence.common.items.armor.ItemIILightEngineerHelmet;
+import pl.pabilo8.immersiveintelligence.common.items.tools.ItemIIBinoculars;
+import pl.pabilo8.immersiveintelligence.common.items.weapons.ItemIIMachinegun;
+import pl.pabilo8.immersiveintelligence.common.items.weapons.ItemIIRailgunOverride;
+import pl.pabilo8.immersiveintelligence.common.items.weapons.ItemIISubmachinegun;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * @author Pabilo8
@@ -57,6 +67,17 @@ import java.util.Arrays;
  */
 public class EntityHans extends EntityCreature implements INpc
 {
+	public boolean isWeapon(ItemStack stack)
+	{
+		return stack.getItem() instanceof ItemIISubmachinegun
+				||stack.getItem() instanceof ItemIIMachinegun
+				||stack.getItem() instanceof ItemIIBinoculars
+				||stack.getItem() instanceof ItemIIRailgunOverride
+				||stack.getItem() instanceof ItemChemthrower
+				||stack.getItem() instanceof ItemRevolver
+				||stack.getItem() instanceof ItemIIAmmoGrenade
+				;
+	}
 	private static final int[] EYE_COLOURS = new int[]{
 			0x597179,//cyan
 			0x536579,//toned blue
@@ -315,9 +336,11 @@ public class EntityHans extends EntityCreature implements INpc
 		//Call other hanses for help when attacked
 		this.targetTasks.addTask(2, new AIHansAlertOthers(this, true));
 
+		this.tasks.addTask(1, new AIHansGetSupplies(this));
 		this.tasks.addTask(2, new AIHansHolsterWeapon(this));
 		updateWeaponTasks();
 
+		this.tasks.addTask(5, new EntityAIAvoidEntity<>(this, EntityBullet.class, avEntity -> avEntity.bullet.getName().equals("grenade_5bCal"), 8.0F, 0.6f, 0.7f));
 		this.tasks.addTask(5, new EntityAIAvoidEntity<>(this, EntityGasCloud.class, 8.0F, 0.6f, 0.7f));
 		this.tasks.addTask(6, new AIHansIdle(this));
 		this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityLiving.class, 6.0F));
