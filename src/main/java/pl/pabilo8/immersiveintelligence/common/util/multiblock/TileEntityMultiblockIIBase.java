@@ -9,6 +9,7 @@ import blusunrize.immersiveengineering.common.blocks.TileEntityMultiblockPart;
 import blusunrize.immersiveengineering.common.util.inventory.IIEInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -24,6 +25,7 @@ import pl.pabilo8.immersiveintelligence.common.network.messages.MessageIITileSyn
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
+import java.util.function.Consumer;
 
 /**
  * A new beginning!<br>
@@ -36,6 +38,11 @@ public abstract class TileEntityMultiblockIIBase<T extends TileEntityMultiblockI
 {
 	//The multiblock INSTANCE, for easy access
 	protected final MultiblockStuctureBase<T> multiblock;
+
+
+	//--- Reference Variables ---//
+
+	public static final String KEY_SYNC_ALL_VALUES = "_sync_all_values";
 
 	protected TileEntityMultiblockIIBase(MultiblockStuctureBase<T> multiblock)
 	{
@@ -50,7 +57,7 @@ public abstract class TileEntityMultiblockIIBase<T extends TileEntityMultiblockI
 	{
 		//Optimize
 		ApiUtils.checkForNeedlessTicking(this);
-		if(master()!=this)
+		if(isDummy())
 			return;
 
 		//Tick
@@ -85,7 +92,7 @@ public abstract class TileEntityMultiblockIIBase<T extends TileEntityMultiblockI
 	 */
 	protected final boolean isFullSyncMessage(@Nonnull NBTTagCompound message)
 	{
-		return message.hasKey("_sync_all_values");
+		return message.hasKey(KEY_SYNC_ALL_VALUES);
 	}
 
 	//--- Inventory & Fluid Handling ---//
@@ -172,8 +179,17 @@ public abstract class TileEntityMultiblockIIBase<T extends TileEntityMultiblockI
 	{
 		if(!isDummy())
 		{
+			if(multiblock.isMassiveStructure())
+				return INFINITE_EXTENT_AABB;
+
 			BlockPos nullPos = this.getBlockPosForPos(0);
-			return new AxisAlignedBB(nullPos, nullPos.offset(facing, structureDimensions[1]).offset(mirrored?facing.rotateYCCW(): facing.rotateY(), structureDimensions[2]).up(structureDimensions[0]));
+			return new AxisAlignedBB(
+					nullPos,
+					nullPos.offset(facing,
+									structureDimensions[1]).offset(mirrored?facing.rotateYCCW(): facing.rotateY(),
+									structureDimensions[2])
+							.up(structureDimensions[0])
+			);
 		}
 		return super.getRenderBoundingBox();
 	}
@@ -189,6 +205,31 @@ public abstract class TileEntityMultiblockIIBase<T extends TileEntityMultiblockI
 					blocks.add(origin.offset(facing, x).offset(facing.rotateY(), z).add(0, y, 0));
 
 		return blocks.toArray(new BlockPos[0]);
+	}
+
+	/**
+	 * @param tileAction action performed for each tile entity of this multiblock
+	 */
+	public void forMultiblockBlocks(Consumer<T> tileAction)
+	{
+//		BlockPos origin = getPos().subtract(new Vec3i(offset[0], offset[1], offset[2]));
+
+		for(int i = 0; i < structureDimensions[0]*structureDimensions[1]*structureDimensions[2]; i++)
+		{
+			TileEntity te = world.getTileEntity(getBlockPosForPos(i));
+			if(te!=null&&te.getClass()==this.getClass())
+				tileAction.accept((T)te);
+		}
+
+/*
+		for(int y = 0; y < structureDimensions[0]; y++)
+			for(int x = 0; x < structureDimensions[1]; x++)
+				for(int z = 0; z < structureDimensions[2]; z++)
+				{
+					TileEntity te = world.getTileEntity(origin.offset(facing, x).offset(facing.rotateY(), mirrored?-z: z).add(0, y, 0));
+					if(te!=null&&te.getClass()==this.getClass())
+						tileAction.accept((T)te);
+				}*/
 	}
 
 	/**
@@ -217,7 +258,7 @@ public abstract class TileEntityMultiblockIIBase<T extends TileEntityMultiblockI
 			//II stuff
 			NBTTagCompound nbt = new NBTTagCompound();
 			master.writeCustomNBT(nbt, false);
-			nbt.setBoolean("_sync_all_values", true);
+			nbt.setBoolean(KEY_SYNC_ALL_VALUES, true);
 			master.sendNBTMessageClient(nbt);
 		}
 	}
@@ -230,7 +271,8 @@ public abstract class TileEntityMultiblockIIBase<T extends TileEntityMultiblockI
 	 */
 	public void sendNBTMessageClient(NBTTagCompound message)
 	{
-		IIPacketHandler.sendToClient(this, new MessageIITileSync(this, message));
+		if(!message.hasNoTags())
+			IIPacketHandler.sendToClient(this, new MessageIITileSync(this, message));
 	}
 
 	/**
@@ -240,6 +282,7 @@ public abstract class TileEntityMultiblockIIBase<T extends TileEntityMultiblockI
 	 */
 	public void sendNBTMessageServer(NBTTagCompound message)
 	{
-		IIPacketHandler.sendToServer(new MessageIITileSync(this, message));
+		if(!message.hasNoTags())
+			IIPacketHandler.sendToServer(new MessageIITileSync(this, message));
 	}
 }

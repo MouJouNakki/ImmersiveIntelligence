@@ -3,6 +3,7 @@ package pl.pabilo8.immersiveintelligence.common.item.crafting;
 import pl.pabilo8.immersiveintelligence.common.item.crafting.ItemIIMaterial.Materials;
 import pl.pabilo8.immersiveintelligence.common.util.item.IIItemEnum;
 import pl.pabilo8.immersiveintelligence.common.util.item.ItemIISubItemsBase;
+import pl.pabilo8.modworks.annotations.item.GeneratedItemModels;
 
 /**
  * @author Pabilo8
@@ -15,6 +16,7 @@ public class ItemIIMaterial extends ItemIISubItemsBase<Materials>
 		super("material", 64, Materials.values());
 	}
 
+	@GeneratedItemModels(itemName = "material")
 	public enum Materials implements IIItemEnum
 	{
 		@IIItemProperties(oreDict = "electronTubeAdvanced")
@@ -92,6 +94,25 @@ public class ItemIIMaterial extends ItemIISubItemsBase<Materials>
 		RUBBER_COMPOUND,
 
 		@IIItemProperties(oreDict = "templateCircuit", hidden = true)
-		CIRCUIT_TEMPLATE
+		CIRCUIT_TEMPLATE,
+
+		@IIItemProperties(oreDict = "circuitCryptographic")
+		CRYPTOGRAPHIC_CIRCUIT_BOARD,
+
+		@IIItemProperties(oreDict = "gunbarrelIron")
+		IRON_GUN_BARREL,
+		@IIItemProperties(oreDict = "gunbarrelTungsten")
+		TUNGSTEN_GUN_BARREL,
+		@IIItemProperties(oreDict = "gunstockWood")
+		GUN_STOCK,
+		@IIItemProperties(oreDict = "gunbodyWood")
+		GUN_CASING,
+		@IIItemProperties(oreDict = "gunpartBasic")
+		FIRING_MECHANISM,
+		@IIItemProperties(oreDict = "gunpartAdvanced")
+		ADVANCED_FIRING_MECHANISM,
+
+		@IIItemProperties(oreDict = "ingotSand")
+		SANDBAG,
 	}
 }

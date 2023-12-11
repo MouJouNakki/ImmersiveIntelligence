@@ -7,6 +7,7 @@ import blusunrize.immersiveengineering.common.IEContent;
 import blusunrize.immersiveengineering.common.blocks.IEBlockInterfaces.IDirectionalTile;
 import blusunrize.immersiveengineering.common.blocks.metal.TileEntityMultiblockMetal;
 import blusunrize.immersiveengineering.common.util.Utils;
+import com.google.common.math.IntMath;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementManager;
 import net.minecraft.advancements.PlayerAdvancements;
@@ -27,6 +28,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
+import net.minecraftforge.energy.EnergyStorage;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidUtil;
@@ -45,9 +47,11 @@ import pl.pabilo8.immersiveintelligence.api.data.IDataConnector;
 import pl.pabilo8.immersiveintelligence.api.data.types.DataTypeItemStack;
 import pl.pabilo8.immersiveintelligence.api.data.types.DataTypeString;
 import pl.pabilo8.immersiveintelligence.api.data.types.IDataType;
-import pl.pabilo8.immersiveintelligence.api.utils.IWrench;
+import pl.pabilo8.immersiveintelligence.api.utils.tools.IWrench;
+import pl.pabilo8.immersiveintelligence.common.compat.BaublesHelper;
+import pl.pabilo8.immersiveintelligence.common.compat.IICompatModule;
 import pl.pabilo8.immersiveintelligence.common.entity.bullet.EntityBullet;
-import pl.pabilo8.immersiveintelligence.common.util.IILib;
+import pl.pabilo8.immersiveintelligence.common.util.IIReference;
 import pl.pabilo8.immersiveintelligence.common.util.ISerializableEnum;
 
 import javax.annotation.Nonnull;
@@ -329,11 +333,12 @@ public class IIUtils
 	{
 		if(tank.getFluidAmount() > 0)
 		{
-			FluidStack out = blusunrize.immersiveengineering.common.util.Utils.copyFluidStackWithAmount(tank.getFluid(), Math.min(tank.getFluidAmount(), amount), false);
-			IFluidHandler output = FluidUtil.getFluidHandler(world, pos.offset(side), side);
+
+			FluidStack out = tank.drain(Math.min(tank.getFluidAmount(), amount), false);
+			IFluidHandler output = FluidUtil.getFluidHandler(world, pos.offset(side), side.getOpposite());
 			if(output!=null)
 			{
-				int accepted = output.fill(out, false);
+				int accepted = output.fill(out, true);
 				if(accepted > 0)
 				{
 					int drained = output.fill(blusunrize.immersiveengineering.common.util.Utils.copyFluidStackWithAmount(out, Math.min(out.amount, accepted), false), true);
@@ -358,6 +363,9 @@ public class IIUtils
 	 */
 	public static Vec3d offsetPosDirection(float offset, double yaw, double pitch)
 	{
+		if(offset==0)
+			return new Vec3d(0, 0, 0);
+
 		double yy = (MathHelper.sin((float)pitch)*offset);
 		double true_offset = (MathHelper.cos((float)pitch)*offset);
 
@@ -509,7 +517,7 @@ public class IIUtils
 	{
 		if(stack.isEmpty())
 			return false;
-		return stack.getItem().getToolClasses(stack).contains(IILib.TOOL_ADVANCED_HAMMER);
+		return stack.getItem().getToolClasses(stack).contains(IIReference.TOOL_ADVANCED_HAMMER);
 	}
 
 	public static boolean isAABBContained(@Nonnull AxisAlignedBB compared, @Nonnull AxisAlignedBB comparedTo)
@@ -550,6 +558,10 @@ public class IIUtils
 	{
 		if(player instanceof EntityPlayerMP)
 		{
+			//Can't unlock the same advancement twice
+			if(hasUnlockedIIAdvancement(player, name))
+				return;
+
 			PlayerAdvancements advancements = ((EntityPlayerMP)player).getAdvancements();
 			AdvancementManager manager = ((WorldServer)player.getEntityWorld()).getAdvancementManager();
 			Advancement advancement = manager.getAdvancement(new ResourceLocation(ImmersiveIntelligence.MODID, name));
@@ -575,21 +587,21 @@ public class IIUtils
 	{
 		if(stack.isEmpty())
 			return false;
-		return stack.getItem().getToolClasses(stack).contains(IILib.TOOL_WRENCH)&&stack.getItem() instanceof IWrench;
+		return stack.getItem().getToolClasses(stack).contains(IIReference.TOOL_WRENCH)&&stack.getItem() instanceof IWrench;
 	}
 
 	public static boolean isTachometer(ItemStack stack)
 	{
 		if(stack.isEmpty())
 			return false;
-		return stack.getItem().getToolClasses(stack).contains(IILib.TOOL_TACHOMETER);
+		return stack.getItem().getToolClasses(stack).contains(IIReference.TOOL_TACHOMETER);
 	}
 
 	public static boolean isCrowbar(ItemStack stack)
 	{
 		if(stack.isEmpty())
 			return false;
-		return stack.getItem().getToolClasses(stack).contains(IILib.TOOL_CROWBAR);
+		return stack.getItem().getToolClasses(stack).contains(IIReference.TOOL_CROWBAR);
 	}
 
 	public static boolean isVoltmeter(ItemStack stack)
@@ -719,9 +731,15 @@ public class IIUtils
 		return vv >= min&&vv <= max;
 	}
 
+	@Deprecated
 	public static String getPowerLevelString(TileEntityMultiblockMetal<?, ?> tile)
 	{
 		return getPowerLevelString(tile.getEnergyStored(null), tile.getMaxEnergyStored(null));
+	}
+
+	public static String getPowerLevelString(EnergyStorage storage)
+	{
+		return getPowerLevelString(storage.getEnergyStored(), storage.getMaxEnergyStored());
 	}
 
 	public static String getPowerLevelString(int min, int max)
@@ -838,6 +856,45 @@ public class IIUtils
 		return packet;
 	}
 
+	public static void giveOrDropCasingStack(@Nonnull Entity entity, ItemStack stack)
+	{
+		//attempt to give the item
+		if(entity.hasCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null))
+		{
+			IItemHandler capability = entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
+			if(capability!=null)
+			{
+				for(int i = 0; i < 10; i++)
+				{
+					if(stack.isEmpty())
+						break;
+
+					ItemStack pouchStack;
+					if(i==0)
+						pouchStack = (IICompatModule.baubles&&entity instanceof EntityPlayer)?
+								BaublesHelper.getWornPouch(((EntityPlayer)entity)):
+								ItemStack.EMPTY;
+					else
+						pouchStack = capability.getStackInSlot(i-1);
+
+					if(!pouchStack.getItem().equals(IIContent.itemCasingPouch))
+						continue;
+
+					IItemHandler pouchCap = pouchStack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
+					if(pouchCap==null)
+						continue;
+
+					stack = ItemHandlerHelper.insertItem(pouchCap, stack, false);
+					if(entity instanceof EntityPlayer)
+						((EntityPlayer)entity).inventoryContainer.detectAndSendChanges();
+				}
+			}
+		}
+
+		if(!stack.isEmpty())
+			giveOrDropStack(entity, stack);
+	}
+
 	public static void giveOrDropStack(@Nonnull Entity entity, ItemStack stack)
 	{
 		//attempt to give the item
@@ -882,5 +939,18 @@ public class IIUtils
 				return field.getAnnotation(annotationClass);
 		} catch(NoSuchFieldException ignored) {}
 		return null;
+	}
+
+	/**
+	 * @param numbers array of numbers, must contain at least two
+	 * @return Greatest Common Divisor of multiple numbers
+	 */
+	public static int gcd(int... numbers)
+	{
+		int gcd = numbers[0];
+		for(int i = 1; i < numbers.length; i++)
+			gcd = IntMath.gcd(gcd, numbers[i]);
+
+		return gcd;
 	}
 }

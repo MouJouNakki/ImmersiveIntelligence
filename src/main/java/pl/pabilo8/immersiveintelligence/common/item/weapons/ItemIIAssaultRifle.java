@@ -12,7 +12,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
@@ -23,10 +22,10 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import pl.pabilo8.immersiveintelligence.Config.IIConfig.Weapons.AssaultRifle;
 import pl.pabilo8.immersiveintelligence.ImmersiveIntelligence;
-import pl.pabilo8.immersiveintelligence.api.utils.IAdvancedZoomTool;
-import pl.pabilo8.immersiveintelligence.api.utils.IItemScrollable;
+import pl.pabilo8.immersiveintelligence.api.utils.ItemTooltipHandler.IItemScrollable;
+import pl.pabilo8.immersiveintelligence.api.utils.tools.IAdvancedZoomTool;
+import pl.pabilo8.immersiveintelligence.common.IIConfigHandler.IIConfig.Weapons.AssaultRifle;
 import pl.pabilo8.immersiveintelligence.common.IIContent;
 import pl.pabilo8.immersiveintelligence.common.IISounds;
 import pl.pabilo8.immersiveintelligence.common.IIUtils;
@@ -35,7 +34,7 @@ import pl.pabilo8.immersiveintelligence.common.item.weapons.ammohandler.AmmoHand
 import pl.pabilo8.immersiveintelligence.common.item.weapons.ammohandler.AmmoHandlerMagazine;
 import pl.pabilo8.immersiveintelligence.common.item.weapons.ammohandler.AmmoHandlerSingle;
 import pl.pabilo8.immersiveintelligence.common.util.AdvancedSounds.RangedSound;
-import pl.pabilo8.immersiveintelligence.common.util.IILib;
+import pl.pabilo8.immersiveintelligence.common.util.IIReference;
 import pl.pabilo8.immersiveintelligence.common.util.easynbt.EasyNBT;
 
 import javax.annotation.Nonnull;
@@ -56,10 +55,8 @@ public class ItemIIAssaultRifle extends ItemIIGunBase implements IItemScrollable
 	public static final String ENERGY_UPGRADED = "energy";
 
 	//--- Scope Overlay Textures ---//
-	@SideOnly(Side.CLIENT)
 	public static final ResourceLocation OVERLAY_SCOPE = new ResourceLocation(ImmersiveIntelligence.MODID,
 			"textures/gui/item/machinegun/scope.png");
-	@SideOnly(Side.CLIENT)
 	public static final ResourceLocation OVERLAY_SCOPE_IR = new ResourceLocation(ImmersiveIntelligence.MODID,
 			"textures/gui/item/machinegun/scope_infrared.png");
 
@@ -72,7 +69,6 @@ public class ItemIIAssaultRifle extends ItemIIGunBase implements IItemScrollable
 		super("assault_rifle");
 		stgAmmoHandler = new AmmoHandlerMagazine(this, MAGAZINE, IIContent.itemAmmoAssaultRifle)
 		{
-			@SideOnly(Side.CLIENT)
 			@Nullable
 			@Override
 			protected SoundEvent getUnloadSound(ItemStack weapon, EasyNBT nbt)
@@ -80,7 +76,6 @@ public class ItemIIAssaultRifle extends ItemIIGunBase implements IItemScrollable
 				return IISounds.assaultRifleUnload;
 			}
 
-			@SideOnly(Side.CLIENT)
 			@Nullable
 			@Override
 			protected SoundEvent getReloadSound(ItemStack weapon, EasyNBT nbt)
@@ -91,7 +86,6 @@ public class ItemIIAssaultRifle extends ItemIIGunBase implements IItemScrollable
 
 		railgunAmmoHandler = new AmmoHandlerSingle(this, LOADED_GRENADE, IIContent.itemRailgunGrenade)
 		{
-			@SideOnly(Side.CLIENT)
 			@Nullable
 			@Override
 			protected SoundEvent getUnloadSound(ItemStack weapon, EasyNBT nbt)
@@ -99,7 +93,6 @@ public class ItemIIAssaultRifle extends ItemIIGunBase implements IItemScrollable
 				return null;
 			}
 
-			@SideOnly(Side.CLIENT)
 			@Nullable
 			@Override
 			protected SoundEvent getReloadSound(ItemStack weapon, EasyNBT nbt)
@@ -140,7 +133,7 @@ public class ItemIIAssaultRifle extends ItemIIGunBase implements IItemScrollable
 	{
 		if(isEnergyUpgraded(stack))
 		{
-			list.add(IIUtils.getItalicString(I18n.format(IILib.INFO_KEY+"charge_with_if")));
+			list.add(IIUtils.getItalicString(I18n.format(IIReference.INFO_KEY+"charge_with_if")));
 			list.add(I18n.format(Lib.DESC+"info.energyStored", TextFormatting.GOLD+String.valueOf(getEnergyStored(stack))+TextFormatting.RESET));
 			list.add("");
 		}
@@ -249,7 +242,6 @@ public class ItemIIAssaultRifle extends ItemIIGunBase implements IItemScrollable
 		return super.getRecoilDecay(weapon, nbt, isAimed);
 	}
 
-	@SideOnly(Side.CLIENT)
 	@Nullable
 	@Override
 	protected SoundEvent getDryfireSound(ItemStack weapon, EasyNBT nbt)
@@ -257,7 +249,6 @@ public class ItemIIAssaultRifle extends ItemIIGunBase implements IItemScrollable
 		return IISounds.assaultRifleShotDry;
 	}
 
-	@SideOnly(Side.CLIENT)
 	@Nullable
 	@Override
 	protected RangedSound getFireSound(ItemStack weapon, EasyNBT nbt)
@@ -265,7 +256,6 @@ public class ItemIIAssaultRifle extends ItemIIGunBase implements IItemScrollable
 		return ItemNBTHelper.getInt(weapon, FIRE_MODE)==2?IISounds.assaultRifleRailgunShot: IISounds.assaultRifleShot;
 	}
 
-	@SideOnly(Side.CLIENT)
 	@Nullable
 	@Override
 	protected SoundEvent getChargeFireSound(ItemStack weapon, EasyNBT nbt)
@@ -329,8 +319,13 @@ public class ItemIIAssaultRifle extends ItemIIGunBase implements IItemScrollable
 	@Override
 	public void removeFromWorkbench(EntityPlayer player, ItemStack stack)
 	{
-		NBTTagCompound upgrades = getUpgrades(stack);
-		// TODO: 09.08.2020 advancements
+		if(hasIIUpgrade(stack, WeaponUpgrades.ELECTRIC_FIRING_MOTOR)&&
+				hasIIUpgrade(stack, WeaponUpgrades.SCOPE, WeaponUpgrades.INFRARED_SCOPE))
+			IIUtils.unlockIIAdvancement(player, "main/weapon_of_war");
+		if(hasIIUpgrades(stack, WeaponUpgrades.RAILGUN_ASSISTED_CHAMBER, WeaponUpgrades.RIFLE_GRENADE_LAUNCHER))
+			IIUtils.unlockIIAdvancement(player, "main/the_accelerator");
+		if(hasIIUpgrade(stack, WeaponUpgrades.STEREOSCOPIC_RANGEFINDER))
+			IIUtils.unlockIIAdvancement(player, "main/special_operations_initiative");
 	}
 
 	//--- IItemScrollable ---//

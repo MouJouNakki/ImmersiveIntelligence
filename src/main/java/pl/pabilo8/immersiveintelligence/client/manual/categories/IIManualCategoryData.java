@@ -8,9 +8,9 @@ import pl.pabilo8.immersiveintelligence.common.IIContent;
 import pl.pabilo8.immersiveintelligence.common.block.data_device.BlockIIDataDevice.IIBlockTypes_Connector;
 import pl.pabilo8.immersiveintelligence.common.block.metal_device.BlockIIMetalDevice.IIBlockTypes_MetalDevice;
 import pl.pabilo8.immersiveintelligence.common.crafting.IIRecipes;
-import pl.pabilo8.immersiveintelligence.common.item.ItemIIFunctionalCircuit.Circuits;
 import pl.pabilo8.immersiveintelligence.common.item.crafting.ItemIIMaterial.Materials;
-import pl.pabilo8.immersiveintelligence.common.util.IILib;
+import pl.pabilo8.immersiveintelligence.common.item.data.ItemIIFunctionalCircuit.Circuits;
+import pl.pabilo8.immersiveintelligence.common.util.IIReference;
 import pl.pabilo8.immersiveintelligence.common.util.easynbt.EasyNBT;
 
 /**
@@ -24,7 +24,7 @@ public class IIManualCategoryData extends IIManualCategory
 	@Override
 	public String getCategory()
 	{
-		return IILib.CAT_DATA;
+		return IIReference.CAT_DATA;
 	}
 
 	@Override
@@ -34,15 +34,29 @@ public class IIManualCategoryData extends IIManualCategory
 
 		addEntry("data_main");
 		addEntry("electronic_components")
-				.addSource("circuit_blueprints", getSourceForItems(
+				.addSource("circuit_template", getSourceForItems(
 						BlueprintCraftingRecipe.getTypedBlueprint("basic_circuits"),
 						BlueprintCraftingRecipe.getTypedBlueprint("advanced_circuits"),
 						BlueprintCraftingRecipe.getTypedBlueprint("processors")
+				))
+				.addSource("circuit_blueprints", getSourceForItems(
+						BlueprintCraftingRecipe.getTypedBlueprint("basic_circuits"),
+						BlueprintCraftingRecipe.getTypedBlueprint("advanced_circuits"),
+						BlueprintCraftingRecipe.getTypedBlueprint("processors"),
+						BlueprintCraftingRecipe.getTypedBlueprint("cryptography_circuits")
+				))
+				.addSource("basic_circuit_blueprints", getSourceForItems(
+						BlueprintCraftingRecipe.getTypedBlueprint("basic_circuits")
+
 				))
 				.addSource("basic_general", getSourceForItems(
 						IIContent.itemMaterial.getStack(Materials.BASIC_CIRCUIT_BOARD_RAW),
 						IIContent.itemMaterial.getStack(Materials.BASIC_CIRCUIT_BOARD_ETCHED),
 						IIRecipes.BASIC_CIRCUIT,
+						IIContent.itemMaterial.getStack(Materials.BASIC_ELECTRONIC_ELEMENT)
+				))
+				.addSource("basic_electronic_element", getSourceForItems(
+
 						IIContent.itemMaterial.getStack(Materials.BASIC_ELECTRONIC_ELEMENT)
 				))
 				.addSource("advanced_general", getSourceForItems(
@@ -132,8 +146,7 @@ public class IIManualCategoryData extends IIManualCategory
 				));
 		for(Circuits circuit : Circuits.values())
 			functionalCircuits.addSource(circuit.getName(), getSourceForItem(IIContent.itemCircuit.getStack(circuit)));
-		//TODO: 08.08.2023 Perhaps more automation?
-		addEntry("functions/arithmetic");
+
 
 		addEntry("redstone_interface");
 
@@ -141,12 +154,13 @@ public class IIManualCategoryData extends IIManualCategory
 
 		addEntry("radio_station");
 		addEntry("printing_press");
-		addEntry("conveyor_scanner");
+		addEntry("scanning_conveyor");
 
 		addEntry("chemical_bath");
 		addEntry("chemical_painter");
 		addEntry("electrolyzer");
 		addEntry("precision_assembler");
+		addEntry("functions/arithmetic");
 		addEntry("folder/device/sekritdokuments/data_pol");
 
 		/*ManualHelper.addEntry("data_main", getCategory(),
@@ -223,10 +237,10 @@ public class IIManualCategoryData extends IIManualCategory
 				new ManualPageMultiblock(ManualHelper.getManual(), "redstone_interface0", MultiblockRedstoneInterface.INSTANCE),
 				new ManualPages.Text(ManualHelper.getManual(), "redstone_interface1")
 		);
-		ManualHelper.addEntry("conveyor_scanner", getCategory(),
-				new ManualPageMultiblock(ManualHelper.getManual(), "conveyor_scanner0", MultiblockConveyorScanner.INSTANCE),
-				new ManualPages.Text(ManualHelper.getManual(), "conveyor_scanner1"),
-				new IIManualPageDataVariables(ManualHelper.getManual(), "conveyor_scanner", false)
+		ManualHelper.addEntry("scanning_conveyor", getCategory(),
+				new ManualPageMultiblock(ManualHelper.getManual(), "scanning_conveyor0", MultiblockConveyorScanner.INSTANCE),
+				new ManualPages.Text(ManualHelper.getManual(), "scanning_conveyor1"),
+				new IIManualPageDataVariables(ManualHelper.getManual(), "scanning_conveyor", false)
 						.addEntry(new DataTypeItemStack(), 's')
 		);
 

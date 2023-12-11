@@ -17,11 +17,12 @@ import pl.pabilo8.immersiveintelligence.client.util.amt.IIUpgradableItemRenderer
 import pl.pabilo8.immersiveintelligence.common.IIContent;
 import pl.pabilo8.immersiveintelligence.common.IIUtils;
 import pl.pabilo8.immersiveintelligence.common.item.weapons.ItemIIWeaponUpgrade.WeaponUpgrades;
-import pl.pabilo8.immersiveintelligence.common.util.IILib;
+import pl.pabilo8.immersiveintelligence.common.util.IIReference;
 import pl.pabilo8.immersiveintelligence.common.util.ISerializableEnum;
 import pl.pabilo8.immersiveintelligence.common.util.easynbt.EasyNBT;
 import pl.pabilo8.immersiveintelligence.common.util.item.IIItemEnum;
 import pl.pabilo8.immersiveintelligence.common.util.item.ItemIISubItemsBase;
+import pl.pabilo8.modworks.annotations.item.GeneratedItemModels;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public class ItemIIWeaponUpgrade extends ItemIISubItemsBase<WeaponUpgrades> impl
 	public enum WeaponTypes implements ISerializableEnum
 	{
 		MACHINEGUN(0xdc3939, '\u24b6'),
-		SUBMACHINEGUN(0xff5940, '\u24b7'),
+		SUBMACHINEGUN(0xff894d, '\u24b7'),
 		RAILGUN(0x3d6753, '\u24b8'),
 		REVOLVER(0x3e4481, '\u24b9'),
 		AUTOREVOLVER(0x2c305b, '\u24ba'),
@@ -65,6 +66,7 @@ public class ItemIIWeaponUpgrade extends ItemIISubItemsBase<WeaponUpgrades> impl
 		}
 	}
 
+	@GeneratedItemModels(itemName = "weapon_upgrade")
 	public enum WeaponUpgrades implements IIItemEnum
 	{
 		//--- Machinegun ---//
@@ -195,11 +197,11 @@ public class ItemIIWeaponUpgrade extends ItemIISubItemsBase<WeaponUpgrades> impl
 		WeaponUpgrades sub = stackToSub(stack);
 		//add valid weapon types
 		for(WeaponTypes type : sub.toolset)
-			list.add(IIUtils.getHexCol(type.color, type.symbol+" "+I18n.format(IILib.DESC_TOOLUPGRADE+"item."+type.getName())));
+			list.add(IIUtils.getHexCol(type.color, type.symbol+" "+I18n.format(IIReference.DESC_TOOLUPGRADE+"item."+type.getName())));
 
 		//add description
 		String[] flavour = ImmersiveEngineering.proxy.splitStringOnWidth(
-				I18n.format(IILib.DESCRIPTION_KEY+"toolupgrade."+sub.getName()), 200);
+				I18n.format(IIReference.DESCRIPTION_KEY+"toolupgrade."+sub.getName()), 200);
 		Arrays.stream(flavour).map(IIUtils::getItalicString).forEach(list::add);
 	}
 

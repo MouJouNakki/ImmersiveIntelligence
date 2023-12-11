@@ -4,6 +4,9 @@ Not really Beep-Boop yet
 
 # intro
 The universal design of the [Circuit Boards](electronic_components) allows them to be easily [refitted] to perform various specialized operations using the [Engineer's Workbench]().
+
+-
+
 |[crafting]{source:"circuit_blueprints"}|
 
 # arithmetic
@@ -64,7 +67,7 @@ The universal design of the [Circuit Boards](electronic_components) allows them 
 # document
 |[item_display]{source:"%SECTION%"}|
 |[text]{source:"%SECTION%",bold:1b}|
-*Performs operations on [data](data_types#string) acquired from [scanned documents](conveyor_scanner).*
+*Performs operations on [data](data_types#string) acquired from [scanned documents](scanning_conveyor).*
 
 # type_conversion
 |[item_display]{source:"%SECTION%"}|

@@ -5,28 +5,17 @@ import blusunrize.immersiveengineering.api.energy.wires.WireApi;
 import blusunrize.immersiveengineering.client.ClientUtils;
 import blusunrize.immersiveengineering.client.IECustomStateMapper;
 import blusunrize.immersiveengineering.client.IEDefaultColourHandlers;
-import blusunrize.immersiveengineering.client.ImmersiveModelRegistry;
 import blusunrize.immersiveengineering.client.models.obj.IEOBJLoader;
 import blusunrize.immersiveengineering.client.render.EntityRenderNone;
-import blusunrize.immersiveengineering.client.render.ItemRendererIEOBJ;
-import blusunrize.immersiveengineering.common.Config;
-import blusunrize.immersiveengineering.common.IEContent;
 import blusunrize.immersiveengineering.common.blocks.IEBlockInterfaces.IColouredBlock;
 import blusunrize.immersiveengineering.common.blocks.IEBlockInterfaces.IGuiTile;
 import blusunrize.immersiveengineering.common.blocks.IEBlockInterfaces.IIEMetaBlock;
 import blusunrize.immersiveengineering.common.items.IEItemInterfaces.IColouredItem;
 import blusunrize.immersiveengineering.common.items.IEItemInterfaces.IGuiItem;
 import blusunrize.immersiveengineering.common.items.ItemIEBase;
-import blusunrize.immersiveengineering.common.util.ItemNBTHelper;
-import blusunrize.immersiveengineering.common.util.chickenbones.Matrix4;
-import blusunrize.lib.manual.IManualPage;
-import blusunrize.lib.manual.ManualInstance;
-import blusunrize.lib.manual.ManualInstance.ManualEntry;
-import blusunrize.lib.manual.gui.GuiManual;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.RenderPlayer;
@@ -44,7 +33,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.client.ForgeHooksClient;
-import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.client.model.ModelLoader;
@@ -53,7 +41,6 @@ import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.client.settings.IKeyConflictContext;
 import net.minecraftforge.client.settings.KeyConflictContext;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.world.BlockEvent.BreakEvent;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -72,9 +59,7 @@ import pl.pabilo8.immersiveintelligence.client.fx.particles.ParticleGasCloud;
 import pl.pabilo8.immersiveintelligence.client.fx.particles.ParticleGunfire;
 import pl.pabilo8.immersiveintelligence.client.gui.block.GuiUpgrade;
 import pl.pabilo8.immersiveintelligence.client.manual.IIManualCategory;
-import pl.pabilo8.immersiveintelligence.client.manual.categories.IIManualCategoryData;
-import pl.pabilo8.immersiveintelligence.client.manual.categories.IIManualCategoryLogistics;
-import pl.pabilo8.immersiveintelligence.client.manual.pages.IIManualPageContributorSkin;
+import pl.pabilo8.immersiveintelligence.client.manual.categories.*;
 import pl.pabilo8.immersiveintelligence.client.model.IIModelRegistry;
 import pl.pabilo8.immersiveintelligence.client.model.item.ModelMeasuringCup;
 import pl.pabilo8.immersiveintelligence.client.model.item.ModelMeasuringCup.MeasuringCupModelLoader;
@@ -129,6 +114,7 @@ import pl.pabilo8.immersiveintelligence.common.block.multiblock.wooden_multibloc
 import pl.pabilo8.immersiveintelligence.common.block.rotary_device.BlockIIMechanicalConnector;
 import pl.pabilo8.immersiveintelligence.common.block.rotary_device.tileentity.TileEntityMechanicalConnectable;
 import pl.pabilo8.immersiveintelligence.common.block.rotary_device.tileentity.TileEntityMechanicalWheel;
+import pl.pabilo8.immersiveintelligence.common.compat.IICompatModule;
 import pl.pabilo8.immersiveintelligence.common.entity.*;
 import pl.pabilo8.immersiveintelligence.common.entity.bullet.*;
 import pl.pabilo8.immersiveintelligence.common.entity.vehicle.EntityDrone;
@@ -141,9 +127,6 @@ import pl.pabilo8.immersiveintelligence.common.item.ammo.ItemIIBulletMagazine.Ma
 import pl.pabilo8.immersiveintelligence.common.item.ammo.ItemIINavalMine;
 import pl.pabilo8.immersiveintelligence.common.item.tools.ItemIIDrillHead.DrillHeads;
 import pl.pabilo8.immersiveintelligence.common.item.weapons.ItemIIWeaponUpgrade;
-import pl.pabilo8.immersiveintelligence.common.network.IIPacketHandler;
-import pl.pabilo8.immersiveintelligence.common.network.messages.MessageManualClose;
-import pl.pabilo8.immersiveintelligence.common.util.CustomSkinHandler;
 import pl.pabilo8.immersiveintelligence.common.util.block.BlockIIBase;
 import pl.pabilo8.immersiveintelligence.common.util.block.BlockIIFluid;
 import pl.pabilo8.immersiveintelligence.common.util.item.IIItemEnum;
@@ -162,27 +145,7 @@ import java.util.Map.Entry;
 @Mod.EventBusSubscriber(value = Side.CLIENT, modid = ImmersiveIntelligence.MODID)
 public class ClientProxy extends CommonProxy
 {
-	IKeyConflictContext passenger_action = new IKeyConflictContext()
-	{
-		@Override
-		public boolean isActive()
-		{
-			return KeyConflictContext.IN_GAME.isActive();
-		}
-
-		@Override
-		public boolean conflicts(IKeyConflictContext other)
-		{
-			return other==KeyConflictContext.IN_GAME&&other!=this;
-		}
-	};
-
-	public static KeyBinding keybind_manualReload = new KeyBinding("key."+ImmersiveIntelligence.MODID+".manualReload", Keyboard.KEY_R, "key.categories.gameplay");
-	public static KeyBinding keybind_armorHelmet = new KeyBinding("key."+ImmersiveIntelligence.MODID+".armorHelmet", Keyboard.KEY_V, "key.categories.gameplay");
-	public static KeyBinding keybind_armorExosuit = new KeyBinding("key."+ImmersiveIntelligence.MODID+".armorExosuit", Keyboard.KEY_G, "key.categories.gameplay");
-	public static KeyBinding keybind_zoom = new KeyBinding("key."+ImmersiveIntelligence.MODID+".mgScope", Keyboard.KEY_Z, "key.categories.gameplay");
-	public static KeyBinding keybind_motorbikeEngine = new KeyBinding("key."+ImmersiveIntelligence.MODID+".motorbikeEngine", Keyboard.KEY_R, "key.categories.gameplay");
-	public static KeyBinding keybind_motorbikeTowing = new KeyBinding("key."+ImmersiveIntelligence.MODID+".motorbikeTowing", Keyboard.KEY_Z, "key.categories.gameplay");
+	public static KeyBinding keybind_manualReload, keybind_armorHelmet, keybind_armorExosuit, keybind_zoom, keybind_motorbikeEngine, keybind_motorbikeTowing;
 	public static MechanicalConnectorRenderer mech_con_renderer;
 	public NBTTagCompound storedGuiData = new NBTTagCompound();
 
@@ -194,13 +157,12 @@ public class ClientProxy extends CommonProxy
 	@SubscribeEvent
 	public static void registerModels(ModelRegistryEvent evt)
 	{
-
 		//You've tricked me
 		//I thought the connector rendering is based on something different, but actually it renders the obj connector model with the wire
 		WireApi.registerConnectorForRender("empty", new ResourceLocation(ImmersiveIntelligence.MODID+":block/empty.obj"), null);
 		WireApi.registerConnectorForRender("tripwire", new ResourceLocation(ImmersiveIntelligence.MODID+":block/tripwire_connector.obj"), null);
 
-		// TODO: 06.09.2022 rework
+		//TODO: 06.09.2022 rework
 		for(Block block : IIContent.BLOCKS)
 		{
 			final ResourceLocation loc = Block.REGISTRY.getNameForObject(block);
@@ -294,10 +256,6 @@ public class ClientProxy extends CommonProxy
 				ModelLoader.setCustomMeshDefinition(item, stack -> new ModelResourceLocation(loc, "inventory"));
 			}
 		}
-
-		addModelToItemSubtype(IIContent.itemSawblade, 8, new ModelResourceLocation(new ResourceLocation(ImmersiveIntelligence.MODID, "sawblade/iron_display"), "inventory"));
-		addModelToItemSubtype(IIContent.itemSawblade, 9, new ModelResourceLocation(new ResourceLocation(ImmersiveIntelligence.MODID, "sawblade/steel_display"), "inventory"));
-		addModelToItemSubtype(IIContent.itemSawblade, 10, new ModelResourceLocation(new ResourceLocation(ImmersiveIntelligence.MODID, "sawblade/tungsten_display"), "inventory"));
 	}
 
 	private static void mapFluidState(Block block, Fluid fluid)
@@ -309,49 +267,33 @@ public class ClientProxy extends CommonProxy
 		ModelLoader.setCustomStateMapper(block, mapper);
 	}
 
-	public static void addModelToItemSubtype(ItemIIBase item, int meta, ResourceLocation loc)
-	{
-		ModelBakery.registerItemVariants(item, loc);
-		ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(loc.toString()));
-		ModelLoader.setCustomMeshDefinition(item, stack -> new ModelResourceLocation(loc, "inventory"));
-	}
-
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
 	{
+		EnumHand hand;
 		TileEntity te = world.getTileEntity(new BlockPos(x, y, z));
-		ItemStack stack = player.getHeldItem(player.getHeldItem(EnumHand.MAIN_HAND).getItem() instanceof IGuiItem?EnumHand.MAIN_HAND: EnumHand.OFF_HAND);
+		ItemStack stack = player.getHeldItem(hand = (player.getHeldItem(EnumHand.MAIN_HAND).getItem() instanceof IGuiItem?EnumHand.MAIN_HAND: EnumHand.OFF_HAND));
 
-		if(ID==IIGuiList.GUI_UPGRADE.ordinal())
+		if(ID==IIGuiList.GUI_UPGRADE.ordinal()&&te instanceof IUpgradableMachine)
 		{
-			if(te instanceof IUpgradableMachine)
-			{
-				TileEntity upgradeMaster = ((IUpgradableMachine)te).getUpgradeMaster();
-				if(upgradeMaster!=null)
-					return new GuiUpgrade(player, (TileEntity & IUpgradableMachine)upgradeMaster);
-			}
+			TileEntity upgradeMaster = ((IUpgradableMachine)te).getUpgradeMaster();
+			if(upgradeMaster!=null)
+				return new GuiUpgrade(player, (TileEntity & IUpgradableMachine)upgradeMaster);
 		}
 
-		GuiScreen gui;
+		GuiScreen gui = null;
 		if(IIGuiList.values().length > ID)
 		{
 			IIGuiList guiBuilder = IIGuiList.values()[ID];
 			if(guiBuilder.item)
-			{
-				return guiBuilder.guiFromStack.apply(player, stack);
-			}
-			else if(te instanceof IGuiTile&&guiBuilder.teClass.isInstance(te))
-			{
-				gui = guiBuilder.guiFromTile.apply(player, te);
-				if(gui!=null)
-				{
+				return guiBuilder.guiFromStack.apply(player, stack, hand);
+
+			if(te instanceof IGuiTile&&guiBuilder.teClass.isInstance(te))
+				if((gui = guiBuilder.guiFromTile.apply(player, te))!=null)
 					((IGuiTile)te).onGuiOpened(player, true);
-					return gui;
-				}
-			}
 		}
 
-		return null;
+		return gui;
 	}
 
 	@Override
@@ -365,6 +307,7 @@ public class ClientProxy extends CommonProxy
 
 		//long live .obj models! ^^
 
+		//Register entity renderers
 		RenderingRegistry.registerEntityRenderingHandler(EntitySkyCrate.class, SkyCrateRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityBullet.class, BulletRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityNavalMine.class, NavalMineRenderer::new);
@@ -390,17 +333,6 @@ public class ClientProxy extends CommonProxy
 		RenderingRegistry.registerEntityRenderingHandler(EntityParachute.class, ParachuteRenderer::new);
 		RenderingRegistry.registerEntityRenderingHandler(EntityEmplacementWeapon.class, EntityRenderNone::new);
 
-		//<s>Railgun overwrite</s> <b>Sunlight Railgun Overdrive!</b>
-		ImmersiveModelRegistry.instance.registerCustomItemModel(new ItemStack(IEContent.itemRailgun, 1, 0), new ImmersiveModelRegistry.ItemModelReplacement_OBJ("immersiveengineering:models/item/railgun.obj", true)
-				.setTransformations(TransformType.FIRST_PERSON_RIGHT_HAND, new Matrix4().scale(.125, .125, .125).translate(-.1875f, 2.5f, .25f).rotate(Math.PI*.46875, 0, 1, 0).translate(0.5, 0.25, -0.75f)
-						.rotate(Math.PI*.0225, 0, 0, 1).scale(1.125, 1.125, 1.125))
-				.setTransformations(TransformType.FIRST_PERSON_LEFT_HAND, new Matrix4().scale(.125, .125, .125).translate(-1.75, 1.625, .875).rotate(-Math.PI*.46875, 0, 1, 0))
-				.setTransformations(TransformType.THIRD_PERSON_RIGHT_HAND, new Matrix4().scale(.1875, .1875, .1875).translate(0.5, 0.5f, -3.5).rotate(Math.PI*.40125, 0, 1, 0))
-				.setTransformations(TransformType.THIRD_PERSON_LEFT_HAND, new Matrix4().translate(-.1875, .5, -.3125).scale(.1875, .1875, .1875).rotate(-Math.PI*.46875, 0, 1, 0).rotate(-Math.PI*.25, 0, 0, 1))
-				.setTransformations(TransformType.FIXED, new Matrix4().translate(.1875, .0625, .0625).scale(.125, .125, .125).rotate(-Math.PI*.25, 0, 0, 1))
-				.setTransformations(TransformType.GUI, new Matrix4().translate(-.1875, 0, 0).scale(.1875, .1875, .1875).rotate(-Math.PI*.6875, 0, 1, 0).rotate(-Math.PI*.1875, 0, 0, 1))
-				.setTransformations(TransformType.GROUND, new Matrix4().translate(.125, .125, .0625).scale(.125, .125, .125)));
-		IEContent.itemRailgun.setTileEntityItemStackRenderer(ItemRendererIEOBJ.INSTANCE);
 
 		IIContent.itemAssaultRifle.setTileEntityItemStackRenderer(new AssaultRifleRenderer().subscribeToList("assault_rifle"));
 		IIContent.itemRifle.setTileEntityItemStackRenderer(new RifleRenderer().subscribeToList("rifle"));
@@ -417,9 +349,12 @@ public class ClientProxy extends CommonProxy
 
 		IIModelRegistry.instance.registerCustomItemModel(IIContent.itemBulletMagazine);
 		IIModelRegistry.instance.registerCustomItemModel(IIContent.itemBinoculars);
+		IIModelRegistry.instance.registerCustomItemModel(IIContent.itemCasingPouch);
 
 		IIContent.itemMotorBelt.setRenderModels();
-		Config.manual_bool.put("petroleumHere", false);
+
+		//Compat
+		IICompatModule.doModulesClientPreInit();
 	}
 
 	@SubscribeEvent
@@ -445,6 +380,10 @@ public class ClientProxy extends CommonProxy
 		ApiUtils.getRegisterSprite(event.getMap(), ImmersiveIntelligence.MODID+":items/binoculars/binoculars");
 		ApiUtils.getRegisterSprite(event.getMap(), ImmersiveIntelligence.MODID+":items/binoculars/infrared_binoculars_off");
 		ApiUtils.getRegisterSprite(event.getMap(), ImmersiveIntelligence.MODID+":items/binoculars/infrared_binoculars_on");
+
+		ApiUtils.getRegisterSprite(event.getMap(), ImmersiveIntelligence.MODID+":items/casing_pouch/empty");
+		ApiUtils.getRegisterSprite(event.getMap(), ImmersiveIntelligence.MODID+":items/casing_pouch/filled");
+		ApiUtils.getRegisterSprite(event.getMap(), ImmersiveIntelligence.MODID+":items/casing_pouch/closed");
 
 		for(Entry<String, Shrapnel> s : ShrapnelHandler.registry.entrySet())
 			ApiUtils.getRegisterSprite(event.getMap(), s.getValue().texture.replace("textures/", ""));
@@ -499,15 +438,40 @@ public class ClientProxy extends CommonProxy
 		MinecraftForge.EVENT_BUS.register(handler);
 		((IReloadableResourceManager)ClientUtils.mc().getResourceManager()).registerReloadListener(handler);
 
+		//Register fonts
 		IIClientUtils.fontRegular = new IIFontRenderer(new ResourceLocation("textures/font/ascii.png"));
 		IIClientUtils.fontEngineerTimes = new IIFontRendererCustomGlyphs(new ResourceLocation(ImmersiveIntelligence.MODID, "textures/font/engineer_times.png"));
 		IIClientUtils.fontNormung = new IIFontRendererCustomGlyphs(new ResourceLocation(ImmersiveIntelligence.MODID, "textures/font/normung.png"));
 		IIClientUtils.fontKaiser = new IIFontRendererCustomGlyphs(new ResourceLocation(ImmersiveIntelligence.MODID, "textures/font/kaiser_fraktur.png"));
 		IIClientUtils.fontTinkerer = new IIFontRendererCustomGlyphs(new ResourceLocation(ImmersiveIntelligence.MODID, "textures/font/tinkerer.png"));
 
+		//Register Keybindings
+		IKeyConflictContext passenger_action = new IKeyConflictContext()
+		{
+			@Override
+			public boolean isActive()
+			{
+				return KeyConflictContext.IN_GAME.isActive();
+			}
+
+			@Override
+			public boolean conflicts(IKeyConflictContext other)
+			{
+				return other==KeyConflictContext.IN_GAME&&other!=this;
+			}
+		};
+
+		keybind_manualReload = new KeyBinding("key."+ImmersiveIntelligence.MODID+".manualReload", Keyboard.KEY_R, "key.categories.gameplay");
 		keybind_manualReload.setKeyConflictContext(passenger_action);
+
+		keybind_armorHelmet = new KeyBinding("key."+ImmersiveIntelligence.MODID+".armorHelmet", Keyboard.KEY_V, "key.categories.gameplay");
+		keybind_armorExosuit = new KeyBinding("key."+ImmersiveIntelligence.MODID+".armorExosuit", Keyboard.KEY_G, "key.categories.gameplay");
+		keybind_zoom = new KeyBinding("key."+ImmersiveIntelligence.MODID+".mgScope", Keyboard.KEY_Z, "key.categories.gameplay");
 		keybind_zoom.setKeyConflictContext(passenger_action);
+
+		keybind_motorbikeEngine = new KeyBinding("key."+ImmersiveIntelligence.MODID+".motorbikeEngine", Keyboard.KEY_R, "key.categories.gameplay");
 		keybind_motorbikeEngine.setKeyConflictContext(passenger_action);
+		keybind_motorbikeTowing = new KeyBinding("key."+ImmersiveIntelligence.MODID+".motorbikeTowing", Keyboard.KEY_Z, "key.categories.gameplay");
 		keybind_motorbikeTowing.setKeyConflictContext(passenger_action);
 
 		ClientRegistry.registerKeyBinding(keybind_manualReload);
@@ -518,14 +482,19 @@ public class ClientProxy extends CommonProxy
 		ClientRegistry.registerKeyBinding(keybind_armorHelmet);
 		ClientRegistry.registerKeyBinding(keybind_armorExosuit);
 
+		//Register shaders
 		ShaderUtil.init();
 
+		//Register coloured blocks
 		for(Block block : IIContent.BLOCKS)
 			if(block instanceof IColouredBlock&&((IColouredBlock)block).hasCustomBlockColours())
 				ClientUtils.mc().getBlockColors().registerBlockColorHandler(IEDefaultColourHandlers.INSTANCE, block);
 		for(Item item : IIContent.ITEMS)
 			if(item instanceof IColouredItem&&((IColouredItem)item).hasCustomItemColours())
 				ClientUtils.mc().getItemColors().registerItemColorHandler(IEDefaultColourHandlers.INSTANCE, item);
+
+		//Compat
+		IICompatModule.doModulesClientInit();
 	}
 
 	@Override
@@ -536,106 +505,6 @@ public class ClientProxy extends CommonProxy
 		//--- Add Manual Pages ---//
 		IILogger.info("Registering II Manual Pages.");
 		reloadManual();
-
-		/*
-		IIManualDataAndElectronics.INSTANCE.addPages();
-		IIManualLogistics.INSTANCE.addPages();
-		IIManualWarfare.INSTANCE.addPages();
-		IIManualIntelligence.INSTANCE.addPages();
-		IIManualMotorworks.INSTANCE.addPages();
-
-		ManualHelper.addEntry("chemical_bath", ManualHelper.CAT_HEAVYMACHINES,
-				new ManualPageMultiblock(ManualHelper.getManual(), "chemical_bath0", MultiblockChemicalBath.INSTANCE)
-		);
-		ManualHelper.addEntry("precission_assembler", ManualHelper.CAT_HEAVYMACHINES,
-				new ManualPageMultiblock(ManualHelper.getManual(), "precission_assembler0", MultiblockPrecisionAssembler.INSTANCE),
-				new ManualPages.Text(ManualHelper.getManual(), "precission_assembler1")
-		);
-		ManualHelper.addEntry("electrolyzer", ManualHelper.CAT_HEAVYMACHINES,
-				new ManualPageMultiblock(ManualHelper.getManual(), "electrolyzer0", MultiblockElectrolyzer.INSTANCE),
-				new ManualPages.Text(ManualHelper.getManual(), "electrolyzer1")
-		);
-		ManualHelper.addEntry("chemical_painter", ManualHelper.CAT_HEAVYMACHINES,
-				new ManualPageMultiblock(ManualHelper.getManual(), "chemical_painter0", MultiblockChemicalPainter.INSTANCE),
-				new ManualPages.Text(ManualHelper.getManual(), "chemical_painter1"),
-				new ManualPages.Text(ManualHelper.getManual(), "chemical_painter2"),
-				new IIManualPageDataVariables(ManualHelper.getManual(), "filler", true)
-						.addEntry(new DataTypeString(), 'p')
-						.addEntry(new DataTypeInteger(), 'p'),
-				new IIManualPageDataVariablesCallback(ManualHelper.getManual(), "filler")
-						.addEntry(new DataTypeInteger(), "get_color")
-						.addEntry(new DataTypeInteger(), "get_color_hex")
-						.addEntry(new DataTypeInteger(), "get_ink", "get_ink_black")
-						.addEntry(new DataTypeInteger(), "get_ink_cyan")
-						.addEntry(new DataTypeInteger(), "get_ink_magenta")
-						.addEntry(new DataTypeInteger(), "get_ink_yellow")
-						.addEntry(new DataTypeInteger(), "get_energy")
-		);
-		ManualHelper.addEntry("filler", ManualHelper.CAT_HEAVYMACHINES,
-				new ManualPageMultiblock(ManualHelper.getManual(), "filler0", MultiblockFiller.INSTANCE),
-				new ManualPages.Text(ManualHelper.getManual(), "filler1")
-		);
-
-		ManualHelper.addEntry("rotary_power", ManualHelper.CAT_MACHINES,
-				new ManualPages.Image(ManualHelper.getManual(), "rotary_power0", ImmersiveIntelligence.MODID+":textures/misc/rotary.png;0;0;110;64"),
-				new ManualPages.Text(ManualHelper.getManual(), "rotary_power1"),
-				new ManualPages.Crafting(ManualHelper.getManual(), "rotary_power2", new ItemStack(IIContent.blockMechanicalConnector)),
-				new ManualPages.CraftingMulti(ManualHelper.getManual(), "rotary_power3", new ItemStack(IIContent.itemMotorBelt, 1, 0), new ItemStack(IIContent.itemMotorBelt, 1, 1), new ItemStack(IIContent.itemMotorBelt, 1, 2)),
-				new ManualPages.Crafting(ManualHelper.getManual(), "rotary_power4", new ItemStack(IIContent.blockGearbox)),
-				new ManualPages.Crafting(ManualHelper.getManual(), "rotary_power5", new ItemStack(IIContent.blockMechanicalDevice, 1, BlockIIMechanicalDevice.IIBlockTypes_MechanicalDevice.WOODEN_TRANSMISSION_BOX.getMeta()))
-		);
-
-		ManualHelper.addEntry("sawmill", ManualHelper.CAT_MACHINES,
-				new ManualPageMultiblock(ManualHelper.getManual(), "sawmill0", MultiblockSawmill.INSTANCE),
-				new ManualPages.Text(ManualHelper.getManual(), "sawmill1"),
-				new ManualPages.Text(ManualHelper.getManual(), "sawmill2")
-		);
-
-		ManualHelper.addEntry("medicrate", ManualHelper.CAT_MACHINES,
-				new ManualPages.Crafting(ManualHelper.getManual(), "medicrate0", new ItemStack(IIContent.blockMetalDevice, 1, BlockIIMetalDevice.IIBlockTypes_MetalDevice.MEDIC_CRATE.getMeta())),
-				new ManualPages.Text(ManualHelper.getManual(), "medicrate1")
-		);
-
-		ManualHelper.addEntry("repair_crate", ManualHelper.CAT_MACHINES,
-				new ManualPages.Crafting(ManualHelper.getManual(), "repair_crate0", new ItemStack(IIContent.blockMetalDevice, 1, BlockIIMetalDevice.IIBlockTypes_MetalDevice.REPAIR_CRATE.getMeta())),
-				new ManualPages.Text(ManualHelper.getManual(), "repair_crate1")
-		);
-
-		ManualHelper.addEntry("advanced_powerpack", ManualHelper.CAT_TOOLS,
-				new ManualPages.Crafting(ManualHelper.getManual(), "advanced_powerpack0", new ItemStack(IIContent.itemAdvancedPowerPack)),
-				new ManualPages.Text(ManualHelper.getManual(), "advanced_powerpack1")
-		);
-
-		ManualHelper.addEntry("electric_tools", ManualHelper.CAT_TOOLS,
-				new ManualPages.Crafting(ManualHelper.getManual(), "electric_tools0", new ItemStack(IIContent.itemHammer)),
-				new ManualPages.Crafting(ManualHelper.getManual(), "electric_tools1", new ItemStack(IIContent.itemElectricWrench)),
-				new ManualPages.Crafting(ManualHelper.getManual(), "electric_tools2", new ItemStack(IIContent.itemWirecutter))
-		);
-
-		Fluid[] lighterFluids = LighterFuelHandler.getAllowedFluids();
-		ManualPages[] lighterPages = new ManualPages[1+(int)Math.ceil(lighterFluids.length/12f)];
-		lighterPages[0] = new ManualPages.Crafting(ManualHelper.getManual(), "lighter0", new ItemStack(IIContent.itemLighter));
-
-		for(int i = 0; i < lighterPages.length-1; i++)
-		{
-			int off = (i*12);
-			int j = (lighterFluids.length-off)%12;
-			String[][] tt = new String[j+1][2];
-
-			tt[0][0] = ManualHelper.getManual().formatText("field_fuel");
-			tt[0][1] = ManualHelper.getManual().formatText("field_amount");
-
-			for(int ii = 0; ii < j; ii++)
-			{
-				int amount = LighterFuelHandler.getBurnQuantity(new FluidStack(lighterFluids[off+ii], 1));
-				tt[ii+1][0] = lighterFluids[off+ii].getLocalizedName(new FluidStack(lighterFluids[off+ii], amount));
-				tt[ii+1][1] = String.format("%d mB", amount);
-			}
-
-			lighterPages[i+1] = new Table(ManualHelper.getManual(), "lighter_fuels", tt, true);
-		}
-
-		ManualHelper.addEntry("lighter", ManualHelper.CAT_TOOLS, lighterPages);*/
 
 
 		//Weapons (Items)
@@ -729,8 +598,7 @@ public class ClientProxy extends CommonProxy
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityChemicalBath.class, new ChemicalBathRenderer().subscribeToList("chemical_bath"));
 		ForgeHooksClient.registerTESRItemStack(Item.getItemFromBlock(IIContent.blockMetalMultiblock0), MetalMultiblocks0.CHEMICAL_BATH.getMeta(), TileEntityChemicalBath.class);
 
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityElectrolyzer.class, new ElectrolyzerRenderer().subscribeToList("electrolyzer"));
-		ForgeHooksClient.registerTESRItemStack(Item.getItemFromBlock(IIContent.blockMetalMultiblock0), MetalMultiblocks0.ELECTROLYZER.getMeta(), TileEntityElectrolyzer.class);
+		registerTileRenderer(ElectrolyzerRenderer.class);
 
 		//TODO: Fix misspeling during the Split, it could break stuff
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityPrecisionAssembler.class, new PrecisionAssemblerRenderer().subscribeToList("precision_assembler"));
@@ -741,13 +609,10 @@ public class ClientProxy extends CommonProxy
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityProjectileWorkshop.class, new ProjectileWorkshopRenderer().subscribeToList("projectile_workshop"));
 		ForgeHooksClient.registerTESRItemStack(Item.getItemFromBlock(IIContent.blockMetalMultiblock1), MetalMultiblocks1.PROJECTILE_WORKSHOP.getMeta(), TileEntityProjectileWorkshop.class);
 
-
 		registerTileRenderer(SawmillRenderer.class);
 		registerTileRenderer(PackerRenderer.class);
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityConveyorScanner.class, new ConveyorScannerRenderer().subscribeToList("conveyor_scanner"));
-
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityArtilleryHowitzer.class, new ArtilleryHowitzerRenderer().subscribeToList("artillery_howitzer"));
-		ForgeHooksClient.registerTESRItemStack(Item.getItemFromBlock(IIContent.blockMetalMultiblock0), MetalMultiblocks0.ARTILLERY_HOWITZER.getMeta(), TileEntityArtilleryHowitzer.class);
+		registerTileRenderer(ScanningConveyorRenderer.class);
+		registerTileRenderer(ArtilleryHowitzerRenderer.class);
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBallisticComputer.class, new BallisticComputerRenderer().subscribeToList("ballistic_computer"));
 
@@ -791,6 +656,9 @@ public class ClientProxy extends CommonProxy
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAluminiumChainFenceGate.class, new FenceGateRenderer<>());
 
 		reloadModels();
+
+		//Compat
+		IICompatModule.doModulesClientPostInit();
 	}
 
 	private <T extends TileEntity> void registerTileRenderer(Class<? extends IITileRenderer<T>> clazz)
@@ -801,64 +669,6 @@ public class ClientProxy extends CommonProxy
 			IITileRenderer<T> tileRenderer = clazz.newInstance();
 			ClientRegistry.bindTileEntitySpecialRenderer(((Class<T>)rt.clazz()), tileRenderer.subscribeToList(rt.name()));
 		} catch(InstantiationException|IllegalAccessException ignored) {}
-	}
-
-	@Override
-	public void onBreakBlock(BreakEvent event)
-	{
-		if(!event.getWorld().isRemote)
-			super.onBreakBlock(event);
-	}
-
-	@SubscribeEvent
-	public static void guiOpen(GuiOpenEvent event)
-	{
-		// TODO: 26.08.2021 investigate
-		if(event.getGui() instanceof GuiManual)
-			CustomSkinHandler.getManualPages();
-		else if(ClientEventHandler.lastGui instanceof GuiManual)
-		{
-			GuiManual gui = (GuiManual)ClientEventHandler.lastGui;
-			String name = null;
-
-			ManualInstance inst = gui.getManual();
-			if(inst!=null)
-			{
-				ManualEntry entry = inst.getEntry(gui.getSelectedEntry());
-				if(entry!=null)
-				{
-					IManualPage page = entry.getPages()[gui.page];
-					if(page instanceof IIManualPageContributorSkin)
-					{
-						name = ((IIManualPageContributorSkin)page).skin.name;
-					}
-				}
-			}
-			EntityPlayer p = ClientUtils.mc().player;
-
-			ItemStack mainItem = p.getHeldItemMainhand();
-			ItemStack offItem = p.getHeldItemOffhand();
-
-			boolean main = !mainItem.isEmpty()&&mainItem.getItem()==IEContent.itemTool&&mainItem.getItemDamage()==3;
-			boolean off = !offItem.isEmpty()&&offItem.getItem()==IEContent.itemTool&&offItem.getItemDamage()==3;
-			ItemStack target = main?mainItem: offItem;
-
-			if(main||off)
-			{
-				IIPacketHandler.sendToServer(new MessageManualClose(name==null?"": name));
-
-				if(name==null&&ItemNBTHelper.hasKey(target, "lastSkin"))
-				{
-					ItemNBTHelper.remove(target, "lastSkin");
-				}
-				else if(name!=null)
-				{
-					ItemNBTHelper.setString(target, "lastSkin", name);
-				}
-			}
-		}
-
-		ClientEventHandler.lastGui = event.getGui();
 	}
 
 	@Override
@@ -873,5 +683,8 @@ public class ClientProxy extends CommonProxy
 		IIManualCategory.cleanFolderEntries();
 		IIManualCategoryData.INSTANCE.addPages();
 		IIManualCategoryLogistics.INSTANCE.addPages();
+		IIManualCategoryWarfare.INSTANCE.addPages();
+		IIManualCategoryMotorworks.INSTANCE.addPages();
+		IIManualCategoryIntelligence.INSTANCE.addPages();
 	}
 }

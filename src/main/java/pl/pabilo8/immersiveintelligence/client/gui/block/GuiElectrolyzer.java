@@ -5,14 +5,13 @@ import blusunrize.immersiveengineering.client.gui.GuiIEContainerBase;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.InventoryPlayer;
 import org.lwjgl.opengl.GL11;
 import pl.pabilo8.immersiveintelligence.ImmersiveIntelligence;
 import pl.pabilo8.immersiveintelligence.client.IIClientUtils;
 import pl.pabilo8.immersiveintelligence.common.IIUtils;
 import pl.pabilo8.immersiveintelligence.common.block.multiblock.metal_multiblock0.tileentity.TileEntityElectrolyzer;
 import pl.pabilo8.immersiveintelligence.common.gui.ContainerElectrolyzer;
-import pl.pabilo8.immersiveintelligence.common.util.IILib;
+import pl.pabilo8.immersiveintelligence.common.util.IIReference;
 
 import java.util.ArrayList;
 
@@ -22,6 +21,7 @@ import java.util.ArrayList;
  */
 public class GuiElectrolyzer extends GuiIEContainerBase
 {
+	//REFACTOR: 22.10.2023 use drawutils 
 	public static final String texture_electrolyzer = ImmersiveIntelligence.MODID+":textures/gui/electrolyzer.png";
 	TileEntityElectrolyzer tile;
 
@@ -38,7 +38,7 @@ public class GuiElectrolyzer extends GuiIEContainerBase
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
 	{
-		this.fontRenderer.drawString(I18n.format("tile."+ImmersiveIntelligence.MODID+".metal_multiblock.electrolyzer.name"), 8, 6, IILib.COLOR_H1);
+		this.fontRenderer.drawString(I18n.format("tile."+ImmersiveIntelligence.MODID+".metal_multiblock.electrolyzer.name"), 8, 6, IIReference.COLOR_H1);
 	}
 
 	/**
@@ -59,11 +59,11 @@ public class GuiElectrolyzer extends GuiIEContainerBase
 
 		this.drawTexturedModalRect(guiLeft+50, guiTop+21, 196, 0, 15, 51);
 
-		IIClientUtils.drawPowerBar(guiLeft+161, guiTop+24,7,47,tile.getEnergyStored(null)/(float)tile.getMaxEnergyStored(null));
+		IIClientUtils.drawPowerBar(guiLeft+161, guiTop+24, 7, 47, tile.getEnergyStored(null)/(float)tile.getMaxEnergyStored(null));
 
-		if(tile.active&&tile.processTimeMax!=0)
+		if(tile.currentProcess!=null)
 		{
-			float progress = Math.min(1f, tile.processTime/(float)tile.processTimeMax);
+			float progress = Math.min(1f, tile.currentProcess.ticks/(float)tile.currentProcess.maxTicks);
 			this.drawTexturedModalRect(guiLeft+66, guiTop+42, 176, 71, Math.round(54*progress), 10);
 		}
 	}
@@ -82,7 +82,7 @@ public class GuiElectrolyzer extends GuiIEContainerBase
 		ClientUtils.handleGuiTank(tile.tanks[2], guiLeft+90, guiTop+55, 45, 16, 176, 51, 49, 20, mx, my, texture_electrolyzer, tooltip);
 
 		if(mx > guiLeft+161&&mx < guiLeft+168&&my > guiTop+24&&my < guiTop+71)
-			tooltip.add(IIUtils.getPowerLevelString(tile));
+			tooltip.add(IIUtils.getPowerLevelString(tile.energyStorage.getEnergyStored(), tile.energyStorage.getMaxEnergyStored()));
 
 		if(!tooltip.isEmpty())
 		{

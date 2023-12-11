@@ -14,7 +14,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import pl.pabilo8.immersiveintelligence.api.utils.IMinecartBlockPickable;
+import pl.pabilo8.immersiveintelligence.api.utils.minecart.IMinecartBlockPickable;
 import pl.pabilo8.immersiveintelligence.common.IIContent;
 import pl.pabilo8.immersiveintelligence.common.block.metal_device.BlockIIMetalDevice.IIBlockTypes_MetalDevice;
 import pl.pabilo8.immersiveintelligence.common.entity.minecart.barrel.EntityMinecartBarrelSteel;
@@ -29,6 +29,7 @@ import pl.pabilo8.immersiveintelligence.common.entity.minecart.crate.EntityMinec
 import pl.pabilo8.immersiveintelligence.common.item.ItemIIMinecart.Minecarts;
 import pl.pabilo8.immersiveintelligence.common.util.item.IIItemEnum;
 import pl.pabilo8.immersiveintelligence.common.util.item.ItemIISubItemsBase;
+import pl.pabilo8.modworks.annotations.item.GeneratedItemModels;
 
 import java.util.function.BiFunction;
 import java.util.function.Supplier;
@@ -44,6 +45,7 @@ public class ItemIIMinecart extends ItemIISubItemsBase<Minecarts>
 		super("minecart", 1, Minecarts.values());
 	}
 
+	@GeneratedItemModels(itemName = "minecart")
 	public enum Minecarts implements IIItemEnum
 	{
 		WOODEN_CRATE(EntityMinecartCrateWooden::new,
