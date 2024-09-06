@@ -62,15 +62,15 @@ public class CommandIIHans extends CommandBase
 	{
 		squadList.clear();
 
-		squadList.put(new ResourceLocation(ImmersiveIntelligence.MODID, "none"),
-				new HansSquadHandWeapon()
-				{
-					@Override
-					public void setItems(EntityHans hans, int id)
-					{
-					}
-				}
-		);
+//		squadList.put(new ResourceLocation(ImmersiveIntelligence.MODID, "none"),
+//				new HansSquadHandWeapon()
+//				{
+//					@Override
+//					public void setItems(EntityHans hans, int id)
+//					{
+//					}
+//				}
+//		);
 
 		squadList.put(new ResourceLocation(ImmersiveIntelligence.MODID, "rifle"),
 				new HansSquadHandWeapon()
@@ -323,6 +323,25 @@ public class CommandIIHans extends CommandBase
 				}
 		);
 
+	}
+	public static void spawnReinforcements(World world, Vec3d pos, Team team)
+	{
+		if(Math.random() > 0.5)
+			squadList.get(new ResourceLocation(ImmersiveIntelligence.MODID, "stg")).spawnHanses(world, pos, 1, team, true, 0, 0);
+		else if(Math.random() > 0.4)
+			squadList.get(new ResourceLocation(ImmersiveIntelligence.MODID, "rifle")).spawnHanses(world, pos, 1, team, true, 0, 0);
+		else if(Math.random() > 0.2)
+			squadList.get(new ResourceLocation(ImmersiveIntelligence.MODID, "smg")).spawnHanses(world, pos, 1, team, true, 0, 0);
+		else if(Math.random() > 0.3)
+			squadList.get(new ResourceLocation(ImmersiveIntelligence.MODID, "grenadier")).spawnHanses(world, pos, 1, team, true, 0, 0);
+		else if(Math.random() > 0.2)
+			squadList.get(new ResourceLocation(ImmersiveIntelligence.MODID, "railgun")).spawnHanses(world, pos, 1, team, true, 0, 0);
+		else if(Math.random() > 0.3)
+			squadList.get(new ResourceLocation(ImmersiveIntelligence.MODID, "railgun_sniper")).spawnHanses(world, pos, 1, team, true, 0, 0);
+		else if(Math.random() > 0.4)
+			squadList.get(new ResourceLocation(ImmersiveIntelligence.MODID, "chemthrower")).spawnHanses(world, pos, 1, team, true, 0, 0);
+		else if(Math.random() > 0.5)
+			squadList.get(new ResourceLocation(ImmersiveIntelligence.MODID, "field_howi")).spawnHanses(world, pos, 1, team, true, 0, 0);
 	}
 
 	/**

@@ -208,7 +208,7 @@ public class EntityBullet extends Entity implements IEntityLightEventConsumer, I
 	{
 		super.onUpdate();
 	}
-
+	private int stillTicks = 0;
 	@Override
 	public void onUpdate()
 	{
@@ -233,7 +233,9 @@ public class EntityBullet extends Entity implements IEntityLightEventConsumer, I
 		}
 		else
 		{
-			if((!shouldLoadChunks&&ticksExisted > MAX_TICKS&&DEV_DECAY)||(posY < 0))
+			if (motionX == 0 && motionY == 0 && motionZ == 0 && !bullet.getName().equals("grenade_5bCal"))
+				stillTicks++;
+			if((!shouldLoadChunks&&ticksExisted > MAX_TICKS&&DEV_DECAY)||(posY < 0)||(stillTicks > 2))
 			{
 				setDead();
 				return;

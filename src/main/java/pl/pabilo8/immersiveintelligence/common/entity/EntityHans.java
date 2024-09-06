@@ -350,8 +350,10 @@ public class EntityHans extends EntityCreature implements INpc
 		);
 		//Call other hanses for help when attacked
 		this.targetTasks.addTask(2, new AIHansAlertOthers(this, true));
+		this.targetTasks.addTask(3, new AIHansAttackAnything(this));
 
-		this.tasks.addTask(1, new AIHansGetSupplies(this));
+		//this.tasks.addTask(1, new AIHansGetSupplies(this));
+		this.tasks.addTask(1, new AIHansSummonReinforcements(this));
 		this.tasks.addTask(2, new AIHansHolsterWeapon(this));
 		updateWeaponTasks();
 
