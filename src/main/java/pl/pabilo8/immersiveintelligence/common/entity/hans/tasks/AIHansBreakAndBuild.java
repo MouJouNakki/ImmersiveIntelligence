@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class AIHansBreakAndBuild extends AIHansBase
 {
 
-    protected AIHansBreakAndBuild(EntityHans hans)
+    public AIHansBreakAndBuild(EntityHans hans)
     {
         super(hans);
     }
