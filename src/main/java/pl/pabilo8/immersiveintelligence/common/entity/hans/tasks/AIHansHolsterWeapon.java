@@ -3,6 +3,7 @@ package pl.pabilo8.immersiveintelligence.common.entity.hans.tasks;
 import blusunrize.immersiveengineering.common.items.ItemChemthrower;
 import blusunrize.immersiveengineering.common.items.ItemRevolver;
 import net.minecraft.entity.ai.EntityAIBase;
+import net.minecraft.item.ItemEmptyMap;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
 import pl.pabilo8.immersiveintelligence.common.entity.EntityHans;
@@ -59,6 +60,7 @@ public class AIHansHolsterWeapon extends EntityAIBase
 				||stack.getItem() instanceof ItemIIRailgunOverride
 				||stack.getItem() instanceof ItemChemthrower
 				||stack.getItem() instanceof ItemRevolver
+				||stack.getItem() instanceof ItemEmptyMap
 				;
 	}
 }

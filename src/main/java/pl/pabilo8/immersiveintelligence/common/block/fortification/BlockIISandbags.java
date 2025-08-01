@@ -57,7 +57,7 @@ public class BlockIISandbags extends BlockIITileProvider<IIBlockTypes_Sandbags>
 	}
 
 	@Override
-	protected IBlockState getInitDefaultState()
+	public IBlockState getInitDefaultState()
 	{
 		return super.getInitDefaultState()
 				.withProperty(LEFT, 0)

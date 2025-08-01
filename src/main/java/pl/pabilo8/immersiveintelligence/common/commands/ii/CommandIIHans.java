@@ -10,7 +10,9 @@ import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.WrongUsageException;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityBoat;
 import net.minecraft.entity.passive.EntityDonkey;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -36,12 +38,21 @@ import pl.pabilo8.immersiveintelligence.common.entity.EntityHans;
 import pl.pabilo8.immersiveintelligence.common.entity.EntityMachinegun;
 import pl.pabilo8.immersiveintelligence.common.entity.EntityMortar;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.HansUtils;
+<<<<<<< Updated upstream:src/main/java/pl/pabilo8/immersiveintelligence/common/commands/ii/CommandIIHans.java
 import pl.pabilo8.immersiveintelligence.common.entity.vehicle.EntityVehicleSeat;
 import pl.pabilo8.immersiveintelligence.common.entity.vehicle.towable.gun.EntityFieldHowitzer;
 import pl.pabilo8.immersiveintelligence.common.item.ammo.ItemIIBulletMagazine.Magazines;
 import pl.pabilo8.immersiveintelligence.common.item.armor.ItemIIArmorUpgrade.ArmorUpgrades;
 import pl.pabilo8.immersiveintelligence.common.item.weapons.ItemIIRailgunOverride;
 import pl.pabilo8.immersiveintelligence.common.item.weapons.ItemIIWeaponUpgrade.WeaponUpgrade;
+=======
+import pl.pabilo8.immersiveintelligence.common.entity.hans.tasks.hand_weapon.AIHansCommander;
+import pl.pabilo8.immersiveintelligence.common.items.ammunition.ItemIIBulletMagazine;
+import pl.pabilo8.immersiveintelligence.common.items.armor.ItemIIArmorUpgrade.ArmorUpgrades;
+import pl.pabilo8.immersiveintelligence.common.items.weapons.ItemIIMachinegun;
+import pl.pabilo8.immersiveintelligence.common.items.weapons.ItemIIRailgunOverride;
+import pl.pabilo8.immersiveintelligence.common.items.weapons.ItemIIWeaponUpgrade.WeaponUpgrades;
+>>>>>>> Stashed changes:src/main/java/pl/pabilo8/immersiveintelligence/common/util/commands/ii/CommandIIHans.java
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -108,6 +119,21 @@ public class CommandIIHans extends CommandBase
 						ItemStack stack = IIContent.itemGrenade.getAmmoStack(IIContent.ammoCoreBrass, CoreType.CANISTER, FuseType.CONTACT, IIContent.ammoComponentHMX)
 								.setStackDisplayName("Sprenghandgranate mk.2");
 						stack.setCount(16);
+						hans.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, stack);
+					}
+				}
+		);
+		
+		squadList.put(new ResourceLocation(ImmersiveIntelligence.MODID, "nuke_grenadier"),
+				new HansSquadHandWeapon()
+				{
+					@Override
+					public void setItems(EntityHans hans, int id)
+					{
+						HansUtils.setHelmet(hans, ArmorUpgrades.GASMASK, ArmorUpgrades.HAZMAT_COATING);
+						ItemStack stack = IIContent.itemGrenade.getBulletWithParams("core_brass", "canister", "nuke")
+								.setStackDisplayName("Nuklearehandgranate mk.1");
+						stack.setCount(1);
 						hans.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, stack);
 					}
 				}
@@ -314,6 +340,56 @@ public class CommandIIHans extends CommandBase
 					}
 				}
 		);
+		squadList.put(new ResourceLocation(ImmersiveIntelligence.MODID, "commander"),
+			new HansSquadHandWeapon()
+			{
+				@Override
+				public void setItems(EntityHans hans, int id) {
+					HansUtils.setHelmet(hans);
+					ItemStack stack = new ItemStack(IIContent.itemRadioConfigurator);
+					hans.setHeldItem(EnumHand.MAIN_HAND, stack);
+				}
+			}
+		);
+		squadList.put(new ResourceLocation(ImmersiveIntelligence.MODID, "captain"),
+				new HansSquadCaptain()
+		);
+		squadList.put(new ResourceLocation(ImmersiveIntelligence.MODID, "naval_mg"),
+				new HansSquad()
+				{
+					@Override
+					public EntityHans spawnHanses(World world, Vec3d pos, int amount, Team team, boolean parachute,
+							float yaw, float pitch) {
+						EntityHans hans1 = squadList.get(new ResourceLocation(ImmersiveIntelligence.MODID, "captain")).spawnHanses(world, pos, amount, team, parachute, yaw, pitch);
+						EntityHans hans2 = squadList.get(new ResourceLocation(ImmersiveIntelligence.MODID, "heavy_mg")).spawnHanses(world, pos, amount, team, parachute, yaw, pitch);
+						hans2.getRidingEntity().startRiding(hans1.getRidingEntity());
+						return hans1;
+					}
+				}
+		);
+		
+//		squadList.put(new ResourceLocation(ImmersiveIntelligence.MODID, "field_mg"),
+//				new HansSquadHandWeapon()
+//				{
+//					@Override
+//					public void setItems(EntityHans hans, int id)
+//					{
+//						HansUtils.setHelmet(hans);
+//						ItemStack stack = new ItemStack(IIContent.itemMachinegun);
+//						ItemIIMachinegun itemMachinegun = (IIContent.itemMachinegun);
+//
+//						NonNullList<ItemStack> upgrades = NonNullList.withSize(itemMachinegun.getSlotCount(stack), ItemStack.EMPTY);
+//						upgrades.set(0, new ItemStack(IIContent.itemWeaponUpgrade, 1, WeaponUpgrades.HASTY_BIPOD.ordinal()));
+//
+//						itemMachinegun.setContainedItems(stack, upgrades);
+//						itemMachinegun.recalculateUpgrades(stack);
+//						itemMachinegun.finishUpgradeRecalculation(stack);
+//
+//						hans.setItemStackToSlot(EntityEquipmentSlot.OFFHAND, stack);
+//
+//					}
+//				}
+//		);
 
 	}
 
@@ -656,6 +732,36 @@ public class CommandIIHans extends CommandBase
 		{
 			return true;
 		}
+	}
+	private static class HansSquadCaptain extends HansSquadTeamWeapon<EntityBoat>
+	{
+
+		@Override
+		protected EntityBoat spawnTeamWeapon(World world, Vec3d pos, Team team, boolean parachute, float yaw,
+				float pitch) {
+			EntityBoat boat = new EntityBoat(world);
+			boat.setPositionAndRotation(pos.x, pos.y, pos.z, yaw, 0);
+			world.spawnEntity(boat);
+			return boat;
+		}
+
+		@Override
+		protected EntityHans addCrewmen(World world, Vec3d pos, Team team, boolean parachute, EntityBoat teamWeapon) {
+			EntityHans hans = createCrewman(world, pos, team, parachute);
+			hans.startRiding(teamWeapon);
+			ItemStack stack = new ItemStack(Items.MAP);
+			hans.setHeldItem(EnumHand.MAIN_HAND, stack);
+			return hans;
+		}
+	}
+	
+	public static void commanderSpawnSquad(ResourceLocation squad, EntityHans commander)
+	{
+		commanderSpawnSquad(squad, commander, commander.getPositionVector(), true, 0);
+	}
+	public static void commanderSpawnSquad(ResourceLocation squad, EntityHans commander, Vec3d pos, boolean parachute, float yaw)
+	{
+		squadList.get(squad).spawnHanses(commander.world, pos, 1, commander.getTeam(), parachute, yaw, 0);
 	}
 
 	/*

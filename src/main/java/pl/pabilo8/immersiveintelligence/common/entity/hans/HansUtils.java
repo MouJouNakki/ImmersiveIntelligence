@@ -48,6 +48,8 @@ public class HansUtils
 		WEAPON_MAP.put(IEContent.itemChemthrower, AIHansChemthrower::new);
 		WEAPON_MAP.put(IIContent.itemBinoculars, AIHansBinoculars::new);
 		WEAPON_MAP.put(IIContent.itemGrenade, AIHansGrenade::new);
+		WEAPON_MAP.put(IIContent.itemRadioConfigurator, AIHansCommander::new);
+		//WEAPON_MAP.put(IIContent.itemMachinegun, AIHansMachinegunHeld::new);
 	}
 
 	@Nullable

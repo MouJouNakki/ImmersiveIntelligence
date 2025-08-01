@@ -6,16 +6,30 @@ import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.MathHelper;
+<<<<<<< Updated upstream
 import pl.pabilo8.immersiveintelligence.api.ammo.enums.CoreType;
 import pl.pabilo8.immersiveintelligence.api.ammo.enums.FuseType;
+=======
+import net.minecraft.util.math.Vec3d;
+import net.minecraftforge.fluids.capability.IFluidHandlerItem;
+import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
+import pl.pabilo8.immersiveintelligence.api.Utils;
+>>>>>>> Stashed changes
 import pl.pabilo8.immersiveintelligence.common.IIContent;
+import pl.pabilo8.immersiveintelligence.common.entity.EntityHans;
 import pl.pabilo8.immersiveintelligence.common.entity.EntityMachinegun;
 import pl.pabilo8.immersiveintelligence.common.item.ammo.ItemIIBulletMagazine.Magazines;
 import pl.pabilo8.immersiveintelligence.common.network.IIPacketHandler;
+<<<<<<< Updated upstream
 import pl.pabilo8.immersiveintelligence.common.network.messages.MessageEntityNBTSync;
 import pl.pabilo8.immersiveintelligence.common.util.IIColor;
 import pl.pabilo8.immersiveintelligence.common.util.easynbt.EasyNBT;
+=======
+import pl.pabilo8.immersiveintelligence.common.network.MessageEntityNBTSync;
+import blusunrize.immersiveengineering.common.util.ItemNBTHelper;
+>>>>>>> Stashed changes
 
 import javax.annotation.Nullable;
 
@@ -27,6 +41,8 @@ public class AIHansMachinegun extends EntityAIBase
 {
 	private final EntityLiving hans;
 	private EntityMachinegun mg;
+	private int checkTimer = 0;
+	private double maxDistForField = 40;
 
 	@Nullable
 	private Entity target = null;
@@ -64,6 +80,44 @@ public class AIHansMachinegun extends EntityAIBase
 	 */
 	public void updateTask()
 	{
+		if(mg != null&&IIContent.itemMachinegun.getUpgrades(mg.gun).hasKey("hasty_bipod"))
+		{
+			if(checkTimer<=0)
+			{
+				checkTimer = 100;
+				double nearestEnemyDist = Double.POSITIVE_INFINITY;
+				for(Entity entity : hans.world.loadedEntityList)
+				{
+					if(((EntityHans)hans).isValidTarget(entity))
+					{
+						double dist = hans.getDistance(entity.posX, entity.posY, entity.posZ);
+						if(dist < nearestEnemyDist)
+							nearestEnemyDist = dist;
+					}
+				}
+				if(nearestEnemyDist>maxDistForField)
+				{
+					hans.dismountRidingEntity();
+					ItemNBTHelper.setTagCompound(mg.gun, "magazine1", mg.magazine1.serializeNBT());
+					ItemNBTHelper.setTagCompound(mg.gun, "magazine2", mg.magazine2.serializeNBT());
+					if(IIContent.itemMachinegun.getCapacity(mg.gun, 0) > 0)
+					{
+						IFluidHandlerItem cap = mg.gun.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY, null);
+						if(cap!=null)
+						{
+							cap.drain(Integer.MAX_VALUE, true);
+							if(mg.tank.getFluid()!=null)
+								cap.fill(mg.tank.getFluid().copy(), true);
+						}
+					}
+					hans.setHeldItem(EnumHand.OFF_HAND, mg.gun);
+					mg.setDead();
+					return;
+				}
+			}
+			else
+				checkTimer--;
+		}
 		target = hans.getAttackTarget();
 		if(mg!=null)
 		{

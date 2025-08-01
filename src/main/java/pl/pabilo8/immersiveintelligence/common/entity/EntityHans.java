@@ -6,6 +6,7 @@ import blusunrize.immersiveengineering.common.util.Utils;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.ai.EntityAITasks.EntityAITaskEntry;
+import net.minecraft.entity.item.EntityBoat;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
@@ -34,7 +35,11 @@ import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import pl.pabilo8.immersiveintelligence.common.IIContent;
+<<<<<<< Updated upstream
 import pl.pabilo8.immersiveintelligence.common.entity.ammo.component.EntityGasCloud;
+=======
+import pl.pabilo8.immersiveintelligence.common.entity.hans.HansBoatPathNavigate;
+>>>>>>> Stashed changes
 import pl.pabilo8.immersiveintelligence.common.entity.hans.HansAnimations;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.HansAnimations.*;
 import pl.pabilo8.immersiveintelligence.common.entity.hans.HansPathNavigate;
@@ -128,6 +133,8 @@ public class EntityHans extends EntityCreature implements INpc
 		this.dataManager.register(DATA_MARKER_EYE_COLOR, (eyeColor = EYE_COLORS[rand.nextInt(EYE_COLORS.length)]).getPackedRGB());
 		this.dataManager.register(DATA_MARKER_SPEECH, new NBTTagCompound());
 		setHealth(20);
+		
+		boatNavigator = new HansBoatPathNavigate(this, worldIn);
 	}
 
 	@Override
@@ -135,6 +142,8 @@ public class EntityHans extends EntityCreature implements INpc
 	{
 		return new HansPathNavigate(this, world);
 	}
+
+	private HansBoatPathNavigate boatNavigator;
 
 	@Override
 	protected void entityInit()
@@ -299,6 +308,8 @@ public class EntityHans extends EntityCreature implements INpc
 	@Override
 	public HansPathNavigate getNavigator()
 	{
+		if(this.getRidingEntity() instanceof EntityBoat)
+			return boatNavigator;
 		return ((HansPathNavigate)super.getNavigator());
 	}
 
@@ -374,6 +385,8 @@ public class EntityHans extends EntityCreature implements INpc
 				tasks.addTask(0, vehicleTask = new AIHansMortar(this));
 			else if(entity.getLowestRidingEntity() instanceof EntityFieldHowitzer)
 				tasks.addTask(0, vehicleTask = new AIHansHowitzer(this));
+			if(entity instanceof EntityBoat)
+				boatNavigator.theEntity = (EntityBoat)entity;
 			return true;
 		}
 		return false;
