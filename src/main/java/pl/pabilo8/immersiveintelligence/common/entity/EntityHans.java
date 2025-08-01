@@ -121,6 +121,7 @@ public class EntityHans extends EntityCreature implements INpc
 	private EntityAIBase vehicleTask = null;
 	private AIHansHandWeapon weaponTask = null;
 	private AIHansOpenDoor doorTask = null;
+	private AIHansBreakBlock breakTask = null;
 
 	/**
 	 * Whether this Hans is a head of a Squad
@@ -364,6 +365,7 @@ public class EntityHans extends EntityCreature implements INpc
 		this.tasks.addTask(0, new EntityAISwimming(this));
 		this.tasks.addTask(0, new AIHansClimbLadder(this));
 		this.tasks.addTask(0, doorTask = new AIHansOpenDoor(this, true));
+		this.tasks.addTask(0, breakTask = new AIHansBreakBlock(this/*, true*/));
 
 		//this.tasks.addTask(4, new EntityAIAvoidEntity<>(this, EntityLivingBase.class, avEntity-> this.hasAmmunition()&&avEntity!=null&&avEntity.getRevengeTarget()==this, 8.0F, 0.6D, 0.6D));
 	}
@@ -686,5 +688,9 @@ public class EntityHans extends EntityCreature implements INpc
 	public AIHansOpenDoor getDoorTask()
 	{
 		return doorTask;
+	}
+	public AIHansBreakBlock getBreakTask()
+	{
+		return breakTask;
 	}
 }

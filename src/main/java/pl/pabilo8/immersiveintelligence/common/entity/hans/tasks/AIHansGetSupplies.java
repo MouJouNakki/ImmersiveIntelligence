@@ -44,9 +44,12 @@ public class AIHansGetSupplies extends EntityAIBase
         ItemStack weapon = getHeldWeapon();
         boolean needsWeapon = weapon.isEmpty();
         boolean needsHelmet = needsHelmet();
-        boolean needsAmmo = (!needsWeapon&&!hans.hasAmmo&&canGetAmmoFor(weapon));
-        if(!needsWeapon&&!needsHelmet&&!needsAmmo)
+        int ammoCount = Integer.MAX_VALUE;
+        if(!needsWeapon)
+            ammoCount = getAmmoCount(weapon, false);
+        if(!needsWeapon&&!needsHelmet&&ammoCount == 0) {
             return false;
+        }
         BlockPos closestPos = null;
         double closestDist = Double.MAX_VALUE;
         BlockPos hansPos = hans.getPosition();
@@ -60,7 +63,7 @@ public class AIHansGetSupplies extends EntityAIBase
                     int yPos = hansPos.getY() + getBackforthOffset(y);
                     int zPos = hansPos.getZ() + getBackforthOffset(z);
                     BlockPos checkPos = new BlockPos(xPos, yPos, zPos);
-                    if(getSuppliesSlot(checkPos, false) == -1)
+                    if(getSuppliesSlot(checkPos, false, ammoCount) == -1)
                         continue;
                     if(closestPos == null || hans.getDistanceSq(checkPos) < closestDist)
                     {
@@ -79,31 +82,37 @@ public class AIHansGetSupplies extends EntityAIBase
     {
         return Math.floorDiv(num,2)*(num%2==0?-1:1);
     }
-
-    private int getSuppliesSlot(BlockPos pos, boolean extra)
+    private int getAmmoCount(ItemStack weapon, boolean extra)
     {
-        ItemStack weapon = getHeldWeapon();
-        boolean needsWeapon = weapon.isEmpty();
-        boolean needsHelmet = needsHelmet();
-        int ammoCount = 0;
-        if(extra&&canGetAmmoFor(weapon))
-        {
+        if(canGetAmmoFor(weapon)) {
+            int ammoCount = 0;
             final IItemHandler capability = hans.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
-            if(capability!=null)
-            {
+            if (capability != null) {
                 for (int i = 0; i < capability.getSlots(); i++) {
                     ItemStack itemstack = capability.getStackInSlot(i);
-                    if(isAmmoFor(weapon,itemstack))
-                    {
+                    if (isAmmoFor(weapon, itemstack)) {
                         ammoCount += itemstack.getCount();
-                        if(ammoCount >= getPreferredAmmoFor(weapon))
+                        if (!extra || ammoCount >= getPreferredAmmoFor(weapon))
                             break;
                     }
                 }
             }
+            return ammoCount;
         }
+        return Integer.MAX_VALUE;
+    }
+    private int getSuppliesSlot(BlockPos pos, boolean extra)
+    {
+        return getSuppliesSlot(pos, extra, getAmmoCount(getHeldWeapon(), extra));
+    }
+
+    private int getSuppliesSlot(BlockPos pos, boolean extra, int ammoCount)
+    {
+        ItemStack weapon = getHeldWeapon();
+        boolean needsWeapon = weapon.isEmpty();
+        boolean needsHelmet = needsHelmet();
         boolean extraAmmo = extra && ammoCount < getPreferredAmmoFor(weapon);
-        boolean needsAmmo = (!needsWeapon&&canGetAmmoFor(weapon)&&(!hans.hasAmmo||extraAmmo));
+        boolean needsAmmo = (!needsWeapon&&canGetAmmoFor(weapon)&&(ammoCount==0||extraAmmo));
         TileEntity tileEntity = hans.world.getTileEntity(pos);
         if(tileEntity == null)
             return -1;

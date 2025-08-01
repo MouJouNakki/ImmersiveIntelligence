@@ -8,6 +8,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.pathfinding.Path;
 import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.pathfinding.PathPoint;
 import net.minecraft.pathfinding.WalkNodeProcessor;
@@ -37,13 +38,14 @@ import java.util.Set;
 // TODO: 28.12.2021 Pioneer Hanses
 public class HansWalkNodeProcessor extends WalkNodeProcessor
 {
-	private boolean canBreakBlocks = false;
+	private boolean canBreakBlocks = true;
 	private boolean breakableFlag = false;
 
 	private PathNodeType getPathNodeType(EntityLiving entitylivingIn, int x, int y, int z)
 	{
 		this.breakableFlag = false;
-		return this.getPathNodeType(this.blockaccess, x, y, z, entitylivingIn, this.entitySizeX, this.entitySizeY, this.entitySizeZ, this.getCanOpenDoors(), this.getCanEnterDoors());
+		//return this.getPathNodeType(this.blockaccess, x, y, z, entitylivingIn, this.entitySizeX, this.entitySizeY, this.entitySizeZ, this.getCanOpenDoors(), this.getCanEnterDoors());
+		return this.getPathNodeTypeRaw(this.blockaccess, x, y, z);
 	}
 
 	@Override
@@ -198,7 +200,7 @@ public class HansWalkNodeProcessor extends WalkNodeProcessor
 				point.nodeType = type;
 				point.costMalus = Math.max(point.costMalus, priority);
 				if(this.breakableFlag)
-					point.costMalus++;
+					point.costMalus += 1000;
 			}
 			if(type!=PathNodeType.WALKABLE)
 			{
@@ -230,7 +232,7 @@ public class HansWalkNodeProcessor extends WalkNodeProcessor
 							point.nodeType = PathNodeType.WALKABLE;
 							point.costMalus = Math.max(point.costMalus, priority);
 							if(this.breakableFlag)
-								point.costMalus++;
+								point.costMalus += 1000;
 							return point;
 						}
 					}
@@ -248,7 +250,7 @@ public class HansWalkNodeProcessor extends WalkNodeProcessor
 							point.nodeType = type;
 							point.costMalus = Math.max(point.costMalus, priority);
 							if(this.breakableFlag)
-								point.costMalus++;
+								point.costMalus += 1000;
 							break;
 						}
 						if(priority < 0.0F)
@@ -269,9 +271,9 @@ public class HansWalkNodeProcessor extends WalkNodeProcessor
 		Block block = iblockstate.getBlock();
 
 		// TODO: 28.12.2021 revisit block breaking
-		/*if(this.entity!=null&&this.canBreakBlocks()&&ConfigHandler.breakableBlocks.canBreak(iblockstate))
+		if(this.entity!=null&&this.canBreakBlocks()/*&&ConfigHandler.breakableBlocks.canBreak(iblockstate)*/)
 		{
-			double d1 = (double)this.entity.width/2.0D;
+			/*double d1 = (double)this.entity.width/2.0D;
 			AxisAlignedBB aabb = new AxisAlignedBB((double)x-d1+0.5D, (double)y+1.001D, (double)z-d1+0.5D, (double)x+d1+0.5D, (float)y+1+this.entity.height, (double)z+d1+0.5D);
 			if(this.entity.posY > blockpos.getY()+0.8)
 				return this.defaultNode(acc, iblockstate, blockpos, block);
@@ -285,15 +287,24 @@ public class HansWalkNodeProcessor extends WalkNodeProcessor
 				else
 					return this.defaultNode(acc, iblockstate, blockpos, block);
 			}
-			return PathNodeType.OPEN;
+			return PathNodeType.OPEN;*/
+			Path path = this.entity.getNavigator().getPath();
+			if(path != null) {
+				PathPoint pathPoint = path.getFinalPathPoint();
+				if(pathPoint != null && pathPoint.y > this.entity.posY && blockpos.getY() <= this.entity.posY)
+					return defaultNode(acc, iblockstate, blockpos, block);
+			}
+			if(!acc.isAirBlock(blockpos))
+				breakableFlag = true;
+			return PathNodeType.WALKABLE;
 		}
 		else
-		{*/
+		{
 		if(this.entity!=null)
 			if(block.isLadder(iblockstate, acc, blockpos, this.entity))
 				return PathNodeType.WALKABLE;
 		return this.defaultNode(acc, iblockstate, blockpos, block);
-		/*}*/
+		}
 	}
 
 	protected PathNodeType defaultNode(IBlockAccess world, IBlockState state, BlockPos pos, Block block)
